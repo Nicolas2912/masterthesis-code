@@ -1,0 +1,167 @@
+{
+  "document": "Service_Software_BAL_0420_EN",
+  "evaluator_type": "fusion",
+  "llm_model": "unsloth/Qwen2.5-VL-32B-Instruct-unsloth-bnb-4bit",
+  "total_questions": 50,
+  "answerable_questions": 44,
+  "unanswerable_questions": 6,
+  "safety_critical_questions": 11,
+  "categories": {
+    "TECHNICAL": 14,
+    "SAFETY": 11,
+    "VISUAL": 7,
+    "MULTI_CHAPTER": 7,
+    "UNANSWERABLE": 6,
+    "NUMERICAL": 5
+  },
+  "execution_time": 5436.834433794022,
+  "metrics": {
+    "alpha_similarity": {
+      "mean": 0.9421143260869113,
+      "median": 0.9450649917125702,
+      "min": 0.8900421857833862,
+      "max": 0.9824317097663879,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9419260535921369,
+        "NUMERICAL": 0.9576856255531311,
+        "SAFETY": 0.9386422200636431,
+        "TECHNICAL": 0.9322576820850372,
+        "VISUAL": 0.9563496964318412
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q042",
+          "score": 0.9636414051055908,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9636), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q040",
+          "score": 0.9634812474250793,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9635), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q017",
+          "score": 0.9244056344032288,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9244), indicating nearly identical meaning."
+        }
+      ]
+    },
+    "question_answer_relevance": {
+      "mean": 0.9278134345492383,
+      "median": 1.0,
+      "min": 0.6086956521739131,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 1.0,
+        "NUMERICAL": 0.8032323232323233,
+        "SAFETY": 0.8814511325091806,
+        "TECHNICAL": 0.9365476461717063,
+        "VISUAL": 1.0
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q023",
+          "score": 0.96,
+          "reasoning": "The score is 0.96 because a statement suggested not closing the window, which contradicts the input's request to close it."
+        },
+        {
+          "question_id": "Q033",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and doesn't contain any irrelevant information! Great job!"
+        },
+        {
+          "question_id": "Q021",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and completely addresses the prompt. Great job!"
+        }
+      ]
+    },
+    "hallucination": {
+      "mean": 0.24778138528138527,
+      "median": 0.10555555555555556,
+      "min": 0.0,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.06938775510204082,
+        "NUMERICAL": 0.49000000000000005,
+        "SAFETY": 0.3777777777777778,
+        "TECHNICAL": 0.2642857142857143,
+        "VISUAL": 0.015873015873015872
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q005",
+          "score": 0.0,
+          "reasoning": "The score is 0.00 because the actual output aligns with the provided context across multiple aspects, including log file path monitoring, Ethernet IP address settings, device type, and data storage location, with no contradictions identified."
+        },
+        {
+          "question_id": "Q006",
+          "score": 0.0,
+          "reasoning": "The score is 0.00 because the actual output aligns with the provided contexts across multiple aspects, including diagnosis procedures, testing drives, diagnosis mode, measuring wheel test, potential issues like motor current exceeding limits, control lead issues, test run and encoder increments, and potential issues like the measuring wheel not being moved within the timeout period. There are no contradictions."
+        },
+        {
+          "question_id": "Q024",
+          "score": 0.0,
+          "reasoning": "The score is 0.00 because the actual output is fully aligned with the provided contexts, with no contradictions identified."
+        }
+      ]
+    },
+    "faithfulness": {
+      "mean": 0.9927451230396532,
+      "median": 1.0,
+      "min": 0.9047619047619048,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.987228439763002,
+        "NUMERICAL": 1.0,
+        "SAFETY": 0.9913419913419914,
+        "TECHNICAL": 0.9903874593315587,
+        "VISUAL": 1.0
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q003",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the output is perfectly faithful to the retrieval context! Keep up the great work!"
+        },
+        {
+          "question_id": "Q029",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the output is perfectly faithful to the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q043",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Great job!"
+        }
+      ]
+    }
+  },
+  "metrics_enabled": [
+    "alpha_similarity",
+    "question_answer_relevance",
+    "hallucination",
+    "faithfulness"
+  ],
+  "fusion_metrics": {
+    "config": {
+      "num_generated_queries": 3,
+      "rrf_k": 60.0
+    },
+    "generate_queries_time": {
+      "mean": 7.101096830584786,
+      "median": 6.685053110122681,
+      "min": 3.9488682746887207,
+      "max": 12.466258525848389
+    },
+    "fusion_time": {
+      "mean": 4.396655342795632e-05,
+      "median": 4.029273986816406e-05,
+      "min": 3.3855438232421875e-05,
+      "max": 9.179115295410156e-05
+    }
+  }
+}

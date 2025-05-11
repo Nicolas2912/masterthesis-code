@@ -1,0 +1,235 @@
+{
+  "document": "MF1_BAL_0183_EN",
+  "evaluator_type": "kg_enhanced",
+  "total_questions": 50,
+  "answerable_questions": 44,
+  "unanswerable_questions": 6,
+  "safety_critical_questions": 17,
+  "categories": {
+    "TECHNICAL": 15,
+    "SAFETY": 10,
+    "MULTI_CHAPTER": 7,
+    "VISUAL": 6,
+    "NUMERICAL": 6,
+    "UNANSWERABLE": 6
+  },
+  "execution_time": 4408.561275959015,
+  "metrics": {
+    "alpha_similarity": {
+      "mean": 0.8079891976985064,
+      "median": 0.8284499645233154,
+      "min": 0.2762501835823059,
+      "max": 0.9723366498947144,
+      "by_category": {
+        "MULTI_CHAPTER": 0.8840059893471854,
+        "NUMERICAL": 0.8714450895786285,
+        "SAFETY": 0.6517307877540588,
+        "TECHNICAL": 0.8226159453392029,
+        "VISUAL": 0.8797108630339304
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q001",
+          "score": 0.9583238363265991,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9583), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q002",
+          "score": 0.7966150045394897,
+          "reasoning": "The prediction and reference have good semantic similarity (0.7966), sharing significant meaning."
+        },
+        {
+          "question_id": "Q021",
+          "score": 0.8676284551620483,
+          "reasoning": "The prediction and reference have very high semantic similarity (0.8676), capturing most of the same information."
+        }
+      ]
+    },
+    "question_answer_relevance": {
+      "mean": 0.9306802306514692,
+      "median": 1.0,
+      "min": 0.5,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9665866346538615,
+        "NUMERICAL": 0.9871794871794872,
+        "SAFETY": 0.8114852337173766,
+        "TECHNICAL": 0.9692595305928638,
+        "VISUAL": 0.9533333333333333
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q034",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and addresses all aspects of the input question comprehensively!"
+        },
+        {
+          "question_id": "Q026",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and addresses the input directly without any irrelevant information. Great job!"
+        },
+        {
+          "question_id": "Q039",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no irrelevant statements, indicating a perfectly relevant response! Keep up the great work!"
+        }
+      ]
+    },
+    "hallucination": {
+      "mean": 0.4610389610389611,
+      "median": 0.42857142857142855,
+      "min": 0.0,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.22448979591836735,
+        "NUMERICAL": 0.7142857142857143,
+        "SAFETY": 0.42857142857142855,
+        "TECHNICAL": 0.5142857142857142,
+        "VISUAL": 0.4047619047619047
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q037",
+          "score": 0.2857142857142857,
+          "reasoning": "The score is 0.29 because while there are several factual alignments between the output and the context regarding potential faults, safety, and component checks, there are also contradictions where the output focuses on troubleshooting while the context describes parts and procedures, indicating some level of hallucination."
+        },
+        {
+          "question_id": "Q002",
+          "score": 0.14285714285714285,
+          "reasoning": "The score is 0.14 because the actual output largely aligns with the provided context, with no direct contradictions identified, indicating a low level of hallucination."
+        },
+        {
+          "question_id": "Q021",
+          "score": 0.8571428571428571,
+          "reasoning": "The score is 0.86 because while the output aligns with the nameplate information, it lacks detail and doesn't fully utilize the provided context, leading to a high hallucination score despite the absence of direct contradictions."
+        }
+      ]
+    },
+    "faithfulness": {
+      "mean": 0.9808994708994708,
+      "median": 1.0,
+      "min": 0.75,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9904761904761905,
+        "NUMERICAL": 1.0,
+        "SAFETY": 1.0,
+        "TECHNICAL": 0.9631851851851853,
+        "VISUAL": 0.9694444444444444
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q024",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q037",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the output is perfectly faithful to the retrieval context! Keep up the great work!"
+        },
+        {
+          "question_id": "Q023",
+          "score": 0.75,
+          "reasoning": "The score is 0.75 because the actual output provides specific actions like replacing the motor or motor control card when the MF1 unit is not ready, which contradicts the retrieval context's general advice to have specialized personnel check the unit and switch it to a currentless state."
+        }
+      ]
+    },
+    "multimodal_answer_relevancy": {
+      "mean": 0.9740259740259739,
+      "median": 1.0,
+      "min": 0.5,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 1.0,
+        "NUMERICAL": 0.9166666666666666,
+        "SAFETY": 0.9857142857142858,
+        "TECHNICAL": 1.0,
+        "VISUAL": 0.9166666666666666
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q025",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the output perfectly addressed the question about the general purpose and components of the master feeder, with no irrelevant statements present."
+        },
+        {
+          "question_id": "Q001",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response completely addressed the question without including any irrelevant statements."
+        },
+        {
+          "question_id": "Q010",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is fully relevant and directly addresses the question about the commissioning of the MF1 master feeder, with no irrelevant information included."
+        }
+      ]
+    },
+    "multimodal_faithfulness": {
+      "mean": 0.8971425993826816,
+      "median": 0.9166666666666666,
+      "min": 0.6666666666666666,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.855485527544351,
+        "NUMERICAL": 0.841025641025641,
+        "SAFETY": 0.9423809523809524,
+        "TECHNICAL": 0.9040562868504044,
+        "VISUAL": 0.9115850815850817
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q030",
+          "score": 0.8,
+          "reasoning": "The score is 0.80 because the actual output incorrectly suggests a specific ratio between rotations and force, which complicates the relationship of 2.5 rotations to 200 N instead of presenting it straightforwardly."
+        },
+        {
+          "question_id": "Q027",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions identified between the actual output and the retrieval context, indicating complete alignment and accuracy."
+        },
+        {
+          "question_id": "Q040",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context, indicating perfect alignment."
+        }
+      ]
+    }
+  },
+  "metrics_enabled": [
+    "alpha_similarity",
+    "question_answer_relevance",
+    "hallucination",
+    "faithfulness",
+    "multimodal_answer_relevancy",
+    "multimodal_faithfulness"
+  ],
+  "kg_metrics": {
+    "config": {
+      "kg_file_path": "knowledge_graphs/MF1_BAL_0183_EN_kg.txt",
+      "image_descriptions_path": "image_descriptions/MF1_BAL_0183_EN_image_description.pkl",
+      "llm_model_name": "unsloth/phi-4"
+    },
+    "extract_entities_time": {
+      "mean": 0.00014220042662187055,
+      "median": 0.0001246929168701172,
+      "min": 5.7220458984375e-05,
+      "max": 0.00035643577575683594
+    },
+    "relevant_kg_nodes_time": {
+      "mean": 0.00021391565149480647,
+      "median": 0.00020205974578857422,
+      "min": 6.103515625e-05,
+      "max": 0.0004162788391113281
+    },
+    "format_kg_time": {
+      "mean": 0.0004573626951737837,
+      "median": 0.00045692920684814453,
+      "min": 0.0002608299255371094,
+      "max": 0.0008187294006347656
+    }
+  }
+}

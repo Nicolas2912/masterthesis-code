@@ -1,0 +1,170 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 750px;
+                 background-color: #222222;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+             #config {
+                 float: left;
+                 width: 400px;
+                 height: 600px;
+             }
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+            <div id="config"></div>
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "font": {"color": "white"}, "id": "Manual LDF 5000-40", "label": "Manual LDF 5000-40", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "2009", "label": "2009", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "LDF 5000-40", "label": "LDF 5000-40", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Germany", "label": "Germany", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Connecting the Optics", "label": "Connecting the Optics", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "7", "label": "7", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "9.2", "label": "9.2", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "9.2.2", "label": "9.2.2", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "9.2.3", "label": "9.2.3", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "9.2.4", "label": "9.2.4", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Safety circuit", "label": "Safety circuit", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "transmission line", "label": "transmission line", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Laserline", "label": "Laserline", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "LDF series", "label": "LDF series", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Laserline GmbH", "label": "Laserline GmbH", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "VG1", "label": "VG1", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "VG2", "label": "VG2", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "VG3", "label": "VG3", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "VG3E", "label": "VG3E", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "VG4", "label": "VG4", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "VG5", "label": "VG5", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "retina", "label": "retina", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "eye", "label": "eye", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "laser heads", "label": "laser heads", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "laser", "label": "laser", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "dew point", "label": "dew point", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "temperature", "label": "temperature", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Deionized", "label": "Deionized", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "demineralized water", "label": "demineralized water", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Teleservice Internet", "label": "Teleservice Internet", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "internet", "label": "internet", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "LL-Control", "label": "LL-Control", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "SET-Command", "label": "SET-Command", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "LOOP-Command", "label": "LOOP-Command", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Loop Command", "label": "Loop Command", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "instruction", "label": "instruction", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "SH_Open Command", "label": "SH_Open Command", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "shutter", "label": "shutter", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "SH_CLOSE", "label": "SH_CLOSE", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "LDF Series", "label": "LDF Series", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "laser light cable", "label": "laser light cable", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Field-bus interface", "label": "Field-bus interface", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "field-bus", "label": "field-bus", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "DP1 (Laserline)", "label": "DP1 (Laserline)", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "DP2 (Customer)", "label": "DP2 (Customer)", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "DP1", "label": "DP1", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Profibus", "label": "Profibus", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "inactive", "label": "inactive", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "active signal", "label": "active signal", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "main menu", "label": "main menu", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "status bar", "label": "status bar", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "LDF", "label": "LDF", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Shutters", "label": "Shutters", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Protective door", "label": "Protective door", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "active", "label": "active", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "inactive signal", "label": "inactive signal", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "LSB", "label": "LSB", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "binary coding", "label": "binary coding", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "MSB", "label": "MSB", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "binary coded", "label": "binary coded", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "byte swapping", "label": "byte swapping", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "beam switch", "label": "beam switch", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "beam path", "label": "beam path", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "laser diodes", "label": "laser diodes", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Safety Category III", "label": "Safety Category III", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "DIN EN 954-1", "label": "DIN EN 954-1", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "RJ11", "label": "RJ11", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "RJ45", "label": "RJ45", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "10.4 Error Messages and Troubleshooting Message", "label": "10.4 Error Messages and Troubleshooting Message", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "E-Stop button", "label": "E-Stop button", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "E-Stop circuit", "label": "E-Stop circuit", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Program START / STOP", "label": "Program START / STOP", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Program stop", "label": "Program stop", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "SHUTTER", "label": "SHUTTER", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "VPN", "label": "VPN", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Internet", "label": "Internet", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "VPN server", "label": "VPN server", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Tunnel", "label": "Tunnel", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "router", "label": "router", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "network", "label": "network", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Page16-5", "label": "Page16-5", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "01_01_02", "label": "01_01_02", "shape": "dot"}]);
+                  edges = new vis.DataSet([{"from": "Manual LDF 5000-40", "label": "publication date", "to": "2009"}, {"from": "Manual LDF 5000-40", "label": "country of origin", "to": "Germany"}, {"from": "LDF 5000-40", "label": "country of origin", "to": "Germany"}, {"from": "LDF 5000-40", "label": "part of", "to": "9.2"}, {"from": "LDF 5000-40", "label": "manufacturer", "to": "Laserline GmbH"}, {"from": "LDF 5000-40", "label": "manufacturer", "to": "Laserline"}, {"from": "LDF 5000-40", "label": "subclass of", "to": "laser diodes"}, {"from": "Connecting the Optics", "label": "number of episodes", "to": "7"}, {"from": "9.2.2", "label": "followed by", "to": "9.2.3"}, {"from": "9.2.3", "label": "followed by", "to": "9.2.3"}, {"from": "9.2.3", "label": "followed by", "to": "9.2.4"}, {"from": "Safety circuit", "label": "connects with", "to": "transmission line"}, {"from": "Laserline", "label": "country", "to": "Germany"}, {"from": "LDF series", "label": "manufacturer", "to": "Laserline GmbH"}, {"from": "Laserline GmbH", "label": "country", "to": "Germany"}, {"from": "VG1", "label": "manufacturer", "to": "Laserline GmbH"}, {"from": "VG2", "label": "manufacturer", "to": "Laserline GmbH"}, {"from": "VG2", "label": "country of origin", "to": "Germany"}, {"from": "VG2", "label": "connects with", "to": "VG3"}, {"from": "VG2", "label": "connects with", "to": "VG4"}, {"from": "VG2", "label": "connects with", "to": "VG5"}, {"from": "VG3", "label": "manufacturer", "to": "Laserline GmbH"}, {"from": "VG3", "label": "connects with", "to": "VG4"}, {"from": "VG3", "label": "connects with", "to": "VG5"}, {"from": "VG3E", "label": "country of origin", "to": "Germany"}, {"from": "VG4", "label": "country of origin", "to": "Germany"}, {"from": "VG4", "label": "connects with", "to": "VG5"}, {"from": "VG4", "label": "manufacturer", "to": "Laserline"}, {"from": "VG5", "label": "country of origin", "to": "Germany"}, {"from": "VG5", "label": "manufacturer", "to": "Laserline"}, {"from": "retina", "label": "part of", "to": "eye"}, {"from": "laser heads", "label": "subclass of", "to": "laser"}, {"from": "dew point", "label": "subclass of", "to": "temperature"}, {"from": "Deionized", "label": "said to be the same as", "to": "demineralized water"}, {"from": "Teleservice Internet", "label": "instance of", "to": "internet"}, {"from": "LL-Control", "label": "country of origin", "to": "Germany"}, {"from": "SET-Command", "label": "followed by", "to": "LOOP-Command"}, {"from": "Loop Command", "label": "instance of", "to": "instruction"}, {"from": "SH_Open Command", "label": "instance of", "to": "shutter"}, {"from": "SH_CLOSE", "label": "instance of", "to": "shutter"}, {"from": "LDF Series", "label": "subclass of", "to": "laser light cable"}, {"from": "Field-bus interface", "label": "part of", "to": "field-bus"}, {"from": "DP1 (Laserline)", "label": "connects with", "to": "DP2 (Customer)"}, {"from": "DP1 (Laserline)", "label": "connects with", "to": "DP1"}, {"from": "DP2 (Customer)", "label": "connects with", "to": "DP1"}, {"from": "DP1", "label": "manufacturer", "to": "Laserline GmbH"}, {"from": "Profibus", "label": "manufacturer", "to": "Laserline GmbH"}, {"from": "Profibus", "label": "country", "to": "Germany"}, {"from": "inactive", "label": "opposite of", "to": "active signal"}, {"from": "main menu", "label": "has part", "to": "status bar"}, {"from": "LDF", "label": "country", "to": "Germany"}, {"from": "LDF", "label": "instance of", "to": "binary coding"}, {"from": "Shutters", "label": "part of", "to": "Protective door"}, {"from": "active", "label": "opposite of", "to": "inactive signal"}, {"from": "LSB", "label": "instance of", "to": "binary coding"}, {"from": "LSB", "label": "country", "to": "Germany"}, {"from": "LSB", "label": "instance of", "to": "binary coded"}, {"from": "MSB", "label": "instance of", "to": "binary coding"}, {"from": "byte swapping", "label": "facet of", "to": "binary coding"}, {"from": "beam switch", "label": "uses", "to": "beam path"}, {"from": "Safety Category III", "label": "has part", "to": "DIN EN 954-1"}, {"from": "RJ11", "label": "connects with", "to": "RJ45"}, {"from": "10.4 Error Messages and Troubleshooting Message", "label": "country", "to": "Germany"}, {"from": "E-Stop button", "label": "part of", "to": "E-Stop circuit"}, {"from": "Program START / STOP", "label": "different from", "to": "Program stop"}, {"from": "SHUTTER", "label": "subclass of", "to": "shutter"}, {"from": "VPN", "label": "part of", "to": "Internet"}, {"from": "VPN", "label": "has part", "to": "VPN server"}, {"from": "Tunnel", "label": "subclass of", "to": "VPN"}, {"from": "router", "label": "part of", "to": "network"}, {"from": "Page16-5", "label": "publication date", "to": "01_01_02"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": true,
+        "filter": [
+            "physics"
+        ]
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+                  // if this network requires displaying the configure window,
+                  // put it in its div
+                  options.configure["container"] = document.getElementById("config");
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

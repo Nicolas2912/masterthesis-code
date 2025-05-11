@@ -1,0 +1,235 @@
+{
+  "document": "Masterliner_MaxiFlex_HD_BasicFlex_HD_BAL_0510_EN",
+  "evaluator_type": "kg_enhanced",
+  "total_questions": 50,
+  "answerable_questions": 44,
+  "unanswerable_questions": 6,
+  "safety_critical_questions": 14,
+  "categories": {
+    "TECHNICAL": 13,
+    "SAFETY": 11,
+    "MULTI_CHAPTER": 8,
+    "VISUAL": 7,
+    "UNANSWERABLE": 6,
+    "NUMERICAL": 5
+  },
+  "execution_time": 3910.006859779358,
+  "metrics": {
+    "alpha_similarity": {
+      "mean": 0.8826281794092872,
+      "median": 0.8968823254108429,
+      "min": 0.7116855382919312,
+      "max": 0.9658035039901733,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9244644939899445,
+        "NUMERICAL": 0.893160605430603,
+        "SAFETY": 0.8436166427352212,
+        "TECHNICAL": 0.8591299928151644,
+        "VISUAL": 0.9322354197502136
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q002",
+          "score": 0.9611623287200928,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9612), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q043",
+          "score": 0.9579843878746033,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9580), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q029",
+          "score": 0.7991020679473877,
+          "reasoning": "The prediction and reference have good semantic similarity (0.7991), sharing significant meaning."
+        }
+      ]
+    },
+    "question_answer_relevance": {
+      "mean": 0.8960444251384605,
+      "median": 1.0,
+      "min": 0.0,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.876221678187404,
+        "NUMERICAL": 0.8614285714285714,
+        "SAFETY": 0.7942929292929293,
+        "TECHNICAL": 0.9670627847098435,
+        "VISUAL": 0.9714285714285714
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q023",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Great job!"
+        },
+        {
+          "question_id": "Q026",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and doesn't contain any irrelevant information! Great job!"
+        },
+        {
+          "question_id": "Q036",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and addresses all aspects of the input without any irrelevant information. Great job!"
+        }
+      ]
+    },
+    "hallucination": {
+      "mean": 0.22077922077922077,
+      "median": 0.07142857142857142,
+      "min": 0.0,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.125,
+        "NUMERICAL": 0.6285714285714286,
+        "SAFETY": 0.1948051948051948,
+        "TECHNICAL": 0.10989010989010987,
+        "VISUAL": 0.2857142857142857
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q036",
+          "score": 0.14285714285714285,
+          "reasoning": "The score is 0.14 because the actual output aligns well with the provided context, with only a minor omission regarding twisting the connection sleeve clockwise, which isn't a direct contradiction."
+        },
+        {
+          "question_id": "Q006",
+          "score": 0.42857142857142855,
+          "reasoning": "The score is 0.43 because while some parts of the output align with the context regarding disassembly and safety procedures, other parts contradict the context by describing disassembly when the context discusses connection, troubleshooting, and maintenance."
+        },
+        {
+          "question_id": "Q034",
+          "score": 0.2857142857142857,
+          "reasoning": "The score is 0.29 because while the actual output aligns with the context on several key aspects like suspension, bending angle, wire feed distance, and maintenance intervals, it omits specific details about wire ends, passage size, and the MasterLiner's individual segments, leading to some information lacking."
+        }
+      ]
+    },
+    "faithfulness": {
+      "mean": 0.9883152865889439,
+      "median": 1.0,
+      "min": 0.8571428571428571,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9515855255145537,
+        "NUMERICAL": 1.0,
+        "SAFETY": 1.0,
+        "TECHNICAL": 0.9966555183946488,
+        "VISUAL": 0.988095238095238
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q010",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q042",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the output is perfectly faithful to the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q033",
+          "score": 0.9166666666666666,
+          "reasoning": "The score is 0.92 because the actual output contradicts the retrieval context by implying the MasterLiner requires maintenance, when the context states it doesn't under normal conditions."
+        }
+      ]
+    },
+    "multimodal_answer_relevancy": {
+      "mean": 0.9761904761904762,
+      "median": 1.0,
+      "min": 0.0,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 1.0,
+        "NUMERICAL": 1.0,
+        "SAFETY": 0.9,
+        "TECHNICAL": 1.0,
+        "VISUAL": 1.0
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q008",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no irrelevant statements in the response, directly addressing the question about personal protective equipment (PPE) for technicians using the MasterLiner system."
+        },
+        {
+          "question_id": "Q037",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no irrelevant statements in the output, demonstrating a perfect alignment with the input."
+        },
+        {
+          "question_id": "Q021",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response was completely relevant and directly addressed the method for attaching a wire guide and the advantages of using an internal wire guide for feeding wire. There were no irrelevant statements present, indicating a perfect alignment with the input."
+        }
+      ]
+    },
+    "multimodal_faithfulness": {
+      "mean": 0.8912566405738674,
+      "median": 0.9282051282051282,
+      "min": 0.6,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.8729831676260248,
+        "NUMERICAL": 0.8014285714285714,
+        "SAFETY": 0.978974358974359,
+        "TECHNICAL": 0.886539252602601,
+        "VISUAL": 0.8571428571428571
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q026",
+          "score": 0.8181818181818182,
+          "reasoning": "The score is 0.82 because the actual output incorrectly includes the suitability of MasterLiner Basic Flex/HD versions for standard applications, which is not specified in the retrieval context, and it also fails to clarify the need for suspension and mounting for 'wire feeders and wire drums', despite discussing mounts and strain relief devices."
+        },
+        {
+          "question_id": "Q003",
+          "score": 0.9444444444444444,
+          "reasoning": "The score is 0.94 because the actual output incorrectly limits the MasterLiner's wire feed distance to 25 meters, despite the retrieval context indicating that distances over 25 meters require an additional drive, suggesting the capability to exceed that length."
+        },
+        {
+          "question_id": "Q020",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions present, indicating full alignment between the actual output and the retrieval context. Great job on maintaining consistency!"
+        }
+      ]
+    }
+  },
+  "metrics_enabled": [
+    "alpha_similarity",
+    "question_answer_relevance",
+    "hallucination",
+    "faithfulness",
+    "multimodal_answer_relevancy",
+    "multimodal_faithfulness"
+  ],
+  "kg_metrics": {
+    "config": {
+      "kg_file_path": "knowledge_graphs/Masterliner_MaxiFlex_HD_BasicFlex_HD_BAL_0510_EN_kg.txt",
+      "image_descriptions_path": "image_descriptions/Masterliner_MaxiFlex_HD_BasicFlex_HD_BAL_0510_EN_image_description.pkl",
+      "llm_model_name": "unsloth/phi-4"
+    },
+    "extract_entities_time": {
+      "mean": 0.00010318105871027166,
+      "median": 9.799003601074219e-05,
+      "min": 5.412101745605469e-05,
+      "max": 0.00020432472229003906
+    },
+    "relevant_kg_nodes_time": {
+      "mean": 0.00012115456841208719,
+      "median": 0.00012552738189697266,
+      "min": 4.696846008300781e-05,
+      "max": 0.000194549560546875
+    },
+    "format_kg_time": {
+      "mean": 0.0004315755584023216,
+      "median": 0.00041985511779785156,
+      "min": 0.0002307891845703125,
+      "max": 0.0008168220520019531
+    }
+  }
+}

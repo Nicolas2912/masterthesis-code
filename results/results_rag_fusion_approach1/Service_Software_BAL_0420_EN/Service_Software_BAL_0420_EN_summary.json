@@ -1,0 +1,228 @@
+{
+  "document": "Service_Software_BAL_0420_EN",
+  "evaluator_type": "fusion",
+  "total_questions": 50,
+  "answerable_questions": 44,
+  "unanswerable_questions": 6,
+  "safety_critical_questions": 11,
+  "categories": {
+    "TECHNICAL": 14,
+    "SAFETY": 11,
+    "VISUAL": 7,
+    "MULTI_CHAPTER": 7,
+    "UNANSWERABLE": 6,
+    "NUMERICAL": 5
+  },
+  "execution_time": 4566.724061965942,
+  "metrics": {
+    "alpha_similarity": {
+      "mean": 0.8074142160740766,
+      "median": 0.8449665307998657,
+      "min": 0.504697322845459,
+      "max": 0.9543129205703735,
+      "by_category": {
+        "MULTI_CHAPTER": 0.6986405253410339,
+        "NUMERICAL": 0.8946226835250854,
+        "SAFETY": 0.8395435268228705,
+        "TECHNICAL": 0.7875418322426933,
+        "VISUAL": 0.8431519951139178
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q013",
+          "score": 0.8632802963256836,
+          "reasoning": "The prediction and reference have very high semantic similarity (0.8633), capturing most of the same information."
+        },
+        {
+          "question_id": "Q037",
+          "score": 0.5962356925010681,
+          "reasoning": "The prediction and reference have moderate semantic similarity (0.5962), with some shared concepts."
+        },
+        {
+          "question_id": "Q018",
+          "score": 0.8037373423576355,
+          "reasoning": "The prediction and reference have very high semantic similarity (0.8037), capturing most of the same information."
+        }
+      ]
+    },
+    "question_answer_relevance": {
+      "mean": 0.9281410675871982,
+      "median": 1.0,
+      "min": 0.475,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9218808800115791,
+        "NUMERICAL": 0.8612878349720455,
+        "SAFETY": 0.9443675889328063,
+        "TECHNICAL": 0.9299472760241618,
+        "VISUAL": 0.953042328042328
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q024",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and addresses all aspects of the input prompt."
+        },
+        {
+          "question_id": "Q012",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and addresses the safety considerations for high motor currents during MFS system configuration and testing, with no irrelevant information present. Great job!"
+        },
+        {
+          "question_id": "Q020",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and doesn't contain any irrelevant information! Great job!"
+        }
+      ]
+    },
+    "hallucination": {
+      "mean": 0.3555555555555555,
+      "median": 0.3,
+      "min": 0.0,
+      "max": 0.9,
+      "by_category": {
+        "MULTI_CHAPTER": 0.19999999999999998,
+        "NUMERICAL": 0.36,
+        "SAFETY": 0.5454545454545454,
+        "TECHNICAL": 0.3174603174603175,
+        "VISUAL": 0.2857142857142857
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q006",
+          "score": 0.1,
+          "reasoning": "The score is 0.10 because the actual output has a high degree of factual alignment with the context, with only one minor contradiction related to the specific eBOX settings not being discussed in the output."
+        },
+        {
+          "question_id": "Q034",
+          "score": 0.0,
+          "reasoning": "The hallucination score is 0.00 because the actual output aligns with the provided context and there are no contradictions."
+        },
+        {
+          "question_id": "Q024",
+          "score": 0.1,
+          "reasoning": "The score is 0.10 because the actual output largely aligns with the provided contexts regarding Ethernet IP address configuration for MFS-V2 and MFS-V3 systems, but there's a minor contradiction as the output focuses on configuration while the context also mentions displaying system information."
+        }
+      ]
+    },
+    "faithfulness": {
+      "mean": 0.9951985370950889,
+      "median": 1.0,
+      "min": 0.9090909090909091,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9950738916256158,
+        "NUMERICAL": 1.0,
+        "SAFETY": 1.0,
+        "TECHNICAL": 0.9887445887445887,
+        "VISUAL": 1.0
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q019",
+          "score": 0.9090909090909091,
+          "reasoning": "The score is 0.91 because the actual output incorrectly states that the USB/RS Converter method requires an Ethernet patch cable, which is not mentioned in the retrieval context. The retrieval context only mentions a USB/RS converter and a USB cable."
+        },
+        {
+          "question_id": "Q005",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q022",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Great job!"
+        }
+      ]
+    },
+    "multimodal_answer_relevancy": {
+      "mean": 0.975378787878788,
+      "median": 1.0,
+      "min": 0.5,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 1.0,
+        "NUMERICAL": 0.9833333333333332,
+        "SAFETY": 1.0,
+        "TECHNICAL": 0.9285714285714286,
+        "VISUAL": 1.0
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q021",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the output directly addressed the request for reinstalling the USB driver for the eBOX V2 without any irrelevant statements. The completeness and relevance of the information provided ensured that the score remained at the highest level."
+        },
+        {
+          "question_id": "Q031",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the output provided a clear and relevant response to the question, with no irrelevant statements distracting from the requested information."
+        },
+        {
+          "question_id": "Q005",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the output fully addressed the input question without any irrelevant statements. All aspects of log file storage, management, and disk usage prevention were effectively covered."
+        }
+      ]
+    },
+    "multimodal_faithfulness": {
+      "mean": 0.8962126643214808,
+      "median": 0.9258241758241759,
+      "min": 0.5454545454545454,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.8716416728634774,
+        "NUMERICAL": 0.8800000000000001,
+        "SAFETY": 0.9301587301587301,
+        "TECHNICAL": 0.8807953950811094,
+        "VISUAL": 0.9098548510313217
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q006",
+          "score": 0.8235294117647058,
+          "reasoning": "The score is 0.82 because the actual output suggests that diagnosis mode is only accessible when the system is idle, while the retrieval context indicates that access to this mode depends on active processes. Additionally, the output lacks clarity on the specific timeout period, which is generically referenced in the context."
+        },
+        {
+          "question_id": "Q038",
+          "score": 0.8421052631578947,
+          "reasoning": "The score is 0.84 because there are contradictions regarding the limitations of user level 1 mode, specifically that it prohibits modifications to configurations which misaligns with claims about configuring monitoring settings. Additionally, the context clarifies that only pre-configured setup files can be loaded at this level, contradicting the allowance for level 2 users to create configurations, and further emphasizes that users are not required to ensure setup files for visualization in this mode."
+        },
+        {
+          "question_id": "Q025",
+          "score": 0.7777777777777778,
+          "reasoning": "The score is 0.78 because the actual output inaccurately asserts that functional checks verify component operation, deviating from the context that focuses on testing drives in nonconforming situations. Additionally, it mistakenly identifies the connection method as WLAN, conflicting with the specified IP address in the context that does not clarify the connection type."
+        }
+      ]
+    }
+  },
+  "metrics_enabled": [
+    "alpha_similarity",
+    "question_answer_relevance",
+    "hallucination",
+    "faithfulness",
+    "multimodal_answer_relevancy",
+    "multimodal_faithfulness"
+  ],
+  "fusion_metrics": {
+    "config": {
+      "num_generated_queries": 5,
+      "rrf_k": 60.0
+    },
+    "generate_queries_time": {
+      "mean": 3.1224717172709378,
+      "median": 3.0542112588882446,
+      "min": 2.3523943424224854,
+      "max": 4.245168209075928
+    },
+    "fusion_time": {
+      "mean": 5.878101695667613e-05,
+      "median": 5.7578086853027344e-05,
+      "min": 4.9591064453125e-05,
+      "max": 7.939338684082031e-05
+    }
+  }
+}

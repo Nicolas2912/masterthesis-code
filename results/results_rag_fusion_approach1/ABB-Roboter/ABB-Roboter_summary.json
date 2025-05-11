@@ -1,0 +1,221 @@
+{
+  "document": "ABB-Roboter",
+  "evaluator_type": "fusion",
+  "total_questions": 50,
+  "answerable_questions": 45,
+  "unanswerable_questions": 5,
+  "safety_critical_questions": 6,
+  "categories": {
+    "TECHNICAL": 26,
+    "MULTI_CHAPTER": 8,
+    "NUMERICAL": 6,
+    "SAFETY": 5,
+    "UNANSWERABLE": 5
+  },
+  "execution_time": 3553.918732881546,
+  "metrics": {
+    "alpha_similarity": {
+      "mean": 0.8596897588835822,
+      "median": 0.8630768060684204,
+      "min": 0.5519567728042603,
+      "max": 0.9657854437828064,
+      "by_category": {
+        "MULTI_CHAPTER": 0.8543571531772614,
+        "NUMERICAL": 0.8332973519961039,
+        "SAFETY": 0.8241119503974914,
+        "TECHNICAL": 0.8742630023222703
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q016",
+          "score": 0.8090541362762451,
+          "reasoning": "The prediction and reference have very high semantic similarity (0.8091), capturing most of the same information."
+        },
+        {
+          "question_id": "Q032",
+          "score": 0.9657098054885864,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9657), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q031",
+          "score": 0.8529160022735596,
+          "reasoning": "The prediction and reference have very high semantic similarity (0.8529), capturing most of the same information."
+        }
+      ]
+    },
+    "question_answer_relevance": {
+      "mean": 0.9174825462267567,
+      "median": 1.0,
+      "min": 0.0,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.970188075230092,
+        "NUMERICAL": 0.8866421568627452,
+        "SAFETY": 0.7375,
+        "TECHNICAL": 0.9429945014302633
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q004",
+          "score": 0.9629629629629629,
+          "reasoning": "The score is 0.96 because a statement about opening the add signal window is present, which is not directly related to the implications of swapping plus and minus signs."
+        },
+        {
+          "question_id": "Q034",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and addresses all aspects of the prompt without introducing any extraneous information. Great job!"
+        },
+        {
+          "question_id": "Q003",
+          "score": 0.6875,
+          "reasoning": "The score is 0.69 because the response includes irrelevant information about robots and conveyors instead of focusing solely on the CNC mill jogging procedure, but it likely contains some relevant information to achieve this score."
+        }
+      ]
+    },
+    "hallucination": {
+      "mean": 0.45370370370370366,
+      "median": 0.4,
+      "min": 0.0,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.08750000000000001,
+        "NUMERICAL": 0.7111111111111111,
+        "SAFETY": 0.64,
+        "TECHNICAL": 0.47115384615384615
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q008",
+          "score": 0.1,
+          "reasoning": "The score is 0.10 because there are several factual alignments between the actual output and the context, with only one minor contradiction regarding the specificity of the context compared to the output."
+        },
+        {
+          "question_id": "Q030",
+          "score": 0.0,
+          "reasoning": "The score is 0.00 because the actual output is fully aligned with the provided context, with no contradictions detected."
+        },
+        {
+          "question_id": "Q010",
+          "score": 0.4,
+          "reasoning": "The score is 0.40 because while there are several factual alignments regarding move instructions, there are also contradictions where the output focuses on move instructions while the context discusses object placement, coordinate systems, overall programming workflow, and robot placement. This suggests some misalignment between the output and the specific details in the context."
+        }
+      ]
+    },
+    "faithfulness": {
+      "mean": 0.9933163154800582,
+      "median": 1.0,
+      "min": 0.9259259259259259,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9844924812030076,
+        "NUMERICAL": 1.0,
+        "SAFETY": 1.0,
+        "TECHNICAL": 0.9932036287299445
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q032",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q001",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q004",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context! Great job!"
+        }
+      ]
+    },
+    "multimodal_answer_relevancy": {
+      "mean": 0.9166666666666666,
+      "median": 1.0,
+      "min": 0.0,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 1.0,
+        "NUMERICAL": 0.8888888888888888,
+        "SAFETY": 0.6666666666666666,
+        "TECHNICAL": 0.95
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q022",
+          "score": NaN,
+          "reasoning": "The score is 1.00 because there were no irrelevant statements in the output, indicating that all provided information was highly relevant to the input question about repositioning a robot and its implications."
+        },
+        {
+          "question_id": "Q021",
+          "score": NaN,
+          "reasoning": "The score is 1.00 because there were no irrelevant statements in the output, indicating that all provided information was highly relevant to the input question about repositioning a robot and its implications."
+        },
+        {
+          "question_id": "Q016",
+          "score": NaN,
+          "reasoning": "The score is 1.00 because there are no irrelevant statements in the output, ensuring a direct and relevant response to the input question."
+        }
+      ]
+    },
+    "multimodal_faithfulness": {
+      "mean": 0.8892577470581534,
+      "median": 0.9333333333333333,
+      "min": 0.631578947368421,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.8482142857142857,
+        "NUMERICAL": 0.8088383838383839,
+        "SAFETY": 0.9666666666666667,
+        "TECHNICAL": 0.9079287372843874
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q035",
+          "score": 0.8571428571428571,
+          "reasoning": "The score is 0.86 because the actual output contradicts the retrieval context by creating a system with external axes, which only supports specified tracks of types RTT and IRBTx003, while excluding IRBTx004 which is not mentioned but implied to be unsupported."
+        },
+        {
+          "question_id": "Q038",
+          "score": NaN,
+          "reasoning": "The score is 0.86 because the actual output contradicts the retrieval context by creating a system with external axes, which only supports specified tracks of types RTT and IRBTx003, while excluding IRBTx004 which is not mentioned but implied to be unsupported."
+        },
+        {
+          "question_id": "Q032",
+          "score": NaN,
+          "reasoning": "The score is 0.85 because the actual output fails to acknowledge the absence of an 'Open Containing Folder' option for embedded files, which cannot simply be dismissed as unavailable. Additionally, it inaccurately generalizes that embedded files always appear in the Pack and Go file, while the retrieval context specifies they are part of the station file. Finally, the layout details about the Document Manager window are misrepresented, as the retrieval context provides limited information about its structure."
+        }
+      ]
+    }
+  },
+  "metrics_enabled": [
+    "alpha_similarity",
+    "question_answer_relevance",
+    "hallucination",
+    "faithfulness",
+    "multimodal_answer_relevancy",
+    "multimodal_faithfulness"
+  ],
+  "fusion_metrics": {
+    "config": {
+      "num_generated_queries": 5,
+      "rrf_k": 60.0
+    },
+    "generate_queries_time": {
+      "mean": 3.23685851626926,
+      "median": 3.0951931476593018,
+      "min": 2.212644577026367,
+      "max": 6.321034908294678
+    },
+    "fusion_time": {
+      "mean": 6.174511379665798e-05,
+      "median": 6.031990051269531e-05,
+      "min": 4.9591064453125e-05,
+      "max": 9.012222290039062e-05
+    }
+  }
+}

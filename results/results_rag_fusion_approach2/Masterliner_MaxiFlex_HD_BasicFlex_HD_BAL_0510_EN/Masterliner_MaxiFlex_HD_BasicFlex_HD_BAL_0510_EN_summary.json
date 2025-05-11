@@ -1,0 +1,167 @@
+{
+  "document": "Masterliner_MaxiFlex_HD_BasicFlex_HD_BAL_0510_EN",
+  "evaluator_type": "fusion",
+  "llm_model": "unsloth/Qwen2.5-VL-32B-Instruct-unsloth-bnb-4bit",
+  "total_questions": 50,
+  "answerable_questions": 44,
+  "unanswerable_questions": 6,
+  "safety_critical_questions": 14,
+  "categories": {
+    "TECHNICAL": 13,
+    "SAFETY": 11,
+    "MULTI_CHAPTER": 8,
+    "VISUAL": 7,
+    "UNANSWERABLE": 6,
+    "NUMERICAL": 5
+  },
+  "execution_time": 5209.814845323563,
+  "metrics": {
+    "alpha_similarity": {
+      "mean": 0.9602396935224533,
+      "median": 0.9655368328094482,
+      "min": 0.9027302861213684,
+      "max": 0.9854827523231506,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9681814834475517,
+        "NUMERICAL": 0.9566758275032043,
+        "SAFETY": 0.9576945304870605,
+        "TECHNICAL": 0.9501957801672128,
+        "VISUAL": 0.9763615046228681
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q009",
+          "score": 0.960469663143158,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9605), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q016",
+          "score": 0.9296503067016602,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9297), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q007",
+          "score": 0.9738950729370117,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9739), indicating nearly identical meaning."
+        }
+      ]
+    },
+    "question_answer_relevance": {
+      "mean": 0.9450205224258112,
+      "median": 1.0,
+      "min": 0.35,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.965374677002584,
+        "NUMERICAL": 0.7933333333333333,
+        "SAFETY": 0.9588229870487935,
+        "TECHNICAL": 0.9709202941761081,
+        "VISUAL": 0.9603174603174603
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q024",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and doesn't contain any irrelevant information! Great job!"
+        },
+        {
+          "question_id": "Q010",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and doesn't contain any irrelevant information. Great job!"
+        },
+        {
+          "question_id": "Q013",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and doesn't contain any irrelevant information! Great job!"
+        }
+      ]
+    },
+    "hallucination": {
+      "mean": 0.19188311688311688,
+      "median": 0.1,
+      "min": 0.0,
+      "max": 0.8888888888888888,
+      "by_category": {
+        "MULTI_CHAPTER": 0.057291666666666664,
+        "NUMERICAL": 0.45,
+        "SAFETY": 0.32499999999999996,
+        "TECHNICAL": 0.0879120879120879,
+        "VISUAL": 0.14523809523809522
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q028",
+          "score": 0.2,
+          "reasoning": "The score is 0.20 because while there are several factual alignments between the actual output and the context regarding MasterLiner maintenance, wire feed, and bending radii, there are also contradictions. Specifically, the output focuses on troubleshooting steps, which are not directly addressed in the context, which primarily discusses maintenance intervals, installation, and general regulations."
+        },
+        {
+          "question_id": "Q037",
+          "score": 0.125,
+          "reasoning": "The score is 0.12 because while the actual output largely aligns with the provided context, there is a contradiction regarding the omission of specific application types (A and B) and their characteristics, as described in the context."
+        },
+        {
+          "question_id": "Q038",
+          "score": 0.2222222222222222,
+          "reasoning": "The score is 0.22 because while there are several factual alignments regarding handling, bending radii, and wire feed, there are also contradictions related to the output not directly addressing the setup of individual components and product descriptions as detailed in the context."
+        }
+      ]
+    },
+    "faithfulness": {
+      "mean": 0.9910332314744079,
+      "median": 1.0,
+      "min": 0.8333333333333334,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9851190476190477,
+        "NUMERICAL": 1.0,
+        "SAFETY": 0.9946524064171123,
+        "TECHNICAL": 0.9961538461538461,
+        "VISUAL": 0.9761904761904763
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q026",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the output is perfectly faithful to the retrieval context! Keep up the great work!"
+        },
+        {
+          "question_id": "Q033",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q015",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context. Great job!"
+        }
+      ]
+    }
+  },
+  "metrics_enabled": [
+    "alpha_similarity",
+    "question_answer_relevance",
+    "hallucination",
+    "faithfulness"
+  ],
+  "fusion_metrics": {
+    "config": {
+      "num_generated_queries": 3,
+      "rrf_k": 60.0
+    },
+    "generate_queries_time": {
+      "mean": 6.601550010117617,
+      "median": 6.436506390571594,
+      "min": 3.9707024097442627,
+      "max": 10.109440088272095
+    },
+    "fusion_time": {
+      "mean": 4.5201995156028055e-05,
+      "median": 4.0531158447265625e-05,
+      "min": 3.337860107421875e-05,
+      "max": 0.00012493133544921875
+    }
+  }
+}

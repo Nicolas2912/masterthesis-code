@@ -1,0 +1,228 @@
+{
+  "document": "Manual_DiodeLaser_LDF5000-40_VGP_LLKB_50091005",
+  "evaluator_type": "fusion",
+  "total_questions": 50,
+  "answerable_questions": 44,
+  "unanswerable_questions": 6,
+  "safety_critical_questions": 15,
+  "categories": {
+    "TECHNICAL": 13,
+    "SAFETY": 11,
+    "MULTI_CHAPTER": 8,
+    "VISUAL": 7,
+    "UNANSWERABLE": 6,
+    "NUMERICAL": 5
+  },
+  "execution_time": 5070.131826877594,
+  "metrics": {
+    "alpha_similarity": {
+      "mean": 0.8804128684780814,
+      "median": 0.8907269537448883,
+      "min": 0.7558553814888,
+      "max": 0.9532730579376221,
+      "by_category": {
+        "MULTI_CHAPTER": 0.8897838369011879,
+        "NUMERICAL": 0.8635711908340454,
+        "SAFETY": 0.8660700754685835,
+        "TECHNICAL": 0.8872019602702215,
+        "VISUAL": 0.8916633214269366
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q038",
+          "score": 0.9029841423034668,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9030), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q001",
+          "score": 0.8918837308883667,
+          "reasoning": "The prediction and reference have very high semantic similarity (0.8919), capturing most of the same information."
+        },
+        {
+          "question_id": "Q007",
+          "score": 0.8600735664367676,
+          "reasoning": "The prediction and reference have very high semantic similarity (0.8601), capturing most of the same information."
+        }
+      ]
+    },
+    "question_answer_relevance": {
+      "mean": 0.9545794285357936,
+      "median": 1.0,
+      "min": 0.7,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9265656156430602,
+        "NUMERICAL": 0.990909090909091,
+        "SAFETY": 0.9823014195107219,
+        "TECHNICAL": 0.9321385941644562,
+        "VISUAL": 0.9587581624470156
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q040",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and doesn't contain any irrelevant information! Great job!"
+        },
+        {
+          "question_id": "Q015",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and addresses all aspects of the prompt without any irrelevant information. Great job!"
+        },
+        {
+          "question_id": "Q008",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no irrelevant statements, indicating the response is perfectly aligned with the input question."
+        }
+      ]
+    },
+    "hallucination": {
+      "mean": 0.253409090909091,
+      "median": 0.2,
+      "min": 0.0,
+      "max": 0.9,
+      "by_category": {
+        "MULTI_CHAPTER": 0.16875,
+        "NUMERICAL": 0.6799999999999999,
+        "SAFETY": 0.24545454545454548,
+        "TECHNICAL": 0.18461538461538465,
+        "VISUAL": 0.18571428571428572
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q004",
+          "score": 0.1,
+          "reasoning": "The score is 0.10 because the actual output largely aligns with the provided context, with only a minor omission regarding laser optic maintenance, which the context mentions but the output doesn't elaborate on."
+        },
+        {
+          "question_id": "Q024",
+          "score": 0.4,
+          "reasoning": "The score is 0.40 because while the actual output aligns with several aspects of the context regarding system operation and safety features, it also misses key details and specific instructions mentioned in the context, such as safety processes without a shutter system, page number references, and the mode selector PLC."
+        },
+        {
+          "question_id": "Q033",
+          "score": 0.0,
+          "reasoning": "The score is 0.00 because the actual output is fully aligned with the provided contexts, with no contradictions identified."
+        }
+      ]
+    },
+    "faithfulness": {
+      "mean": 0.9928500613179206,
+      "median": 1.0,
+      "min": 0.9230769230769231,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9888833992094862,
+        "NUMERICAL": 1.0,
+        "SAFETY": 1.0,
+        "TECHNICAL": 0.9826411926394324,
+        "VISUAL": 1.0
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q002",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the output is perfectly faithful to the retrieval context! Keep up the great work!"
+        },
+        {
+          "question_id": "Q043",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the output is perfectly faithful to the retrieval context! Keep up the great work!"
+        },
+        {
+          "question_id": "Q040",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Great job!"
+        }
+      ]
+    },
+    "multimodal_answer_relevancy": {
+      "mean": 0.9806818181818183,
+      "median": 1.0,
+      "min": 0.6,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.95,
+        "NUMERICAL": 1.0,
+        "SAFETY": 0.9886363636363636,
+        "TECHNICAL": 0.9750000000000001,
+        "VISUAL": 1.0
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q013",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response addressed the question directly and thoroughly without any irrelevant statements. This indicates a high level of accuracy and relevance to the input provided."
+        },
+        {
+          "question_id": "Q019",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the output directly addresses the input's request without any irrelevant statements present, ensuring a fully relevant response."
+        },
+        {
+          "question_id": "Q029",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because all statements in the output are relevant and directly address the function of load contactors in the specified electrical contexts."
+        }
+      ]
+    },
+    "multimodal_faithfulness": {
+      "mean": 0.8748608559164138,
+      "median": 0.9,
+      "min": 0.5333333333333333,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.7600468975468975,
+        "NUMERICAL": 0.8868686868686868,
+        "SAFETY": 0.9250957375957376,
+        "TECHNICAL": 0.8904761904761904,
+        "VISUAL": 0.8731573567843559
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q038",
+          "score": 0.5416666666666666,
+          "reasoning": "The score is 0.54 because the actual output includes several references to the 'Dynamic PRG start' signal that are not supported by the retrieval context, which lacks explicit connections to this signal's functionality or timing in various scenarios such as starting the program, resetting signals, or system readiness."
+        },
+        {
+          "question_id": "Q005",
+          "score": 0.8571428571428571,
+          "reasoning": "The score is 0.86 because the actual output introduces functions and labels ('5' for reading programs and '8' for a checkbox) that are not found in the retrieval context, indicating some discrepancies in alignment."
+        },
+        {
+          "question_id": "Q027",
+          "score": 0.9285714285714286,
+          "reasoning": "The score is 0.93 because the actual output inaccurately suggests that the cooling circuit can simply operate under 'no more than 6 bar,' while it actually must be designed to handle dynamic pressures and adhere to specific limits."
+        }
+      ]
+    }
+  },
+  "metrics_enabled": [
+    "alpha_similarity",
+    "question_answer_relevance",
+    "hallucination",
+    "faithfulness",
+    "multimodal_answer_relevancy",
+    "multimodal_faithfulness"
+  ],
+  "fusion_metrics": {
+    "config": {
+      "num_generated_queries": 5,
+      "rrf_k": 60.0
+    },
+    "generate_queries_time": {
+      "mean": 3.3497583866119385,
+      "median": 3.23835027217865,
+      "min": 2.2934648990631104,
+      "max": 6.723223924636841
+    },
+    "fusion_time": {
+      "mean": 6.356564435091886e-05,
+      "median": 6.198883056640625e-05,
+      "min": 5.245208740234375e-05,
+      "max": 9.274482727050781e-05
+    }
+  }
+}

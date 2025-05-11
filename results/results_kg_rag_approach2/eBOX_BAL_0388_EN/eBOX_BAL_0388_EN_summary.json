@@ -1,0 +1,174 @@
+{
+  "document": "eBOX_BAL_0388_EN",
+  "evaluator_type": "kg_enhanced",
+  "llm_model": "microsoft/Phi-3-mini-4k-instruct",
+  "total_questions": 50,
+  "answerable_questions": 44,
+  "unanswerable_questions": 6,
+  "safety_critical_questions": 12,
+  "categories": {
+    "TECHNICAL": 13,
+    "VISUAL": 9,
+    "SAFETY": 9,
+    "MULTI_CHAPTER": 8,
+    "UNANSWERABLE": 6,
+    "NUMERICAL": 5
+  },
+  "execution_time": 4504.565791845322,
+  "metrics": {
+    "alpha_similarity": {
+      "mean": 0.9420382610776208,
+      "median": 0.9447953104972839,
+      "min": 0.8348584771156311,
+      "max": 0.9801135063171387,
+      "by_category": {
+        "MULTI_CHAPTER": 0.953262023627758,
+        "NUMERICAL": 0.9358399271965027,
+        "SAFETY": 0.9401918583446078,
+        "TECHNICAL": 0.932898746087001,
+        "VISUAL": 0.9505530264642503
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q030",
+          "score": 0.9354194402694702,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9354), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q006",
+          "score": 0.9798554182052612,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9799), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q038",
+          "score": 0.9394973516464233,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9395), indicating nearly identical meaning."
+        }
+      ]
+    },
+    "question_answer_relevance": {
+      "mean": 0.9625826672329167,
+      "median": 1.0,
+      "min": 0.65,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9728617051491424,
+        "NUMERICAL": 0.93,
+        "SAFETY": 0.9646261646261647,
+        "TECHNICAL": 0.9563050290982195,
+        "VISUAL": 0.9785714285714285
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q037",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no irrelevant statements, indicating a perfectly relevant and complete response!"
+        },
+        {
+          "question_id": "Q024",
+          "score": 0.95,
+          "reasoning": "The score is 0.95 because while the response likely addresses the LED issue, it also contains irrelevant information about gas flow, the switch, and the motor, slightly detracting from its overall focus."
+        },
+        {
+          "question_id": "Q040",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information."
+        }
+      ]
+    },
+    "hallucination": {
+      "mean": 0.32575757575757575,
+      "median": 0.3333333333333333,
+      "min": 0.0,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.1875,
+        "NUMERICAL": 0.6333333333333333,
+        "SAFETY": 0.2962962962962963,
+        "TECHNICAL": 0.32051282051282054,
+        "VISUAL": 0.31481481481481477
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q035",
+          "score": 0.3333333333333333,
+          "reasoning": "The score is 0.33 because while there are factual alignments regarding pin assignments and power supply details, there are also contradictions where the output provides more detail than the context diagrams, leading to a moderate level of hallucination."
+        },
+        {
+          "question_id": "Q014",
+          "score": 0.16666666666666666,
+          "reasoning": "The score is 0.17 because the actual output aligns with the context on multiple safety and operational aspects of the eBOX, with no direct contradictions identified, suggesting a high degree of factual consistency."
+        },
+        {
+          "question_id": "Q044",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the actual output discusses voltage drop and troubleshooting steps not found in the provided contexts, indicating a complete disconnect and hallucination."
+        }
+      ]
+    },
+    "faithfulness": {
+      "mean": 0.9917304917304918,
+      "median": 1.0,
+      "min": 0.8571428571428571,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9861111111111112,
+        "NUMERICAL": 0.9780219780219781,
+        "SAFETY": 1.0,
+        "TECHNICAL": 0.989010989010989,
+        "VISUAL": 1.0
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q022",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the output and the retrieval context! Keep up the great work!"
+        },
+        {
+          "question_id": "Q021",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the output is perfectly faithful to the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q008",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the output is perfectly faithful to the retrieval context! Keep up the great work!"
+        }
+      ]
+    }
+  },
+  "metrics_enabled": [
+    "alpha_similarity",
+    "question_answer_relevance",
+    "hallucination",
+    "faithfulness"
+  ],
+  "kg_metrics": {
+    "config": {
+      "kg_file_path": "knowledge_graphs/eBOX_BAL_0388_EN_kg.txt",
+      "image_descriptions_path": "image_descriptions/eBOX_BAL_0388_EN_image_description.pkl",
+      "llm_model_name": "microsoft/Phi-3-mini-4k-instruct"
+    },
+    "extract_entities_time": {
+      "mean": 0.00011132522062821822,
+      "median": 9.965896606445312e-05,
+      "min": 4.887580871582031e-05,
+      "max": 0.0002505779266357422
+    },
+    "relevant_kg_nodes_time": {
+      "mean": 0.00017005747014825994,
+      "median": 0.00018084049224853516,
+      "min": 5.435943603515625e-05,
+      "max": 0.00029015541076660156
+    },
+    "format_kg_time": {
+      "mean": 0.0,
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    }
+  }
+}

@@ -1,0 +1,265 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 750px;
+                 background-color: #222222;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+             #loadingBar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width: 100%;
+                 height: 750px;
+                 background-color:rgba(200,200,200,0.8);
+                 -webkit-transition: all 0.5s ease;
+                 -moz-transition: all 0.5s ease;
+                 -ms-transition: all 0.5s ease;
+                 -o-transition: all 0.5s ease;
+                 transition: all 0.5s ease;
+                 opacity:1;
+             }
+
+             #bar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width:20px;
+                 height:20px;
+                 margin:auto auto auto auto;
+                 border-radius:11px;
+                 border:2px solid rgba(30,30,30,0.05);
+                 background: rgb(0, 173, 246); /* Old browsers */
+                 box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+             }
+
+             #border {
+                 position:absolute;
+                 top:10px;
+                 left:10px;
+                 width:500px;
+                 height:23px;
+                 margin:auto auto auto auto;
+                 box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+                 border-radius:10px;
+             }
+
+             #text {
+                 position:absolute;
+                 top:8px;
+                 left:530px;
+                 width:30px;
+                 height:50px;
+                 margin:auto auto auto auto;
+                 font-size:22px;
+                 color: #000000;
+             }
+
+             div.outerBorder {
+                 position:relative;
+                 top:400px;
+                 width:600px;
+                 height:44px;
+                 margin:auto auto auto auto;
+                 border:8px solid rgba(0,0,0,0.1);
+                 background: rgb(252,252,252); /* Old browsers */
+                 background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+                 background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+                 background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+                 background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+                 background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+                 border-radius:72px;
+                 box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+             }
+             
+
+             
+             #config {
+                 float: left;
+                 width: 400px;
+                 height: 600px;
+             }
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+            <div id="loadingBar">
+              <div class="outerBorder">
+                <div id="text">0%</div>
+                <div id="border">
+                  <div id="bar"></div>
+                </div>
+              </div>
+            </div>
+        
+        
+            <div id="config"></div>
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "font": {"color": "white"}, "id": "FANUC", "label": "FANUC", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "collaborative robot", "label": "collaborative robot", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "FANUC COLLABORATIVE ROBOT SYSTEM", "label": "FANUC COLLABORATIVE ROBOT SYSTEM", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "FANUC Robot", "label": "FANUC Robot", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Robot controller", "label": "Robot controller", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Robot teach pendant", "label": "Robot teach pendant", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "EN ISO 10218", "label": "EN ISO 10218", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Annex I of Machinery Directive", "label": "Annex I of Machinery Directive", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Safety shoes", "label": "Safety shoes", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Helmet", "label": "Helmet", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Safety of the working person", "label": "Safety of the working person", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Safety of the operating area", "label": "Safety of the operating area", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "safety precautions", "label": "safety precautions", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "door switch", "label": "door switch", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "mat switch", "label": "mat switch", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "padlock", "label": "padlock", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "circuit breaker", "label": "circuit breaker", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "2(b) Connection diagram for the signal of the safety fence", "label": "2(b) Connection diagram for the signal of the safety fence", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "2(c) Footstep for maintenance", "label": "2(c) Footstep for maintenance", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "2.4 Safety of the Operator", "label": "2.4 Safety of the Operator", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "2.4(a) Connection diagram for external emergency stop button", "label": "2.4(a) Connection diagram for external emergency stop button", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "EMERGENCY STOP button", "label": "EMERGENCY STOP button", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "teach pendant", "label": "teach pendant", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Stop function", "label": "Stop function", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Stop type", "label": "Stop type", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "teach pendant enable/disable switch", "label": "teach pendant enable/disable switch", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Stop", "label": "Stop", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Stopwatch", "label": "Stopwatch", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "power-on", "label": "power-on", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "power-off", "label": "power-off", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Servo motor", "label": "Servo motor", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Gearbox", "label": "Gearbox", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Wrist unit", "label": "Wrist unit", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "T\u00c3\u0153V Rheinland", "label": "T\u00c3\u0153V Rheinland", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Japan", "label": "Japan", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "T\u00c3\u0153V S\u00c3\u0153D", "label": "T\u00c3\u0153V S\u00c3\u0153D", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "T\u00c3\u0153V Rheinland Japan", "label": "T\u00c3\u0153V Rheinland Japan", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "T\u00c3\u0153V S\u00c3\u0153D America", "label": "T\u00c3\u0153V S\u00c3\u0153D America", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "NFPA70", "label": "NFPA70", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "ISO10218-2", "label": "ISO10218-2", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "emergency exit", "label": "emergency exit", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "evacuation", "label": "evacuation", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "T2 mode", "label": "T2 mode", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "trapping and collision", "label": "trapping and collision", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "limit switches", "label": "limit switches", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "IEC/EN 60204-1", "label": "IEC/EN 60204-1", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "seat mountings", "label": "seat mountings", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "seat", "label": "seat", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Occupational Safety and Health Act", "label": "Occupational Safety and Health Act", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Occupational Safety and Health Protection Act 2005", "label": "Occupational Safety and Health Protection Act 2005", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "SYSRDY", "label": "SYSRDY", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "visual indicator", "label": "visual indicator", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "safety standard", "label": "safety standard", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "limit switch", "label": "limit switch", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "safety fence", "label": "safety fence", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "SAFETY PRECAUTIONS", "label": "SAFETY PRECAUTIONS", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "End Effector", "label": "End Effector", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "End effector", "label": "End effector", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "air valve", "label": "air valve", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "pneumatic device", "label": "pneumatic device", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "COLLABORATIVE ROBOT", "label": "COLLABORATIVE ROBOT", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Collaborative Robot Function", "label": "Collaborative Robot Function", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "SAFETY PRECAUTIONS WARNING", "label": "SAFETY PRECAUTIONS WARNING", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Collaborative Robot", "label": "Collaborative Robot", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "ACCEPTABLE MOTION SPEED FOR BODY REGIONS", "label": "ACCEPTABLE MOTION SPEED FOR BODY REGIONS", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "acceptable motion speed", "label": "acceptable motion speed", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "SAFETY PRECAUTIONS B-84194EN/01", "label": "SAFETY PRECAUTIONS B-84194EN/01", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "collaborative workspace", "label": "collaborative workspace", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "helmet", "label": "helmet", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "safety shoe", "label": "safety shoe", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Stop Category 0", "label": "Stop Category 0", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Stop Category 1", "label": "Stop Category 1", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Stop Category 2", "label": "Stop Category 2", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Stop Pattern", "label": "Stop Pattern", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "MODE SELECT SWITCH", "label": "MODE SELECT SWITCH", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "operating modes", "label": "operating modes", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "ENABLING DEVICE (DEADMAN SWITCH)", "label": "ENABLING DEVICE (DEADMAN SWITCH)", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Teach pendant", "label": "Teach pendant", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "IEC", "label": "IEC", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "EN ISO 13855", "label": "EN ISO 13855", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "EN ISO 14119", "label": "EN ISO 14119", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "EN ISO 13857", "label": "EN ISO 13857", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Other Protection Devices", "label": "Other Protection Devices", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "interlocking guard", "label": "interlocking guard", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "interlocking system", "label": "interlocking system", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "stop", "label": "stop", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "servo power", "label": "servo power", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Safety procedures of entering the safety fence", "label": "Safety procedures of entering the safety fence", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Stop the robot", "label": "Stop the robot", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "operating mode key switch", "label": "operating mode key switch", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Programming", "label": "Programming", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Installation", "label": "Installation", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "hardware", "label": "hardware", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "software", "label": "software", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Safety and Operational Verification", "label": "Safety and Operational Verification", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "commissioning and testing", "label": "commissioning and testing", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "programming", "label": "programming", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "programmed", "label": "programmed", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "sensor", "label": "sensor", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "robot", "label": "robot", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "robot operating space", "label": "robot operating space", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "MAINTENANCE", "label": "MAINTENANCE", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "repair", "label": "repair", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "robot system", "label": "robot system", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "robot arm", "label": "robot arm", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "mechanical unit", "label": "mechanical unit", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "controller", "label": "controller", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "A05B-1702-B201", "label": "A05B-1702-B201", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "A05B-1702-B202", "label": "A05B-1702-B202", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "MECHANICAL UNIT", "label": "MECHANICAL UNIT", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "SETTING", "label": "SETTING", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "CONNECTION WITH THE CONTROLLER", "label": "CONNECTION WITH THE CONTROLLER", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "TRANSPORTATION AND INSTALLATION", "label": "TRANSPORTATION AND INSTALLATION", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "EQUIPMENT INSTALLATION TO THE ROBOT", "label": "EQUIPMENT INSTALLATION TO THE ROBOT", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Transport kit", "label": "Transport kit", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "carrying support", "label": "carrying support", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "transport kit", "label": "transport kit", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Stop signal", "label": "Stop signal", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "floor mount", "label": "floor mount", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "mount", "label": "mount", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "2 CONNECTION WITH THE CONTROLLER", "label": "2 CONNECTION WITH THE CONTROLLER", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "2", "label": "2", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "J1-axis", "label": "J1-axis", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "J2-axis", "label": "J2-axis", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "J3-axis", "label": "J3-axis", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "ISO 11201", "label": "ISO 11201", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "IP", "label": "IP", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "chlorine", "label": "chlorine", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "solvent", "label": "solvent", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "gasoline", "label": "gasoline", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "detergent", "label": "detergent", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "rust", "label": "rust", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "ZERO POINT POSITION AND MOTION LIMIT", "label": "ZERO POINT POSITION AND MOTION LIMIT", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "operating space", "label": "operating space", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "3(c) J2-axis motion limit (CRX-10iA,CRX-10iA/L)", "label": "3(c) J2-axis motion limit (CRX-10iA,CRX-10iA/L)", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "3(d) J3-axis motion limit (CRX-10iA/L)", "label": "3(d) J3-axis motion limit (CRX-10iA/L)", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "CRX-10iA", "label": "CRX-10iA", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "4", "label": "4", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "0.00", "label": "0.00", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "0", "label": "0", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "2(a) Standard tool coordinate", "label": "2(a) Standard tool coordinate", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "standard tool coordinates", "label": "standard tool coordinates", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "connector", "label": "connector", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "connector jacket", "label": "connector jacket", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "PIPING AND WIRING TO THE END EFFECTOR", "label": "PIPING AND WIRING TO THE END EFFECTOR", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Interface", "label": "Interface", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "IEC61508", "label": "IEC61508", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "notified body", "label": "notified body", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Joint Position Check", "label": "Joint Position Check", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Stop Position Prediction", "label": "Stop Position Prediction", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "stop the robot", "label": "stop the robot", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "J5\u00e2\u20ac\u2018axis motion range", "label": "J5\u00e2\u20ac\u2018axis motion range", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "J5-AXIS MOTION RANGE", "label": "J5-AXIS MOTION RANGE", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "DUAL CHECK SAFETY FUNCTION OPERATOR\u00e2\u20ac\u2122S MANUAL", "label": "DUAL CHECK SAFETY FUNCTION OPERATOR\u00e2\u20ac\u2122S MANUAL", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "end effector", "label": "end effector", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "controller ventilation system", "label": "controller ventilation system", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "robot connection cable", "label": "robot connection cable", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "7.2(a) Connector Inspection points", "label": "7.2(a) Connector Inspection points", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "7.2", "label": "7.2", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "MASTERING", "label": "MASTERING", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "mastering", "label": "mastering", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Pulsecoder", "label": "Pulsecoder", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Zero\u00e2\u20ac\u2018position mastering", "label": "Zero\u00e2\u20ac\u2018position mastering", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Witness mark", "label": "Witness mark", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Witness Mark", "label": "Witness Mark", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "CALIBRATE Robot Calibrated!", "label": "CALIBRATE Robot Calibrated!", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Zero-position Mastering", "label": "Zero-position Mastering", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Quick mastering", "label": "Quick mastering", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "0.0000", "label": "0.0000", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Fixture position mastering", "label": "Fixture position mastering", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "calibration", "label": "calibration", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "MASTERING Procedure of Single axis mastering", "label": "MASTERING Procedure of Single axis mastering", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "single axis mastering", "label": "single axis mastering", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "$DMR_GRP", "label": "$DMR_GRP", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "system variable", "label": "system variable", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "CKAL", "label": "CKAL", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Alarm notification", "label": "Alarm notification", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "RCAL", "label": "RCAL", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "PHAL", "label": "PHAL", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "CSAL", "label": "CSAL", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "STBERR", "label": "STBERR", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "SPHAL", "label": "SPHAL", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "CRCERR", "label": "CRCERR", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "noise", "label": "noise", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "vibration", "label": "vibration", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Reducer", "label": "Reducer", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Arm", "label": "Arm", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Symptom", "label": "Symptom", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "BZAL", "label": "BZAL", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Symptom Displacement", "label": "Symptom Displacement", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Hexagon", "label": "Hexagon", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "socket head", "label": "socket head", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "button bolt", "label": "button bolt", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "flush bolt", "label": "flush bolt", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Shibokusa", "label": "Shibokusa", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Minamitsuru-gun", "label": "Minamitsuru-gun", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Yamanashi Prefecture", "label": "Yamanashi Prefecture", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Echternach", "label": "Echternach", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "B-84194EN/01 B - 8 4 1 9 4 E N / 0 1", "label": "B-84194EN/01 B - 8 4 1 9 4 E N / 0 1", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "June, 2020", "label": "June, 2020", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "E", "label": "E", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "N", "label": "N", "shape": "dot"}]);
+                  edges = new vis.DataSet([{"from": "FANUC", "label": "product or material produced", "to": "collaborative robot"}, {"from": "FANUC", "label": "country", "to": "Japan"}, {"from": "FANUC COLLABORATIVE ROBOT SYSTEM", "label": "instance of", "to": "collaborative robot"}, {"from": "FANUC Robot", "label": "has part", "to": "Robot controller"}, {"from": "FANUC Robot", "label": "has part", "to": "Robot teach pendant"}, {"from": "EN ISO 10218", "label": "part of", "to": "Annex I of Machinery Directive"}, {"from": "EN ISO 10218", "label": "instance of", "to": "safety standard"}, {"from": "EN ISO 10218", "label": "publisher", "to": "IEC"}, {"from": "Safety shoes", "label": "subclass of", "to": "Helmet"}, {"from": "Safety of the working person", "label": "has part", "to": "Safety of the operating area"}, {"from": "Safety of the working person", "label": "has part", "to": "safety precautions"}, {"from": "Safety of the operating area", "label": "part of", "to": "safety precautions"}, {"from": "safety precautions", "label": "part of", "to": "safety precautions"}, {"from": "door switch", "label": "subclass of", "to": "mat switch"}, {"from": "padlock", "label": "subclass of", "to": "circuit breaker"}, {"from": "2(b) Connection diagram for the signal of the safety fence", "label": "followed by", "to": "2(c) Footstep for maintenance"}, {"from": "2.4 Safety of the Operator", "label": "part of", "to": "2.4(a) Connection diagram for external emergency stop button"}, {"from": "EMERGENCY STOP button", "label": "part of", "to": "teach pendant"}, {"from": "teach pendant", "label": "has part", "to": "teach pendant enable/disable switch"}, {"from": "teach pendant", "label": "use", "to": "programmed"}, {"from": "Stop function", "label": "has part", "to": "Stop type"}, {"from": "Stop function", "label": "has part", "to": "Stop function"}, {"from": "Stop", "label": "part of", "to": "Stopwatch"}, {"from": "Stop", "label": "uses", "to": "Stop signal"}, {"from": "Stopwatch", "label": "has part", "to": "Stopwatch"}, {"from": "power-on", "label": "opposite of", "to": "power-off"}, {"from": "Servo motor", "label": "connects with", "to": "Gearbox"}, {"from": "Servo motor", "label": "connects with", "to": "Wrist unit"}, {"from": "Gearbox", "label": "connects with", "to": "Wrist unit"}, {"from": "T\u00c3\u0153V Rheinland", "label": "country", "to": "Japan"}, {"from": "Japan", "label": "contains administrative territorial entity", "to": "Yamanashi Prefecture"}, {"from": "T\u00c3\u0153V S\u00c3\u0153D", "label": "country", "to": "Japan"}, {"from": "T\u00c3\u0153V Rheinland Japan", "label": "product or material produced", "to": "collaborative robot"}, {"from": "T\u00c3\u0153V S\u00c3\u0153D America", "label": "product or material produced", "to": "collaborative robot"}, {"from": "NFPA70", "label": "part of", "to": "ISO10218-2"}, {"from": "emergency exit", "label": "subclass of", "to": "evacuation"}, {"from": "T2 mode", "label": "subclass of", "to": "trapping and collision"}, {"from": "limit switches", "label": "part of", "to": "IEC/EN 60204-1"}, {"from": "seat mountings", "label": "part of", "to": "seat"}, {"from": "Occupational Safety and Health Act", "label": "has part", "to": "Occupational Safety and Health Protection Act 2005"}, {"from": "SYSRDY", "label": "instance of", "to": "visual indicator"}, {"from": "limit switch", "label": "part of", "to": "safety fence"}, {"from": "limit switch", "label": "subclass of", "to": "sensor"}, {"from": "SAFETY PRECAUTIONS", "label": "has part", "to": "End Effector"}, {"from": "SAFETY PRECAUTIONS", "label": "has part", "to": "End effector"}, {"from": "End effector", "label": "connects with", "to": "Reducer"}, {"from": "End effector", "label": "connects with", "to": "Arm"}, {"from": "air valve", "label": "part of", "to": "pneumatic device"}, {"from": "COLLABORATIVE ROBOT", "label": "has part", "to": "Collaborative Robot Function"}, {"from": "COLLABORATIVE ROBOT", "label": "has part", "to": "COLLABORATIVE ROBOT"}, {"from": "SAFETY PRECAUTIONS WARNING", "label": "facet of", "to": "Collaborative Robot"}, {"from": "ACCEPTABLE MOTION SPEED FOR BODY REGIONS", "label": "instance of", "to": "acceptable motion speed"}, {"from": "SAFETY PRECAUTIONS B-84194EN/01", "label": "facet of", "to": "collaborative workspace"}, {"from": "helmet", "label": "different from", "to": "safety shoe"}, {"from": "Stop Category 0", "label": "part of", "to": "Stop Category 1"}, {"from": "Stop Category 0", "label": "part of", "to": "Stop Pattern"}, {"from": "Stop Category 1", "label": "part of", "to": "Stop Pattern"}, {"from": "Stop Category 2", "label": "follows", "to": "Stop Category 0"}, {"from": "MODE SELECT SWITCH", "label": "instance of", "to": "operating modes"}, {"from": "ENABLING DEVICE (DEADMAN SWITCH)", "label": "has part", "to": "Teach pendant"}, {"from": "EN ISO 13855", "label": "part of", "to": "EN ISO 14119"}, {"from": "EN ISO 13857", "label": "part of", "to": "EN ISO 14119"}, {"from": "Other Protection Devices", "label": "has part", "to": "interlocking guard"}, {"from": "Other Protection Devices", "label": "has part", "to": "interlocking system"}, {"from": "stop", "label": "facet of", "to": "servo power"}, {"from": "Safety procedures of entering the safety fence", "label": "facet of", "to": "safety fence"}, {"from": "Stop the robot", "label": "uses", "to": "operating mode key switch"}, {"from": "Programming", "label": "part of", "to": "Installation"}, {"from": "hardware", "label": "used by", "to": "software"}, {"from": "software", "label": "part of", "to": "programming"}, {"from": "Safety and Operational Verification", "label": "subclass of", "to": "commissioning and testing"}, {"from": "robot", "label": "part of", "to": "robot operating space"}, {"from": "robot operating space", "label": "has part", "to": "robot operating space"}, {"from": "MAINTENANCE", "label": "subclass of", "to": "repair"}, {"from": "robot system", "label": "has part", "to": "robot arm"}, {"from": "mechanical unit", "label": "has part", "to": "controller"}, {"from": "controller", "label": "connects with", "to": "Pulsecoder"}, {"from": "A05B-1702-B201", "label": "followed by", "to": "A05B-1702-B202"}, {"from": "MECHANICAL UNIT", "label": "has part", "to": "SETTING"}, {"from": "SETTING", "label": "part of", "to": "SETTING"}, {"from": "CONNECTION WITH THE CONTROLLER", "label": "part of", "to": "TRANSPORTATION AND INSTALLATION"}, {"from": "EQUIPMENT INSTALLATION TO THE ROBOT", "label": "part of", "to": "TRANSPORTATION AND INSTALLATION"}, {"from": "Transport kit", "label": "has part", "to": "carrying support"}, {"from": "carrying support", "label": "part of", "to": "transport kit"}, {"from": "floor mount", "label": "subclass of", "to": "mount"}, {"from": "2 CONNECTION WITH THE CONTROLLER", "label": "length", "to": "2"}, {"from": "J1-axis", "label": "followed by", "to": "J2-axis"}, {"from": "J2-axis", "label": "followed by", "to": "J3-axis"}, {"from": "ISO 11201", "label": "part of", "to": "IP"}, {"from": "chlorine", "label": "subject has role", "to": "solvent"}, {"from": "gasoline", "label": "subject has role", "to": "solvent"}, {"from": "detergent", "label": "subject has role", "to": "solvent"}, {"from": "rust", "label": "subject has role", "to": "solvent"}, {"from": "ZERO POINT POSITION AND MOTION LIMIT", "label": "facet of", "to": "operating space"}, {"from": "3(c) J2-axis motion limit (CRX-10iA,CRX-10iA/L)", "label": "followed by", "to": "3(d) J3-axis motion limit (CRX-10iA/L)"}, {"from": "CRX-10iA", "label": "part of", "to": "4"}, {"from": "4", "label": "part of", "to": "4"}, {"from": "0.00", "label": "point in time", "to": "0"}, {"from": "0", "label": "point in time", "to": "0"}, {"from": "2(a) Standard tool coordinate", "label": "part of", "to": "standard tool coordinates"}, {"from": "connector", "label": "part of", "to": "connector jacket"}, {"from": "PIPING AND WIRING TO THE END EFFECTOR", "label": "instance of", "to": "Interface"}, {"from": "IEC61508", "label": "instance of", "to": "notified body"}, {"from": "Joint Position Check", "label": "has part", "to": "Stop Position Prediction"}, {"from": "Stop Position Prediction", "label": "use", "to": "stop the robot"}, {"from": "J5\u00e2\u20ac\u2018axis motion range", "label": "part of", "to": "J5-AXIS MOTION RANGE"}, {"from": "J5-AXIS MOTION RANGE", "label": "has part", "to": "DUAL CHECK SAFETY FUNCTION OPERATOR\u00e2\u20ac\u2122S MANUAL"}, {"from": "end effector", "label": "part of", "to": "robot"}, {"from": "end effector", "label": "connects with", "to": "controller ventilation system"}, {"from": "end effector", "label": "connects with", "to": "robot connection cable"}, {"from": "robot connection cable", "label": "connects with", "to": "controller ventilation system"}, {"from": "7.2(a) Connector Inspection points", "label": "part of", "to": "7.2"}, {"from": "MASTERING", "label": "subclass of", "to": "mastering"}, {"from": "Pulsecoder", "label": "manufacturer", "to": "FANUC"}, {"from": "Zero\u00e2\u20ac\u2018position mastering", "label": "uses", "to": "Witness mark"}, {"from": "Witness Mark", "label": "use", "to": "Zero\u00e2\u20ac\u2018position mastering"}, {"from": "CALIBRATE Robot Calibrated!", "label": "use", "to": "Zero-position Mastering"}, {"from": "Quick mastering", "label": "uses", "to": "0.0000"}, {"from": "Quick mastering", "label": "subclass of", "to": "calibration"}, {"from": "Fixture position mastering", "label": "subclass of", "to": "Quick mastering"}, {"from": "MASTERING Procedure of Single axis mastering", "label": "use", "to": "single axis mastering"}, {"from": "$DMR_GRP", "label": "instance of", "to": "system variable"}, {"from": "CKAL", "label": "instance of", "to": "Alarm notification"}, {"from": "RCAL", "label": "instance of", "to": "Alarm notification"}, {"from": "PHAL", "label": "instance of", "to": "Alarm notification"}, {"from": "CSAL", "label": "instance of", "to": "Alarm notification"}, {"from": "STBERR", "label": "instance of", "to": "Alarm notification"}, {"from": "SPHAL", "label": "instance of", "to": "Alarm notification"}, {"from": "CRCERR", "label": "instance of", "to": "Alarm notification"}, {"from": "noise", "label": "subclass of", "to": "vibration"}, {"from": "noise", "label": "subclass of", "to": "Symptom"}, {"from": "Reducer", "label": "connects with", "to": "Arm"}, {"from": "BZAL", "label": "subclass of", "to": "Symptom Displacement"}, {"from": "Hexagon", "label": "subclass of", "to": "socket head"}, {"from": "button bolt", "label": "subclass of", "to": "socket head"}, {"from": "flush bolt", "label": "subclass of", "to": "socket head"}, {"from": "Shibokusa", "label": "country", "to": "Japan"}, {"from": "Minamitsuru-gun", "label": "country", "to": "Japan"}, {"from": "Echternach", "label": "country", "to": "Japan"}, {"from": "B-84194EN/01 B - 8 4 1 9 4 E N / 0 1", "label": "inception", "to": "June, 2020"}, {"from": "E", "label": "opposite of", "to": "N"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": true,
+        "filter": [
+            "physics"
+        ]
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+                  // if this network requires displaying the configure window,
+                  // put it in its div
+                  options.configure["container"] = document.getElementById("config");
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+                      network.on("stabilizationProgress", function(params) {
+                          document.getElementById('loadingBar').removeAttribute("style");
+                          var maxWidth = 496;
+                          var minWidth = 20;
+                          var widthFactor = params.iterations/params.total;
+                          var width = Math.max(minWidth,maxWidth * widthFactor);
+                          document.getElementById('bar').style.width = width + 'px';
+                          document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
+                      });
+                      network.once("stabilizationIterationsDone", function() {
+                          document.getElementById('text').innerHTML = '100%';
+                          document.getElementById('bar').style.width = '496px';
+                          document.getElementById('loadingBar').style.opacity = 0;
+                          // really clean the dom element
+                          setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
+                      });
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

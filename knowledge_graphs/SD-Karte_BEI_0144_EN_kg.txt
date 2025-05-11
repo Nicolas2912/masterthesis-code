@@ -1,0 +1,1 @@
+[{'head': 'SD card', 'type': 'connects with', 'tail': 'SD-Slot'}, {'head': 'SD-Slot', 'type': 'connects with', 'tail': 'SD card'}, {'head': 'MIOACHSCO', 'type': 'instance of', 'tail': 'firmware'}, {'head': 'MIOACHSCO', 'type': 'instance of', 'tail': 'firmware'}, {'head': 'Notepad', 'type': 'operating system', 'tail': 'Windows'}]

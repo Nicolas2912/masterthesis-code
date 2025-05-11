@@ -1,0 +1,235 @@
+{
+  "document": "Service_Software_BAL_0420_EN",
+  "evaluator_type": "kg_enhanced",
+  "total_questions": 50,
+  "answerable_questions": 44,
+  "unanswerable_questions": 6,
+  "safety_critical_questions": 11,
+  "categories": {
+    "TECHNICAL": 14,
+    "SAFETY": 11,
+    "VISUAL": 7,
+    "MULTI_CHAPTER": 7,
+    "UNANSWERABLE": 6,
+    "NUMERICAL": 5
+  },
+  "execution_time": 3853.3507273197174,
+  "metrics": {
+    "alpha_similarity": {
+      "mean": 0.8119110329584642,
+      "median": 0.8373656868934631,
+      "min": 0.5258162617683411,
+      "max": 0.9554014205932617,
+      "by_category": {
+        "MULTI_CHAPTER": 0.7221307754516602,
+        "NUMERICAL": 0.8744596004486084,
+        "SAFETY": 0.8481071970679543,
+        "TECHNICAL": 0.8057391813823155,
+        "VISUAL": 0.8124777589525495
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q028",
+          "score": 0.7936662435531616,
+          "reasoning": "The prediction and reference have good semantic similarity (0.7937), sharing significant meaning."
+        },
+        {
+          "question_id": "Q002",
+          "score": 0.8927414417266846,
+          "reasoning": "The prediction and reference have very high semantic similarity (0.8927), capturing most of the same information."
+        },
+        {
+          "question_id": "Q023",
+          "score": 0.6845104694366455,
+          "reasoning": "The prediction and reference have moderate semantic similarity (0.6845), with some shared concepts."
+        }
+      ]
+    },
+    "question_answer_relevance": {
+      "mean": 0.9453792039625868,
+      "median": 1.0,
+      "min": 0.34782608695652173,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9800664451827242,
+        "NUMERICAL": 0.8695652173913043,
+        "SAFETY": 0.9125218057838379,
+        "TECHNICAL": 0.9694190020505811,
+        "VISUAL": 0.9683982683982685
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q032",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and doesn't contain any irrelevant information! Great job!"
+        },
+        {
+          "question_id": "Q008",
+          "score": 0.7142857142857143,
+          "reasoning": "The score is 0.71 because while some safety precautions are mentioned, the output includes many irrelevant references to figures in the document, lowering the overall relevancy. It's not lower because some relevant safety information is still present."
+        },
+        {
+          "question_id": "Q013",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and addresses the input question directly."
+        }
+      ]
+    },
+    "hallucination": {
+      "mean": 0.3603896103896104,
+      "median": 0.2857142857142857,
+      "min": 0.0,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.16326530612244897,
+        "NUMERICAL": 0.4,
+        "SAFETY": 0.5714285714285714,
+        "TECHNICAL": 0.30612244897959184,
+        "VISUAL": 0.30612244897959184
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q009",
+          "score": 0.8571428571428571,
+          "reasoning": "The score is 0.86 because while the output aligns with the context on the importance of properly shutting down the system before disconnecting, it contradicts the context by omitting several key details, warnings, and instructions regarding connection methods, error messages, and eBOX settings, indicating a high degree of hallucination."
+        },
+        {
+          "question_id": "Q007",
+          "score": 0.14285714285714285,
+          "reasoning": "The score is 0.14 because the actual output largely aligns with the context, mentioning elements and functionalities described within it. The minor deviation arises from the output providing a more detailed explanation than explicitly present in the context, but it doesn't directly contradict it."
+        },
+        {
+          "question_id": "Q035",
+          "score": 0.0,
+          "reasoning": "The score is 0.00 because the actual output is factually aligned with the provided contexts, with no contradictions identified."
+        }
+      ]
+    },
+    "faithfulness": {
+      "mean": 0.9834000174909266,
+      "median": 1.0,
+      "min": 0.7272727272727273,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9947089947089947,
+        "NUMERICAL": 1.0,
+        "SAFETY": 0.980952380952381,
+        "TECHNICAL": 0.9725829725829725,
+        "VISUAL": 0.9857142857142858
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q036",
+          "score": 0.9629629629629629,
+          "reasoning": "The score is 0.96 because the actual output incorrectly states that parameter changes can be made during user level 2 mode, contradicting the retrieval context which specifies that changes can only be saved when no process is running."
+        },
+        {
+          "question_id": "Q008",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q038",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the output is perfectly faithful to the retrieval context! Great job!"
+        }
+      ]
+    },
+    "multimodal_answer_relevancy": {
+      "mean": 0.9397268135904501,
+      "median": 1.0,
+      "min": 0.2,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.8997113997113997,
+        "NUMERICAL": 0.8400000000000001,
+        "SAFETY": 0.9545454545454546,
+        "TECHNICAL": 0.9535714285714285,
+        "VISUAL": 1.0
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q007",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no irrelevant statements found in the actual output, indicating a perfect relevance to the input question."
+        },
+        {
+          "question_id": "Q015",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the output directly addresses the safety measure indicated by the system regarding the M-Drive's protection cover and potential hazards, without including any irrelevant statements."
+        },
+        {
+          "question_id": "Q035",
+          "score": 0.9090909090909091,
+          "reasoning": "The score is 0.91 because while the majority of the response effectively outlines the steps for setting up the software as requested, the inclusion of visual references detracts from the focus on the specific steps outlined in the input. This small degree of irrelevance prevents the score from being higher, although the core information remains highly relevant."
+        }
+      ]
+    },
+    "multimodal_faithfulness": {
+      "mean": 0.895801949461709,
+      "median": 0.9258241758241759,
+      "min": 0.5294117647058824,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.8400160064025611,
+        "NUMERICAL": 0.9114285714285714,
+        "SAFETY": 0.9099491417673236,
+        "TECHNICAL": 0.868887403446227,
+        "VISUAL": 0.9720238095238096
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q011",
+          "score": 0.8,
+          "reasoning": "The score is 0.80 because the actual output incorrectly describes User Level 2 as restricted, while it actually allows unrestricted access to all settings and parameters, leading to a contradiction regarding its level of restriction."
+        },
+        {
+          "question_id": "Q019",
+          "score": 0.6428571428571429,
+          "reasoning": "The score is 0.64 because the actual output contains several claims about connection methods that are not supported by the retrieval context, such as suggesting exclusivity of methods to specific versions like eBOX MFS-V2 and eBOX MFS-V3, which contradicts the more flexible interpretations present in the context."
+        },
+        {
+          "question_id": "Q027",
+          "score": 0.9090909090909091,
+          "reasoning": "The score is 0.91 because the actual output defines a 30 seconds timeout for checking the measuring wheel, but it does not mention that the measuring wheel needs to be moved within that timeout period, indicating a lack of alignment between the output and the retrieval context."
+        }
+      ]
+    }
+  },
+  "metrics_enabled": [
+    "alpha_similarity",
+    "question_answer_relevance",
+    "hallucination",
+    "faithfulness",
+    "multimodal_answer_relevancy",
+    "multimodal_faithfulness"
+  ],
+  "kg_metrics": {
+    "config": {
+      "kg_file_path": "knowledge_graphs/Service_Software_BAL_0420_EN_kg.txt",
+      "image_descriptions_path": "image_descriptions/Service_Software_BAL_0420_EN_image_description.pkl",
+      "llm_model_name": "unsloth/phi-4"
+    },
+    "extract_entities_time": {
+      "mean": 0.00016225468028675425,
+      "median": 0.0001361370086669922,
+      "min": 6.461143493652344e-05,
+      "max": 0.00040340423583984375
+    },
+    "relevant_kg_nodes_time": {
+      "mean": 0.0002979365262118253,
+      "median": 0.00031769275665283203,
+      "min": 7.295608520507812e-05,
+      "max": 0.0004382133483886719
+    },
+    "format_kg_time": {
+      "mean": 0.0005308823152021928,
+      "median": 0.0004277229309082031,
+      "min": 0.0002040863037109375,
+      "max": 0.0009591579437255859
+    }
+  }
+}

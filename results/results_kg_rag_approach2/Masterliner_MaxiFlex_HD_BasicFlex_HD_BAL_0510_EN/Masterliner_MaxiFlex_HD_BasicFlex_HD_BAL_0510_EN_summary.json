@@ -1,0 +1,174 @@
+{
+  "document": "Masterliner_MaxiFlex_HD_BasicFlex_HD_BAL_0510_EN",
+  "evaluator_type": "kg_enhanced",
+  "llm_model": "microsoft/Phi-3-mini-4k-instruct",
+  "total_questions": 50,
+  "answerable_questions": 44,
+  "unanswerable_questions": 6,
+  "safety_critical_questions": 14,
+  "categories": {
+    "TECHNICAL": 13,
+    "SAFETY": 11,
+    "MULTI_CHAPTER": 8,
+    "VISUAL": 7,
+    "UNANSWERABLE": 6,
+    "NUMERICAL": 5
+  },
+  "execution_time": 4550.888738870621,
+  "metrics": {
+    "alpha_similarity": {
+      "mean": 0.9606293886899948,
+      "median": 0.9670421183109283,
+      "min": 0.8946951627731323,
+      "max": 0.9867780804634094,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9702820405364037,
+        "NUMERICAL": 0.9525249838829041,
+        "SAFETY": 0.956923018802296,
+        "TECHNICAL": 0.9511262866166922,
+        "VISUAL": 0.9788595608302525
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q012",
+          "score": 0.9717717170715332,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9718), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q027",
+          "score": 0.9587545394897461,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9588), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q003",
+          "score": 0.9732141494750977,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9732), indicating nearly identical meaning."
+        }
+      ]
+    },
+    "question_answer_relevance": {
+      "mean": 0.9220303824389516,
+      "median": 1.0,
+      "min": 0.13953488372093023,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9632180882180882,
+        "NUMERICAL": 0.7326688815060909,
+        "SAFETY": 0.8754292861609935,
+        "TECHNICAL": 0.9724533913500667,
+        "VISUAL": 0.9933333333333333
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q041",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and doesn't contain any irrelevant information! Great job!"
+        },
+        {
+          "question_id": "Q007",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and doesn't contain any irrelevant information! Great job!"
+        },
+        {
+          "question_id": "Q024",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and doesn't contain any irrelevant information! Great job!"
+        }
+      ]
+    },
+    "hallucination": {
+      "mean": 0.125,
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.8333333333333334,
+      "by_category": {
+        "MULTI_CHAPTER": 0.06249999999999999,
+        "NUMERICAL": 0.2,
+        "SAFETY": 0.12121212121212123,
+        "TECHNICAL": 0.11538461538461539,
+        "VISUAL": 0.16666666666666666
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q041",
+          "score": 0.3333333333333333,
+          "reasoning": "The score is 0.33 because while there are factual alignments regarding wire feed distance and the need for additional support, there are also contradictions where the output discusses wire feed distance limitations while some contexts focus on unrelated topics like nameplate information or avoiding wire knots."
+        },
+        {
+          "question_id": "Q007",
+          "score": 0.0,
+          "reasoning": "The score is 0.00 because the actual output is fully supported by the provided context, with no contradictions identified."
+        },
+        {
+          "question_id": "Q027",
+          "score": 0.0,
+          "reasoning": "The score is 0.00 because the actual output aligns with the provided contexts, with no contradictions detected."
+        }
+      ]
+    },
+    "faithfulness": {
+      "mean": 0.9812872109496683,
+      "median": 1.0,
+      "min": 0.6666666666666666,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9523809523809523,
+        "NUMERICAL": 1.0,
+        "SAFETY": 0.993939393939394,
+        "TECHNICAL": 0.9848236869513466,
+        "VISUAL": 0.9703774486383183
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q017",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q013",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the output is perfectly faithful to the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q036",
+          "score": NaN,
+          "reasoning": "Error: Evaluation LLM outputted an invalid JSON. Please use a better evaluation model."
+        }
+      ]
+    }
+  },
+  "metrics_enabled": [
+    "alpha_similarity",
+    "question_answer_relevance",
+    "hallucination",
+    "faithfulness"
+  ],
+  "kg_metrics": {
+    "config": {
+      "kg_file_path": "knowledge_graphs/Masterliner_MaxiFlex_HD_BasicFlex_HD_BAL_0510_EN_kg.txt",
+      "image_descriptions_path": "image_descriptions/Masterliner_MaxiFlex_HD_BasicFlex_HD_BAL_0510_EN_image_description.pkl",
+      "llm_model_name": "microsoft/Phi-3-mini-4k-instruct"
+    },
+    "extract_entities_time": {
+      "mean": 9.660287336869673e-05,
+      "median": 9.429454803466797e-05,
+      "min": 4.9114227294921875e-05,
+      "max": 0.0002040863037109375
+    },
+    "relevant_kg_nodes_time": {
+      "mean": 0.00010885975577614524,
+      "median": 0.00011456012725830078,
+      "min": 3.528594970703125e-05,
+      "max": 0.00018787384033203125
+    },
+    "format_kg_time": {
+      "mean": 0.0,
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    }
+  }
+}

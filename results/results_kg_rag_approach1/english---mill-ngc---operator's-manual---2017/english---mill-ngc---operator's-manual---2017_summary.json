@@ -1,0 +1,228 @@
+{
+  "document": "english---mill-ngc---operator's-manual---2017",
+  "evaluator_type": "kg_enhanced",
+  "total_questions": 50,
+  "answerable_questions": 43,
+  "unanswerable_questions": 7,
+  "safety_critical_questions": 6,
+  "categories": {
+    "TECHNICAL": 21,
+    "MULTI_CHAPTER": 9,
+    "NUMERICAL": 8,
+    "UNANSWERABLE": 7,
+    "SAFETY": 5
+  },
+  "execution_time": 3579.4392771720886,
+  "metrics": {
+    "alpha_similarity": {
+      "mean": 0.8561637027319088,
+      "median": 0.8818765878677368,
+      "min": 0.6652573347091675,
+      "max": 0.9705806970596313,
+      "by_category": {
+        "MULTI_CHAPTER": 0.7974746227264404,
+        "NUMERICAL": 0.8896272405982018,
+        "SAFETY": 0.8518004775047302,
+        "TECHNICAL": 0.8696070143154689
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q033",
+          "score": 0.7208212018013,
+          "reasoning": "The prediction and reference have good semantic similarity (0.7208), sharing significant meaning."
+        },
+        {
+          "question_id": "Q015",
+          "score": 0.8602845668792725,
+          "reasoning": "The prediction and reference have very high semantic similarity (0.8603), capturing most of the same information."
+        },
+        {
+          "question_id": "Q025",
+          "score": 0.826178789138794,
+          "reasoning": "The prediction and reference have very high semantic similarity (0.8262), capturing most of the same information."
+        }
+      ]
+    },
+    "question_answer_relevance": {
+      "mean": 0.970404030852733,
+      "median": 1.0,
+      "min": 0.7391304347826086,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.944853411036986,
+        "NUMERICAL": 0.9705608974358975,
+        "SAFETY": 0.9795417348608838,
+        "TECHNICAL": 0.9791188939782406
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q003",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and doesn't contain any irrelevant information! Great job!"
+        },
+        {
+          "question_id": "Q026",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and addresses the input directly."
+        },
+        {
+          "question_id": "Q040",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and contains no irrelevant information. Great job!"
+        }
+      ]
+    },
+    "hallucination": {
+      "mean": 0.41196013289036537,
+      "median": 0.42857142857142855,
+      "min": 0.0,
+      "max": 0.8571428571428571,
+      "by_category": {
+        "MULTI_CHAPTER": 0.2857142857142857,
+        "NUMERICAL": 0.30357142857142855,
+        "SAFETY": 0.6857142857142857,
+        "TECHNICAL": 0.44217687074829926
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q028",
+          "score": 0.42857142857142855,
+          "reasoning": "The score is 0.43 because while the actual output aligns with the context in describing G103 and its function in limiting lookahead, it also deviates by focusing on the general usage of G103 instead of addressing the specific topics of tool pre-call, variable #3003, and cutting blocks using G83 as presented in the contradictory contexts."
+        },
+        {
+          "question_id": "Q019",
+          "score": 0.8571428571428571,
+          "reasoning": "The score is 0.86 because while some information aligns, there are multiple contradictions indicating the actual output discusses E-Stop while the contexts cover unrelated topics like brake, spindle fan, transformer icons, beacon light indications, and other icons."
+        },
+        {
+          "question_id": "Q012",
+          "score": 0.0,
+          "reasoning": "The score is 0.00 because the actual output is fully aligned with the provided contexts, with no contradictions detected."
+        }
+      ]
+    },
+    "faithfulness": {
+      "mean": 0.9794856918163289,
+      "median": 1.0,
+      "min": 0.7857142857142857,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9955555555555556,
+        "NUMERICAL": 1.0,
+        "SAFETY": 0.9616666666666667,
+        "TECHNICAL": 0.9690262578461335
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q026",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q011",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Keep up the great work!"
+        },
+        {
+          "question_id": "Q022",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the output is perfectly faithful to the retrieval context! Keep up the great work!"
+        }
+      ]
+    },
+    "multimodal_answer_relevancy": {
+      "mean": 0.956081081081081,
+      "median": 1.0,
+      "min": 0.0,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.984375,
+        "NUMERICAL": 0.9166666666666666,
+        "SAFETY": 1.0,
+        "TECHNICAL": 0.9473684210526315
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q040",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because all statements made in the output are relevant to the input question about adjusting the feedrate. There are no irrelevant statements, demonstrating a clear and focused response."
+        },
+        {
+          "question_id": "Q041",
+          "score": 0.5,
+          "reasoning": "The score is 0.50 because while the calculation details provided are pertinent, the mention of irrelevant statements about images detracts from the overall relevance to the question regarding spindle speed for tapping. This indicates a partial alignment with the request, hence the moderate score."
+        },
+        {
+          "question_id": "Q035",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no irrelevant statements present in the output, meaning it perfectly addressed the input request with complete relevance."
+        }
+      ]
+    },
+    "multimodal_faithfulness": {
+      "mean": 0.7961903139534718,
+      "median": 0.8571428571428571,
+      "min": 0.0,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.8978479853479854,
+        "NUMERICAL": 0.673015873015873,
+        "SAFETY": 0.8875,
+        "TECHNICAL": 0.7730611839683862
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q036",
+          "score": 0.8571428571428571,
+          "reasoning": "The score is 0.86 because there are contradictions regarding the features described in the retrieval context. Specifically, it does not mention that the Help window can be exited by pressing [HELP] again, nor does it include the existence of a 'STOP' button for emergency shutdown on the control panel, impacting the overall alignment of the actual output with the retrieval context."
+        },
+        {
+          "question_id": "Q025",
+          "score": NaN,
+          "reasoning": "The score is 1.00 because there are no contradictions present, indicating a perfect alignment between the actual output and the retrieval context."
+        },
+        {
+          "question_id": "Q039",
+          "score": NaN,
+          "reasoning": "The score is 0.77 because there are several contradictions; the actual output claims that pressing [HELP] exits the Help window without support from the retrieval context, it incorrectly refers to cursor arrows for navigation instead of the stated [HANDLE JOG] control, and it suggests that search results appear in the HELP window after a keyword search, which is not clearly indicated in the retrieval context."
+        }
+      ]
+    }
+  },
+  "metrics_enabled": [
+    "alpha_similarity",
+    "question_answer_relevance",
+    "hallucination",
+    "faithfulness",
+    "multimodal_answer_relevancy",
+    "multimodal_faithfulness"
+  ],
+  "kg_metrics": {
+    "config": {
+      "kg_file_path": "knowledge_graphs/english---mill-ngc---operator's-manual---2017_kg.txt",
+      "image_descriptions_path": "image_descriptions/english---mill-ngc---operator's-manual---2017_image_description.pkl",
+      "llm_model_name": "unsloth/phi-4"
+    },
+    "extract_entities_time": {
+      "mean": 0.00038749672645746274,
+      "median": 0.00037384033203125,
+      "min": 0.00022411346435546875,
+      "max": 0.0008203983306884766
+    },
+    "relevant_kg_nodes_time": {
+      "mean": 0.00347627040951751,
+      "median": 0.003162860870361328,
+      "min": 0.002422809600830078,
+      "max": 0.0055255889892578125
+    },
+    "format_kg_time": {
+      "mean": 0.002610483834909838,
+      "median": 0.002850055694580078,
+      "min": 0.0008709430694580078,
+      "max": 0.004960536956787109
+    }
+  }
+}

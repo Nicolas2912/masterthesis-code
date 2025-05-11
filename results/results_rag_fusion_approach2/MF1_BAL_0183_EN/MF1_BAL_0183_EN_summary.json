@@ -1,0 +1,167 @@
+{
+  "document": "MF1_BAL_0183_EN",
+  "evaluator_type": "fusion",
+  "llm_model": "unsloth/Qwen2.5-VL-32B-Instruct-unsloth-bnb-4bit",
+  "total_questions": 50,
+  "answerable_questions": 44,
+  "unanswerable_questions": 6,
+  "safety_critical_questions": 17,
+  "categories": {
+    "TECHNICAL": 15,
+    "SAFETY": 10,
+    "MULTI_CHAPTER": 7,
+    "VISUAL": 6,
+    "NUMERICAL": 6,
+    "UNANSWERABLE": 6
+  },
+  "execution_time": 5577.233100652695,
+  "metrics": {
+    "alpha_similarity": {
+      "mean": 0.9391812262209979,
+      "median": 0.9539059996604919,
+      "min": 0.8452960252761841,
+      "max": 0.9895401000976562,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9746928811073303,
+        "NUMERICAL": 0.954887847105662,
+        "SAFETY": 0.907172006368637,
+        "TECHNICAL": 0.9311683019002278,
+        "VISUAL": 0.955425351858139
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q032",
+          "score": 0.9764488935470581,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9764), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q003",
+          "score": 0.9525525569915771,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9526), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q001",
+          "score": 0.9708869457244873,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9709), indicating nearly identical meaning."
+        }
+      ]
+    },
+    "question_answer_relevance": {
+      "mean": 0.9280446471802478,
+      "median": 1.0,
+      "min": 0.37142857142857144,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9971988795518207,
+        "NUMERICAL": 0.9,
+        "SAFETY": 0.8229245283018868,
+        "TECHNICAL": 0.9545094886494117,
+        "VISUAL": 0.9797733431879774
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q035",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and addresses all aspects of the prompt comprehensively!"
+        },
+        {
+          "question_id": "Q044",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and addresses all aspects of the input question."
+        },
+        {
+          "question_id": "Q038",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and doesn't contain any irrelevant information! Great job!"
+        }
+      ]
+    },
+    "hallucination": {
+      "mean": 0.34207251082251083,
+      "median": 0.26111111111111107,
+      "min": 0.0,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.13134920634920635,
+        "NUMERICAL": 0.7037037037037037,
+        "SAFETY": 0.41646825396825393,
+        "TECHNICAL": 0.30798941798941804,
+        "VISUAL": 0.1875
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q016",
+          "score": 0.125,
+          "reasoning": "The score is 0.12 because the actual output largely aligns with the provided context, with only a minor omission regarding the attached safety instructions, which doesn't constitute a direct contradiction."
+        },
+        {
+          "question_id": "Q003",
+          "score": 0.5,
+          "reasoning": "The score is 0.50 because while some aspects of the actual output align with the context regarding cleaning and inspection, there are also contradictions where the output focuses on toothed wheels instead of the wire guide nipple, knurled screws, feed rollers, and the wire feeding procedure, indicating a mix of factual and hallucinated information."
+        },
+        {
+          "question_id": "Q026",
+          "score": 0.1111111111111111,
+          "reasoning": "The score is 0.11 because the actual output largely aligns with the provided context, with only minor additions of detail not explicitly contradicted by the context."
+        }
+      ]
+    },
+    "faithfulness": {
+      "mean": 0.9956469886702446,
+      "median": 1.0,
+      "min": 0.8461538461538461,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 1.0,
+        "NUMERICAL": 1.0,
+        "SAFETY": 1.0,
+        "TECHNICAL": 0.9897435897435898,
+        "VISUAL": 0.9944444444444445
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q021",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the output is perfectly faithful to the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q007",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q025",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Great job!"
+        }
+      ]
+    }
+  },
+  "metrics_enabled": [
+    "alpha_similarity",
+    "question_answer_relevance",
+    "hallucination",
+    "faithfulness"
+  ],
+  "fusion_metrics": {
+    "config": {
+      "num_generated_queries": 3,
+      "rrf_k": 60.0
+    },
+    "generate_queries_time": {
+      "mean": 6.677018902518532,
+      "median": 6.292811393737793,
+      "min": 3.950388193130493,
+      "max": 12.050559759140015
+    },
+    "fusion_time": {
+      "mean": 4.2573972181840375e-05,
+      "median": 4.029273986816406e-05,
+      "min": 3.337860107421875e-05,
+      "max": 6.937980651855469e-05
+    }
+  }
+}

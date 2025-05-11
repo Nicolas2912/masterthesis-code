@@ -1,0 +1,162 @@
+{
+  "document": "english---mill-ngc---operator's-manual---2017",
+  "evaluator_type": "fusion",
+  "llm_model": "unsloth/Qwen2.5-VL-32B-Instruct-unsloth-bnb-4bit",
+  "total_questions": 50,
+  "answerable_questions": 43,
+  "unanswerable_questions": 7,
+  "safety_critical_questions": 6,
+  "categories": {
+    "TECHNICAL": 21,
+    "MULTI_CHAPTER": 9,
+    "NUMERICAL": 8,
+    "UNANSWERABLE": 7,
+    "SAFETY": 5
+  },
+  "execution_time": 5331.762761354446,
+  "metrics": {
+    "alpha_similarity": {
+      "mean": 0.9460992341817811,
+      "median": 0.9432039260864258,
+      "min": 0.88663250207901,
+      "max": 0.9847413301467896,
+      "by_category": {
+        "MULTI_CHAPTER": 0.933693508307139,
+        "NUMERICAL": 0.94674351811409,
+        "SAFETY": 0.9535265564918518,
+        "TECHNICAL": 0.9494021222704933
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q032",
+          "score": 0.9362583160400391,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9363), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q031",
+          "score": 0.9105347990989685,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9105), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q041",
+          "score": 0.9360934495925903,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9361), indicating nearly identical meaning."
+        }
+      ]
+    },
+    "question_answer_relevance": {
+      "mean": 0.9862654466741115,
+      "median": 1.0,
+      "min": 0.868421052631579,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9984567901234568,
+        "NUMERICAL": 0.9782617705570292,
+        "SAFETY": 0.9766666666666666,
+        "TECHNICAL": 0.9863750284802917
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q008",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no irrelevant statements, indicating a perfectly relevant and complete answer!"
+        },
+        {
+          "question_id": "Q029",
+          "score": 0.9666666666666667,
+          "reasoning": "The score is 0.97 because while mostly relevant, the output includes details about the consequences of TCPC and the manual processes it replaces, which are not direct explanations of its purpose and operation, preventing a perfect score."
+        },
+        {
+          "question_id": "Q019",
+          "score": 0.8833333333333333,
+          "reasoning": "The score is 0.88 because while the response likely addresses the E-Stop issue, the inclusion of icon descriptions and image references detracts from the core task of explaining causes and resolution steps, preventing a higher score. However, it still achieves a good score as it likely contains relevant information alongside the irrelevant parts."
+        }
+      ]
+    },
+    "hallucination": {
+      "mean": 0.39590254706533773,
+      "median": 0.375,
+      "min": 0.0,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.2920634920634921,
+        "NUMERICAL": 0.45,
+        "SAFETY": 0.58,
+        "TECHNICAL": 0.3759637188208617
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q039",
+          "score": 0.4,
+          "reasoning": "The score is 0.40 because while there are several factual alignments regarding warm-up procedures, operating temperatures, and machine operation guidelines, there are also contradictions related to tool number selection and the absence of sleep mode commands in the actual output compared to the context."
+        },
+        {
+          "question_id": "Q004",
+          "score": 0.9,
+          "reasoning": "The score is 0.90 because while there is one alignment, there are nine contradictions where the actual output discusses a function not consistently described or supported by the provided context, indicating a high degree of hallucination."
+        },
+        {
+          "question_id": "Q003",
+          "score": 0.4,
+          "reasoning": "The score is 0.40 because while there are several factual alignments regarding the general process of setting part zero and work offsets, there are also contradictions. Specifically, the output focuses on setting the part zero using a mechanical pointer, while some contexts describe setting tool offsets or program calls, leading to a moderate hallucination score."
+        }
+      ]
+    },
+    "faithfulness": {
+      "mean": 0.9897932816537467,
+      "median": 1.0,
+      "min": 0.875,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9930555555555556,
+        "NUMERICAL": 1.0,
+        "SAFETY": 0.9888888888888889,
+        "TECHNICAL": 0.9847222222222223
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q042",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q027",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q006",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Great job!"
+        }
+      ]
+    }
+  },
+  "metrics_enabled": [
+    "alpha_similarity",
+    "question_answer_relevance",
+    "hallucination",
+    "faithfulness"
+  ],
+  "fusion_metrics": {
+    "config": {
+      "num_generated_queries": 3,
+      "rrf_k": 60.0
+    },
+    "generate_queries_time": {
+      "mean": 8.340719971545907,
+      "median": 7.9943718910217285,
+      "min": 4.502355575561523,
+      "max": 13.199800968170166
+    },
+    "fusion_time": {
+      "mean": 4.550468089968659e-05,
+      "median": 4.2438507080078125e-05,
+      "min": 3.361701965332031e-05,
+      "max": 9.226799011230469e-05
+    }
+  }
+}

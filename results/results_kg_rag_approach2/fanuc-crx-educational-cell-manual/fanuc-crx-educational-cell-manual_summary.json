@@ -1,0 +1,169 @@
+{
+  "document": "fanuc-crx-educational-cell-manual",
+  "evaluator_type": "kg_enhanced",
+  "llm_model": "microsoft/Phi-3-mini-4k-instruct",
+  "total_questions": 50,
+  "answerable_questions": 44,
+  "unanswerable_questions": 6,
+  "safety_critical_questions": 37,
+  "categories": {
+    "SAFETY": 17,
+    "TECHNICAL": 13,
+    "MULTI_CHAPTER": 8,
+    "NUMERICAL": 6,
+    "UNANSWERABLE": 6
+  },
+  "execution_time": 5200.515398263931,
+  "metrics": {
+    "alpha_similarity": {
+      "mean": 0.9661031487313184,
+      "median": 0.9696683585643768,
+      "min": 0.944495677947998,
+      "max": 0.9823521375656128,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9734519347548485,
+        "NUMERICAL": 0.9689109027385712,
+        "SAFETY": 0.9627616195117726,
+        "TECHNICAL": 0.9646546244621277
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q031",
+          "score": 0.9597358107566833,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9597), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q026",
+          "score": 0.9805494546890259,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9805), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q010",
+          "score": 0.9791594743728638,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9792), indicating nearly identical meaning."
+        }
+      ]
+    },
+    "question_answer_relevance": {
+      "mean": 0.9707545254717769,
+      "median": 1.0,
+      "min": 0.6190476190476191,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9594298245614035,
+        "NUMERICAL": 1.0,
+        "SAFETY": 0.9586529179251014,
+        "TECHNICAL": 0.9800508399646332
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q042",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and addresses all aspects of the input question directly and completely. Great job!"
+        },
+        {
+          "question_id": "Q040",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and addresses all aspects of the input question! Great job!"
+        },
+        {
+          "question_id": "Q029",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no irrelevant statements, indicating a perfectly relevant and complete answer! Great job!"
+        }
+      ]
+    },
+    "hallucination": {
+      "mean": 0.15909090909090912,
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.8333333333333334,
+      "by_category": {
+        "MULTI_CHAPTER": 0.041666666666666664,
+        "NUMERICAL": 0.4444444444444444,
+        "SAFETY": 0.13725490196078433,
+        "TECHNICAL": 0.1282051282051282
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q004",
+          "score": 0.5,
+          "reasoning": "The score is 0.50 because while the output aligns with the context in some aspects like mentioning the label containing the mechanical unit specification number and its position, periodic maintenance, and the label containing model name, type, serial number, date, and weight, it also contradicts the context by misinterpreting the maintenance schedule, index, and CE marking label, focusing instead on locating the specification number."
+        },
+        {
+          "question_id": "Q020",
+          "score": 0.0,
+          "reasoning": "The score is 0.00 because the actual output aligns with the provided context, detailing the calibration process, setting $MASTER_DONE, verifying mastering, and setting the quick mastering reference and zero-position mastering procedures, with no contradictions."
+        },
+        {
+          "question_id": "Q022",
+          "score": 0.16666666666666666,
+          "reasoning": "The score is 0.17 because the actual output mostly aligns with the context regarding robot maintenance, but there is a minor contradiction related to the maintenance area versus storage, indicating a slight deviation from the provided context."
+        }
+      ]
+    },
+    "faithfulness": {
+      "mean": 0.9933933819803386,
+      "median": 1.0,
+      "min": 0.8695652173913043,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9795289855072464,
+        "NUMERICAL": 1.0,
+        "SAFETY": 0.9925339366515837,
+        "TECHNICAL": 1.0
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q022",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q013",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the output perfectly aligns with the provided context! Keep up the great work!"
+        },
+        {
+          "question_id": "Q024",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context! Keep up the great work!"
+        }
+      ]
+    }
+  },
+  "metrics_enabled": [
+    "alpha_similarity",
+    "question_answer_relevance",
+    "hallucination",
+    "faithfulness"
+  ],
+  "kg_metrics": {
+    "config": {
+      "kg_file_path": "knowledge_graphs/fanuc-crx-educational-cell-manual_kg.txt",
+      "image_descriptions_path": "image_descriptions/fanuc-crx-educational-cell-manual_image_description.pkl",
+      "llm_model_name": "microsoft/Phi-3-mini-4k-instruct"
+    },
+    "extract_entities_time": {
+      "mean": 0.00021419741890647194,
+      "median": 0.00017631053924560547,
+      "min": 0.00011038780212402344,
+      "max": 0.0004451274871826172
+    },
+    "relevant_kg_nodes_time": {
+      "mean": 0.0013664148070595481,
+      "median": 0.0014109611511230469,
+      "min": 0.0007781982421875,
+      "max": 0.0022878646850585938
+    },
+    "format_kg_time": {
+      "mean": 0.0,
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    }
+  }
+}

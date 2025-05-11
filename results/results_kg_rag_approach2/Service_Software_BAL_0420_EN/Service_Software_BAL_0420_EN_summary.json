@@ -1,0 +1,174 @@
+{
+  "document": "Service_Software_BAL_0420_EN",
+  "evaluator_type": "kg_enhanced",
+  "llm_model": "microsoft/Phi-3-mini-4k-instruct",
+  "total_questions": 50,
+  "answerable_questions": 44,
+  "unanswerable_questions": 6,
+  "safety_critical_questions": 11,
+  "categories": {
+    "TECHNICAL": 14,
+    "SAFETY": 11,
+    "VISUAL": 7,
+    "MULTI_CHAPTER": 7,
+    "UNANSWERABLE": 6,
+    "NUMERICAL": 5
+  },
+  "execution_time": 4866.724187374115,
+  "metrics": {
+    "alpha_similarity": {
+      "mean": 0.9416930580681021,
+      "median": 0.9399930536746979,
+      "min": 0.8900737762451172,
+      "max": 0.9768003821372986,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9323390211377826,
+        "NUMERICAL": 0.9561311960220337,
+        "SAFETY": 0.9402576576579701,
+        "TECHNICAL": 0.9365976537976947,
+        "VISUAL": 0.9531805770737785
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q004",
+          "score": 0.9714648127555847,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9715), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q022",
+          "score": 0.8971719741821289,
+          "reasoning": "The prediction and reference have very high semantic similarity (0.8972), capturing most of the same information."
+        },
+        {
+          "question_id": "Q043",
+          "score": 0.935206413269043,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9352), indicating nearly identical meaning."
+        }
+      ]
+    },
+    "question_answer_relevance": {
+      "mean": 0.9406119356857161,
+      "median": 1.0,
+      "min": 0.4897959183673469,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9736158578263842,
+        "NUMERICAL": 0.9092114845938376,
+        "SAFETY": 0.8880510529570681,
+        "TECHNICAL": 0.9744096728307255,
+        "VISUAL": 0.9450371057513915
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q011",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and doesn't contain any irrelevant information! Great job!"
+        },
+        {
+          "question_id": "Q037",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no irrelevant statements, indicating the response perfectly addresses the input."
+        },
+        {
+          "question_id": "Q038",
+          "score": 0.9789473684210527,
+          "reasoning": "The score is 0.98 because while the response is highly relevant, the inclusion of references to unrelated icons ('User' and 'Settings') slightly detracts from perfect focus on monitoring mode functionality."
+        }
+      ]
+    },
+    "hallucination": {
+      "mean": 0.25757575757575757,
+      "median": 0.16666666666666666,
+      "min": 0.0,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.16666666666666666,
+        "NUMERICAL": 0.36666666666666664,
+        "SAFETY": 0.4696969696969697,
+        "TECHNICAL": 0.19047619047619047,
+        "VISUAL": 0.07142857142857142
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q027",
+          "score": 0.16666666666666666,
+          "reasoning": "The score is 0.17 because the actual output largely aligns with the provided context, listing possible causes of test failure that are consistent with the context's description of drive testing and diagnosis, with no direct contradictions."
+        },
+        {
+          "question_id": "Q035",
+          "score": 0.16666666666666666,
+          "reasoning": "The score is 0.17 because the actual output largely aligns with the provided contexts, with only minor details exceeding the context's scope, resulting in a low hallucination score."
+        },
+        {
+          "question_id": "Q006",
+          "score": 0.0,
+          "reasoning": "The score is 0.00 because the actual output aligns with the provided contexts, with no contradictions detected."
+        }
+      ]
+    },
+    "faithfulness": {
+      "mean": 0.9891331656848898,
+      "median": 1.0,
+      "min": 0.9090909090909091,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9774548440065681,
+        "NUMERICAL": 1.0,
+        "SAFETY": 1.0,
+        "TECHNICAL": 0.9804468930084694,
+        "VISUAL": 0.9948979591836735
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q020",
+          "score": 0.9655172413793104,
+          "reasoning": "The score is 0.97 because the actual output incorrectly states the IP address as 192.168.0.3, contradicting the retrieval context which specifies it as 192.168.200.225."
+        },
+        {
+          "question_id": "Q011",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context! Keep up the great work!"
+        },
+        {
+          "question_id": "Q004",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context! Keep up the great work!"
+        }
+      ]
+    }
+  },
+  "metrics_enabled": [
+    "alpha_similarity",
+    "question_answer_relevance",
+    "hallucination",
+    "faithfulness"
+  ],
+  "kg_metrics": {
+    "config": {
+      "kg_file_path": "knowledge_graphs/Service_Software_BAL_0420_EN_kg.txt",
+      "image_descriptions_path": "image_descriptions/Service_Software_BAL_0420_EN_image_description.pkl",
+      "llm_model_name": "microsoft/Phi-3-mini-4k-instruct"
+    },
+    "extract_entities_time": {
+      "mean": 0.0001481608910994096,
+      "median": 0.00012993812561035156,
+      "min": 5.7697296142578125e-05,
+      "max": 0.00031948089599609375
+    },
+    "relevant_kg_nodes_time": {
+      "mean": 0.00028395110910589045,
+      "median": 0.00029909610748291016,
+      "min": 6.914138793945312e-05,
+      "max": 0.00043511390686035156
+    },
+    "format_kg_time": {
+      "mean": 0.0,
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    }
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "document": "fanuc-crx-educational-cell-manual",
+  "evaluator_type": "kg_enhanced",
+  "total_questions": 50,
+  "answerable_questions": 44,
+  "unanswerable_questions": 6,
+  "safety_critical_questions": 37,
+  "categories": {
+    "SAFETY": 17,
+    "TECHNICAL": 13,
+    "MULTI_CHAPTER": 8,
+    "NUMERICAL": 6,
+    "UNANSWERABLE": 6
+  },
+  "execution_time": 4159.606637001038,
+  "metrics": {
+    "alpha_similarity": {
+      "mean": 0.9003464132547379,
+      "median": 0.9082860350608826,
+      "min": 0.7883298397064209,
+      "max": 0.9726811647415161,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9075844436883926,
+        "NUMERICAL": 0.9093907078107198,
+        "SAFETY": 0.9032299027723425,
+        "TECHNICAL": 0.8879472338236295
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q026",
+          "score": 0.9189323782920837,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9189), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q025",
+          "score": 0.8841649293899536,
+          "reasoning": "The prediction and reference have very high semantic similarity (0.8842), capturing most of the same information."
+        },
+        {
+          "question_id": "Q005",
+          "score": 0.9726811647415161,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9727), indicating nearly identical meaning."
+        }
+      ]
+    },
+    "question_answer_relevance": {
+      "mean": 0.9466265392912444,
+      "median": 1.0,
+      "min": 0.6296296296296297,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9746863189720333,
+        "NUMERICAL": 0.886021414244145,
+        "SAFETY": 0.9488782051282051,
+        "TECHNICAL": 0.9543860926457024
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q037",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no irrelevant statements, indicating the response is perfectly aligned with the input."
+        },
+        {
+          "question_id": "Q040",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and addresses all aspects of the input question! Great job!"
+        },
+        {
+          "question_id": "Q017",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no irrelevant statements, indicating a perfectly relevant and complete answer!"
+        }
+      ]
+    },
+    "hallucination": {
+      "mean": 0.3084415584415584,
+      "median": 0.2857142857142857,
+      "min": 0.0,
+      "max": 0.8571428571428571,
+      "by_category": {
+        "MULTI_CHAPTER": 0.10714285714285714,
+        "NUMERICAL": 0.5714285714285714,
+        "SAFETY": 0.31932773109243695,
+        "TECHNICAL": 0.29670329670329665
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q008",
+          "score": 0.0,
+          "reasoning": "The score is 0.00 because the actual output aligns with the provided contexts regarding robot system design, safety precautions, risk assessment, and the user's role in ensuring safety."
+        },
+        {
+          "question_id": "Q006",
+          "score": 0.5714285714285714,
+          "reasoning": "The score is 0.57 because while the output aligns with some aspects of the context regarding robot transportation, it omits key details from other relevant contexts such as peripheral equipment, maintenance, and system design, leading to a partial hallucination score."
+        },
+        {
+          "question_id": "Q031",
+          "score": 0.42857142857142855,
+          "reasoning": "The score is 0.43 because while the actual output aligns with the context in detailing vibration troubleshooting, it contradicts the context by not addressing motor overheating, general mechanical unit maintenance, and periodic checks, focusing instead on vibration when the context provided other maintenance aspects."
+        }
+      ]
+    },
+    "faithfulness": {
+      "mean": 0.978797669618643,
+      "median": 1.0,
+      "min": 0.5833333333333334,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9413377192982456,
+        "NUMERICAL": 0.9875,
+        "SAFETY": 0.9818339100346021,
+        "TECHNICAL": 0.9945324283559578
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q016",
+          "score": 0.75,
+          "reasoning": "The score is 0.75 because the actual output incorrectly states that pressing [ENTER] is required after inputting values for Group, Axis, Upper limit, and Lower limit, and also incorrectly states that accessing DCS settings requires pressing the F1 ([TYPE]) key instead of selecting [DCS], according to the retrieval context."
+        },
+        {
+          "question_id": "Q040",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the output is perfectly faithful to the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q012",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the output is perfectly faithful to the retrieval context! Keep up the great work!"
+        }
+      ]
+    },
+    "multimodal_answer_relevancy": {
+      "mean": 0.9801829268292683,
+      "median": 1.0,
+      "min": 0.25,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.8928571428571429,
+        "NUMERICAL": 1.0,
+        "SAFETY": 1.0,
+        "TECHNICAL": 0.9947916666666666
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q038",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response directly addresses all aspects of the input without any irrelevant statements, fully meeting the request for periodic maintenance tasks and their frequencies."
+        },
+        {
+          "question_id": "Q016",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response directly and effectively addresses the input without any irrelevant statements, demonstrating clear understanding and relevance to the question asked."
+        },
+        {
+          "question_id": "Q028",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because all statements in the output directly address the input question about daily check items for the mechanical unit and their importance for the robot's safety and performance."
+        }
+      ]
+    },
+    "multimodal_faithfulness": {
+      "mean": 0.8868372083042098,
+      "median": 0.9333333333333333,
+      "min": 0.21428571428571427,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.815281112444978,
+        "NUMERICAL": 0.9401709401709402,
+        "SAFETY": 0.9246570423041012,
+        "TECHNICAL": 0.8527777777777779
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q011",
+          "score": 0.6,
+          "reasoning": "The score is 0.60 because numerous details in the actual output were not supported by the retrieval context, including specific key usages and actions related to maintenance mode and mount angle settings, which led to a lack of clarity and verification."
+        },
+        {
+          "question_id": "Q024",
+          "score": 0.7142857142857143,
+          "reasoning": "The score is 0.71 because the actual output contains several contradictions regarding the robot's IP code compliance, its dust protection claims, the conditions under which it can be immersed in water, and potential operational issues related to water drainage in the J1 base."
+        },
+        {
+          "question_id": "Q009",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions present, indicating that the actual output is fully aligned with the retrieval context. Keep up the great work!"
+        }
+      ]
+    }
+  },
+  "metrics_enabled": [
+    "alpha_similarity",
+    "question_answer_relevance",
+    "hallucination",
+    "faithfulness",
+    "multimodal_answer_relevancy",
+    "multimodal_faithfulness"
+  ],
+  "kg_metrics": {
+    "config": {
+      "kg_file_path": "knowledge_graphs/fanuc-crx-educational-cell-manual_kg.txt",
+      "image_descriptions_path": "image_descriptions/fanuc-crx-educational-cell-manual_image_description.pkl",
+      "llm_model_name": "unsloth/phi-4"
+    },
+    "extract_entities_time": {
+      "mean": 0.00023308667269620028,
+      "median": 0.00017833709716796875,
+      "min": 0.00011730194091796875,
+      "max": 0.0008213520050048828
+    },
+    "relevant_kg_nodes_time": {
+      "mean": 0.0013744126666675913,
+      "median": 0.0013998746871948242,
+      "min": 0.0007181167602539062,
+      "max": 0.0025696754455566406
+    },
+    "format_kg_time": {
+      "mean": 0.0018297542225230825,
+      "median": 0.0019345283508300781,
+      "min": 0.000324249267578125,
+      "max": 0.002772808074951172
+    }
+  }
+}

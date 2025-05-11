@@ -1,0 +1,235 @@
+{
+  "document": "eBOX_BAL_0388_EN",
+  "evaluator_type": "kg_enhanced",
+  "total_questions": 50,
+  "answerable_questions": 44,
+  "unanswerable_questions": 6,
+  "safety_critical_questions": 12,
+  "categories": {
+    "TECHNICAL": 13,
+    "VISUAL": 9,
+    "SAFETY": 9,
+    "MULTI_CHAPTER": 8,
+    "UNANSWERABLE": 6,
+    "NUMERICAL": 5
+  },
+  "execution_time": 3551.393579483032,
+  "metrics": {
+    "alpha_similarity": {
+      "mean": 0.8279100168835033,
+      "median": 0.8526574969291687,
+      "min": 0.4830293655395508,
+      "max": 0.9636783003807068,
+      "by_category": {
+        "MULTI_CHAPTER": 0.8337393328547478,
+        "NUMERICAL": 0.8387335419654847,
+        "SAFETY": 0.8395500514242384,
+        "TECHNICAL": 0.8096679494931147,
+        "VISUAL": 0.8314249515533447
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q024",
+          "score": 0.7290574908256531,
+          "reasoning": "The prediction and reference have good semantic similarity (0.7291), sharing significant meaning."
+        },
+        {
+          "question_id": "Q013",
+          "score": 0.8778200745582581,
+          "reasoning": "The prediction and reference have very high semantic similarity (0.8778), capturing most of the same information."
+        },
+        {
+          "question_id": "Q019",
+          "score": 0.775496244430542,
+          "reasoning": "The prediction and reference have good semantic similarity (0.7755), sharing significant meaning."
+        }
+      ]
+    },
+    "question_answer_relevance": {
+      "mean": 0.9425230320852591,
+      "median": 1.0,
+      "min": 0.5454545454545454,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9953703703703703,
+        "NUMERICAL": 0.8269393764130607,
+        "SAFETY": 0.9113095238095238,
+        "TECHNICAL": 0.9483956623087059,
+        "VISUAL": 0.9824915824915824
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q041",
+          "score": 0.7714285714285715,
+          "reasoning": "The score is 0.77 because the inclusion of irrelevant image filenames detracts from the overall relevancy, but the core analysis of operating parameters and potential issues related to voltage fluctuation is still present."
+        },
+        {
+          "question_id": "Q017",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and doesn't contain any irrelevant information! Great job!"
+        },
+        {
+          "question_id": "Q003",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and doesn't contain any irrelevant information! Great job!"
+        }
+      ]
+    },
+    "hallucination": {
+      "mean": 0.42207792207792205,
+      "median": 0.42857142857142855,
+      "min": 0.0,
+      "max": 0.8571428571428571,
+      "by_category": {
+        "MULTI_CHAPTER": 0.39285714285714285,
+        "NUMERICAL": 0.42857142857142855,
+        "SAFETY": 0.36507936507936506,
+        "TECHNICAL": 0.4505494505494505,
+        "VISUAL": 0.46031746031746024
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q021",
+          "score": 0.42857142857142855,
+          "reasoning": "The score is 0.43 because while some aspects of the actual output align with the context (e.g., jumper settings, X3 port, main switch Q1), there are contradictions regarding the power supply configuration (external vs. internal) and specific jumper settings, indicating a mix of factual and hallucinated information."
+        },
+        {
+          "question_id": "Q011",
+          "score": 0.42857142857142855,
+          "reasoning": "The score is 0.43 because while the output aligns with several aspects of the context regarding safety precautions, it omits key details such as transport protection removal, shutdown procedures for all components, and user responsibilities, leading to a moderate level of hallucination."
+        },
+        {
+          "question_id": "Q041",
+          "score": 0.42857142857142855,
+          "reasoning": "The score is 0.43 because while some parts of the actual output align with the context regarding the eBOX and its power supply, there are contradictions as the output discusses specific voltage and frequency ranges not explicitly mentioned in some of the provided contexts, indicating some level of hallucination."
+        }
+      ]
+    },
+    "faithfulness": {
+      "mean": 0.9888888888888888,
+      "median": 1.0,
+      "min": 0.8,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9666666666666667,
+        "NUMERICAL": 0.9777777777777779,
+        "SAFETY": 0.9876543209876544,
+        "TECHNICAL": 1.0,
+        "VISUAL": 1.0
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q008",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context! Keep up the great work!"
+        },
+        {
+          "question_id": "Q034",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the output is perfectly faithful to the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q036",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Keep up the great work!"
+        }
+      ]
+    },
+    "multimodal_answer_relevancy": {
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 1.0,
+        "NUMERICAL": 1.0,
+        "SAFETY": 1.0,
+        "TECHNICAL": 1.0,
+        "VISUAL": 1.0
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q043",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the output directly addressed the inquiry about the maximum permissible weight for the eBOX without any irrelevant statements. This indicates a perfect alignment with the input question."
+        },
+        {
+          "question_id": "Q040",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the output addressed the input question directly and provided relevant information without any irrelevant statements."
+        },
+        {
+          "question_id": "Q023",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the actual output directly addressed the input without including any irrelevant statements."
+        }
+      ]
+    },
+    "multimodal_faithfulness": {
+      "mean": 0.8694560805356258,
+      "median": 0.9128787878787878,
+      "min": 0.2857142857142857,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.6937950937950939,
+        "NUMERICAL": 0.8953296703296705,
+        "SAFETY": 0.9604377104377105,
+        "TECHNICAL": 0.9194749694749694,
+        "VISUAL": 0.8479938271604939
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q010",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions present, indicating that the actual output fully aligns with the retrieval context."
+        },
+        {
+          "question_id": "Q023",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the actual output and the retrieval context. Keep up the great work!"
+        },
+        {
+          "question_id": "Q040",
+          "score": 0.9285714285714286,
+          "reasoning": "The score is 0.93 because the actual output incorrectly claims that the maximum relative humidity at 30\u00b0C is 90%, despite the retrieval context specifying that this maximum applies only at 20\u00b0C."
+        }
+      ]
+    }
+  },
+  "metrics_enabled": [
+    "alpha_similarity",
+    "question_answer_relevance",
+    "hallucination",
+    "faithfulness",
+    "multimodal_answer_relevancy",
+    "multimodal_faithfulness"
+  ],
+  "kg_metrics": {
+    "config": {
+      "kg_file_path": "knowledge_graphs/eBOX_BAL_0388_EN_kg.txt",
+      "image_descriptions_path": "image_descriptions/eBOX_BAL_0388_EN_image_description.pkl",
+      "llm_model_name": "unsloth/phi-4"
+    },
+    "extract_entities_time": {
+      "mean": 0.00011861866170709783,
+      "median": 0.00010848045349121094,
+      "min": 4.649162292480469e-05,
+      "max": 0.0002696514129638672
+    },
+    "relevant_kg_nodes_time": {
+      "mean": 0.00017620758576826617,
+      "median": 0.0001862049102783203,
+      "min": 5.5789947509765625e-05,
+      "max": 0.00023865699768066406
+    },
+    "format_kg_time": {
+      "mean": 0.0003943985158746893,
+      "median": 0.0004018545150756836,
+      "min": 0.00022530555725097656,
+      "max": 0.0005195140838623047
+    }
+  }
+}

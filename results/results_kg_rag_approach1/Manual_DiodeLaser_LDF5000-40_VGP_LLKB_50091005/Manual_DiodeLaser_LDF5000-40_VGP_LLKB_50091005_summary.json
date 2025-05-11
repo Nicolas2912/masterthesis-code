@@ -1,0 +1,235 @@
+{
+  "document": "Manual_DiodeLaser_LDF5000-40_VGP_LLKB_50091005",
+  "evaluator_type": "kg_enhanced",
+  "total_questions": 50,
+  "answerable_questions": 44,
+  "unanswerable_questions": 6,
+  "safety_critical_questions": 15,
+  "categories": {
+    "TECHNICAL": 13,
+    "SAFETY": 11,
+    "MULTI_CHAPTER": 8,
+    "VISUAL": 7,
+    "UNANSWERABLE": 6,
+    "NUMERICAL": 5
+  },
+  "execution_time": 4527.083914518356,
+  "metrics": {
+    "alpha_similarity": {
+      "mean": 0.8815661668777466,
+      "median": 0.8882626891136169,
+      "min": 0.738244354724884,
+      "max": 0.9559122920036316,
+      "by_category": {
+        "MULTI_CHAPTER": 0.8901345506310463,
+        "NUMERICAL": 0.8789930462837219,
+        "SAFETY": 0.8727400519631126,
+        "TECHNICAL": 0.8753602413030771,
+        "VISUAL": 0.8990065710885184
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q026",
+          "score": 0.779348611831665,
+          "reasoning": "The prediction and reference have good semantic similarity (0.7793), sharing significant meaning."
+        },
+        {
+          "question_id": "Q036",
+          "score": 0.9025758504867554,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9026), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q023",
+          "score": 0.8972383737564087,
+          "reasoning": "The prediction and reference have very high semantic similarity (0.8972), capturing most of the same information."
+        }
+      ]
+    },
+    "question_answer_relevance": {
+      "mean": 0.9545261969296917,
+      "median": 1.0,
+      "min": 0.6363636363636364,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9543688443119183,
+        "NUMERICAL": 1.0,
+        "SAFETY": 0.9451292609829195,
+        "TECHNICAL": 0.9468021459606313,
+        "VISUAL": 0.9513360203015375
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q015",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and addresses all aspects of the prompt without introducing any extraneous information. Great job!"
+        },
+        {
+          "question_id": "Q040",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and doesn't contain any irrelevant information! Great job!"
+        },
+        {
+          "question_id": "Q021",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and addresses all aspects of the input question, including the procedure for draining coolant, the use of compressed air, and pressure limitations. Great job!"
+        }
+      ]
+    },
+    "hallucination": {
+      "mean": 0.2532467532467532,
+      "median": 0.14285714285714285,
+      "min": 0.0,
+      "max": 0.8571428571428571,
+      "by_category": {
+        "MULTI_CHAPTER": 0.07142857142857142,
+        "NUMERICAL": 0.45714285714285713,
+        "SAFETY": 0.1688311688311688,
+        "TECHNICAL": 0.2967032967032967,
+        "VISUAL": 0.36734693877551017
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q043",
+          "score": 0.5714285714285714,
+          "reasoning": "The score is 0.57 because while some aspects of the actual output align with the context regarding process safety, automatic shutdown, and laser active time configuration, there are also contradictions. The actual output focuses on maximum laser activation time, which is distinct from pulse time, shutter response, general operation modes, and other functions described in the context. This mix of alignment and contradiction results in a moderate hallucination score."
+        },
+        {
+          "question_id": "Q002",
+          "score": 0.5714285714285714,
+          "reasoning": "The score is 0.57 because while there are factual alignments regarding the general process of replacing a filter, there are also contradictions as the actual output focuses on a water filter cartridge while the context often refers to DI cartridges or other cooling system procedures."
+        },
+        {
+          "question_id": "Q015",
+          "score": 0.2857142857142857,
+          "reasoning": "The score is 0.29 because while there are several factual alignments between the output and the context regarding laser dangers, there are also instances where the output focuses on specific dangers (reflected beams and eye injuries) that are not the primary focus of some contexts, which mention secondary dangers like fire or fiber optic cable damage. This slight deviation contributes to the hallucination score."
+        }
+      ]
+    },
+    "faithfulness": {
+      "mean": 0.9819414792197051,
+      "median": 1.0,
+      "min": 0.8461538461538461,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.976304945054945,
+        "NUMERICAL": 1.0,
+        "SAFETY": 0.9878787878787879,
+        "TECHNICAL": 0.9764546351084812,
+        "VISUAL": 0.9763440860215054
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q006",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q019",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q020",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating perfect alignment between the output and the retrieval context! Keep up the great work!"
+        }
+      ]
+    },
+    "multimodal_answer_relevancy": {
+      "mean": 0.9967532467532468,
+      "median": 1.0,
+      "min": 0.8571428571428571,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 1.0,
+        "NUMERICAL": 1.0,
+        "SAFETY": 1.0,
+        "TECHNICAL": 0.989010989010989,
+        "VISUAL": 1.0
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q023",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response directly addressed the input question with relevant and comprehensive information, with no irrelevant statements present."
+        },
+        {
+          "question_id": "Q018",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the output directly addressed the input's query regarding operating a laser system within rated parameters and the potential liabilities, with no irrelevant statements made."
+        },
+        {
+          "question_id": "Q028",
+          "score": 0.8571428571428571,
+          "reasoning": "The score is 0.86 because there was a relevant and informative response regarding the mode selector PLC, but it included an irrelevant statement about a visual support image, which detracted from the overall relevance. Despite this, the main points were well addressed, contributing to a relatively high score."
+        }
+      ]
+    },
+    "multimodal_faithfulness": {
+      "mean": 0.8267525153959152,
+      "median": 0.861904761904762,
+      "min": 0.10526315789473684,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.6031691396194105,
+        "NUMERICAL": 0.9064935064935066,
+        "SAFETY": 0.8633449883449884,
+        "TECHNICAL": 0.8909054309983102,
+        "VISUAL": 0.8486749361749363
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q039",
+          "score": 0.6153846153846154,
+          "reasoning": "The score is 0.62 because the actual output inaccurately specifies that transport bolts must be screwed into threaded openings, when the context only mentions their use for securing the unit. It also wrongly asserts that bolts are needed at both the front and back rather than just noting their use. Furthermore, the actual output describes wrapping the entire system with foils and the use of wooden frames, neither of which are stated in the context, which only covers accessories and different securing methods."
+        },
+        {
+          "question_id": "Q006",
+          "score": 0.9375,
+          "reasoning": "The score is 0.94 because while the context emphasizes the need for a trained authorized representative for operating the diode laser, it doesn't explicitly state that such a representative must be present during maintenance, leading to a minor contradiction."
+        },
+        {
+          "question_id": "Q008",
+          "score": 0.9,
+          "reasoning": "The score is 0.90 because the actual output incorrectly suggests that maintenance personnel do not have responsibilities regarding the regular checking of safety devices, which contradicts the retrieval context emphasizing the necessity of such checks."
+        }
+      ]
+    }
+  },
+  "metrics_enabled": [
+    "alpha_similarity",
+    "question_answer_relevance",
+    "hallucination",
+    "faithfulness",
+    "multimodal_answer_relevancy",
+    "multimodal_faithfulness"
+  ],
+  "kg_metrics": {
+    "config": {
+      "kg_file_path": "knowledge_graphs/Manual_DiodeLaser_LDF5000-40_VGP_LLKB_50091005_kg.txt",
+      "image_descriptions_path": "image_descriptions/Manual_DiodeLaser_LDF5000-40_VGP_LLKB_50091005_image_description.pkl",
+      "llm_model_name": "unsloth/phi-4"
+    },
+    "extract_entities_time": {
+      "mean": 0.00017398053949529475,
+      "median": 0.00014102458953857422,
+      "min": 0.00010037422180175781,
+      "max": 0.0008981227874755859
+    },
+    "relevant_kg_nodes_time": {
+      "mean": 0.0004694082520224831,
+      "median": 0.00044846534729003906,
+      "min": 0.0003211498260498047,
+      "max": 0.0007619857788085938
+    },
+    "format_kg_time": {
+      "mean": 0.0007034648548473011,
+      "median": 0.0007395744323730469,
+      "min": 0.00018668174743652344,
+      "max": 0.00115966796875
+    }
+  }
+}

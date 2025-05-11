@@ -1,0 +1,174 @@
+{
+  "document": "Manual_DiodeLaser_LDF5000-40_VGP_LLKB_50091005",
+  "evaluator_type": "kg_enhanced",
+  "llm_model": "microsoft/Phi-3-mini-4k-instruct",
+  "total_questions": 50,
+  "answerable_questions": 44,
+  "unanswerable_questions": 6,
+  "safety_critical_questions": 15,
+  "categories": {
+    "TECHNICAL": 13,
+    "SAFETY": 11,
+    "MULTI_CHAPTER": 8,
+    "VISUAL": 7,
+    "UNANSWERABLE": 6,
+    "NUMERICAL": 5
+  },
+  "execution_time": 5174.244333267212,
+  "metrics": {
+    "alpha_similarity": {
+      "mean": 0.9500803811983629,
+      "median": 0.9532985985279083,
+      "min": 0.9037082195281982,
+      "max": 0.9827165007591248,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9585516825318336,
+        "NUMERICAL": 0.9474394202232361,
+        "SAFETY": 0.9408532326871698,
+        "TECHNICAL": 0.9484077875430768,
+        "VISUAL": 0.9598913448197501
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q003",
+          "score": 0.9651705622673035,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9652), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q013",
+          "score": 0.9516071081161499,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9516), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q022",
+          "score": 0.9536627531051636,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9537), indicating nearly identical meaning."
+        }
+      ]
+    },
+    "question_answer_relevance": {
+      "mean": 0.9427789327791575,
+      "median": 1.0,
+      "min": 0.6666666666666666,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.984375,
+        "NUMERICAL": 0.9400491400491401,
+        "SAFETY": 0.9290820797020838,
+        "TECHNICAL": 0.9745226404800873,
+        "VISUAL": 0.8597614484390247
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q044",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and addresses the prompt directly. Great job!"
+        },
+        {
+          "question_id": "Q018",
+          "score": 0.8823529411764706,
+          "reasoning": "The score is 0.88 because while the response likely addresses the steps and liabilities, the presence of statements describing the methodology and laser characteristics (rather than specific steps or liabilities) lowers the relevancy score. It's not lower because the core question about steps and liabilities is still addressed."
+        },
+        {
+          "question_id": "Q015",
+          "score": 0.7083333333333334,
+          "reasoning": "The score is 0.71 because while the response touches on dangers related to lasers, it includes many statements about fire hazards and general safety measures that are not directly focused on the dangers of reflections or materials that reflect, thus lowering the relevancy. However, it still maintains a decent score as it does address the topic to some extent."
+        }
+      ]
+    },
+    "hallucination": {
+      "mean": 0.178030303030303,
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.8333333333333334,
+      "by_category": {
+        "MULTI_CHAPTER": 0.125,
+        "NUMERICAL": 0.3,
+        "SAFETY": 0.07575757575757575,
+        "TECHNICAL": 0.23076923076923078,
+        "VISUAL": 0.21428571428571427
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q006",
+          "score": 0.0,
+          "reasoning": "The score is 0.00 because the actual output is fully aligned with the provided contexts, with no contradictions identified."
+        },
+        {
+          "question_id": "Q001",
+          "score": 0.0,
+          "reasoning": "The score is 0.00 because the actual output generally aligns with the provided contexts, with no contradictions detected."
+        },
+        {
+          "question_id": "Q022",
+          "score": 0.0,
+          "reasoning": "The score is 0.00 because the actual output is fully aligned with the provided context, with no contradictions detected."
+        }
+      ]
+    },
+    "faithfulness": {
+      "mean": 0.9883089265864385,
+      "median": 1.0,
+      "min": 0.8333333333333334,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9967105263157895,
+        "NUMERICAL": 1.0,
+        "SAFETY": 0.9797979797979799,
+        "TECHNICAL": 0.9876456876456877,
+        "VISUAL": 0.9849624060150377
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q044",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q030",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q034",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Great job!"
+        }
+      ]
+    }
+  },
+  "metrics_enabled": [
+    "alpha_similarity",
+    "question_answer_relevance",
+    "hallucination",
+    "faithfulness"
+  ],
+  "kg_metrics": {
+    "config": {
+      "kg_file_path": "knowledge_graphs/Manual_DiodeLaser_LDF5000-40_VGP_LLKB_50091005_kg.txt",
+      "image_descriptions_path": "image_descriptions/Manual_DiodeLaser_LDF5000-40_VGP_LLKB_50091005_image_description.pkl",
+      "llm_model_name": "microsoft/Phi-3-mini-4k-instruct"
+    },
+    "extract_entities_time": {
+      "mean": 0.00017169930718161842,
+      "median": 0.00014257431030273438,
+      "min": 0.00010037422180175781,
+      "max": 0.0008461475372314453
+    },
+    "relevant_kg_nodes_time": {
+      "mean": 0.00046676939184015447,
+      "median": 0.00045561790466308594,
+      "min": 0.00031566619873046875,
+      "max": 0.0008227825164794922
+    },
+    "format_kg_time": {
+      "mean": 0.0,
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    }
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "document": "fanuc-crx-educational-cell-manual",
+  "evaluator_type": "fusion",
+  "llm_model": "unsloth/Qwen2.5-VL-32B-Instruct-unsloth-bnb-4bit",
+  "total_questions": 50,
+  "answerable_questions": 44,
+  "unanswerable_questions": 6,
+  "safety_critical_questions": 37,
+  "categories": {
+    "SAFETY": 17,
+    "TECHNICAL": 13,
+    "MULTI_CHAPTER": 8,
+    "NUMERICAL": 6,
+    "UNANSWERABLE": 6
+  },
+  "execution_time": 5833.478052377701,
+  "metrics": {
+    "alpha_similarity": {
+      "mean": 0.9653651470487769,
+      "median": 0.9710777401924133,
+      "min": 0.9310024976730347,
+      "max": 0.9825959205627441,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9716167449951172,
+        "NUMERICAL": 0.9718259672323862,
+        "SAFETY": 0.9600481741568622,
+        "TECHNICAL": 0.9654890573941745
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q022",
+          "score": 0.9434258937835693,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9434), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q041",
+          "score": 0.9744131565093994,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9744), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q016",
+          "score": 0.973871648311615,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9739), indicating nearly identical meaning."
+        }
+      ]
+    },
+    "question_answer_relevance": {
+      "mean": 0.9764861627677531,
+      "median": 1.0,
+      "min": 0.7297297297297297,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9837573385518591,
+        "NUMERICAL": 0.9636082075106466,
+        "SAFETY": 0.9801726271904111,
+        "TECHNICAL": 0.9736938247576545
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q031",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and addresses the prompt directly!"
+        },
+        {
+          "question_id": "Q041",
+          "score": 0.8292682926829268,
+          "reasoning": "The score is 0.83 because while the response likely addresses the stopping angle from the table, the inclusion of irrelevant images and discussion of conditions outside the prompt's scope (like rated load at maximum velocity) detracts from the overall relevancy. It's not lower because the core question about the stopping angle is likely answered."
+        },
+        {
+          "question_id": "Q024",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and addresses the prompt directly!"
+        }
+      ]
+    },
+    "hallucination": {
+      "mean": 0.2238816738816739,
+      "median": 0.10555555555555556,
+      "min": 0.0,
+      "max": 0.8,
+      "by_category": {
+        "MULTI_CHAPTER": 0.13055555555555556,
+        "NUMERICAL": 0.5166666666666667,
+        "SAFETY": 0.18496732026143792,
+        "TECHNICAL": 0.19706959706959706
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q022",
+          "score": 0.0,
+          "reasoning": "The score is 0.00 because the actual output is fully aligned with the provided context, with no contradictions."
+        },
+        {
+          "question_id": "Q031",
+          "score": 0.42857142857142855,
+          "reasoning": "The score is 0.43 because while some parts of the actual output align with the context regarding vibration troubleshooting, there are also contradictions where the output discusses vibration in contexts that do not mention it, indicating some hallucination."
+        },
+        {
+          "question_id": "Q003",
+          "score": 0.0,
+          "reasoning": "The score is 0.00 because the actual output is fully aligned with the provided context, with no contradictions detected."
+        }
+      ]
+    },
+    "faithfulness": {
+      "mean": 0.9923127235083757,
+      "median": 1.0,
+      "min": 0.8666666666666667,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 1.0,
+        "NUMERICAL": 0.9777777777777779,
+        "SAFETY": 0.9945012787723784,
+        "TECHNICAL": 0.9914285714285713
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q012",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the output is perfectly faithful to the retrieval context! Keep up the great work!"
+        },
+        {
+          "question_id": "Q019",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the output is perfectly faithful to the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q024",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Great job!"
+        }
+      ]
+    }
+  },
+  "metrics_enabled": [
+    "alpha_similarity",
+    "question_answer_relevance",
+    "hallucination",
+    "faithfulness"
+  ],
+  "fusion_metrics": {
+    "config": {
+      "num_generated_queries": 3,
+      "rrf_k": 60.0
+    },
+    "generate_queries_time": {
+      "mean": 6.9743722026998345,
+      "median": 6.031622290611267,
+      "min": 3.928743600845337,
+      "max": 11.927261114120483
+    },
+    "fusion_time": {
+      "mean": 4.3083320964466445e-05,
+      "median": 4.2438507080078125e-05,
+      "min": 3.1948089599609375e-05,
+      "max": 7.176399230957031e-05
+    }
+  }
+}

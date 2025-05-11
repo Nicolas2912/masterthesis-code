@@ -1,0 +1,170 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 750px;
+                 background-color: #222222;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+             #config {
+                 float: left;
+                 width: 400px;
+                 height: 600px;
+             }
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+            <div id="config"></div>
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "font": {"color": "white"}, "id": "DE Betriebsanleitung", "label": "DE Betriebsanleitung", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "EN", "label": "EN", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "MFS-V2", "label": "MFS-V2", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "master feeder systems", "label": "master feeder systems", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "MFS-V3", "label": "MFS-V3", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Microsoft Excel", "label": "Microsoft Excel", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Microsoft Windows", "label": "Microsoft Windows", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "MF control", "label": "MF control", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Windows 7 Embedded", "label": "Windows 7 Embedded", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "MFS Service Software", "label": "MFS Service Software", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Abicor Binzel", "label": "Abicor Binzel", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Windows 7", "label": "Windows 7", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "MFS service software 5", "label": "MFS service software 5", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Windows XP", "label": "Windows XP", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "MFS service software", "label": "MFS service software", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "control panel", "label": "control panel", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "User level 0", "label": "User level 0", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "User level 1", "label": "User level 1", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "User level 2", "label": "User level 2", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "IP address", "label": "IP address", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "MFSV2", "label": "MFSV2", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "MFSV3", "label": "MFSV3", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "WMFS", "label": "WMFS", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "9", "label": "9", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Signal description", "label": "Signal description", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Signal Type", "label": "Signal Type", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "service software", "label": "service software", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "MFS", "label": "MFS", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Abicor Binze", "label": "Abicor Binze", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Warning message", "label": "Warning message", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "error message", "label": "error message", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "eBOX", "label": "eBOX", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Logdaten", "label": "Logdaten", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Warning", "label": "Warning", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "error", "label": "error", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Monitoring window", "label": "Monitoring window", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "ADDA controller", "label": "ADDA controller", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "printed circuit board", "label": "printed circuit board", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "MF1", "label": "MF1", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "slave drive", "label": "slave drive", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "wire actual value encoder", "label": "wire actual value encoder", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "MF-1", "label": "MF-1", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Status indicator", "label": "Status indicator", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Binzel-abicor", "label": "Binzel-abicor", "shape": "dot"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Giessen", "label": "Giessen", "shape": "dot"}]);
+                  edges = new vis.DataSet([{"from": "DE Betriebsanleitung", "label": "language of work or name", "to": "EN"}, {"from": "EN", "label": "language used", "to": "EN"}, {"from": "MFS-V2", "label": "instance of", "to": "master feeder systems"}, {"from": "MFS-V2", "label": "followed by", "to": "MFS-V3"}, {"from": "MFS-V3", "label": "instance of", "to": "master feeder systems"}, {"from": "MFS-V3", "label": "operating system", "to": "9"}, {"from": "MFS-V3", "label": "instance of", "to": "service software"}, {"from": "MFS-V3", "label": "developer", "to": "Abicor Binze"}, {"from": "MFS-V3", "label": "part of the series", "to": "MFS"}, {"from": "Microsoft Excel", "label": "operating system", "to": "Microsoft Windows"}, {"from": "MF control", "label": "operating system", "to": "Windows 7 Embedded"}, {"from": "MFS Service Software", "label": "developer", "to": "Abicor Binzel"}, {"from": "MFS Service Software", "label": "operating system", "to": "Windows 7"}, {"from": "MFS service software 5", "label": "operating system", "to": "Windows XP"}, {"from": "MFS service software", "label": "has part", "to": "control panel"}, {"from": "MFS service software", "label": "developer", "to": "Abicor Binzel"}, {"from": "MFS service software", "label": "platform", "to": "eBOX"}, {"from": "MFS service software", "label": "has part", "to": "Monitoring window"}, {"from": "User level 0", "label": "followed by", "to": "User level 1"}, {"from": "User level 0", "label": "followed by", "to": "User level 2"}, {"from": "User level 1", "label": "followed by", "to": "User level 2"}, {"from": "IP address", "label": "use", "to": "IP address"}, {"from": "MFSV2", "label": "developer", "to": "Abicor Binzel"}, {"from": "MFSV3", "label": "developer", "to": "Abicor Binzel"}, {"from": "WMFS", "label": "developer", "to": "Abicor Binzel"}, {"from": "9", "label": "point in time", "to": "9"}, {"from": "Signal description", "label": "uses", "to": "Signal Type"}, {"from": "MFS", "label": "developer", "to": "Abicor Binze"}, {"from": "Warning message", "label": "different from", "to": "error message"}, {"from": "Logdaten", "label": "part of", "to": "MFS"}, {"from": "Warning", "label": "subclass of", "to": "error"}, {"from": "Warning", "label": "subclass of", "to": "Status indicator"}, {"from": "Warning", "label": "part of", "to": "Warning"}, {"from": "ADDA controller", "label": "subclass of", "to": "printed circuit board"}, {"from": "MF1", "label": "subclass of", "to": "slave drive"}, {"from": "MF1", "label": "has part", "to": "wire actual value encoder"}, {"from": "wire actual value encoder", "label": "part of", "to": "MF-1"}, {"from": "Binzel-abicor", "label": "headquarters location", "to": "Giessen"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": true,
+        "filter": [
+            "physics"
+        ]
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+                  // if this network requires displaying the configure window,
+                  // put it in its div
+                  options.configure["container"] = document.getElementById("config");
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

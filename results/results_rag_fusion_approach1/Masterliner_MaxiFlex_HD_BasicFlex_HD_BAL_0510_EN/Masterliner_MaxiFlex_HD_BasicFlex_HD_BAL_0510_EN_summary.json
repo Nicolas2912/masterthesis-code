@@ -1,0 +1,228 @@
+{
+  "document": "Masterliner_MaxiFlex_HD_BasicFlex_HD_BAL_0510_EN",
+  "evaluator_type": "fusion",
+  "total_questions": 50,
+  "answerable_questions": 44,
+  "unanswerable_questions": 6,
+  "safety_critical_questions": 14,
+  "categories": {
+    "TECHNICAL": 13,
+    "SAFETY": 11,
+    "MULTI_CHAPTER": 8,
+    "VISUAL": 7,
+    "UNANSWERABLE": 6,
+    "NUMERICAL": 5
+  },
+  "execution_time": 4441.3713228702545,
+  "metrics": {
+    "alpha_similarity": {
+      "mean": 0.8908477263017134,
+      "median": 0.9076172113418579,
+      "min": 0.7156645059585571,
+      "max": 0.9767392873764038,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9099810570478439,
+        "NUMERICAL": 0.8847513675689698,
+        "SAFETY": 0.8664099790833213,
+        "TECHNICAL": 0.8828852726862981,
+        "VISUAL": 0.9265251926013401
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q003",
+          "score": 0.9275199174880981,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9275), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q026",
+          "score": 0.8957173824310303,
+          "reasoning": "The prediction and reference have very high semantic similarity (0.8957), capturing most of the same information."
+        },
+        {
+          "question_id": "Q041",
+          "score": 0.9038751125335693,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9039), indicating nearly identical meaning."
+        }
+      ]
+    },
+    "question_answer_relevance": {
+      "mean": 0.9523070660602091,
+      "median": 1.0,
+      "min": 0.3235294117647059,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9758064516129032,
+        "NUMERICAL": 0.8101604278074866,
+        "SAFETY": 0.9682594445402795,
+        "TECHNICAL": 0.9533387126742667,
+        "VISUAL": 1.0
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q027",
+          "score": 0.96875,
+          "reasoning": "The score is 0.97 because a small portion of the response discusses the frequency of the task rather than strictly focusing on the replacement procedure, slightly detracting from perfect relevancy."
+        },
+        {
+          "question_id": "Q024",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there were no irrelevant statements, indicating a perfectly relevant response! Great job!"
+        },
+        {
+          "question_id": "Q014",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and doesn't contain any irrelevant information! Great job!"
+        }
+      ]
+    },
+    "hallucination": {
+      "mean": 0.24155844155844156,
+      "median": 0.1,
+      "min": 0.0,
+      "max": 0.9,
+      "by_category": {
+        "MULTI_CHAPTER": 0.037500000000000006,
+        "NUMERICAL": 0.38,
+        "SAFETY": 0.22727272727272727,
+        "TECHNICAL": 0.29450549450549446,
+        "VISUAL": 0.3
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q034",
+          "score": 0.0,
+          "reasoning": "The score is 0.00 because the actual output aligns with all provided contexts, with no contradictions detected."
+        },
+        {
+          "question_id": "Q043",
+          "score": 0.6,
+          "reasoning": "The score is 0.60 because while the output aligns with some contexts regarding storage conditions and temperature ranges, it also contradicts other contexts that do not discuss storage temperature or conditions, indicating some level of hallucination."
+        },
+        {
+          "question_id": "Q035",
+          "score": 0.2,
+          "reasoning": "The score is 0.20 because while the output aligns with the context on several aspects of the MasterLiner, it also discusses attaching and disassembling it, which is not directly covered in some of the provided contexts, leading to a minor deviation."
+        }
+      ]
+    },
+    "faithfulness": {
+      "mean": 0.9885230352303525,
+      "median": 1.0,
+      "min": 0.8333333333333334,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9585714285714285,
+        "NUMERICAL": 1.0,
+        "SAFETY": 0.9944444444444445,
+        "TECHNICAL": 1.0,
+        "VISUAL": 0.9791666666666666
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q017",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Keep up the great work!"
+        },
+        {
+          "question_id": "Q008",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q004",
+          "score": NaN,
+          "reasoning": "Error: Evaluation LLM outputted an invalid JSON. Please use a better evaluation model."
+        }
+      ]
+    },
+    "multimodal_answer_relevancy": {
+      "mean": 0.9943181818181818,
+      "median": 1.0,
+      "min": 0.75,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 1.0,
+        "NUMERICAL": 0.95,
+        "SAFETY": 1.0,
+        "TECHNICAL": 1.0,
+        "VISUAL": 1.0
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q033",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the output directly addresses the maintenance checks for the MasterLiner without any irrelevant statements. This demonstrates a clear and focused response."
+        },
+        {
+          "question_id": "Q034",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the output perfectly addressed the input without any irrelevant statements, providing a clear and direct explanation of the relationship between the MasterLiner's suspension, bending angle, and wire feed distance in the context of wire feed irregularities."
+        },
+        {
+          "question_id": "Q025",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the output directly addresses the input's request without any irrelevant statements. It fully meets the guidelines for laying the MasterLiner in a cable carrier and emphasizes the importance of bending radii and using the correct version."
+        }
+      ]
+    },
+    "multimodal_faithfulness": {
+      "mean": 0.8913504745090729,
+      "median": 0.9166666666666666,
+      "min": 0.5,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.8729978354978355,
+        "NUMERICAL": 0.8333333333333333,
+        "SAFETY": 0.9592988710635769,
+        "TECHNICAL": 0.8718723914544348,
+        "VISUAL": 0.8831632653061224
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q011",
+          "score": 0.9,
+          "reasoning": "The score is 0.90 because the output incorrectly suggests using suspension devices when the context explicitly states that cable ties should not be used to suspend the MasterLiner, highlighting a discrepancy in adherence to the guidelines."
+        },
+        {
+          "question_id": "Q032",
+          "score": 0.6363636363636364,
+          "reasoning": "The score is 0.64 because several claims in the actual output contradict the retrieval context. Specifically, the MasterLiner is incorrectly identified as a flexible conduit for robotic welding cells, quick connectors are misrepresented even though the context emphasizes threaded connections, the ideal length to prevent wire feed issues is inaccurately stated as 25 meters, and the suggestion to use cable ties for suspension is directly opposed to the retrieval context advice against it."
+        },
+        {
+          "question_id": "Q016",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions present, indicating that the actual output is completely aligned with the retrieval context."
+        }
+      ]
+    }
+  },
+  "metrics_enabled": [
+    "alpha_similarity",
+    "question_answer_relevance",
+    "hallucination",
+    "faithfulness",
+    "multimodal_answer_relevancy",
+    "multimodal_faithfulness"
+  ],
+  "fusion_metrics": {
+    "config": {
+      "num_generated_queries": 5,
+      "rrf_k": 60.0
+    },
+    "generate_queries_time": {
+      "mean": 3.0881467136469753,
+      "median": 2.969995617866516,
+      "min": 2.2273664474487305,
+      "max": 4.37836766242981
+    },
+    "fusion_time": {
+      "mean": 5.415894768454812e-05,
+      "median": 5.269050598144531e-05,
+      "min": 4.291534423828125e-05,
+      "max": 7.319450378417969e-05
+    }
+  }
+}

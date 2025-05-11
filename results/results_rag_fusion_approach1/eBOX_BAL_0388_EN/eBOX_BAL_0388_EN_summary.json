@@ -1,0 +1,228 @@
+{
+  "document": "eBOX_BAL_0388_EN",
+  "evaluator_type": "fusion",
+  "total_questions": 50,
+  "answerable_questions": 44,
+  "unanswerable_questions": 6,
+  "safety_critical_questions": 12,
+  "categories": {
+    "TECHNICAL": 13,
+    "VISUAL": 9,
+    "SAFETY": 9,
+    "MULTI_CHAPTER": 8,
+    "UNANSWERABLE": 6,
+    "NUMERICAL": 5
+  },
+  "execution_time": 3998.2473232746124,
+  "metrics": {
+    "alpha_similarity": {
+      "mean": 0.8242841152982279,
+      "median": 0.8360237181186676,
+      "min": 0.4631703794002533,
+      "max": 0.9610871076583862,
+      "by_category": {
+        "MULTI_CHAPTER": 0.8174991458654404,
+        "NUMERICAL": 0.8483082771301269,
+        "SAFETY": 0.8406878113746643,
+        "TECHNICAL": 0.801237363081712,
+        "VISUAL": 0.8338544997904036
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q014",
+          "score": 0.8346046209335327,
+          "reasoning": "The prediction and reference have very high semantic similarity (0.8346), capturing most of the same information."
+        },
+        {
+          "question_id": "Q035",
+          "score": 0.8406896591186523,
+          "reasoning": "The prediction and reference have very high semantic similarity (0.8407), capturing most of the same information."
+        },
+        {
+          "question_id": "Q019",
+          "score": 0.7259319424629211,
+          "reasoning": "The prediction and reference have good semantic similarity (0.7259), sharing significant meaning."
+        }
+      ]
+    },
+    "question_answer_relevance": {
+      "mean": 0.9449194013943267,
+      "median": 1.0,
+      "min": 0.68,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9354395604395604,
+        "NUMERICAL": 0.8912525354969574,
+        "SAFETY": 0.9707602339181286,
+        "TECHNICAL": 0.9443454015399717,
+        "VISUAL": 0.9581491305629236
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q023",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and addresses the input question directly."
+        },
+        {
+          "question_id": "Q004",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and doesn't contain any irrelevant information! Great job!"
+        },
+        {
+          "question_id": "Q012",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and addresses all aspects of the prompt! Great job!"
+        }
+      ]
+    },
+    "hallucination": {
+      "mean": 0.41218434343434346,
+      "median": 0.45,
+      "min": 0.0,
+      "max": 0.9,
+      "by_category": {
+        "MULTI_CHAPTER": 0.12638888888888888,
+        "NUMERICAL": 0.45999999999999996,
+        "SAFETY": 0.4,
+        "TECHNICAL": 0.4634615384615384,
+        "VISUAL": 0.5777777777777778
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q027",
+          "score": 0.7,
+          "reasoning": "The score is 0.70 because while there are factual alignments regarding the eBOX control elements and LED status, there are also several contradictions. The output focuses on LED status (P2 and P3), while many contexts describe pin assignments, technical data, connections, and other aspects of the eBOX, leading to a moderate level of hallucination."
+        },
+        {
+          "question_id": "Q018",
+          "score": 0.7777777777777778,
+          "reasoning": "The score is 0.78 because while the output aligns with the context regarding the existence and function of the X1 port, it omits numerous details present in the context, such as pin assignments for various ports, power supply configurations, and connection details, leading to a high hallucination score due to significant information gaps."
+        },
+        {
+          "question_id": "Q008",
+          "score": 0.7,
+          "reasoning": "The score is 0.70 because while the output aligns with the context regarding PPE for maintenance and cleaning, it contradicts the context by describing PPE during operation, which is not mentioned and thus considered hallucinated."
+        }
+      ]
+    },
+    "faithfulness": {
+      "mean": 0.9897309130263675,
+      "median": 1.0,
+      "min": 0.8095238095238095,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.970508658008658,
+        "NUMERICAL": 0.9818181818181818,
+        "SAFETY": 1.0,
+        "TECHNICAL": 0.9903846153846154,
+        "VISUAL": 1.0
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q035",
+          "score": 0.8095238095238095,
+          "reasoning": "The score is 0.81 because the actual output incorrectly describes the signals for the Hot Wire Power Source Port (X11) and the Control Lead Port (X2). It also misidentifies the Control Lead Port as X13 and X2, while the retrieval context specifies different connections for M-Drive and eBOX."
+        },
+        {
+          "question_id": "Q005",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Keep up the great work!"
+        },
+        {
+          "question_id": "Q029",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context! Keep up the great work!"
+        }
+      ]
+    },
+    "multimodal_answer_relevancy": {
+      "mean": 0.9475108225108225,
+      "median": 1.0,
+      "min": 0.0,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 1.0,
+        "NUMERICAL": 0.7666666666666667,
+        "SAFETY": 0.9444444444444444,
+        "TECHNICAL": 0.989010989010989,
+        "VISUAL": 0.9444444444444444
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q043",
+          "score": 0.0,
+          "reasoning": "The score is 0.00 because the output contained multiple irrelevant statements that did not address the specific question about the maximum permissible weight that can be placed on the eBOX during transport. Each irrelevant statement failed to provide helpful or specific information related to the weight limits, leading to a completely unhelpful response."
+        },
+        {
+          "question_id": "Q024",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no irrelevant statements in the output, making it completely aligned with the input query."
+        },
+        {
+          "question_id": "Q006",
+          "score": 0.5,
+          "reasoning": "The score is 0.50 because there are several irrelevant statements that distract from the core topic of establishing a connection between the eBOX and M-Drive devices, such as acknowledging the question and offering further help, which do not provide useful information for the requested steps."
+        }
+      ]
+    },
+    "multimodal_faithfulness": {
+      "mean": 0.9377725178861542,
+      "median": 1.0,
+      "min": 0.375,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9226190476190477,
+        "NUMERICAL": 0.8788888888888888,
+        "SAFETY": 0.9582146248812915,
+        "TECHNICAL": 0.9776223776223776,
+        "VISUAL": 0.905952380952381
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q007",
+          "score": 0.9285714285714286,
+          "reasoning": "The score is 0.93 because the actual output incorrectly emphasizes the necessity of installing service software before operating the eBOX, whereas the retrieval context suggests that the software is needed for initial operation but does not mandate prior installation."
+        },
+        {
+          "question_id": "Q023",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions present, indicating that the actual output aligns perfectly with the retrieval context."
+        },
+        {
+          "question_id": "Q042",
+          "score": 0.9166666666666666,
+          "reasoning": "The score is 0.92 because the actual output states that storing the eBOX at -20 \u00b0C is acceptable, which contradicts the retrieval context's specified range of -10 \u00b0C to +40 \u00b0C."
+        }
+      ]
+    }
+  },
+  "metrics_enabled": [
+    "alpha_similarity",
+    "question_answer_relevance",
+    "hallucination",
+    "faithfulness",
+    "multimodal_answer_relevancy",
+    "multimodal_faithfulness"
+  ],
+  "fusion_metrics": {
+    "config": {
+      "num_generated_queries": 5,
+      "rrf_k": 60.0
+    },
+    "generate_queries_time": {
+      "mean": 3.072230181910775,
+      "median": 2.996263861656189,
+      "min": 2.1826536655426025,
+      "max": 5.40413761138916
+    },
+    "fusion_time": {
+      "mean": 5.3183598951859906e-05,
+      "median": 5.1140785217285156e-05,
+      "min": 4.57763671875e-05,
+      "max": 6.556510925292969e-05
+    }
+  }
+}

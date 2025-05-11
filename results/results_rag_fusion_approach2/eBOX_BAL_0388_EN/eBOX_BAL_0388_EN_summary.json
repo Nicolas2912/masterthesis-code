@@ -1,0 +1,167 @@
+{
+  "document": "eBOX_BAL_0388_EN",
+  "evaluator_type": "fusion",
+  "llm_model": "unsloth/Qwen2.5-VL-32B-Instruct-unsloth-bnb-4bit",
+  "total_questions": 50,
+  "answerable_questions": 44,
+  "unanswerable_questions": 6,
+  "safety_critical_questions": 12,
+  "categories": {
+    "TECHNICAL": 13,
+    "VISUAL": 9,
+    "SAFETY": 9,
+    "MULTI_CHAPTER": 8,
+    "UNANSWERABLE": 6,
+    "NUMERICAL": 5
+  },
+  "execution_time": 5005.8582282066345,
+  "metrics": {
+    "alpha_similarity": {
+      "mean": 0.9422604550014843,
+      "median": 0.947028398513794,
+      "min": 0.8411343097686768,
+      "max": 0.9864802360534668,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9511099606752396,
+        "NUMERICAL": 0.9306396961212158,
+        "SAFETY": 0.9454109337594774,
+        "TECHNICAL": 0.933280165378864,
+        "VISUAL": 0.9506712555885315
+      },
+      "sample_reasoning": [
+        {
+          "question_id": "Q023",
+          "score": 0.9382190704345703,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9382), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q003",
+          "score": 0.9805174469947815,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9805), indicating nearly identical meaning."
+        },
+        {
+          "question_id": "Q025",
+          "score": 0.9550968408584595,
+          "reasoning": "The prediction and reference have extremely high semantic similarity (0.9551), indicating nearly identical meaning."
+        }
+      ]
+    },
+    "question_answer_relevance": {
+      "mean": 0.941405590527915,
+      "median": 0.9775252525252525,
+      "min": 0.6296296296296297,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9737291164120433,
+        "NUMERICAL": 0.9130303030303031,
+        "SAFETY": 0.9600985434318768,
+        "TECHNICAL": 0.9089639847043498,
+        "VISUAL": 0.9566047605263291
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q022",
+          "score": 0.8857142857142857,
+          "reasoning": "The score is 0.89 because while the response addresses troubleshooting steps and potential causes, it includes some irrelevant details about locating internal components, the M-Drive port, welding, and scenarios where the gas supply is closed, which are not directly related to the core troubleshooting question."
+        },
+        {
+          "question_id": "Q004",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because the response is perfectly relevant and doesn't contain any irrelevant information! Great job!"
+        },
+        {
+          "question_id": "Q002",
+          "score": 0.9090909090909091,
+          "reasoning": "The score is 0.91 because while the answer likely provides the correct steps, the inclusion of irrelevant images showing internal components detracts slightly from the overall relevancy, preventing a perfect score. However, the core information is relevant, hence the high score."
+        }
+      ]
+    },
+    "hallucination": {
+      "mean": 0.3259469696969697,
+      "median": 0.275,
+      "min": 0.0,
+      "max": 0.8888888888888888,
+      "by_category": {
+        "MULTI_CHAPTER": 0.23402777777777778,
+        "NUMERICAL": 0.19,
+        "SAFETY": 0.5685185185185185,
+        "TECHNICAL": 0.3376068376068376,
+        "VISUAL": 0.22376543209876543
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q022",
+          "score": 0.0,
+          "reasoning": "The score is 0.00 because the actual output aligns with the provided contexts and there are no contradictions."
+        },
+        {
+          "question_id": "Q020",
+          "score": 0.5,
+          "reasoning": "The score is 0.50 because while some parts of the output align with the context, there are also contradictions regarding the jumper settings for the internal power supply, indicating a mix of factual and hallucinated information."
+        },
+        {
+          "question_id": "Q044",
+          "score": 0.0,
+          "reasoning": "The score is 0.00 because the actual output is factually aligned with the provided contexts, with no contradictions detected."
+        }
+      ]
+    },
+    "faithfulness": {
+      "mean": 0.9897345301757065,
+      "median": 1.0,
+      "min": 0.8571428571428571,
+      "max": 1.0,
+      "by_category": {
+        "MULTI_CHAPTER": 0.9821428571428572,
+        "NUMERICAL": 0.9833333333333332,
+        "SAFETY": 1.0,
+        "TECHNICAL": 0.9826546003016591,
+        "VISUAL": 1.0
+      },
+      "model_used": "Vertex AI (gemini-2.0-flash)",
+      "sample_reasoning": [
+        {
+          "question_id": "Q038",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q012",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the output is perfectly faithful to the retrieval context! Great job!"
+        },
+        {
+          "question_id": "Q030",
+          "score": 1.0,
+          "reasoning": "The score is 1.00 because there are no contradictions, indicating the actual output aligns perfectly with the retrieval context! Keep up the great work!"
+        }
+      ]
+    }
+  },
+  "metrics_enabled": [
+    "alpha_similarity",
+    "question_answer_relevance",
+    "hallucination",
+    "faithfulness"
+  ],
+  "fusion_metrics": {
+    "config": {
+      "num_generated_queries": 3,
+      "rrf_k": 60.0
+    },
+    "generate_queries_time": {
+      "mean": 6.27910560911352,
+      "median": 5.883278846740723,
+      "min": 3.850299119949341,
+      "max": 12.715913772583008
+    },
+    "fusion_time": {
+      "mean": 4.077499563043768e-05,
+      "median": 3.8623809814453125e-05,
+      "min": 3.266334533691406e-05,
+      "max": 5.245208740234375e-05
+    }
+  }
+}
