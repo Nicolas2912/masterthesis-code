@@ -1,0 +1,1005 @@
+{
+  "total_questions": 50,
+  "questions": [
+    {
+      "id": "Q001",
+      "question": "What is the procedure for feeding wire through the master feeder, including how to utilize the wire guide speed sensor and the wire actual value encoder?",
+      "category": "VISUAL",
+      "safety_critical": false,
+      "answer": "To feed the wire through the master feeder, follow these steps:\n\n## Wire Feeding Procedure\n\n1.  Connect the cable assembly to the interface and remove the protection cap. Connect the control leads to the master feeder.\n2.  Rotate the eccentric bolt and remove it upwards.\n3.  Open the rocker arm.\n4.  Press the inching trigger until the wire becomes visible. Introduce the wire into the wire guide speed sensor (and on retraction into the torch).\n5.  Feed the wire through the wire guide speed sensor using the inching trigger. While doing this, open the pressure lever for the wire actual value encoder. Note that the contact pressure of the wire actual value encoder is preset for wires from 0.8 to 1.0 mm.\n6.  Close the rocker arm and insert the eccentric bolt.\n7.  Press the inching trigger until the wire emerges from the torch neck.",
+      "image": [
+        "page_12_figure_4.png"
+      ],
+      "chunks": [
+        {
+          "page": 1,
+          "score": 0.8948568105697632
+        },
+        {
+          "page": 13,
+          "score": 0.8637164831161499
+        }
+      ]
+    },
+    {
+      "id": "Q002",
+      "question": "What are the key inspection points for the wire guide system in the MF1 wire feeder, and what indicates that a wire guide nipple needs replacement?",
+      "category": "VISUAL",
+      "safety_critical": false,
+      "answer": "The key inspection points for the wire guide system are:\n\n## Wire Guide Inspection Points\n\n1.  The wire guide at the MasterLiner wire inlet.\n2.  The wire guide nipple between the drive wheels.\n3.  The wire guide speed sensor.\n4.  The wire guide at the wire outlet.\n\nA wire guide nipple needs replacement when visual inspection reveals that it is worn or damaged.",
+      "image": [
+        "page_16_figure_2_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 16,
+          "score": 0.8945563435554504
+        },
+        {
+          "page": 16,
+          "score": 0.857944905757904
+        },
+        {
+          "page": 3,
+          "score": 0.8542577624320984
+        }
+      ]
+    },
+    {
+      "id": "Q003",
+      "question": "Describe the procedure for inspecting the toothed wheels of the wire feeder, and what conditions would necessitate their replacement to ensure proper operation and longevity of the equipment?",
+      "category": "VISUAL",
+      "safety_critical": true,
+      "answer": "The toothed wheels should be visually inspected weekly for wear, with increased frequency if the rocker arm force is high. Here's how to inspect and determine if replacement is needed:\n\n## Inspection Procedure:\n\n1.  **Power Down:** Before beginning any inspection or maintenance, ensure the power source is switched off, the gas and coolant supplies are closed, the compressed air supply is closed, the entire welding system is switched off, and all electrical connections are disconnected.\n2.  **Visual Examination:** Closely examine the teeth of the gears for signs of wear. Pay attention to the shape and integrity of the teeth.\n3.  **Acceptable Wear:** Some wear is acceptable, but excessive wear requires replacement.\n\n## Determining Replacement:\n\n*   **Condition Ex Works:** This represents a new, unused gear with sharp, well-defined teeth.\n*   **Used But Still Okay:** The teeth may show some rounding or slight wear, but the overall shape and engagement surface are still intact.\n*   **Used – Replacement Essential:** The teeth are significantly worn, chipped, or deformed. The gear may have difficulty engaging properly, leading to slippage or inconsistent wire feed. Immediate replacement is required to prevent further damage and ensure proper operation.",
+      "image": [
+        "page_15_figure_3.png"
+      ],
+      "chunks": [
+        {
+          "page": 16,
+          "score": 0.8629602193832397
+        },
+        {
+          "page": 16,
+          "score": 0.8497770428657532
+        }
+      ]
+    },
+    {
+      "id": "Q004",
+      "question": "When setting the contact pressure on the wire feed system, what is the procedure to ensure the correct force is applied, and what is the maximum allowable force that can be achieved using the adjustment screw?",
+      "category": "VISUAL",
+      "safety_critical": false,
+      "answer": "To set the contact pressure on the wire feed system, follow these steps:\n\n## Setting Contact Pressure\n\n1.  Locate the adjustment screw used to set the contact pressure.\n2.  Tighten the screw until the mark on the screw aligns with the mark on the sleeve. At this point, the force applied is 200 N.\n3.  Note that one full rotation of the adjustment screw corresponds to a change of 80 N in the contact force.\n4.  The screw can be turned a maximum of 2.5 rotations from the starting point.\n\n*   Ensure that the maximum force of 200 N is not exceeded to prevent damage to the wire or the feeding mechanism.\n*   Proper contact pressure is crucial for consistent and reliable wire feeding during the welding process.",
+      "image": [
+        "page_12_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 13,
+          "score": 0.8377292156219482
+        }
+      ]
+    },
+    {
+      "id": "Q005",
+      "question": "When integrating the MF1 master feeder into a welding system with a CAT emergency stop safety cut-out, describe the procedure for connecting the control signals, including the specific connections for the CAT switch and the motor control, and explain the purpose of each connection.",
+      "category": "VISUAL",
+      "safety_critical": true,
+      "answer": "The integration of the CAT emergency stop and motor control signals involves specific connections to ensure safe and functional operation of the welding system.\n\n## Control Signal Connections\n\n1.  **CAT Socket Connection:**\n    *   Connect the CAT socket (2) on the master feeder to the helix cable of the CAT emergency stop safety cut-out. This connection transmits the emergency stop signal to peripheral devices, ensuring that the system can be shut down immediately in case of an emergency.\n\n2.  **Motor Control Lead Port Connection:**\n    *   Connect the cable assembly connection plug to the 16-pin motor control lead port (3). This connection establishes signal transmission for the motor, including gas and CAT signals. It is essential for controlling the motor functions and ensuring proper gas flow during the welding process.\n\n3.  **Wire Actual Value Encoder Control Lead Port Connection:**\n    *   Connect the cable assembly connection plug to the 4-pin wire actual value encoder control lead port (1). This connection establishes signal transmission for the wire actual value encoder, allowing the system to monitor and control the wire feed accurately.\n\n## Purpose of Connections\n\n*   **CAT Emergency Stop:** The CAT connection ensures that any activation of the emergency stop immediately halts the welding process, preventing potential hazards.\n*   **Motor Control:** The motor control connection enables the system to regulate the wire feed speed and gas flow, which are critical for maintaining weld quality and consistency.\n*   **Wire Actual Value Encoder:** This connection provides feedback on the actual wire feed rate, allowing the system to make adjustments and maintain the desired welding parameters.",
+      "image": [
+        "page_13_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.8991546034812927
+        },
+        {
+          "page": 14,
+          "score": 0.8897747993469238
+        },
+        {
+          "page": 9,
+          "score": 0.882796049118042
+        }
+      ]
+    },
+    {
+      "id": "Q006",
+      "question": "Describe the procedure for feeding the wire through the master feeder, including how to utilize the wire guide speed sensor and the inching trigger.",
+      "category": "VISUAL",
+      "safety_critical": false,
+      "answer": "To feed the wire through the master feeder, follow these steps:\n\n## Wire Feeding Procedure\n\n1.  Connect the cable assembly to the interface and remove the protection cap. Ensure the control leads are connected to the master feeder.\n2.  Rotate the eccentric bolt and remove it upwards.\n3.  Open the rocker arm to expose the wire path.\n4.  Press the green inching trigger until the wire becomes visible. Introduce the wire into the wire guide speed sensor, ensuring it also retracts into the torch.\n5.  Continue feeding the wire through the wire guide speed sensor by repeatedly pressing the inching trigger. While doing this, open the pressure lever for the wire actual value encoder.\n6.  Close the rocker arm and re-insert the eccentric bolt to secure the wire in place.\n7.  Finally, press the inching trigger until the wire emerges from the torch neck, completing the feeding process.",
+      "image": [
+        "page_12_figure_5.png"
+      ],
+      "chunks": [
+        {
+          "page": 13,
+          "score": 0.8881680965423584
+        },
+        {
+          "page": 1,
+          "score": 0.8829679489135742
+        }
+      ]
+    },
+    {
+      "id": "Q007",
+      "question": "How do I put the pressure rollers into operation?",
+      "answer": "Lift off the protection cap, rotate the eccentric bolt and remove it upwards, open the rocker arm, unscrew the toothed wheel axles and remove them upwards. Then, remove the drive gears. Remount all components in the reverse order.",
+      "category": "TECHNICAL",
+      "image": [
+        "page_10_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 11,
+          "score": 0.846306324005127
+        },
+        {
+          "page": 10,
+          "score": 0.8461430668830872
+        }
+      ]
+    },
+    {
+      "id": "Q008",
+      "question": "What personal protective equipment (PPE) is recommended to avoid danger to the user during maintenance of the MF1 master feeder?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "To avoid danger to the user, the following personal protective equipment (PPE) is recommended:\n\n*   Protective clothing\n*   Safety goggles\n*   A class P3 respiratory mask\n*   Protective gloves\n*   Safety shoes",
+      "chunks": [
+        {
+          "page": 3,
+          "score": 0.8520574569702148
+        },
+        {
+          "page": 14,
+          "score": 0.8350017666816711
+        },
+        {
+          "page": 3,
+          "score": 0.8246287107467651
+        }
+      ]
+    },
+    {
+      "id": "Q009",
+      "question": "What immediate actions must be taken in the event of an emergency involving the MF1 master feeder to ensure safety?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "In the event of an emergency, immediately disconnect the following supplies:\n\n*   Electrical power supply\n*   Coolant\n*   Gas\n\nFurther measures can be found in the operating instructions for the power source or the documentation of further peripheral devices.",
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.8515614867210388
+        },
+        {
+          "page": 3,
+          "score": 0.8202215433120728
+        }
+      ]
+    },
+    {
+      "id": "Q010",
+      "question": "How does the commissioning of the MF1 master feeder work?",
+      "answer": "Before starting, note that there is the risk of injury due to unexpected start-up.\nRisk of injury due to unexpected start-up\nThe following instructions must be followed during all maintenance, servicing, assembly, disassembly, and repair work:\n• Switch off the power source.\n• Close off the gas and coolant supply.\n• Close off the compressed air supply.\n• Switch off the entire welding system.\n• Disconnect all electrical connections.\nAlso, there is a risk of crushing.\nHands can be pulled in and crushed by moving wheels. So, do not reach into moving wheels.\n• Please take note of the following instructions:\n⇒ Product description on page EN-5\n• The system may be installed and commissioned only by qualified personnel (in Germany, see TRBS 1203).\n• When supplied with a CAT robot mount, isolation is required. If an alternative mounting device is used, the housing must be attached to this in an isolated manner\nFor commissioning, follow the following image:",
+      "category": "SAFETY",
+      "image": [
+        "page_10_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.8690974116325378
+        },
+        {
+          "page": 9,
+          "score": 0.8677316308021545
+        },
+        {
+          "page": 9,
+          "score": 0.8643069267272949
+        }
+      ]
+    },
+    {
+      "id": "Q011",
+      "question": "What specific warning is given regarding the risk of crushing injuries when working with the moving wheels of the MF1 master feeder, and what preventative action is emphasized?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Risk of Crushing\n\nThe document warns of the risk of crushing injuries due to hands being pulled in and crushed by moving wheels.\n\n## Preventative Action\n\nThe preventative action emphasized is:\n\n*   Do not reach into moving wheels.",
+      "chunks": [
+        {
+          "page": 9,
+          "score": 0.8611236810684204
+        },
+        {
+          "page": 9,
+          "score": 0.8454098105430603
+        },
+        {
+          "page": 14,
+          "score": 0.8428257703781128
+        }
+      ]
+    },
+    {
+      "id": "Q012",
+      "question": "What electrical safety checks are necessary during maintenance to prevent electric shock hazards associated with defective cables on the MF1 master feeder?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Electrical Safety Checks\n\nTo prevent electric shock hazards due to defective cables, the following checks are necessary:\n\n1.  Check all live cables and connections for proper installation and damage.\n2.  Replace any damaged, deformed, or worn parts.",
+      "chunks": [
+        {
+          "page": 15,
+          "score": 0.8641933798789978
+        },
+        {
+          "page": 14,
+          "score": 0.833638072013855
+        },
+        {
+          "page": 13,
+          "score": 0.8244209289550781
+        }
+      ]
+    },
+    {
+      "id": "Q013",
+      "question": "What safety measures must be taken before feeding wire to prevent physical injury caused by the start of the wire?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Safety Measures for Wire Feeding\n\nTo prevent physical injury caused by the start of the wire, the following safety measure must be taken:\n\n*   Keep the process-side drive away from the body.",
+      "chunks": [
+        {
+          "page": 13,
+          "score": 0.8434054851531982
+        },
+        {
+          "page": 9,
+          "score": 0.8275282382965088
+        },
+        {
+          "page": 9,
+          "score": 0.8227881193161011
+        }
+      ]
+    },
+    {
+      "id": "Q014",
+      "question": "What potential hazards are associated with improper use of the MF1 master feeder, and what precautions should be taken to mitigate these risks?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Hazards of Improper Use\n\nIf improperly used, the device can present risks to persons, animals, and material property.\n\n## Precautions\n\nTo mitigate these risks, the following precautions should be taken:\n\n*   Use the device according to its designated use only.\n*   Do not convert or modify the device to enhance its performance without authorization.\n*   The device may only be used by qualified personnel (in Germany, see TRBS 1203).",
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.8265005350112915
+        },
+        {
+          "page": 5,
+          "score": 0.8225816488265991
+        },
+        {
+          "page": 3,
+          "score": 0.8083207011222839
+        }
+      ]
+    },
+    {
+      "id": "Q015",
+      "question": "What does the 'DANGER' classification of warnings indicate, and what level of injury is expected if the danger is not avoided?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "The 'DANGER' classification of warnings describes an imminent threatening danger. If not avoided, this will result in fatal or extremely critical injuries.",
+      "chunks": [
+        {
+          "page": 4,
+          "score": 0.8514308929443359
+        },
+        {
+          "page": 9,
+          "score": 0.8132468461990356
+        },
+        {
+          "page": 9,
+          "score": 0.8093848824501038
+        }
+      ]
+    },
+    {
+      "id": "Q016",
+      "question": "What does the 'WARNING' classification of warnings indicate, and what level of injury is expected if the potentially dangerous situation is not avoided?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "The 'WARNING' classification describes a potentially dangerous situation. If not avoided, this may result in serious injuries.",
+      "chunks": [
+        {
+          "page": 4,
+          "score": 0.8524749875068665
+        },
+        {
+          "page": 9,
+          "score": 0.8102619051933289
+        },
+        {
+          "page": 9,
+          "score": 0.8077285289764404
+        }
+      ]
+    },
+    {
+      "id": "Q017",
+      "question": "What does the 'CAUTION' classification of warnings indicate, and what level of injury is expected if the potentially harmful situation is not avoided?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "The 'CAUTION' classification describes a potentially harmful situation. If not avoided, this may result in slight or minor injuries.",
+      "chunks": [
+        {
+          "page": 4,
+          "score": 0.8500761389732361
+        },
+        {
+          "page": 9,
+          "score": 0.8110140562057495
+        },
+        {
+          "page": 9,
+          "score": 0.8078829050064087
+        }
+      ]
+    },
+    {
+      "id": "Q018",
+      "question": "How does the feeding in the wire work?",
+      "answer": "There is a risk of physical injury caused by the start of wire. Keep the process-side drive away from the body.\n1 Connect the cable assembly to the interface (6) and lift off the protection cap. Connect the control leads to the master feeder MF1.\n2 Rotate the eccentric bolt (3) and remove it upwards.\n3 Open the rocker arm (8).\n4 Press the inching trigger (7) until wire (5) becomes visible. Introduce the wire (5) into the wire guide speed sensor (2) (and on retraction into the torch).\n5 Feed it through the wire guide speed sensor (2) using the inching trigger (7). When doing so, open the pressure lever (1) for the wire actual value encoder (9).\nThe contact pressure of the wire actual value encoder (9) is pre-set for wires from 0.8 to 1.0 mm.\n6 Close the rocker arm (8) and insert the eccentric bolt (3).\n7 Press the inching trigger (7) until wire (5) emerges from the torch neck",
+      "category": "TECHNICAL",
+      "image": [
+        "page_12_figure_2.png"
+      ],
+      "chunks": [
+        {
+          "page": 15,
+          "score": 0.8504161238670349
+        },
+        {
+          "page": 9,
+          "score": 0.8263942003250122
+        },
+        {
+          "page": 15,
+          "score": 0.826347827911377
+        }
+      ]
+    },
+    {
+      "id": "Q019",
+      "question": "What specific personal protective equipment (PPE) is recommended when operating or maintaining the MF1 master feeder, and why is each item necessary?",
+      "category": "TECHNICAL",
+      "safety_critical": true,
+      "answer": "## Recommended Personal Protective Equipment (PPE)\n\nTo ensure operator safety, the following PPE is recommended when operating or maintaining the MF1 master feeder:\n\n*   **Protective Clothing:** Protects against sparks, heat, and potential exposure to welding materials.\n*   **Safety Goggles:** Protects eyes from flying debris, sparks, and radiation.\n*   **Class P3 Respiratory Mask:** Protects against inhalation of harmful fumes and particles generated during welding processes.\n*   **Protective Gloves:** Protects hands from burns, cuts, and electrical hazards.\n*   **Safety Shoes:** Protects feet from falling objects and electrical hazards.\n\nFailure to use appropriate PPE can result in serious injuries.",
+      "chunks": [
+        {
+          "page": 3,
+          "score": 0.8488297462463379
+        },
+        {
+          "page": 3,
+          "score": 0.8363181948661804
+        },
+        {
+          "page": 14,
+          "score": 0.8323188424110413
+        }
+      ]
+    },
+    {
+      "id": "Q020",
+      "question": "Describe the procedure for mounting and correctly aligning the feed rollers on the MF1 master feeder, including the different types of rollers and their applications.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Mounting and Aligning Feed Rollers\n\n### Procedure:\n\n1.  **Preparation:** Lift off the protection cap and rotate the eccentric bolt to remove it upwards. Open the rocker arm.\n2.  **Removal of Existing Components:** Unscrew the toothed wheel axles and remove them upwards. Remove the drive gears.\n3.  **Installation of New Rollers:**\n    *   Unscrew the drive roller knurled screws.\n    *   Place the feed drive rollers on the drive gears.\n    *   Remount the drive roller knurled screws.\n4.  **Reassembly:** Remount all components in the reverse order.\n\n### Types of Rollers:\n\n*   **Red Drive Rollers:** V-groove (general purpose).\n*   **Blue Drive Rollers:** U-groove (softer wires).\n*   **Green Drive Rollers:** Knurled V-groove (enhanced grip).\n\n### Applications:\n\n*   Smooth feed rollers are used as pressure rollers for feeding CuSi, steel, or stainless steel.\n\n### Alignment:\n\n*   Ensure the knurled screws are correctly installed for both drive rollers and pressure rollers.\n*   Ensure the feed rollers are correctly installed and always replace or reverse them in pairs.\n*   Observe the groove geometry and the wire diameter.",
+      "chunks": [
+        {
+          "page": 3,
+          "score": 0.8615490198135376
+        },
+        {
+          "page": 10,
+          "score": 0.8570064306259155
+        }
+      ]
+    },
+    {
+      "id": "Q021",
+      "question": "Where do I find the nameplate of the MF1 master feeder?",
+      "answer": "The MF1 master feeder is labelled with a nameplate as in the given picture. When making inquiries, note the following information from the nameplate: device type, ID number, serial number and year of construction",
+      "category": "TECHNICAL",
+      "image": [
+        "page_7_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.8543931245803833
+        },
+        {
+          "page": 9,
+          "score": 0.8494617938995361
+        }
+      ]
+    },
+    {
+      "id": "Q022",
+      "question": "Describe the steps involved in feeding the wire through the MF1 master feeder, including the use of the inching trigger and the wire guide speed sensor.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Feeding Wire Through the MF1 Master Feeder\n\n1.  **Preparation:** Connect the cable assembly to the interface and lift off the protection cap. Connect the control leads to the master feeder MF1.\n2.  **Open the Rocker Arm:** Rotate the eccentric bolt and remove it upwards. Open the rocker arm.\n3.  **Inching:** Press the inching trigger until wire (and on retraction into the torch).\n4.  **Wire Guide Speed Sensor:** Feed the wire through the wire guide speed sensor using the inching trigger. Open the pressure lever for the wire actual value encoder.\n5.  **Close the Rocker Arm:** Close the rocker arm and insert the eccentric bolt.\n6.  **Final Feed:** Press the inching trigger until wire becomes visible. Introduce the wire into the wire guide speed sensor and ensure it emerges from the torch neck.\n\n**CAUTION:** Keep the process-side drive away from the body to avoid physical injury caused by the start of the wire.",
+      "chunks": [
+        {
+          "page": 13,
+          "score": 0.8904649615287781
+        },
+        {
+          "page": 3,
+          "score": 0.8839697241783142
+        }
+      ]
+    },
+    {
+      "id": "Q023",
+      "question": "What are the recommended actions to take if the MF1 unit is not ready for operation, and what are the possible causes?",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Troubleshooting: Unit Not Ready for Operation\n\n### Possible Causes:\n\n*   Control system or component defective.\n*   Motor defective (master or slave).\n*   Wire fault in cable assembly or master drive.\n\n### Recommended Actions:\n\n1.  **Check by Specialized Personnel:** Have qualified personnel inspect the unit.\n2.  **Switch to Currentless State:** Disconnect the unit from the power supply.\n3.  **Motor Replacement:** Replace the motor and press the RESET trigger.\n4.  **Motor Control Card Replacement:** Replace the motor control card.\n5.  **Cable Assembly Inspection:** Check for wire faults in the cable assembly or master drive.\n\n**NOTICE:** Also consult the operating instructions for the welding components, such as the power source, welding torch system, re-circulating cooling unit etc.",
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.8221666812896729
+        },
+        {
+          "page": 3,
+          "score": 0.8102806210517883
+        }
+      ]
+    },
+    {
+      "id": "Q024",
+      "question": "Describe the weekly maintenance checks that should be performed on the MF1 master feeder to ensure optimal performance and longevity.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Weekly Maintenance Checks\n\nThe following checks should be performed weekly:\n\n*   **Basic Cleaning:** Clean the unit to remove any accumulated dirt or debris. This is especially important in extreme working conditions.\n*   **Wire Conduit Inspection:** Blow compressed air through the wire conduit to remove debris and check for wear.\n*   **Gear Inspection:** Visually inspect the gears for abrasion or damage. Refer to section 9.1 for guidance on wear assessment.\n*   **Wire Guide Nipple Inspection:** Visually inspect the wire guide nipple for wear. Refer to section 9.2 for guidance.\n\n**NOTICE:** When using arc welding equipment, always observe the provisions of EN 60974-4 Inspection and testing, as well as any national laws and regulations.",
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.8546212315559387
+        },
+        {
+          "page": 16,
+          "score": 0.8414543271064758
+        },
+        {
+          "page": 15,
+          "score": 0.8387678861618042
+        }
+      ]
+    },
+    {
+      "id": "Q025",
+      "question": "What is the general purpose/functional description of the master feeder and what are its components?",
+      "answer": "The media required for the welding process (welding current, shielding gas, coolant and blast air) are passed through the MF1 master feeder and fed to the torch. The interfaces with the torch and the cable assembly are adapted to the application-specific requirements. The MF1 master feeder is fastened to the robot or the safety cut-out by means of a robot mount. The four-roll drive feeds the wire at a constant wire feed. The master feeder takes over the \"Push\" function here. The wire can be fed directly by means of a MasterLiner or by means of a second slave drive that is tuned exactly to the master feeder. This slave drive is integrated, for example, into the M-Drive, MF1-Rear or a power source.\nThe components are shown on the following picture",
+      "category": "TECHNICAL",
+      "image": [
+        "page_9_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.8764116764068604
+        },
+        {
+          "page": 18,
+          "score": 0.8454024791717529
+        },
+        {
+          "page": 3,
+          "score": 0.832732617855072
+        }
+      ]
+    },
+    {
+      "id": "Q026",
+      "question": "Explain the significance of the 'inching trigger' and 'gas test trigger' on the MF1 master feeder, detailing their functions and proper usage.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Inching Trigger and Gas Test Trigger\n\n*   **Inching Trigger (Green):** Pressing this trigger once feeds the wire. It is used for controlled wire feeding during setup and adjustments.\n*   **Gas Test Trigger (Black):** Pressing this trigger initiates gas flow. It is used to test and purge the gas line before welding.\n\nThese control elements are essential for proper setup and operation of the MF1 master feeder.",
+      "chunks": [
+        {
+          "page": 3,
+          "score": 0.8473935127258301
+        },
+        {
+          "page": 14,
+          "score": 0.8468062877655029
+        },
+        {
+          "page": 14,
+          "score": 0.8450809717178345
+        }
+      ]
+    },
+    {
+      "id": "Q027",
+      "question": "Describe the potential hazards associated with improper use of the MF1 master feeder, and what measures should be taken to mitigate these risks?",
+      "category": "TECHNICAL",
+      "safety_critical": true,
+      "answer": "## Hazards of Improper Use\n\nImproper use of the MF1 master feeder can present risks to persons, animals, and material property.\n\n### Potential Hazards:\n\n*   **Electrical Shock:** Due to defective cables or improper grounding.\n*   **Crushing Injuries:** From moving wheels.\n*   **Exposure to Harmful Fumes:** If proper ventilation is not used.\n*   **Fire Hazards:** From sparks and hot materials.\n\n### Mitigation Measures:\n\n*   **Use the Device According to its Designated Use Only:** Follow the instructions in the operating manual.\n*   **Do Not Modify the Device:** Unauthorized modifications can compromise safety.\n*   **Use by Qualified Personnel Only:** Ensure that only trained and qualified personnel operate the device.\n*   **Regular Inspections:** Check for damaged cables and connections.\n*   **Use Proper PPE:** Wear appropriate personal protective equipment.\n\n**WARNING:** Hazards caused by improper use. If improperly used, the device can present risks to persons, animals and material property.",
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.8365519046783447
+        },
+        {
+          "page": 5,
+          "score": 0.8236918449401855
+        },
+        {
+          "page": 3,
+          "score": 0.8134127855300903
+        }
+      ]
+    },
+    {
+      "id": "Q028",
+      "question": "What are the ambient temperature and humidity limits for operating and storing the MF1 master feeder, and what precautions should be taken if these limits are exceeded?",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Ambient Conditions\n\n### Operating Conditions:\n\n*   **Ambient Temperature:** -10°C to +40°C\n*   **Relative Humidity:** Up to 90% at 20°C\n\n### Storage Conditions:\n\n*   **Ambient Temperature:** -10°C to +40°C\n*   **Ambient Temperature for Shipment:** -25°C to +55°C\n*   **Relative Humidity:** Up to 90% at 20°C\n\n### Precautions:\n\nIf these limits are exceeded, the performance and reliability of the MF1 master feeder may be affected. Ensure the device is operated and stored within the specified conditions to prevent damage and maintain optimal performance.",
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.8305764198303223
+        },
+        {
+          "page": 3,
+          "score": 0.8135796189308167
+        }
+      ]
+    },
+    {
+      "id": "Q029",
+      "question": "Explain the procedure for replacing the rocker arm on the MF1 master feeder, including the tools required and the correct orientation for the new rocker arm.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Replacing the Rocker Arm\n\n1.  **Preparation:** Lift off the protection cap.\n2.  **Disassembly:** Rotate the eccentric bolt and remove it upwards. Open the rocker arm.\n3.  **Removal:** Unscrew the knurled screw.\n4.  **Rocker Arm Removal:** Remove the rocker arm upwards.\n5.  **Installation:** Place the new rocker arm on the rotation axis and secure it with the knurled screw.\n\n**Tools Required:**\n\n*   Screwdriver (for knurled screw)\n\n**Correct Orientation:**\n\n*   Ensure the rocker arm is placed correctly on the rotation axis before securing it with the knurled screw.",
+      "chunks": [
+        {
+          "page": 11,
+          "score": 0.8814809918403625
+        },
+        {
+          "page": 14,
+          "score": 0.8579936027526855
+        }
+      ]
+    },
+    {
+      "id": "Q030",
+      "question": "How do I set the contact pressure?",
+      "answer": "The contact pressure has a defined start and end point.\nNotice: one rotation of the screw corresponds to 80 N.\nIf the screw is fully tightened, this corresponds to a force of 200 N. The mark on the screw points upwards and coincides with the mark on the sleeve. The screw can be turned on a maximum of 2.5 rotations",
+      "category": "TECHNICAL",
+      "image": [
+        "page_12_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 16,
+          "score": 0.9104106426239014
+        },
+        {
+          "page": 16,
+          "score": 0.861774206161499
+        },
+        {
+          "page": 14,
+          "score": 0.8554682731628418
+        }
+      ]
+    },
+    {
+      "id": "Q031",
+      "question": "How do I put the drive rollers into operation?",
+      "answer": "Notice:\n• Red drive rollers = V-groove / blue drive rollers = U-groove / green drive rollers = knurled V-groove.\n• An engraved number indicates the wire diameter to be used.\nUnscrew the drive roller knurled screws, then place the feed drive rollers on drive gears. Afterwards remount the drive roller knurled screws.",
+      "category": "TECHNICAL",
+      "image": [
+        "page_10_figure_1.png",
+        "page_11_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 16,
+          "score": 0.8746689558029175
+        },
+        {
+          "page": 3,
+          "score": 0.8308718204498291
+        }
+      ]
+    },
+    {
+      "id": "Q032",
+      "question": "What safety measures must be taken before performing any maintenance, servicing, assembly, disassembly, or repair work on the MF1 master feeder, and how do these measures relate to potential hazards described in the manual?",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": true,
+      "answer": "## Safety Measures Before Maintenance\n\nBefore commencing any maintenance, servicing, assembly, disassembly, or repair work on the MF1 master feeder, the following safety measures must be implemented:\n\n1.  **Switch off the power source:** This prevents the risk of electric shock from live electrical components (Section 6, 9, 11).\n2.  **Close off the gas and coolant supply:** This mitigates the risk of exposure to hazardous gases or coolant leaks (Section 6, 9, 11).\n3.  **Close the compressed air supply:** This prevents unexpected activation of pneumatic components (Section 6, 9, 11).\n4.  **Switch off the entire welding system:** This ensures that all interconnected components are de-energized and safe to handle (Section 6, 9, 11).\n5.  **Disconnect all electrical connections:** This further isolates the MF1 from any potential electrical hazards (Section 6, 9, 11).\n\nThese measures directly address the following potential hazards:\n\n*   **Electric Shock:** Defective cables can pose a dangerous voltage risk. Regular checks and replacements are crucial (Section 9).\n*   **Crushing:** Moving wheels can pull in and crush hands. Avoiding contact with moving parts is essential (Section 9).\n*   **Unexpected Start-up:** Ensuring all power and supply lines are disconnected prevents accidental activation of the equipment (Section 6, 9, 11).\n\nThese safety protocols are essential to prevent injury and ensure safe maintenance procedures.",
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.8589542508125305
+        },
+        {
+          "page": 9,
+          "score": 0.8533560633659363
+        },
+        {
+          "page": 9,
+          "score": 0.8507665395736694
+        }
+      ]
+    },
+    {
+      "id": "Q033",
+      "question": "Describe the process for mounting feed rollers on the MF1, including the types of rollers available and the considerations for selecting the correct type based on the wire being used. Also, detail the maintenance required for these rollers as per section 9.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## Mounting Feed Rollers on the MF1\n\n### Mounting Procedure:\n\n1.  **Pressure Rollers (Section 6.1.1):**\n    *   Lift off the protection cap.\n    *   Rotate and remove the eccentric bolt upwards.\n    *   Open the rocker arm.\n    *   Unscrew and remove the toothed wheel axles upwards.\n    *   Remove the drive gears.\n    *   Remount all components in the reverse order.\n\n2.  **Drive Rollers (Section 6.1.2):**\n    *   Unscrew the drive roller knurled screws.\n    *   Place the feed drive rollers on the drive gears.\n    *   Remount the drive roller knurled screws.\n\n### Types of Rollers and Selection:\n\n*   **Red drive rollers:** V-groove\n*   **Blue drive rollers:** U-groove\n*   **Green drive rollers:** Knurled V-groove\n\nSelect the appropriate roller based on the wire type and diameter. An engraved number on the roller indicates the wire diameter to be used (Section 6.1.2).\n\n### Maintenance (Section 9):\n\n*   **Weekly Inspection:** Visually inspect the toothed wheels for wear. The higher the rocker arm force, the greater the wear.\n*   **Reversal/Replacement:** Feed rollers come with anti-corrosion protection. Lubricate them before mounting and always replace or reverse them in pairs.\n*   **Groove Condition:** All grooved feed rollers have two guide grooves. If a guide groove is worn out, the feed roller can be reversed once and used again.\n\nProper selection and maintenance of feed rollers are crucial for consistent wire feeding and extended component life.",
+      "chunks": [
+        {
+          "page": 10,
+          "score": 0.8611248731613159
+        },
+        {
+          "page": 11,
+          "score": 0.8572490215301514
+        },
+        {
+          "page": 3,
+          "score": 0.8527350425720215
+        }
+      ]
+    },
+    {
+      "id": "Q034",
+      "question": "Explain the function of the inching trigger and gas test trigger on the MF1, and describe the steps for feeding wire through the system using the inching trigger, referencing the relevant safety precautions.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": true,
+      "answer": "## Function of Inching and Gas Test Triggers\n\n*   **Inching Trigger (Green):** Pressing this trigger feeds the wire (and retracts it into the torch) (Section 6.2, 7.1).\n*   **Gas Test Trigger (Black):** Pressing this trigger initiates gas flow (Section 7.1).\n\n## Steps for Feeding Wire Using the Inching Trigger\n\n1.  Connect the cable assembly to the interface and remove the protection cap. Connect the control leads to the master feeder MF1 (Section 6.2).\n2.  Rotate the eccentric bolt and remove it upwards (Section 6.2).\n3.  Open the rocker arm (Section 6.2).\n4.  **Press the inching trigger** until wire (and on retraction into the torch) (Section 6.2).\n5.  Feed it through the wire guide speed sensor using the inching trigger. When doing so, open the pressure lever for the wire actual value encoder. The contact pressure of the wire actual value encoder is pre-set for wires from 0.8 to 1.0 mm (Section 6.2).\n6.  Close the rocker arm and insert the eccentric bolt (Section 6.2).\n7.  Press the inching trigger until wire becomes visible. Introduce the wire into the wire guide speed sensor emerges from the torch neck (Section 6.2).\n\n## Safety Precautions\n\n*   **Risk of Injury:** Physical injury can occur due to the start of the wire. Keep the process-side drive away from the body (Section 6.2).\n\nProper use of the inching trigger, combined with adherence to safety precautions, ensures safe and effective wire feeding.",
+      "chunks": [
+        {
+          "page": 13,
+          "score": 0.8788278698921204
+        },
+        {
+          "page": 14,
+          "score": 0.870124340057373
+        }
+      ]
+    },
+    {
+      "id": "Q035",
+      "question": "Describe the purpose of the wire actual value encoder, and how it integrates with the control lead pin assignment. What are the specifications for the encoder motor data and encoder wire actual value data, and how do these parameters affect system performance?",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## Purpose of the Wire Actual Value Encoder\n\nThe wire actual value encoder provides feedback on the wire feed rate, allowing for precise control and monitoring of the wire feeding process (Section 5).\n\n## Integration with Control Lead Pin Assignment\n\nThe wire actual value encoder connects via a 4-pin circular connector. The control lead pin assignment is detailed in Figure 7 (Section 6.3).\n\n## Encoder Specifications\n\n### Encoder Motor Data (Tab. 7):\n\n*   **Pulses per revolution:** 300\n*   **Current consumption:** Typically 10 mA, Max. 20 mA, Stand-by 50 μA\n*   **Outputs:** Compatible\n*   **Electric phase shift A/B:** 90± 20 degrees\n*   **Duty factor:** 50± 10%\n*   **Max. frequency:** 200 kHz\n*   **Operating temperature at 90% humidity:** -40 °C to +85°C\n*   **Moment of inertia of the disc:** 0.12 10-7 x kgm²\n*   **Supply voltage Vcc:** 5 V± 10%\n\n### Encoder Wire Actual Value Data (Tab. 8):\n\n*   **Number of pulses:** 1024\n*   **Z pulse or minus pulse:** (Z) 1 per revolution\n*   **Output:** Push-pull (totem pole)\n*   **Supply voltage:** Min. 4.5 V to max. 30 V\n*   **Idle current:** 35 mA\n*   **Max. load:** 20 mA per output (short-circuit-proof)\n*   **V out low:** Max. 500 mV @ l=10 mA\n*   **Working temperature:** -40°C to +85°C\n*   **Storage temperature:** -40 °C to +85 °C\n*   **Max. pulse frequency:** 200 kHz\n\n## Impact on System Performance\n\nThese parameters directly influence the accuracy and responsiveness of the wire feeding system. The number of pulses per revolution determines the resolution of the feedback signal, while the frequency and temperature ratings define the operational limits of the encoder. Proper functioning of the encoder is critical for maintaining consistent welding quality.",
+      "chunks": [
+        {
+          "page": 1,
+          "score": 0.883940577507019
+        }
+      ]
+    },
+    {
+      "id": "Q036",
+      "question": "What are the recommended ambient conditions for operating and storing the MF1, and how do these conditions affect the performance and longevity of the device? Also, what specific components are most susceptible to damage if these conditions are not met?",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## Recommended Ambient Conditions\n\n### Operating Conditions (Tab. 1):\n\n*   **Ambient temperature:** -10°C to +40°C\n*   **Relative humidity:** Up to 90% at 20°C\n\n### Storage Conditions (Tab. 2):\n\n*   **Ambient temperature:** -10°C to +40°C\n*   **Ambient temperature for shipment:** -25°C to +55°C\n*   **Relative humidity:** Up to 90% at 20°C\n\n## Impact on Performance and Longevity\n\nOperating or storing the MF1 outside these conditions can negatively impact its performance and longevity.\n\n*   **Temperature:** Extreme temperatures can affect the viscosity of lubricants, the performance of electronic components, and the integrity of plastic parts.\n*   **Humidity:** High humidity can lead to corrosion of metallic components and degradation of insulation materials.\n\n## Susceptible Components\n\n*   **Electronic Components:** The motor control card and wire actual value encoder are particularly sensitive to temperature and humidity (Tab. 7, Tab. 8).\n*   **Mechanical Components:** Gears, bearings, and rollers can suffer from increased wear and corrosion if exposed to extreme conditions (Section 9).\n*   **Wiring and Connectors:** Insulation can degrade, and connections can corrode, leading to electrical faults (Section 9).\n\nAdhering to the recommended ambient conditions is crucial for ensuring reliable operation and extending the service life of the MF1.",
+      "chunks": [
+        {
+          "page": 8,
+          "score": 0.8344268202781677
+        },
+        {
+          "page": 5,
+          "score": 0.8245297074317932
+        },
+        {
+          "page": 6,
+          "score": 0.8208471536636353
+        }
+      ]
+    },
+    {
+      "id": "Q037",
+      "question": "Describe the troubleshooting steps for addressing a situation where the wire is not being fed, differentiating between potential causes related to the motor, control card, and cable assembly. Reference the relevant sections for maintenance and potential solutions.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## Troubleshooting Steps for Wire Not Being Fed\n\n### 1. Initial Assessment (Section 10):\n\n*   **Symptom:** Wire is not fed when the wire feed trigger is pressed.\n\n### 2. Potential Causes and Solutions (Section 10):\n\n*   **Cause 1: Defective Control System or Component:**\n    *   **Solution:** Check by specialized personnel. Switch unit to currentless state.\n*   **Cause 2: Defective Motor (Master or Slave):**\n    *   **Solution:** Replace motor, press RESET trigger.\n*   **Cause 3: Motor Control Card Fault:**\n    *   **Symptom:** Fault cannot be eliminated by pressing the RESET trigger. When the wire feed trigger is pressed again, the motor control card shows again a fault.\n    *   **Solution:** Replace motor control card.\n*   **Cause 4: Wire Fault in Cable Assembly or Master Drive:**\n    *   **Solution:** Eliminate fault. Replace the feed motor or motor control card.\n\n### 3. Maintenance and Inspection (Section 9):\n\n*   **Check Cable Assembly:** Inspect for any visible damage or wear.\n*   **Inspect Motor Connections:** Ensure all connections are secure and free from corrosion.\n*   **Verify Power Supply:** Confirm that the unit is receiving the correct voltage.\n\n### 4. Additional Considerations:\n\n*   Consult the operating instructions for the welding components, such as the power source and welding torch system (Section 10).\n\nBy systematically addressing these potential causes and performing regular maintenance, the issue of wire not being fed can be effectively resolved.",
+      "chunks": [
+        {
+          "page": 15,
+          "score": 0.8537326455116272
+        }
+      ]
+    },
+    {
+      "id": "Q038",
+      "question": "Explain the process of decommissioning the MF1 master feeder, emphasizing the importance of following shutdown procedures for all integrated components in the welding system. What steps should be taken to ensure safe disassembly and disposal of the unit?",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": true,
+      "answer": "## Decommissioning Process\n\n1.  **Shutdown Procedures (Section 8):**\n    *   As the MF1 master feeder is integrated into a welding system, the process for putting it out of operation depends on the robot control system.\n    *   Make sure that the shutdown procedures for all components integrated in the welding system are strictly observed.\n    *   Switch off the robot control.\n\n2.  **Disassembly (Section 11):**\n    *   Disconnect the cable assembly from the wire feeder.\n    *   Remove the parts to be disconnected.\n    *   Dismount the master feeder MF1 from the torch side fastener.\n\n## Safe Disassembly and Disposal\n\n1.  **Safety Precautions (Section 11):**\n    *   **DANGER:** Risk of injury due to unexpected start-up. Follow these instructions during all maintenance, servicing, assembly, disassembly, and repair work:\n        *   Switch off the power source.\n        *   Close off the gas and coolant supply.\n        *   Close the compressed air supply.\n        *   Switch off the entire welding system.\n        *   Disconnect all electrical connections.\n    *   **NOTICE:** Disassembly may be carried out only by qualified personnel.\n\n2.  **Disposal (Section 12):**\n    *   When disposing of the system, local regulations, laws, provisions, standards, and guidelines must be observed.\n    *   Observe the regulations on the disposal of electronic scrap and dispose of it at your local waste disposal site (e.g., recycling center).\n    *   To correctly dispose of the product, it must first be disassembled.\n\n3.  **Materials (Section 12.1):**\n    *   This product is mainly made of metallic materials, which can be melted in steel and iron works and are, thus, almost infinitely recyclable.\n    *   The plastic materials used are labeled in preparation for their sorting and separation for later recycling.\n\n4.  **Consumables (Section 12.2):**\n    *   Oil, greases, and cleaning agents may not contaminate the ground or enter the sewage system. These materials must be stored, transported, and disposed of in suitable containers.\n    *   Observe the relevant local regulations and disposal instructions of the safety data sheets specified by the manufacturer of the consumables.\n    *   Contaminated cleaning tools (brushes, rags, etc.) must also be disposed of in accordance with the information provided by the consumables’ manufacturer.\n\nBy following these steps, the MF1 can be safely decommissioned, disassembled, and disposed of in an environmentally responsible manner.",
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.9161584377288818
+        },
+        {
+          "page": 18,
+          "score": 0.8785170316696167
+        },
+        {
+          "page": 3,
+          "score": 0.8647512793540955
+        }
+      ]
+    },
+    {
+      "id": "Q039",
+      "question": "What is the maximum number of rotations the screw can be turned?",
+      "answer": "The screw can be turned a maximum of 2.5 rotations.",
+      "category": "NUMERICAL",
+      "image": [
+        "page_12_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 16,
+          "score": 0.8857228755950928
+        },
+        {
+          "page": 16,
+          "score": 0.883151650428772
+        }
+      ]
+    },
+    {
+      "id": "Q040",
+      "question": "The MF1 master feeder has a wire feed rate specified as i=15/1 v=1-20 m/min and i=30/1 v=1-10 m/min. Calculate the maximum wire feed rate in cm/s for both gear ratios and explain how the gear ratio affects the maximum achievable wire feed rate.",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "## Maximum Wire Feed Rate Calculation\n\nTo calculate the maximum wire feed rate in cm/s for both gear ratios, we need to convert meters per minute (m/min) to centimeters per second (cm/s).\n\n### Gear Ratio i=15/1:\n\n1.  Maximum wire feed rate: 20 m/min\n2.  Conversion: 20 m/min * (100 cm/1 m) * (1 min/60 s) = 33.33 cm/s\n\n### Gear Ratio i=30/1:\n\n1.  Maximum wire feed rate: 10 m/min\n2.  Conversion: 10 m/min * (100 cm/1 m) * (1 min/60 s) = 16.67 cm/s\n\n## Effect of Gear Ratio on Wire Feed Rate\n\nThe gear ratio significantly affects the maximum achievable wire feed rate. A lower gear ratio (i=15/1) allows for a higher maximum wire feed rate (33.33 cm/s), while a higher gear ratio (i=30/1) results in a lower maximum wire feed rate (16.67 cm/s). This is because the gear ratio determines the relationship between the motor's rotational speed and the wire feed speed. A lower gear ratio means the wire feeds faster for each rotation of the motor, but it may also reduce the torque available for feeding the wire.",
+      "chunks": [
+        {
+          "page": 1,
+          "score": 0.8596913814544678
+        },
+        {
+          "page": 3,
+          "score": 0.8490626811981201
+        }
+      ]
+    },
+    {
+      "id": "Q041",
+      "question": "The encoder motor has 300 pulses per revolution. If the drive wheel diameter is 20 mm, calculate the linear resolution per pulse in millimeters. How does this resolution affect the precision of wire feeding?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "## Linear Resolution Calculation\n\nTo calculate the linear resolution per pulse, we need to determine the circumference of the drive wheel and then divide it by the number of pulses per revolution.\n\n1.  Calculate the circumference of the drive wheel:\n    Circumference = \n    \n    π * diameter = 3.14159 * 20 mm = 62.83 mm\n2.  Determine the distance moved per encoder pulse:\n    Resolution per pulse = Circumference / Total pulses = 62.83 mm / 300 = 0.209 mm per pulse\n\n## Impact on Wire Feed Precision\n\nThe resolution of 0.209 mm per pulse means that the wire feeder can theoretically control the wire movement in increments of approximately 0.209 millimeters. This affects the precision of wire feeding in the following ways:\n\n*   **Precision Control:** Allows for relatively precise control over the amount of wire fed.\n*   **Adjustment Capability:** Enables the system to make small adjustments to the feed rate, which is important for maintaining consistent welding parameters.\n*   **Dimensional Accuracy:** Contributes to the dimensional accuracy of the weld by ensuring the correct amount of filler material is deposited.\n\nHowever, it's important to note that the actual precision may be affected by other factors such as:\n\n*   **Mechanical play:** Any looseness in the drive mechanism can reduce precision.\n*   **Wire slippage:** If the wire slips on the drive rollers, the actual feed rate will differ from the commanded rate.\n*   **Encoder accuracy:** The encoder itself has a certain level of accuracy, which can affect the precision of the measurement.",
+      "chunks": [
+        {
+          "page": 6,
+          "score": 0.8493520021438599
+        },
+        {
+          "page": 1,
+          "score": 0.8358922004699707
+        }
+      ]
+    },
+    {
+      "id": "Q042",
+      "question": "The technical data specifies the ambient temperature for operation is -10°C to +40°C, and for shipment is -25°C to +55°C. Calculate the temperature range for operation and shipment, and determine the difference between the ranges. Explain the importance of these temperature ranges for the device's performance and longevity.",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "## Temperature Range Calculation\n\nTo calculate the temperature ranges and their difference:\n\n### Operation:\n\n*   Minimum temperature: -10°C\n*   Maximum temperature: +40°C\n*   Range: 40 - (-10) = 50°C\n\n### Shipment:\n\n*   Minimum temperature: -25°C\n*   Maximum temperature: +55°C\n*   Range: 55 - (-25) = 80°C\n\n### Difference between Ranges:\n\n*   Difference = Shipment Range - Operation Range = 80°C - 50°C = 30°C\n\n## Importance of Temperature Ranges\n\nThe specified temperature ranges are critical for the device's performance and longevity for several reasons:\n\n*   **Material Properties:** Extreme temperatures can affect the properties of the materials used in the device. For example, plastics can become brittle at low temperatures and soften at high temperatures. Metals can expand or contract, leading to changes in tolerances and potential mechanical failures.\n*   **Electronic Components:** Electronic components are sensitive to temperature. Operating outside the specified temperature range can cause components to malfunction or fail prematurely. High temperatures can accelerate the degradation of semiconductors, while low temperatures can affect the performance of capacitors and other components.\n*   **Lubrication:** The viscosity of lubricants can change with temperature. At low temperatures, lubricants can become too thick, increasing friction and wear. At high temperatures, lubricants can become too thin, reducing their effectiveness.\n*   **Condensation:** Temperature fluctuations can cause condensation to form inside the device, which can lead to corrosion and electrical shorts.\n*   **Warranty and Reliability:** Operating the device outside the specified temperature range can void the warranty and reduce its overall reliability.\n\nTherefore, it is essential to ensure that the device is operated and stored within the specified temperature ranges to maintain its performance and longevity.",
+      "chunks": [
+        {
+          "page": 5,
+          "score": 0.8607504367828369
+        },
+        {
+          "page": 8,
+          "score": 0.8488397002220154
+        },
+        {
+          "page": 6,
+          "score": 0.822188138961792
+        }
+      ]
+    },
+    {
+      "id": "Q043",
+      "question": "The encoder wire actual value data specifies a supply voltage between Min. 4.5 V to max. 30 V with an idle current of 35 mA and a max load of 20 mA per output. Calculate the maximum power consumption of the encoder at both voltage extremes and analyze the implications for the power supply design.",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "## Maximum Power Consumption Calculation\n\nTo calculate the maximum power consumption of the encoder at both voltage extremes, we need to consider the idle current and the maximum load per output.\n\n### At Minimum Voltage (4.5 V):\n\n1.  **Idle Power Consumption:**\n    *   Power = Voltage * Current = 4.5 V * 35 mA = 4.5 V * 0.035 A = 0.1575 W\n2.  **Maximum Load Power Consumption (assuming worst-case, all outputs at max load):**\n    *   Assuming 2 outputs (A and B), Power per output = 4.5 V * 20 mA = 4.5 V * 0.02 A = 0.09 W\n    *   Total Power for 2 outputs = 2 * 0.09 W = 0.18 W\n3.  **Total Maximum Power Consumption:**\n    *   Total Power = Idle Power + Load Power = 0.1575 W + 0.18 W = 0.3375 W\n\n### At Maximum Voltage (30 V):\n\n1.  **Idle Power Consumption:**\n    *   Power = Voltage * Current = 30 V * 35 mA = 30 V * 0.035 A = 1.05 W\n2.  **Maximum Load Power Consumption (assuming worst-case, all outputs at max load):**\n    *   Assuming 2 outputs (A and B), Power per output = 30 V * 20 mA = 30 V * 0.02 A = 0.6 W\n    *   Total Power for 2 outputs = 2 * 0.6 W = 1.2 W\n3.  **Total Maximum Power Consumption:**\n    *   Total Power = Idle Power + Load Power = 1.05 W + 1.2 W = 2.25 W\n\n## Implications for Power Supply Design\n\nThe power supply design must account for the following:\n\n*   **Voltage Range:** The power supply must be able to provide a stable voltage within the range of 4.5 V to 30 V.\n*   **Current Capacity:** The power supply must be able to supply at least 35 mA of idle current, plus the current required for the outputs. In the worst case (at 30V), it needs to supply at least 75mA (35mA idle + 2*20mA load).\n*   **Power Rating:** The power supply must have a power rating of at least 2.25 W to handle the maximum power consumption of the encoder.\n*   **Regulation:** The power supply should have good voltage regulation to ensure that the voltage remains stable under varying load conditions. Fluctuations in voltage can affect the accuracy of the encoder.\n*   **Ripple and Noise:** The power supply should have low ripple and noise to prevent interference with the encoder signals.\n*   **Protection:** The power supply should have overcurrent and overvoltage protection to protect the encoder from damage in case of a fault.\n\nIt's also important to consider the efficiency of the power supply. A less efficient power supply will draw more power from the mains, which can increase energy costs and generate more heat.",
+      "chunks": [
+        {
+          "page": 1,
+          "score": 0.8749107718467712
+        },
+        {
+          "page": 6,
+          "score": 0.8541972041130066
+        },
+        {
+          "page": 5,
+          "score": 0.8486579656600952
+        }
+      ]
+    },
+    {
+      "id": "Q044",
+      "question": "The motor-specific parameters include a terminal resistance of 2.20 ohms and a torque constant of 52 mNm/A. If the motor is drawing a continuous current of 1.5 A, calculate the voltage drop across the terminal resistance and the resulting torque produced by the motor. How do these values relate to the motor's overall performance and efficiency?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "## Voltage Drop Calculation\n\nTo calculate the voltage drop across the terminal resistance:\n\n1.  Voltage Drop = Current * Resistance = 1.5 A * 2.20 ohms = 3.3 V\n\n## Torque Calculation\n\nTo calculate the torque produced by the motor:\n\n1.  Torque = Torque Constant * Current = 52 mNm/A * 1.5 A = 78 mNm\n\n## Relationship to Motor Performance and Efficiency\n\nThese values relate to the motor's overall performance and efficiency in the following ways:\n\n*   **Voltage Drop:** The voltage drop across the terminal resistance represents a loss of electrical energy that is converted into heat within the motor. This reduces the amount of voltage available to do useful work (i.e., generate torque). A higher voltage drop indicates a less efficient motor.\n*   **Torque:** The torque produced by the motor is a measure of its ability to do work. A higher torque means the motor can exert more force to turn a load. The torque constant (52 mNm/A) indicates how much torque the motor produces per unit of current. A higher torque constant generally indicates a more efficient motor.\n*   **Efficiency:** The overall efficiency of the motor is determined by the ratio of mechanical power output (torque * speed) to electrical power input (voltage * current). The voltage drop across the terminal resistance reduces the electrical power available to the motor, which reduces its efficiency. The torque constant determines how effectively the motor converts electrical current into mechanical torque.\n\nIn summary, a lower voltage drop across the terminal resistance and a higher torque constant are desirable for a more efficient and higher-performing motor. These parameters are important considerations when selecting a motor for a particular application.",
+      "chunks": [
+        {
+          "page": 6,
+          "score": 0.8427376747131348
+        },
+        {
+          "page": 5,
+          "score": 0.8287242650985718
+        },
+        {
+          "page": 6,
+          "score": 0.8012813925743103
+        }
+      ]
+    },
+    {
+      "id": "Q045",
+      "question": "What is the expected lifespan of the motor's encoder disc under continuous operation at maximum frequency and how does this impact scheduled maintenance?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 6,
+          "score": 0.8368831872940063
+        },
+        {
+          "page": 16,
+          "score": 0.8081068992614746
+        },
+        {
+          "page": 5,
+          "score": 0.8033445477485657
+        }
+      ]
+    },
+    {
+      "id": "Q046",
+      "question": "How does the MF1's performance compare to other wire feeders in terms of wire feed accuracy and consistency, and what specific metrics are used to evaluate these aspects?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 1,
+          "score": 0.8331711292266846
+        },
+        {
+          "page": 3,
+          "score": 0.8241090774536133
+        },
+        {
+          "page": 9,
+          "score": 0.8204374313354492
+        }
+      ]
+    },
+    {
+      "id": "Q047",
+      "question": "What is the procedure for recalibrating the wire actual value encoder if it drifts out of tolerance, and what tools or software are required for this process?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 1,
+          "score": 0.8391537666320801
+        },
+        {
+          "page": 13,
+          "score": 0.8194887042045593
+        },
+        {
+          "page": 14,
+          "score": 0.8114036917686462
+        }
+      ]
+    },
+    {
+      "id": "Q048",
+      "question": "What are the specific steps to diagnose and repair a failure in the CAT (emergency stop) circuit, including troubleshooting the wiring and replacing faulty components?",
+      "category": "UNANSWERABLE",
+      "safety_critical": true,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.8406494855880737
+        },
+        {
+          "page": 15,
+          "score": 0.8332397937774658
+        }
+      ]
+    },
+    {
+      "id": "Q049",
+      "question": "What is the recommended procedure for upgrading the MF1's firmware or software, and what are the potential risks and benefits associated with such an upgrade?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.8030921220779419
+        },
+        {
+          "page": 5,
+          "score": 0.7982152700424194
+        }
+      ]
+    },
+    {
+      "id": "Q050",
+      "question": "How does the MF1 handle different types of welding wire (e.g., aluminum, stainless steel) in terms of wire feeding performance and what adjustments are necessary to optimize performance for each material?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 9,
+          "score": 0.8543392419815063
+        },
+        {
+          "page": 3,
+          "score": 0.8506080508232117
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "categories": {
+      "VISUAL": 7,
+      "SAFETY": 11,
+      "TECHNICAL": 13,
+      "MULTI_CHAPTER": 8,
+      "NUMERICAL": 5,
+      "UNANSWERABLE": 6
+    },
+    "difficulties": {},
+    "visual_questions": 7,
+    "safety_critical": 19,
+    "answerable": 44,
+    "document_name": ""
+  }
+}

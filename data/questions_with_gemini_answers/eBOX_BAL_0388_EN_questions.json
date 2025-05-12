@@ -1,0 +1,997 @@
+{
+  "total_questions": 50,
+  "questions": [
+    {
+      "id": "Q001",
+      "question": "When configuring the eBOX for operation with an MF1 and MF1 rear drive, what connections must be established to ensure proper functionality of the wire end sensor and the drives?",
+      "category": "VISUAL",
+      "safety_critical": false,
+      "answer": "To ensure proper functionality when using an eBOX with an MF1 and MF1 rear drive, the following connections must be established:\n\n## Establishing Connections for eBOX, MF1, and MF1 Rear Drive\n\n1.  **Wire End Sensor Connection:** Connect the wire end sensor to the appropriate input on the eBOX. This allows the system to detect when the wire supply is running low.\n2.  **Control Lead Connection:** Establish a connection between the eBOX and the masterfeeder (MF1/MF1 DIG./sensor) using the designated control lead. This facilitates communication and control signals between the eBOX and the masterfeeder.\n3.  **Drive Connections:** Ensure that both the MF1 front drive and the MF1 rear drive are properly connected to the eBOX. These connections are essential for controlling the wire feeding process.\n\n*   The flex supply provides power to the masterfeeder.\n*   The masterliner guides the wire from the barrel to the welding torch.\n*   The wire end sensor control lead transmits the signal from the sensor to the eBOX.",
+      "image": [
+        "page_14_figure_2.png"
+      ],
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.9058801531791687
+        },
+        {
+          "page": 12,
+          "score": 0.8713398575782776
+        }
+      ]
+    },
+    {
+      "id": "Q002",
+      "question": "Prior to performing any maintenance, servicing, assembly, disassembly, or repair work on the eBOX system, what critical steps must be taken to prevent the risk of injury due to unexpected start-up?",
+      "category": "VISUAL",
+      "safety_critical": true,
+      "answer": "To prevent the risk of injury due to unexpected start-up during maintenance, servicing, assembly, disassembly, or repair work, the following steps must be taken:\n\n## Required Safety Procedures\n\n1.  **Switch off the power source:** Ensure that the main power supply to the eBOX is completely turned off to eliminate any electrical hazards.\n2.  **Close the compressed air supply:** Shut off the compressed air supply to prevent any pneumatic components from activating unexpectedly.\n3.  **Close the gas supply:** If the eBOX system utilizes gas, ensure that the gas supply is shut off to prevent leaks or accidental activation of gas-powered components.\n4.  **Disconnect the mains plug:** Physically disconnect the eBOX from the mains power supply by removing the plug from the socket. This ensures that there is no possibility of the system receiving power during the maintenance procedure.",
+      "image": [
+        "page_9_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 23,
+          "score": 0.8658384084701538
+        },
+        {
+          "page": 9,
+          "score": 0.8556269407272339
+        },
+        {
+          "page": 8,
+          "score": 0.8514620065689087
+        }
+      ]
+    },
+    {
+      "id": "Q003",
+      "question": "What is the recommended procedure for maintaining the eBOX air grilles to ensure optimal performance and longevity of the system, and what is the suggested frequency for these maintenance tasks under normal operating conditions?",
+      "category": "VISUAL",
+      "safety_critical": false,
+      "answer": "The recommended procedure for maintaining the eBOX air grilles involves regular checks, cleaning, and filter replacement to ensure optimal performance. The maintenance frequency is typically weekly, monthly, or quarterly, depending on the level of dirt accumulation.\n\n## Air Grille Maintenance Procedure:\n\n1.  **Access the Air Filters:** Open the air grilles (housing air inlet and housing air outlet) using their snap-on closures.\n2.  **Remove the Air Filters:** Take out the air filters from both the inlet and outlet grilles.\n3.  **Clean the Air Filters:** Use dry compressed air to thoroughly clean the filters, removing any accumulated dust or debris. If the filters are excessively dirty or damaged, replace them with new ones.\n4.  **Reinstall the Air Filters:** Insert the cleaned or replaced air filters back into their respective air grilles.\n5.  **Re-attach the Air Grilles:** Securely re-attach the air grilles to the housing, ensuring they are properly snapped into place.",
+      "image": [
+        "page_21_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 21,
+          "score": 0.8341829776763916
+        },
+        {
+          "page": 2,
+          "score": 0.8153425455093384
+        }
+      ]
+    },
+    {
+      "id": "Q004",
+      "question": "When using an external power supply with the eBOX, what is the procedure for configuring the jumper settings on the main PCB, and what is the subsequent order of operations for powering the system?",
+      "category": "VISUAL",
+      "safety_critical": false,
+      "answer": "When using an external power supply, the jumper settings on the main PCB must be configured in a specific order to avoid bus communication failure. The subsequent order of operations for powering the system is as follows:\n\n## Jumper Configuration and Powering Sequence\n\n1.  **Jumper Settings:**\n    *   Set jumper (1) to the OFF position (top position).\n    *   Set jumper (2) to the ON position (left position).\n    *   Set jumper (3) to the ON position (top position).\n2.  **Powering Sequence:**\n    *   Switch on the eBOX at the main switch Q1 (6).\n    *   Connect the AIDA power connector to the X3 port (5).",
+      "image": [
+        "page_16_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 11,
+          "score": 0.8948724269866943
+        },
+        {
+          "page": 10,
+          "score": 0.8575182557106018
+        }
+      ]
+    },
+    {
+      "id": "Q005",
+      "question": "What critical step must be performed on the eBOX unit before its initial operation to mitigate a potential fire hazard, and what specific action is required to complete this step?",
+      "category": "VISUAL",
+      "safety_critical": true,
+      "answer": "The transport protection must be removed from the eBOX before putting the system into operation for the first time to mitigate a potential fire hazard. \n\n## Removing Transport Protection\n\n1.  Open the cover of the eBOX.\n2.  Remove the transport protection. This is typically a cardboard or foam insert placed inside the unit to protect the components during shipping. Removing this material prevents overheating and potential fire hazards during operation.",
+      "image": [
+        "page_8_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 8,
+          "score": 0.851840615272522
+        },
+        {
+          "page": 20,
+          "score": 0.8309786319732666
+        },
+        {
+          "page": 9,
+          "score": 0.8253328800201416
+        }
+      ]
+    },
+    {
+      "id": "Q006",
+      "question": "When establishing a connection between the eBOX and the M-Drive standard or Masterliner, what steps should be taken to ensure proper communication and functionality between the devices?",
+      "category": "VISUAL",
+      "safety_critical": false,
+      "answer": "To establish a proper connection between the eBOX and the M-Drive standard/Masterliner, follow these steps:\n\n## Establishing Connections\n\n1.  Ensure the M-Drive is properly positioned and accessible.\n2.  Locate the port for the control lead X11 on the M-Drive. This port is specifically designed for communication with the eBOX.\n3.  Identify the eBOX and its corresponding port for the control lead X46. This is the designated connection point on the eBOX for the M-Drive.\n4.  Take the control lead and securely connect one end to the X11 port on the M-Drive and the other end to the X46 port on the eBOX. Ensure the connections are firm and properly seated to avoid communication issues.\n\n*   A secure connection is crucial for transmitting control signals and data between the eBOX and the M-Drive, ensuring the wire feed process operates correctly.",
+      "image": [
+        "page_12_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 12,
+          "score": 0.8857617378234863
+        },
+        {
+          "page": 2,
+          "score": 0.8773770928382874
+        },
+        {
+          "page": 14,
+          "score": 0.8585165739059448
+        }
+      ]
+    },
+    {
+      "id": "Q007",
+      "question": "When preparing an eBOX for initial operation, what are the key steps to take after physically installing the unit to ensure it is ready for safe and effective use?",
+      "category": "VISUAL",
+      "safety_critical": true,
+      "answer": "After physically installing the eBOX, several key steps must be taken to ensure safe and effective operation:\n\n## Initial Setup Procedure\n\n1.  **Remove Transport Protection:** Open the eBOX cover and remove any transport protection materials to prevent fire hazards.\n2.  **Power Supply Configuration:** Determine whether to use the internal or external power supply. If using the internal power supply, configure the jumpers on the main PCB according to the instructions, ensuring correct placement for Jumper 1, Jumper 2, and Jumper 3. If using an external power supply (AIDA-compliant eBOX), configure the jumpers accordingly and connect the AIDA power connector to the X3 port.\n3.  **Establish Connections:** Connect the eBOX to the appropriate components based on the system configuration, such as M-Drive or MF1. Ensure all control leads are securely connected to the correct ports (e.g., X11, X46).\n4.  **Install Service Software:** Install the service software as per the operating instructions (BAL.0420).\n5.  **Safety Checks:** Before powering on, ensure all safety precautions are followed, including switching off the power source, closing the compressed air and gas supplies, and disconnecting the mains plug.\n\n*   Following these steps ensures the eBOX is correctly set up and ready for operation, minimizing risks and maximizing performance.",
+      "image": [
+        "page_8_figure_2.png"
+      ],
+      "chunks": [
+        {
+          "page": 8,
+          "score": 0.8425941467285156
+        },
+        {
+          "page": 9,
+          "score": 0.8354068994522095
+        },
+        {
+          "page": 20,
+          "score": 0.8344355821609497
+        }
+      ]
+    },
+    {
+      "id": "Q008",
+      "question": "What personal protective equipment is recommended for users when operating or maintaining the eBOX system, and why is each item necessary for ensuring safety?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Recommended Personal Protective Equipment (PPE)\n\nTo mitigate potential hazards during operation and maintenance of the eBOX system, the following PPE is recommended:\n\n1.  **Protective Clothing:** Protects against burns, cuts, and other physical injuries.\n2.  **Safety Goggles:** Protects the eyes from flying debris, sparks, and radiation.\n3.  **Class P3 Respiratory Mask:** Protects against inhalation of harmful particles and fumes.\n4.  **Safety Gloves:** Protects hands from electrical shock, burns, and cuts.\n5.  **Safety Shoes:** Protects feet from falling objects and electrical hazards.\n\n## Importance of Each Item\n\n*   Each item of PPE is crucial for minimizing the risk of injury during operation and maintenance. Neglecting to use appropriate PPE can lead to serious harm.",
+      "chunks": [
+        {
+          "page": 4,
+          "score": 0.8511238098144531
+        },
+        {
+          "page": 8,
+          "score": 0.8337748646736145
+        },
+        {
+          "page": 7,
+          "score": 0.8232389688491821
+        }
+      ]
+    },
+    {
+      "id": "Q009",
+      "question": "Describe the different classifications of warnings used in the eBOX operating instructions, and explain the potential consequences associated with ignoring each level of warning.",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Warning Classifications\n\nThe operating instructions use four warning levels, ranked by severity:\n\n1.  **DANGER:** Indicates an imminent threat that will result in fatal or extremely critical injuries if not avoided.\n2.  **WARNING:** Indicates a potentially dangerous situation that can result in serious injury if not avoided.\n3.  **CAUTION:** Indicates a potentially harmful situation that may result in slight or minor injuries if not avoided.\n4.  **NOTICE:** Indicates a risk of impairing work results or causing material damage to the equipment.\n\n## Consequences of Ignoring Warnings\n\n*   Ignoring a **DANGER** warning can lead to death or severe, life-altering injuries.\n*   Ignoring a **WARNING** can lead to significant injuries requiring medical attention.\n*   Ignoring a **CAUTION** can lead to minor injuries and discomfort.\n*   Ignoring a **NOTICE** can lead to equipment malfunction and reduced performance.",
+      "chunks": [
+        {
+          "page": 5,
+          "score": 0.8730953931808472
+        },
+        {
+          "page": 20,
+          "score": 0.8450255393981934
+        },
+        {
+          "page": 8,
+          "score": 0.8434990048408508
+        }
+      ]
+    },
+    {
+      "id": "Q010",
+      "question": "What immediate actions should be taken in case of an emergency involving the eBOX system, and where can further emergency measures be found?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Immediate Actions in Case of Emergency\n\nIn an emergency involving the eBOX system, immediately interrupt the following supplies:\n\n*   Power\n\n## Further Measures\n\n*   Further measures can be found in the \"Power source\" oper peripheral devices.",
+      "chunks": [
+        {
+          "page": 20,
+          "score": 0.8069617748260498
+        },
+        {
+          "page": 8,
+          "score": 0.8053916692733765
+        }
+      ]
+    },
+    {
+      "id": "Q011",
+      "question": "What specific safety precautions must be observed during maintenance, servicing, assembly, disassembly, and repair work on the eBOX system to prevent injury due to unexpected start-up?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Safety Precautions to Prevent Unexpected Start-Up\n\nTo prevent injury from unexpected start-up during maintenance, servicing, assembly, disassembly, and repair work, the following precautions must be adhered to:\n\n1.  Switch off the power source.\n2.  Close the compressed air supply.\n3.  Close the gas supply.\n4.  Disconnect the mains plug.",
+      "chunks": [
+        {
+          "page": 23,
+          "score": 0.8671211004257202
+        },
+        {
+          "page": 9,
+          "score": 0.8554960489273071
+        },
+        {
+          "page": 20,
+          "score": 0.8532180190086365
+        }
+      ]
+    },
+    {
+      "id": "Q012",
+      "question": "What actions must be taken to ensure safety when dealing with potentially defective cables on the eBOX system, and what are the potential hazards associated with damaged cables?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Safety Actions for Defective Cables\n\nTo ensure safety when dealing with potentially defective cables on the eBOX system, take the following actions:\n\n1.  Check that all live cables and connections are properly installed.\n2.  Replace any damaged, deformed, or worn parts.\n\n## Potential Hazards\n\n*   Electric shock due to dangerous voltage from defective cables.",
+      "chunks": [
+        {
+          "page": 8,
+          "score": 0.8277586698532104
+        },
+        {
+          "page": 15,
+          "score": 0.8252483606338501
+        },
+        {
+          "page": 20,
+          "score": 0.8145068883895874
+        }
+      ]
+    },
+    {
+      "id": "Q013",
+      "question": "Do I have to remove the transport protection from the eBOX before putting the system into operation for the first time?",
+      "answer": "The transport protection has the potential to cause a fire. Therefore, remove the transport protection before putting the system into operation for the first time. As shown in the figure, open the cover of the eBOX and remove the transport protection.",
+      "category": "SAFETY",
+      "image": [
+        "page_8_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 8,
+          "score": 0.8759320974349976
+        },
+        {
+          "page": 9,
+          "score": 0.8292192220687866
+        },
+        {
+          "page": 20,
+          "score": 0.8064151406288147
+        }
+      ]
+    },
+    {
+      "id": "Q014",
+      "question": "What conditions must be met to ensure that the eBOX system is operated in a designated and safe manner, and what modifications are strictly prohibited?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Safe Operation Conditions\n\nTo ensure the eBOX system is operated safely, it must be used only for the purpose described in the instructions and in the manner described, observing all operating, maintenance, and servicing conditions.\n\n## Prohibited Modifications\n\n*   Unauthorized conversions or power increase modifications are not allowed.",
+      "chunks": [
+        {
+          "page": 19,
+          "score": 0.8407204151153564
+        },
+        {
+          "page": 2,
+          "score": 0.8291275501251221
+        },
+        {
+          "page": 4,
+          "score": 0.828446090221405
+        }
+      ]
+    },
+    {
+      "id": "Q015",
+      "question": "What specific safety risk is associated with manual mode when using the M-Drive, and what action should be taken to mitigate this risk?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Safety Risk in Manual Mode with M-Drive\n\nIn manual mode (only in connection with M-Drive), safety switches on covers and protective devices are ineffective.\n\n## Mitigation Action\n\n*   Greater concentration is required when operating in manual mode.",
+      "chunks": [
+        {
+          "page": 9,
+          "score": 0.8255634307861328
+        },
+        {
+          "page": 2,
+          "score": 0.8127062320709229
+        }
+      ]
+    },
+    {
+      "id": "Q016",
+      "question": "What precautions should be taken regarding the power supply to avoid electric shock when working with the eBOX?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Precautions for Power Supply\n\nTo avoid electric shock, check that all live cables and connections are properly installed and replace any damaged, deformed, or worn parts.",
+      "chunks": [
+        {
+          "page": 15,
+          "score": 0.833134651184082
+        },
+        {
+          "page": 11,
+          "score": 0.8278880715370178
+        },
+        {
+          "page": 10,
+          "score": 0.8237218856811523
+        }
+      ]
+    },
+    {
+      "id": "Q017",
+      "question": "How must the connections of the eBOX and the MF1 be established?",
+      "answer": "Please establish the connections as shown in the following diagram:",
+      "category": "VISUAL",
+      "image": [
+        "page_13_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 20,
+          "score": 0.8433330059051514
+        },
+        {
+          "page": 9,
+          "score": 0.8431223630905151
+        },
+        {
+          "page": 8,
+          "score": 0.8397898077964783
+        }
+      ]
+    },
+    {
+      "id": "Q018",
+      "question": "Where is the X1 mains cable port located?",
+      "answer": "Please refer to the following figure for the position of the mains cable port X1 (15)",
+      "category": "VISUAL",
+      "image": [
+        "page_19_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 23,
+          "score": 0.8410699367523193
+        },
+        {
+          "page": 8,
+          "score": 0.8351677656173706
+        },
+        {
+          "page": 23,
+          "score": 0.8285040259361267
+        }
+      ]
+    },
+    {
+      "id": "Q019",
+      "question": "Where can I find the device number to ask for device information?",
+      "answer": "You find the device number on the nameplate details. Please note the nameplate details and the device information when making any enquiries. It contains the device type, the device number, the year of construction, firmware and the field bus system.",
+      "category": "TECHNICAL",
+      "image": [
+        "page_7_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 3,
+          "score": 0.9031285047531128
+        },
+        {
+          "page": 9,
+          "score": 0.8974146842956543
+        },
+        {
+          "page": 6,
+          "score": 0.8887271285057068
+        }
+      ]
+    },
+    {
+      "id": "Q020",
+      "question": "Explain the procedure for configuring the jumper settings on the main PCB when using an internal power supply for the eBOX US1, and describe how to switch on the eBOX after setting the jumpers.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Configuring Jumper Settings for Internal Power Supply\n\nWhen using an internal power supply, configure the following jumper settings on the main PCB:\n\n1.  Set jumper (1) to on (bottom position).\n2.  Set jumper (2) to on (left position).\n3.  Set jumper (3) to on (bottom position).\n\n## Switching on the eBOX\n\n*   Switch on the eBOX at the main switch Q1 (6).",
+      "chunks": [
+        {
+          "page": 11,
+          "score": 0.907530665397644
+        },
+        {
+          "page": 10,
+          "score": 0.8812504410743713
+        }
+      ]
+    },
+    {
+      "id": "Q021",
+      "question": "Describe the procedure for configuring the jumper settings on the main PCB when using an external power supply for an AIDA-compliant eBOX, and explain how to connect the AIDA power connector.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Configuring Jumper Settings for External Power Supply\n\nWhen using an external power supply for an AIDA-compliant eBOX, configure the following jumper settings on the main PCB, always retaining the order shown:\n\n1.  Set jumper (1) to off (top position).\n2.  Set jumper (2) to on (left position).\n3.  Set jumper (3) to on (top position).\n\n## Connecting the AIDA Power Connector\n\n1.  Switch on the eBOX at the main switch Q1 (6).\n2.  Connect the AIDA power connector to the X3 port (5).",
+      "chunks": [
+        {
+          "page": 11,
+          "score": 0.9331815242767334
+        }
+      ]
+    },
+    {
+      "id": "Q022",
+      "question": "What steps should a technician take to troubleshoot the eBOX system if the unit is not ready for operation, and what are the potential causes of this issue?",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Troubleshooting Steps for Unit Not Ready\n\nIf the eBOX unit is not ready for operation, a technician should take the following steps:\n\n1.  Ask a Binzel specialist to replace the defective control system or component\n2.  Ask a Binzel specialist to check and set the gas flow controller\n3.  Ask a Binzel specialist to check the switch\n\n## Potential Causes\n\n*   Control system or component defective\n*   Gas flow controller defective or set incorrectly\n*   M-Drive safety switch not actuated",
+      "chunks": [
+        {
+          "page": 8,
+          "score": 0.8366145491600037
+        },
+        {
+          "page": 19,
+          "score": 0.8241062760353088
+        },
+        {
+          "page": 20,
+          "score": 0.8212668299674988
+        }
+      ]
+    },
+    {
+      "id": "Q023",
+      "question": "What steps should a technician take to troubleshoot the eBOX system if the wire is not being fed, and what are the potential causes of this issue?",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Troubleshooting Steps for Wire Not Being Fed\n\nIf the wire is not being fed, a technician should take the following steps:\n\n1.  Switch off the power to the system\n2.  Ask a Binzel specialist to replace the motor\n3.  Press the reset button\n4.  Replace the feed system\n5.  Check the control lead and the connectors. Replace the control lead if necessary\n\n## Potential Causes\n\n*   Motor defective\n*   Defective control lead. No feed or only 100% feed possible",
+      "chunks": [
+        {
+          "page": 8,
+          "score": 0.8226405382156372
+        },
+        {
+          "page": 10,
+          "score": 0.8213398456573486
+        },
+        {
+          "page": 3,
+          "score": 0.8213387727737427
+        }
+      ]
+    },
+    {
+      "id": "Q024",
+      "question": "What steps should a technician take to troubleshoot the eBOX system if the LED does not illuminate, and what are the potential causes of this issue?",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Troubleshooting Steps for LED Not Illuminating\n\nIf the LED does not illuminate, a technician should take the following steps:\n\n1.  Check that a power supply is available and/or if the light on the power supply unit illuminates. If not, replace the fuse\n\n## Potential Causes\n\n*   Fuse switched off",
+      "chunks": [
+        {
+          "page": 8,
+          "score": 0.81968092918396
+        },
+        {
+          "page": 10,
+          "score": 0.8161424398422241
+        }
+      ]
+    },
+    {
+      "id": "Q025",
+      "question": "Describe the function of the key-operated switch S1 on the eBOX, and explain how its position affects the operation of the wire feeder, specifically in systems with M-Drive.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Function of Key-Operated Switch S1\n\nThe key-operated switch S1 has the following functions:\n\n*   **Switch position: automatic:** The wire feeder is fully functional when the cover (M-Drive) is closed.\n*   **Switch position: manual:** The protective device is bridged. The inching (wire feed) function is enabled when the cover (M-Drive) is open. The key can be removed in any position.\n\nThis function is solely for systems with M-Drive and is obsolete for other versions.",
+      "chunks": [
+        {
+          "page": 9,
+          "score": 0.8729180097579956
+        },
+        {
+          "page": 19,
+          "score": 0.8721039295196533
+        },
+        {
+          "page": 14,
+          "score": 0.8659512996673584
+        }
+      ]
+    },
+    {
+      "id": "Q026",
+      "question": "Explain the purpose of the reset button S2 on the eBOX, and describe the procedure for using it after a fault has been identified and eliminated.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Purpose of Reset Button S2\n\nThe reset button S2 is used to reset the internal control system to the starting position after a fault has been eliminated.\n\n## Procedure for Using Reset Button\n\n*   Press the button after eliminating a fault.",
+      "chunks": [
+        {
+          "page": 20,
+          "score": 0.848108172416687
+        },
+        {
+          "page": 19,
+          "score": 0.845924437046051
+        },
+        {
+          "page": 8,
+          "score": 0.8317858576774597
+        }
+      ]
+    },
+    {
+      "id": "Q027",
+      "question": "Describe the information provided by the status LEDs (P2 and P3) on the eBOX, and explain how to interpret their different states (green, red, flashing) to diagnose system status.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Status LEDs Information\n\nThe status LEDs provide the following information:\n\n*   **LED P3, rear drive:** Status green = ready, status red, flashing = fault\n*   **LED P2, front drive:** Status green = ready, status red, flashing = fault",
+      "chunks": [
+        {
+          "page": 19,
+          "score": 0.843433678150177
+        }
+      ]
+    },
+    {
+      "id": "Q028",
+      "question": "Describe the recommended maintenance intervals for the eBOX system, and specify the tasks that should be performed weekly, monthly, and quarterly to ensure optimal performance.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Maintenance Intervals\n\nThe maintenance intervals given are standard values and refer to single-shift operation.\n\n## Maintenance Tasks\n\n*   **Weekly:** N/A\n*   **Monthly:** Check, clean and, depending on the level of dirt, replace the air filters.\n*   **Quarterly:** N/A",
+      "chunks": [
+        {
+          "page": 21,
+          "score": 0.8365795016288757
+        },
+        {
+          "page": 7,
+          "score": 0.8306692242622375
+        },
+        {
+          "page": 20,
+          "score": 0.822647750377655
+        }
+      ]
+    },
+    {
+      "id": "Q029",
+      "question": "Explain the procedure for cleaning and replacing the air filters in the eBOX system, and describe the tools and materials required for this maintenance task.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Procedure for Cleaning and Replacing Air Filters\n\n1.  Open the air grilles (1) and (2) (snap-on closures), remove the air filters and air blast with dry compressed air. Replace the filters if necessary.\n2.  Insert the air filters into the air grilles (1) and (2) and re-attach the air grilles (1) and (2) to the housing.\n\n## Tools and Materials Required\n\n*   Dry compressed air",
+      "chunks": [
+        {
+          "page": 3,
+          "score": 0.8339765667915344
+        },
+        {
+          "page": 8,
+          "score": 0.8336504101753235
+        },
+        {
+          "page": 2,
+          "score": 0.8315183520317078
+        }
+      ]
+    },
+    {
+      "id": "Q030",
+      "question": "Describe the process for putting the eBOX out of operation, including the specific steps that must be followed to ensure a safe and controlled shutdown.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Process for Putting the eBOX Out of Operation\n\n1.  Use the main switch (16) to cut the power to the eBOX.",
+      "chunks": [
+        {
+          "page": 20,
+          "score": 0.8905951976776123
+        },
+        {
+          "page": 8,
+          "score": 0.8510740995407104
+        },
+        {
+          "page": 23,
+          "score": 0.8460139036178589
+        }
+      ]
+    },
+    {
+      "id": "Q031",
+      "question": "What maintenance intervals should I choose and what should I do?",
+      "answer": "The maintenance intervals given in the document are standard values and refer to single-shift operation.\nYou should choose a monthly interval to check, clean and, depending on the level of dirt, replace the air filters. For that:\n1. Open the air grilles (1) and (2) (snap-on closures), remove the air filters and air blast with dry compressed air. Replace the filters if necessary.\n2. Insert the air filters into the air grilles (1) and (2) and re-attach the air grilles (1) and (2) to the housing.",
+      "category": "TECHNICAL",
+      "image": [
+        "page_21_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 22,
+          "score": 0.856060266494751
+        },
+        {
+          "page": 7,
+          "score": 0.8372805714607239
+        },
+        {
+          "page": 9,
+          "score": 0.8333741426467896
+        }
+      ]
+    },
+    {
+      "id": "Q032",
+      "question": "How does the modular design of the MFS-V3 wire feeder system, incorporating the eBOX, allow for customized mechanical and electronic adjustments, and what communication methods are supported for these adjustments?",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## Customization through Modular Design\n\nThe modular design of the wire feeder system enables individual mechanical and electronic adjustment via I/O or digital BUS systems. The eBOX is a part of the MFS-V3 wire feeder system and is used in industry and the trade for the delivery of the welding filler materials. All of the electronic control elements are integrated into the BOX.",
+      "chunks": [
+        {
+          "page": 3,
+          "score": 0.879192054271698
+        },
+        {
+          "page": 9,
+          "score": 0.8728235960006714
+        },
+        {
+          "page": 6,
+          "score": 0.8707926273345947
+        }
+      ]
+    },
+    {
+      "id": "Q033",
+      "question": "Describe the relationship between the eBOX and the M-Drive, detailing how they connect and communicate, and explain the function of the control lead in this configuration, referencing the relevant figure.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## eBOX and M-Drive Connection\n\nThe eBOX and M-Drive connect as shown in the diagram. The connections are established as follows:\n\n1.  M-Drive\n2.  Port for control lead X11\n3.  eBOX\n4.  Control lead\n5.  Port for control lead X46",
+      "chunks": [
+        {
+          "page": 12,
+          "score": 0.9041874408721924
+        },
+        {
+          "page": 14,
+          "score": 0.8913558721542358
+        }
+      ]
+    },
+    {
+      "id": "Q034",
+      "question": "Explain the connection configurations for integrating the eBOX with the MF1, and with both MF1 and MF1 rear drive systems, detailing the purpose of each connection and component in these setups, referencing the relevant figures.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## eBOX and MF1 Connection\n\nThe eBOX and MF1 connect as shown in the diagram. The connections are established as follows:\n\n1.  Wire end sensor\n2.  Barrel\n3.  eBOX\n4.  Control lead eBOX - masterfeeder\n5.  Masterfeeder MF1\n6.  Flex supply\n7.  Masterliner\n8.  Wire end sensor control lead\n\n## eBOX, MF1, and MF1 Rear Drive Connection\n\nThe eBOX, MF1, and MF1 rear drive connect as shown in the diagram. The connections are established as follows:\n\n1.  Wire end sensor\n2.  Barrel\n3.  eBOX\n4.  Wire end sensor control lead\n5.  Control lead eBOX - MF1/ MF1DIG. /sensor\n6.  Flex supply\n7.  MF1 front drive\n8.  Masterliner\n9.  MF1 rear drive\n10. Masterliner",
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.9202755689620972
+        },
+        {
+          "page": 12,
+          "score": 0.8957396745681763
+        }
+      ]
+    },
+    {
+      "id": "Q035",
+      "question": "Describe the different ports available on the eBOX (X1, X2, X3, X10, X11, X13), and explain the purpose and signal types associated with each port, referencing the relevant tables.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## eBOX Ports and Their Purposes\n\nThe eBOX features several ports, each serving a specific purpose:\n\n*   **X1 (Mains port):** Used for connecting the mains cable. Signals include L1, N, and PE.\n*   **X2 (eBOX - robot):** Used for connecting to a robot. Signals include 24 VDC, GND, CAN-high, CAN-low, and CAN-GND.\n*   **X3 (US1/US2 port):** Used for external power supply on AIDA versions. Signals include 24 VDC and GND for US1 and US2.\n*   **X10 (Manual terminal):** Used for connecting a manual terminal (optional). Signals include 24 VDC, GND, CAN - A, and CAN - B.\n*   **X11 (M-Drive - eBOX):** Used for connecting to the M-Drive. Various signals for encoder, drive, terminal strip, reset, inching, gas test, gas valve, air blast valve, CAT, sensor, gas pressure controller, hood safety switch, and end of wire.\n*   **X13 (Port for the hot wire power source):** Used for connecting to a hot wire power source. Signals include GND, Arc, Start, Target hot wire output, Power source ready, Detection setpoint voltage, and 24 VDC.",
+      "chunks": [
+        {
+          "page": 12,
+          "score": 0.8605930209159851
+        }
+      ]
+    },
+    {
+      "id": "Q036",
+      "question": "Explain the relationship between the technical data provided in section 3.1 and the power supply details described in section 6.7, and describe how to use this information to ensure proper power supply connections and fuse protection for the eBOX.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## Relationship Between Technical Data and Power Supply\n\nThe technical data provides the connection voltage (100-240 V AC/ 50 or 60 Hz) and power consumption (1.0 kW) for the eBOX. The power supply section details the mains port X1 for inserting the mains plug. To ensure proper power supply connections and fuse protection, refer to both the technical data and the nameplate details for voltage and current requirements.",
+      "chunks": [
+        {
+          "page": 15,
+          "score": 0.883150041103363
+        },
+        {
+          "page": 11,
+          "score": 0.8818743228912354
+        },
+        {
+          "page": 9,
+          "score": 0.8784357309341431
+        }
+      ]
+    },
+    {
+      "id": "Q037",
+      "question": "Describe the steps for removing the transport protection from the eBOX, referencing the relevant figure, and explain why this step is crucial before putting the system into operation, referencing the safety warnings.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": true,
+      "answer": "## Steps for Removing Transport Protection\n\n1.  Open the cover of the eBOX (1).\n2.  Remove the transport protection (2).\n\n## Importance of Removal\n\nThis step is crucial because the transport protection has the potential to cause a fire if not removed before operation.",
+      "chunks": [
+        {
+          "page": 8,
+          "score": 0.926455557346344
+        },
+        {
+          "page": 20,
+          "score": 0.8636276721954346
+        },
+        {
+          "page": 9,
+          "score": 0.8576208353042603
+        }
+      ]
+    },
+    {
+      "id": "Q038",
+      "question": "Explain the procedures for both internal and external power supply configurations for the eBOX US1, detailing the specific jumper settings required for each configuration, referencing the relevant figures.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## Internal Power Supply Configuration\n\nWhen using an internal power supply, configure the following jumper settings on the main PCB:\n\n1.  Set jumper (1) to on (bottom position).\n2.  Set jumper (2) to on (left position).\n3.  Set jumper (3) to on (bottom position).\n\n## External Power Supply Configuration\n\nWhen using an external power supply, configure the following jumper settings on the main PCB, always retaining the order shown:\n\n1.  Set jumper (1) to off (top position).\n2.  Set jumper (2) to on (left position).\n3.  Set jumper (3) to on (top position).",
+      "chunks": [
+        {
+          "page": 11,
+          "score": 0.903520941734314
+        },
+        {
+          "page": 10,
+          "score": 0.8863164186477661
+        }
+      ]
+    },
+    {
+      "id": "Q039",
+      "question": "How can I guarantee the power supply?",
+      "answer": "The eBOX's logic circuit is powered by an internal power supply unit by default. When using an internal power supply, configure the following jumper settings on the main PCB: Set jumper to on (bottom position), jumper to on (left position), and jumper to on (bottom position). Then switch on the eBOX at the main switch Q1.\nReference page_10_figure_1.png\nOn an AIDA-compliant eBOX, the logic circuit is externally powered via the X3 port in order to avoid any bus communication failure if the internal power supply fails. When using an external power supply, configure the following jumper settings on the main PCB, always retaining the order shown: \n1. Set jumper to off (top position), jumper to on (left position) and jumper to on (top position).\n2. Switch on the eBOX at the main switch Q1\n3. Connect the AIDA power connector to the X3 port.\nReference page_11_figure_1.png\nThere is the danger of an electric shock because of dangerous voltage due to defective cables. Therefore:\n- Check that all live cables and connections are properly installed.\n- Replace any damaged, deformed or worn parts\n- Insert the mains plug into the mains port X1.\nReference page_15_figure_1.png",
+      "category": "MULTI_CHAPTER",
+      "image": [
+        "page_10_figure_1.png",
+        "page_11_figure_1.png",
+        "page_15_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 23,
+          "score": 0.8642182350158691
+        },
+        {
+          "page": 23,
+          "score": 0.8527475595474243
+        },
+        {
+          "page": 23,
+          "score": 0.8483222723007202
+        }
+      ]
+    },
+    {
+      "id": "Q040",
+      "question": "Given an ambient temperature of 30°C, what is the maximum relative humidity allowed for operating the eBOX, and how does exceeding this humidity level affect the system's performance and longevity?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "## Maximum Relative Humidity\n\nGiven an ambient temperature of 30°C, the maximum relative humidity allowed for operating the eBOX is up to 90% at 20°C. The document does not specify the maximum relative humidity at 30°C.\n\n## Effects of Exceeding Humidity Level\n\nThe document does not specify the effects of exceeding the humidity level.",
+      "chunks": [
+        {
+          "page": 6,
+          "score": 0.8576133847236633
+        },
+        {
+          "page": 2,
+          "score": 0.818702757358551
+        }
+      ]
+    },
+    {
+      "id": "Q041",
+      "question": "If the connection voltage fluctuates between 110V and 230V AC at a frequency of 55Hz, will the eBOX operate within its specified parameters, and what potential issues could arise from this fluctuation?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "## Operation within Specified Parameters\n\nThe eBOX is designed to operate with a connection voltage of 100-240 V AC at 50 or 60 Hz. A frequency of 55Hz is within the specified parameters.\n\n## Potential Issues\n\nThe document does not specify the potential issues that could arise from this fluctuation.",
+      "chunks": [
+        {
+          "page": 6,
+          "score": 0.8217127323150635
+        }
+      ]
+    },
+    {
+      "id": "Q042",
+      "question": "If the eBOX is stored in an environment with a temperature of -20°C, is this within the acceptable storage conditions, and what potential damage could occur if the temperature falls outside the recommended range?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "## Acceptable Storage Conditions\n\nThe acceptable storage conditions for the eBOX are an ambient temperature of -10 °C to + 40 °C.\n\n## Potential Damage\n\nThe document does not specify the potential damage that could occur if the temperature falls outside the recommended range.",
+      "chunks": [
+        {
+          "page": 6,
+          "score": 0.8442379236221313
+        },
+        {
+          "page": 8,
+          "score": 0.8300777673721313
+        }
+      ]
+    },
+    {
+      "id": "Q043",
+      "question": "What is the maximum permissible weight that can be placed on top of the eBOX during transport, assuming the transport conditions remain within the specified ambient temperature and humidity ranges?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "## Maximum Permissible Weight\n\nThe document does not specify the maximum permissible weight that can be placed on top of the eBOX during transport.",
+      "chunks": [
+        {
+          "page": 6,
+          "score": 0.8449872136116028
+        },
+        {
+          "page": 6,
+          "score": 0.8309047222137451
+        }
+      ]
+    },
+    {
+      "id": "Q044",
+      "question": "If the internal operating voltage of the eBOX drops to 20 VDC, what impact will this have on the performance of the wire drive system, and what steps should be taken to rectify this voltage drop?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "## Impact of Voltage Drop\n\nThe document does not specify the impact of the internal operating voltage dropping to 20 VDC.\n\n## Steps to Rectify Voltage Drop\n\nThe document does not specify the steps to rectify this voltage drop.",
+      "chunks": [
+        {
+          "page": 20,
+          "score": 0.8313239812850952
+        }
+      ]
+    },
+    {
+      "id": "Q045",
+      "question": "What is the MTBF (Mean Time Between Failures) for the eBOX system, and how does this value inform preventative maintenance scheduling?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 2,
+          "score": 0.818543553352356
+        },
+        {
+          "page": 3,
+          "score": 0.8107911348342896
+        },
+        {
+          "page": 9,
+          "score": 0.8098896741867065
+        }
+      ]
+    },
+    {
+      "id": "Q046",
+      "question": "What is the exact chemical composition of the air filters used in the eBOX, and what alternative filter materials are compatible with the system?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 2,
+          "score": 0.8061842918395996
+        },
+        {
+          "page": 3,
+          "score": 0.7991620302200317
+        }
+      ]
+    },
+    {
+      "id": "Q047",
+      "question": "What is the specific algorithm used by the microprocessor-based motor control units within the eBOX to manage wire feed speed and precision?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 9,
+          "score": 0.8583495616912842
+        },
+        {
+          "page": 6,
+          "score": 0.8419618606567383
+        },
+        {
+          "page": 3,
+          "score": 0.8408492207527161
+        }
+      ]
+    },
+    {
+      "id": "Q048",
+      "question": "What is the exact procedure for calibrating the wire feed encoder, and what diagnostic tools are required for this process?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 9,
+          "score": 0.8085082769393921
+        }
+      ]
+    },
+    {
+      "id": "Q049",
+      "question": "What is the specific type and manufacturer of the main switch Q1, and what are its electrical endurance specifications?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 6,
+          "score": 0.81679368019104
+        },
+        {
+          "page": 19,
+          "score": 0.8151524066925049
+        }
+      ]
+    },
+    {
+      "id": "Q050",
+      "question": "What is the exact revision history of the firmware used in the eBOX, and what specific bug fixes or performance improvements are included in each revision?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 2,
+          "score": 0.8291523456573486
+        },
+        {
+          "page": 7,
+          "score": 0.8150850534439087
+        },
+        {
+          "page": 2,
+          "score": 0.8150690793991089
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "categories": {
+      "VISUAL": 7,
+      "SAFETY": 11,
+      "TECHNICAL": 13,
+      "MULTI_CHAPTER": 8,
+      "NUMERICAL": 5,
+      "UNANSWERABLE": 6
+    },
+    "difficulties": {},
+    "visual_questions": 7,
+    "safety_critical": 15,
+    "answerable": 44,
+    "document_name": ""
+  }
+}

@@ -1,0 +1,1098 @@
+{
+  "total_questions": 50,
+  "questions": [
+    {
+      "id": "Q001",
+      "question": "When managing files on the machine, what steps are involved in creating a new subdirectory within the current directory using the file commands menu, and what information is required to complete this operation?",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "To create a new subdirectory within the current directory, first access the file commands menu by pressing [F3] in the device manager. Reference page_108_figure_1 for the file commands menu options. Then, use the cursor arrow keys or the jog handle to highlight the 'Make Directory' command and press [ENTER]. A prompt will appear, asking you to type a name for the new directory. After entering the desired name, press [ENTER] again to create the subdirectory. This action adds a new folder within the existing directory, allowing for better organization of programs and files.",
+      "image": [
+        "page_108_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 70,
+          "score": 0.8751500844955444
+        },
+        {
+          "page": 68,
+          "score": 0.8560037612915039
+        },
+        {
+          "page": 455,
+          "score": 0.8505287766456604
+        }
+      ]
+    },
+    {
+      "id": "Q002",
+      "question": "When operating the machine with the sub-panel, what is the procedure for manually rotating the tool changer carousel, and what condition must be met for automatic tool changes to function correctly?",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "To manually rotate the tool changer carousel using the sub-panel, the Manual/Automatic Tool Change switch must be set to “Manual”. When set to manual, the buttons labeled with clockwise and counterclockwise symbols are enabled, and automatic tool changes are disabled. The carousel rotates one position each time a clockwise or counter-clockwise button is pressed once. For automatic tool changer operation, the Manual/Automatic Tool Change switch must be set to “Automatic Operation”.\n\nReference page_127_figure_1.png, which shows the tool changer door switch panel symbols, including the rotate tool changer carousel counter-clockwise, rotate tool changer carousel clockwise, tool change switch - automatic operation, and tool change switch - manual operation selection.",
+      "image": [
+        "page_127_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 201,
+          "score": 0.8615961670875549
+        },
+        {
+          "page": 25,
+          "score": 0.8596694469451904
+        }
+      ]
+    },
+    {
+      "id": "Q003",
+      "question": "When setting the part zero using a mechanical pointer, what is the procedure for accurately locating the upper left corner of the workpiece after jogging the Z-axis to approximately 0.2\" above the part?",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "After jogging the Z-Axis approximately 0.2\" above the part, accurately locate the upper left corner of the workpiece by following these steps:\n\n1.  Select between the X and Y axes using the appropriate controls.\n2.  Use the jog handle to carefully move the pointer tool to the upper left corner of the part. This process involves visually aligning the pointer with the edges of the workpiece to establish the desired corner location. \n\nReference page_129_figure_1.png, which shows the control panel and the setup with the pointer tool and workpiece.",
+      "image": [
+        "page_129_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 127,
+          "score": 0.8945050835609436
+        },
+        {
+          "page": 128,
+          "score": 0.8645811080932617
+        },
+        {
+          "page": 120,
+          "score": 0.862449586391449
+        }
+      ]
+    },
+    {
+      "id": "Q004",
+      "question": "When using the 'Reverse + And - Signs' function, what considerations must be taken into account before toggling address codes and proceeding with the operation, and what are the potential consequences if these considerations are not addressed?",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "Before using the 'Reverse + And - Signs' function, it's crucial to understand that this operation cannot be undone, and the file will be automatically saved. Therefore, if you're uncertain about keeping the changes, always save a copy of the original program first. \n\n## Steps for Reversing Plus and Minus Signs:\n\n1.  Access the Modify menu and select 'Reverse + And - Signs'.\n2.  In the pop-up menu, press the letter key for the address codes you want to reverse to toggle selections. For example, you can toggle X and Y address codes. Reference page_144_figure_2.png, which shows an example of the 'Reverse Plus and Minus Signs' menu with X and Y address codes selected.\n3.  Press [ENTER] to execute the command or [CANCEL] to return to the editor.\n\nIf these considerations are not addressed, you risk permanently altering your program in unintended ways, potentially leading to machining errors or scrapped parts. Always back up your program before performing irreversible operations.",
+      "image": [
+        "page_144_figure_2.png"
+      ],
+      "chunks": [
+        {
+          "page": 345,
+          "score": 0.8843928575515747
+        },
+        {
+          "page": 350,
+          "score": 0.8601476550102234
+        },
+        {
+          "page": 353,
+          "score": 0.8566815853118896
+        }
+      ]
+    },
+    {
+      "id": "Q005",
+      "question": "When programming a tool path using cutter compensation on the CNC machine with FANUC controls, what considerations must be taken into account when activating and deactivating cutter compensation (G41/G42 and G40) to ensure proper machining and avoid potential alarms?",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "When programming cutter compensation with FANUC controls, it's crucial to manage the entry and exit moves correctly to prevent gouging or leaving excess material. Here's what you need to consider:\n\n1.  **Activation (G41/G42):** When activating cutter compensation using G41 (left) or G42 (right), ensure that a non-zero D code is specified to select the correct offset number from the tool offsets table. The starting position of the move should be the programmed position, while the ending position will be offset to the left or right of the programmed path by the amount entered in the radius/diameter offset column.\n\n2.  **Deactivation (G40):** To deactivate cutter compensation, use G40. In the block that turns off cutter compensation, the starting point is offset, and the ending point is not offset. Always turn off cutter compensation in a move that clears the tool away from the part being cut.\n\n3.  **Circular Moves:** Cutter compensation cannot be turned on or off during a circular move (G02 or G03); doing so will generate an alarm.\n\n4.  **Program Termination:** You may not end a program (M30, M00, M01, or M02) with cutter compensation active. If a program is terminated with cutter compensation still active, an alarm is generated.\n\n5.  **Tool Path:** The tool path actual center (2) is offset from the programmed tool path (1) by the cutter compensation (4). G41/G42 and G40 are commanded at the start and end of the tool path, starting at point (3).\n\n    Reference page_159_figure_2.png\n\nBy following these guidelines, you can ensure smooth transitions into and out of cutter compensation, prevent alarms, and achieve the desired part geometry.",
+      "image": [
+        "page_159_figure_2.png"
+      ],
+      "chunks": [
+        {
+          "page": 166,
+          "score": 0.8824445009231567
+        },
+        {
+          "page": 324,
+          "score": 0.8700695037841797
+        },
+        {
+          "page": 264,
+          "score": 0.8661816120147705
+        }
+      ]
+    },
+    {
+      "id": "Q006",
+      "question": "When programming cutter compensation with G42, what are the key differences in tool behavior between Cutter Compensation Type A and Type B, especially concerning the tool's initial movement when approaching the workpiece with both linear and circular interpolation?",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "When using cutter compensation with G42, the tool's behavior differs significantly between Type A and Type B, especially during the initial approach to the workpiece. Understanding these differences is crucial for achieving the desired part geometry and avoiding collisions.\n\n## Cutter Compensation Type A\n\n*   **Linear Interpolation:** The tool moves directly to the offset start point for the second cut. This is the default setting and is generally suitable for most applications.\n*   **Circular Interpolation:** The tool smoothly transitions into the circular path, maintaining the programmed offset.\n\n## Cutter Compensation Type B\n\n*   **Linear Interpolation:** The tool initially moves perpendicular to the programmed path by a distance equal to the tool radius, then moves parallel to the path to reach the offset start point. This is useful when clearance around a fixture or clamp is needed.\n*   **Circular Interpolation:** Similar to linear interpolation, the tool initially moves away from the programmed path before entering the circular cut, providing extra clearance.\n\nReference page_163_figure_1.png\n\nIn summary, Type A provides a direct path to the cut, while Type B prioritizes clearance by adding an initial offset move. The choice between Type A and Type B depends on the specific requirements of the machining operation, including part geometry, fixture setup, and the need for collision avoidance.",
+      "image": [
+        "page_163_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 125,
+          "score": 0.9168667197227478
+        },
+        {
+          "page": 410,
+          "score": 0.8825923800468445
+        },
+        {
+          "page": 123,
+          "score": 0.8822565674781799
+        }
+      ]
+    },
+    {
+      "id": "Q007",
+      "question": "When using the external subprogram O40008 to define a pattern of hole locations, how does the G98 command at the move between positions 4 and 5 affect the Z-axis behavior, and what potential issue does this address?",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "The G98 command within the subprogram O40008, specifically at the move between positions 4 and 5, forces the Z-axis to return to the initial starting point instead of the R plane. This is done to ensure the tool safely clears any workholding fixtures between positions, preventing potential collisions or damage. \n\nHere's a breakdown:\n\n*   **G98 Behavior:** When G98 is active, the Z-axis retracts to the initial Z starting point at the end of each canned cycle operation within the subprogram.\n*   **G99 Behavior:** In contrast, G99 would retract the Z-axis only to the R plane (the retract plane) between operations.\n*   **Workholding Clearance:** In scenarios where workholding devices (like clamps or vises) are present, using G99 might cause the tool to collide with these fixtures during rapid movements between hole locations. G98 ensures the tool lifts high enough to clear these obstructions.\n\nIn the provided example, the subprogram (program O40008) specifies (8) positions. It also includes a G98 command at the move between positions 4 and 5. This causes the Z Axis to return to the initial starting point instead of the R plane, so the tool passes over the workholding. The main program (Program O40007) specifies (3) different canned cycles:\n\n1.  G81 Spot drill at each position\n2.  G83 Peck drill at each position\n3.  G84 Tap at each position\n\nEach canned cycle calls the subprogram and does the operation at each position. \n\nReference page_171_figure_1.png",
+      "image": [
+        "page_171_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 15,
+          "score": 0.8362587690353394
+        },
+        {
+          "page": 111,
+          "score": 0.835841715335846
+        }
+      ]
+    },
+    {
+      "id": "Q008",
+      "question": "When activating Tool Center Point Control (TCPC) and Dynamic Work Offsets (DWO) on a machine with a rotary table, how do you confirm that the axis definitions and rotary installation match the ANSI standard, and what steps should be taken if the configuration does not match the diagram?",
+      "category": "TECHNICAL",
+      "safety_critical": true,
+      "answer": "To confirm that the axis definitions and rotary installation match the ANSI standard for Tool Center Point Control (TCPC) and Dynamic Work Offsets (DWO), you need to verify that the A, B, and C axes each rotate about the X, Y, and Z axes, respectively. \n\n1.  On the Rotary page, press [F4]. This will display the Confirm TCPC/DWO Configuration pop-up window, which shows diagrams of acceptable configurations. \nReference page_202_figure_1.png\n2.  If your rotary configuration matches one of the diagrams, press [ENTER] to confirm and activate TCPC/DWO.\n3.  If the configuration does not match, you must adjust it to match by redefining the axis letters or changing the rotary unit’s orientation. After adjusting, repeat the confirmation process. It's crucial to save the rotary configuration by pressing F3 after activating TCPC/DWO; otherwise, the settings will be deactivated when the machine is turned off.",
+      "chunks": [
+        {
+          "page": 31,
+          "score": 0.8641871809959412
+        },
+        {
+          "page": 28,
+          "score": 0.8497153520584106
+        },
+        {
+          "page": 36,
+          "score": 0.8448985815048218
+        }
+      ],
+      "image": [
+        "page_202_figure_1.png"
+      ]
+    },
+    {
+      "id": "Q009",
+      "question": "When integrating a new automated clamping system using the M-code relays on the I/O PCB, what considerations should be made regarding the wiring connections to the terminal strip and the interaction with the M-Fin circuit to ensure proper operation and prevent program execution errors?",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "When integrating a new automated clamping system using the M-code relays, several considerations must be made to ensure proper operation and prevent program execution errors. These considerations include the wiring connections to the terminal strip and the interaction with the M-Fin circuit.\n\n## Wiring Connections\n\n1.  **Terminal Strip Connections:** Auxiliary devices, such as probes, auxiliary pumps, or clamping devices, should be connected to the terminal strip for the individual relay. The terminal strip has positions for Normally Open (NO), Normally Closed (NC), and Common (COM). Ensure that the wiring is correctly connected based on the desired behavior of the auxiliary device.\n\n2.  **Relay Activation:** Each M-code (M21-M25) closes one of the optional relays. Only one relay is switched at a time. The M-code relays are located in the lower-left corner of the I/O PCB. Reference page_371_figure_1.png to identify the location of the M-code relays and the terminal strip.\n\n## M-Fin Circuit Interaction\n\n1.  **M-Fin Signal:** After commanding a relay, the program waits for a finish (M-Fin) signal from the equipment. The M-Fin connector is at P8 on the I/O PCB. Pin 3 is the M-Fin input and interacts with input number 18 in the control. Pin 1 is the M-Fin output and interacts with output number 4 on the control.\n\n2.  **Program Flow:** The typical operation sequence is:\n    1.  Run the machining portion of a CNC part program.\n    2.  Stop CNC motion and command a relay.\n    3.  Wait for a finish (M-Fin) signal from the equipment.\n    4.  Continue the CNC part program.\n\n3.  **Error Handling:** If the relay-activated accessory does not finish, the program will pause indefinitely. Pressing [RESET] stops any operation waiting for the M-Fin signal.\n\nBy carefully considering these wiring connections and M-Fin circuit interactions, you can ensure that the automated clamping system operates correctly and that the CNC program executes without errors.",
+      "chunks": [
+        {
+          "page": 26,
+          "score": 0.8857905864715576
+        },
+        {
+          "page": 28,
+          "score": 0.8508236408233643
+        },
+        {
+          "page": 12,
+          "score": 0.8445347547531128
+        }
+      ],
+      "image": [
+        "page_371_figure_1.png"
+      ]
+    },
+    {
+      "id": "Q010",
+      "question": "When performing maintenance on a UMC-750 with a B/C axis configuration, how do Settings 255, 256, and 257 relate to establishing the Machine Rotary Zero Point (MRZP), and what specific measurements do these settings define relative to the machine's home position?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "Settings 255, 256, and 257 define the Machine Rotary Zero Point (MRZP) by specifying the distances between the rotary axes centerlines and the machine's home position along the X, Y, and Z axes, respectively. These settings are crucial for accurate 5-axis machining and tool center point control.\n\n## MRZP Offset Definitions\n*   **Setting 255 (MRZP X Offset):** Defines the distance along the X-axis between the machine zero and the B tilt axis centerline for a B/C axis UMC, or the C rotary axis centerline for an A/C axis trunnion.\n*   **Setting 256 (MRZP Y Offset):** Defines the distance along the Y-axis between the machine zero and the C rotary axis centerline for a B/C axis UMC, or the A tilt axis centerline for an A/C axis trunnion.\n*   **Setting 257 (MRZP Z Offset):** Defines the distance along the Z-axis between the machine zero and the B tilt axis for a B/C axis UMC, or the A tilt axis for an A/C axis trunnion.\n\nReference page_419_figure_1.png\n\nOn a UMC-750, the B and C axes intersect approximately 2 inches above the table. Setting these offsets correctly ensures that the control can accurately compensate for the rotary center distances during 5-axis operations, especially when using G234 Tool Center Point Control (TCPC).",
+      "chunks": [
+        {
+          "page": 21,
+          "score": 0.8369743227958679
+        },
+        {
+          "page": 28,
+          "score": 0.8369730114936829
+        },
+        {
+          "page": 453,
+          "score": 0.8324881792068481
+        }
+      ],
+      "image": [
+        "page_419_figure_1.png"
+      ]
+    },
+    {
+      "id": "Q011",
+      "question": "What is the procedure for safely stopping all machine operations in the event of a malfunction or emergency, and what specific actions does the Emergency Stop button trigger on the Haas mill?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "To safely stop all machine operations during a malfunction or emergency, press the Emergency Stop button. This action immediately halts all axis motion, disables the servos, stops the spindle and tool changer, and turns off the coolant pump. \n\nReference page_45_figure_1.png\n\nIt is crucial to understand the function of the Emergency Stop button to prevent potential damage to the machine, workpiece, or injury to personnel. Regularly inspect the Emergency Stop button to ensure it is functioning correctly and is easily accessible.",
+      "chunks": [
+        {
+          "page": 21,
+          "score": 0.8508825898170471
+        },
+        {
+          "page": 28,
+          "score": 0.8505915403366089
+        },
+        {
+          "page": 30,
+          "score": 0.8289550542831421
+        }
+      ],
+      "image": [
+        "page_45_figure_1.png"
+      ]
+    },
+    {
+      "id": "Q012",
+      "question": "When operating the machine in memory mode, what considerations should be made regarding the single block, optional stop, and block delete functions available on the control pendant?",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "When operating the machine in memory mode, several key functions on the control pendant influence program execution. Understanding these functions is crucial for controlled and safe operation:\n\n1.  **Single Block:** When single block is active, the control executes one program block for each press of the [CYCLE START] button. This is useful for carefully stepping through a program, especially during setup or troubleshooting.\n\n2.  **Optional Stop:** With optional stop enabled, the machine halts execution when it encounters an M01 command within the program. This allows for planned pauses to inspect the part, make adjustments, or perform other tasks.\n\n3.  **Block Delete:** When block delete is toggled on, the control ignores any program lines preceded by a slash (\"/\"). This provides a way to temporarily skip sections of code without permanently removing them from the program.\n\nReference page_50_figure_1.png\n\nThese functions, accessible via the keyboard, offer flexibility in how programs are executed, allowing operators to adapt to different machining needs and ensure safe operation.",
+      "chunks": [
+        {
+          "page": 25,
+          "score": 0.9076768159866333
+        },
+        {
+          "page": 25,
+          "score": 0.8490148782730103
+        },
+        {
+          "page": 25,
+          "score": 0.8413269519805908
+        }
+      ],
+      "image": [
+        "page_50_figure_1.png"
+      ]
+    },
+    {
+      "id": "Q013",
+      "question": "When using the milling/turning calculator, how can you identify if the calculated values are outside the recommended range for the selected workpiece and tool material, and what additional information is displayed when all calculator fields contain data?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "When using the milling/turning calculator, calculated values that fall outside the recommended range for the workpiece and tool material are highlighted in yellow. Additionally, when all calculator fields contain data, whether entered or calculated, the milling calculator displays the recommended power for the operation. \n\nTo effectively use the milling/turning calculator:\n\n1.  Use the cursor arrow keys to navigate between fields.\n2.  Enter known values into the appropriate fields. You can also use the [F3] key to copy a value from the standard calculator.\n3.  For the Work Material and Tool Material fields, use the LEFT and RIGHT cursor arrow keys to select from the available options.\n\nReference page_70_figure_1.png",
+      "chunks": [
+        {
+          "page": 31,
+          "score": 0.86899334192276
+        },
+        {
+          "page": 30,
+          "score": 0.868933916091919
+        },
+        {
+          "page": 21,
+          "score": 0.832231342792511
+        }
+      ],
+      "image": [
+        "page_70_figure_1.png"
+      ]
+    },
+    {
+      "id": "Q014",
+      "question": "When monitoring the active tool display on the control pendant, what key pieces of information should you observe to ensure optimal tool performance and prevent potential issues during machining operations?",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "When monitoring the active tool display, several key pieces of information should be observed to ensure optimal tool performance. These include:\n\n*   **Tool Number:** Verify the correct tool is active.\n*   **Tool Type:** Confirm the tool type matches the intended operation.\n*   **Maximum Tool Load:** Monitor the load percentage to avoid exceeding the tool's capacity.\n*   **Remaining Tool Life:** Track the remaining percentage of tool life or tool group to plan for timely replacements.\n*   **Next Tool:** Note the next tool pocket number and tool number to prepare for tool changes.\n\nBy monitoring these parameters, you can proactively address potential issues, such as tool wear or overload, and maintain efficient machining operations. For example, the active tool display shows the current tool number, type, load, remaining life, and the next tool to be used. This information helps operators make informed decisions about tool usage and replacement. Reference page_74_figure_2.png",
+      "chunks": [
+        {
+          "page": 26,
+          "score": 0.8887587785720825
+        },
+        {
+          "page": 26,
+          "score": 0.8776711225509644
+        },
+        {
+          "page": 26,
+          "score": 0.868132472038269
+        }
+      ],
+      "image": [
+        "page_74_figure_2.png"
+      ]
+    },
+    {
+      "id": "Q015",
+      "question": "When adjusting the axis display on the control pendant, what is the procedure for selecting which axes to display, and what is the maximum number of axes that can be displayed simultaneously?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "To select which axes to display on the Positions display, first ensure a Positions display tab is active, then press the [ALTER] key to bring up the axis display selection window. Use the cursor arrow keys to highlight an axis, and press [ENTER] to toggle it on or off for display. Axes that have a check mark will be shown on the Positions display. To close the axis display selector, press [ALTER] again. Note that you can display a maximum of five axes at any one time. \n\n",
+      "chunks": [
+        {
+          "page": 28,
+          "score": 0.8826140761375427
+        },
+        {
+          "page": 21,
+          "score": 0.8568503856658936
+        },
+        {
+          "page": 28,
+          "score": 0.8498262166976929
+        }
+      ],
+      "image": [
+        "page_79_figure_3.png"
+      ]
+    },
+    {
+      "id": "Q016",
+      "question": "When monitoring the Main Spindle display, what key performance indicators should a technician observe to ensure optimal machining performance and prevent potential spindle damage?",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "To ensure optimal machining performance and prevent potential spindle damage, a technician should observe the following key performance indicators on the Main Spindle display:\n\n## Key Performance Indicators\n\n*   **Spindle Speed (RPM):** Monitor the actual spindle speed to ensure it matches the programmed speed and is within the machine's and tool's limits.\n*   **Spindle Load (kW):** Observe the spindle load to avoid overloading the spindle motor, which can lead to premature wear or failure. The spindle load meter indicates the spindle load as a percentage of motor capacity.\n*   **Surface Speed (FPM):** Check the surface speed to optimize cutting conditions and tool life.\n*   **Chip Load:** Monitor the chip load to ensure proper material removal and prevent tool breakage.\n*   **Feed Rate:** Verify the programmed feed rate to maintain desired cutting parameters.\n*   **Active Feed:** Compare the active feed rate with the programmed feed rate to identify any manual overrides or adjustments affecting the machining process.\n*   **Overrides:** Pay attention to the feed, spindle, and rapid override settings, as these can significantly impact machining performance and safety.\n\nReference page_82_figure_1.png",
+      "chunks": [
+        {
+          "page": 48,
+          "score": 0.9018173813819885
+        },
+        {
+          "page": 49,
+          "score": 0.8760000467300415
+        },
+        {
+          "page": 46,
+          "score": 0.8424077033996582
+        }
+      ],
+      "image": [
+        "page_82_figure_1.png"
+      ]
+    },
+    {
+      "id": "Q017",
+      "question": "The control panel is displaying a 'Low Air Flow' warning while operating in metric mode. What are the potential consequences of insufficient airflow to the machine, and what initial steps should be taken to address this issue?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "Insufficient airflow to the machine can lead to incorrect operation. The initial steps to address this issue are:\n\n1.  Inspect the air supply line for any kinks, leaks, or obstructions that may be restricting airflow.\n2.  Verify that the air compressor is functioning correctly and delivering the required pressure and flow rate.\n3.  Check and clean the air filters to ensure they are not clogged, as this can significantly reduce airflow.\n4.  Ensure that the machine's pneumatic components, such as valves and cylinders, are functioning correctly and not leaking air.\n\nReference page_93_figure_1.png",
+      "chunks": [
+        {
+          "page": 28,
+          "score": 0.8713890314102173
+        },
+        {
+          "page": 397,
+          "score": 0.855195164680481
+        }
+      ],
+      "image": [
+        "page_93_figure_1.png"
+      ]
+    },
+    {
+      "id": "Q018",
+      "question": "What are the potential consequences and required actions if the control panel displays a 'Low Voltage (Alarm)' icon, and how does this differ from a 'Low Voltage (Warning)'?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "If the control panel displays a 'Low Voltage (Alarm)' icon, the Power Fault Detect Module (PDFM) has detected incoming voltage that is too low for operation, and the machine will not operate until the condition is corrected. This is a critical issue that prevents machine operation. A 'Low Voltage (Warning)' indicates that the PFDM detects low incoming voltage, and while the machine may still be operating, continued low voltage can lead to operational issues. \n\nCorrecting a low voltage alarm requires immediate attention to the power supply to the machine, potentially involving checking the incoming power lines, transformers, and the PDFM itself. Ignoring a low voltage warning can escalate to an alarm state, causing unexpected downtime and potential damage to machine components. \n\n",
+      "chunks": [
+        {
+          "page": 29,
+          "score": 0.8774948716163635
+        },
+        {
+          "page": 30,
+          "score": 0.8545000553131104
+        },
+        {
+          "page": 28,
+          "score": 0.8508232831954956
+        }
+      ],
+      "image": [
+        "page_95_figure_5.png"
+      ]
+    },
+    {
+      "id": "Q019",
+      "question": "The machine has stopped and the control panel displays an E-Stop icon. What are the possible causes related to the emergency stop system, and what steps should be taken to identify and resolve each cause?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "The E-Stop icon indicates that an emergency stop button has been activated, halting machine operation. The possible causes and troubleshooting steps are:\n\n## Emergency Stop Causes and Resolution\n\n1.  **Pendant E-Stop:** The emergency stop button on the operator pendant may have been pressed. Check the pendant and release the button by twisting it. The icon should disappear from the control panel.\n\n2.  **Pallet Changer E-Stop:** If the machine is equipped with a pallet changer, the emergency stop button on the pallet changer may have been pressed. Inspect the pallet changer and release the emergency stop button.\n\n3.  **Tool Changer Cage E-Stop:** On machines with a tool changer cage, the emergency stop button on the cage may have been activated. Check the tool changer cage and release the emergency stop button.\n\n4.  **Auxiliary Device E-Stop:** An emergency stop button on an auxiliary device connected to the machine may have been pressed. Inspect all connected auxiliary devices and release any activated emergency stop buttons.\n\nReference page_96_figure_3.png\n\nAfter addressing each potential cause, verify that the E-Stop icon disappears from the control panel. If the icon persists, further diagnostics may be required to identify a fault in the emergency stop circuit.",
+      "chunks": [
+        {
+          "page": 16,
+          "score": 0.8874202966690063
+        },
+        {
+          "page": 15,
+          "score": 0.8820329904556274
+        },
+        {
+          "page": 112,
+          "score": 0.8673367500305176
+        }
+      ],
+      "image": [
+        "page_96_figure_3.png"
+      ]
+    },
+    {
+      "id": "Q020",
+      "question": "When the 'Tool Unclamped' icon is displayed on the control panel, what specific condition does this indicate regarding the machine's spindle, and what immediate actions should be taken to address this condition before initiating any machining operations?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "The 'Tool Unclamped' icon indicates that the tool currently in the spindle is not properly secured. This condition poses a significant safety risk and can lead to tool ejection during operation, potentially damaging the machine or causing injury. \n\nTo address this condition:\n\n1.  Immediately stop all machine operations.\n2.  Inspect the tool clamping mechanism for any obstructions, damage, or wear.\n3.  Ensure that the correct tool is loaded and properly seated in the spindle.\n4.  Manually clamp the tool if possible, and verify that the clamping mechanism is functioning correctly.\n5.  If the issue persists, consult the machine's maintenance manual or contact a qualified technician for further assistance. \n\nDo not proceed with any machining operations until the 'Tool Unclamped' condition is resolved and the tool is securely clamped in the spindle. Reference page_98_figure_2.png",
+      "chunks": [
+        {
+          "page": 115,
+          "score": 0.8912678956985474
+        },
+        {
+          "page": 236,
+          "score": 0.8680890202522278
+        }
+      ],
+      "image": [
+        "page_98_figure_2.png"
+      ]
+    },
+    {
+      "id": "Q021",
+      "question": "Describe the steps required to manually load tools into the tool changer, emphasizing the importance of proper tool holder alignment and secure installation.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "To load tools into the tool changer, always load tools into the tool changer from the spindle. Never load a tool directly into the tool changer carousel. First, insert the tool (pull stud first) into the spindle. Turn the tool so that the two cutouts in the tool holder line up with the tabs of the spindle. Push the tool upward and press the tool release button. When the tool is fitted into the spindle, release the tool release button. Then, use [ATC FWD] and [ATC REV] to rotate the tool carousel to the desired pocket. It is critical to ensure that tool holders and pull studs are in good condition and tightened together securely to prevent them from sticking in the spindle.",
+      "chunks": [
+        {
+          "page": 121,
+          "score": 0.8809119462966919
+        },
+        {
+          "page": 121,
+          "score": 0.8773418664932251
+        },
+        {
+          "page": 16,
+          "score": 0.8708227276802063
+        }
+      ]
+    },
+    {
+      "id": "Q022",
+      "question": "Explain the purpose of the 'Run-Stop-Jog-Continue' feature, and describe the steps a technician would take to use this feature to inspect a part during a machining cycle.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "The 'Run-Stop-Jog-Continue' feature lets you stop a running program, jog away from the part, and then start the program again. First, press [FEED HOLD] to stop axis motion. Then, press [X], [Y], [Z], or an installed Rotary Axis ([A] for A Axis, [B] for B Axis, and [C] for C Axis), then press [HANDLE JOG]. Use the jog handle or jog keys to move the tool away from the part. After inspecting the part, jog to a position as close as possible to the stored position, or to a position where there is an unobstructed rapid path back to the stored position. Press [MEMORY] or [MDI] to return to run mode. Press [CYCLE START] to continue the program.",
+      "chunks": [
+        {
+          "page": 131,
+          "score": 0.8855412006378174
+        },
+        {
+          "page": 16,
+          "score": 0.8656760454177856
+        },
+        {
+          "page": 89,
+          "score": 0.8527438640594482
+        }
+      ]
+    },
+    {
+      "id": "Q023",
+      "question": "Describe the function of the 'Graphics Mode' and how it can be used to identify potential programming errors before running a program on the machine.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "Graphics mode shows an on-screen representation of your part program. The axes do not move, so you do not risk tool or part damage from programming errors. To use Graphics mode, select the GRAPHICS tab. Graphics shows an on-screen representation of your part program. The axes do not move, so you do not risk tool or part damage from programming errors. By observing the simulated tool paths, a technician can identify potential collisions, incorrect tool movements, or other programming errors before they cause damage to the machine or workpiece.",
+      "chunks": [
+        {
+          "page": 132,
+          "score": 0.8750495910644531
+        },
+        {
+          "page": 73,
+          "score": 0.8715485334396362
+        },
+        {
+          "page": 132,
+          "score": 0.8556214570999146
+        }
+      ]
+    },
+    {
+      "id": "Q024",
+      "question": "Explain the difference between 'Absolute' (G90) and 'Incremental' (G91) positioning modes, and provide an example of a situation where each mode would be most appropriate.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "When you command axis motion after a G90 code, the axes move to that position relative to the origin of the coordinate system currently in use. When you command axis motion after a G91, the axes move to that position relative to the current position. Absolute programming is useful in most situations. Incremental programming is more efficient for repetitive, equally spaced cuts.",
+      "chunks": [
+        {
+          "page": 17,
+          "score": 0.9237915277481079
+        },
+        {
+          "page": 148,
+          "score": 0.8929082155227661
+        },
+        {
+          "page": 322,
+          "score": 0.8781999945640564
+        }
+      ]
+    },
+    {
+      "id": "Q025",
+      "question": "Describe the purpose of the 'G43 Tool Offset' command, and explain how it is used to compensate for variations in tool length during machining operations.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "The G43 Hnn Tool Length Compensation command should be used after every tool change. It adjusts the Z-Axis position to account for the length of the tool. The Hnn argument specifies which tool length to use. The G43 command ensures that the tool tip is accurately positioned relative to the workpiece, regardless of the tool's length.",
+      "chunks": [
+        {
+          "page": 290,
+          "score": 0.9122318029403687
+        },
+        {
+          "page": 152,
+          "score": 0.9084780216217041
+        },
+        {
+          "page": 157,
+          "score": 0.8969855308532715
+        }
+      ]
+    },
+    {
+      "id": "Q026",
+      "question": "Explain the function of the 'M19 Spindle Orientation' command, and describe a scenario where precise spindle orientation would be required for a machining operation.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "The Spindle Orientation lets you position the spindle to a programmed angle. This option provides inexpensive, accurate positioning. A scenario where precise spindle orientation would be required is when using a tool that requires a specific angular position, such as a driven tool on a lathe or when performing certain types of engraving.",
+      "chunks": [
+        {
+          "page": 184,
+          "score": 0.9063998460769653
+        },
+        {
+          "page": 370,
+          "score": 0.8850984573364258
+        },
+        {
+          "page": 154,
+          "score": 0.8574810028076172
+        }
+      ]
+    },
+    {
+      "id": "Q027",
+      "question": "Describe the purpose and function of the 'DPRNT' statement, and provide an example of how it can be used to output data for process monitoring or quality control purposes.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "The DPRNT statement lets programs send formatted text to the serial port. DPRNT can print any text and any variable to the serial port. This can be used to output data for process monitoring or quality control purposes. For example, DPRNT [X#1[44]*Z#1[03]*T#1[40]] will output the values of variables #1 in a formatted way.",
+      "chunks": [
+        {
+          "page": 251,
+          "score": 0.8586106300354004
+        },
+        {
+          "page": 250,
+          "score": 0.8577600121498108
+        }
+      ]
+    },
+    {
+      "id": "Q028",
+      "question": "Explain the purpose of the 'G103 Limit Block Buffering' command, and describe a situation where limiting look-ahead would be necessary for proper program execution.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "G103 Limit Block Buffering limits how far ahead the control looks at blocks of code. This is useful in macro programming, where the control attempts to process as many lines as possible ahead of time in order to speed up processing, including the interpretation of macro variables. Limiting look-ahead is necessary when the program's logic depends on the immediate execution of a macro statement before subsequent blocks are processed.",
+      "chunks": [
+        {
+          "page": 251,
+          "score": 0.8926107883453369
+        },
+        {
+          "page": 327,
+          "score": 0.8869765996932983
+        },
+        {
+          "page": 213,
+          "score": 0.8565296530723572
+        }
+      ]
+    },
+    {
+      "id": "Q029",
+      "question": "Describe the purpose and operation of the 'Tool Center Point Control' (TCPC) feature, and explain how it simplifies programming for complex 5-axis machining operations.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "Tool Center Point Control (TCPC) is a software feature in the Haas CNC control that allows a machine to correctly run a contouring 4- or 5-axis program when the workpiece is not located in the exact location specified by a CAM-generated program. This eliminates the need to repost a program from the CAM system when the programmed and the actual workpiece locations are different. TCPC makes sure that this coordinate system remains fixed relative to the table; when the rotary axes rotate, the linear coordinate system rotates with them.",
+      "chunks": [
+        {
+          "page": 417,
+          "score": 0.8856868743896484
+        },
+        {
+          "page": 197,
+          "score": 0.8834015727043152
+        },
+        {
+          "page": 202,
+          "score": 0.8829721212387085
+        }
+      ]
+    },
+    {
+      "id": "Q030",
+      "question": "Explain the purpose and function of the 'Dynamic Work Offset' (DWO) feature, and how it differs from Tool Center Point Control (TCPC).",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "G254 Dynamic Work Offset (DWO) is similar to TCPC, except that it is designed for use with 3+1 or 3+2 positioning, not for simultaneous 4- or 5-axis machining. If the program does not make use of the tilt and rotary Axes, there is no need to use DWO. With DWO, you no longer need to set the workpiece in the exact position as programmed in the CAM system. DWO applies the appropriate offsets to account for the differences between the programmed workpiece location and the actual workpiece location. This eliminates the need to repost a program from the CAM system when the programmed and actual workpiece locations are different.",
+      "chunks": [
+        {
+          "page": 197,
+          "score": 0.9014118909835815
+        },
+        {
+          "page": 202,
+          "score": 0.8973114490509033
+        },
+        {
+          "page": 359,
+          "score": 0.897014319896698
+        }
+      ]
+    },
+    {
+      "id": "Q031",
+      "question": "Explain how the M98 and M97 commands are used to call subprograms, detailing the key differences between these two methods and the implications for program organization.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "M98 is used to call an external subprogram, which is a separate program that the main program references. The P code in M98 refers to the program number of the subprogram. M97 is used to call a local subprogram, which is a block of code within the main program. The P code in M97 refers to the N line number of the local subprogram. External subprograms are useful for reusable code across multiple main programs, while local subprograms are convenient for short, self-contained routines within a single program.",
+      "chunks": [
+        {
+          "page": 379,
+          "score": 0.8953058123588562
+        },
+        {
+          "page": 379,
+          "score": 0.8919620513916016
+        },
+        {
+          "page": 169,
+          "score": 0.8906093835830688
+        }
+      ]
+    },
+    {
+      "id": "Q032",
+      "question": "Describe the steps for creating a new program using the control interface, and explain how the 'File Name' and 'File Comment' fields are used for program management.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "To create a new program, press [INSERT]. Enter the new program information in the fields. The Program O number field is required; the File Name and File comment are optional. Use the [UP] and [DOWN] cursors to move between the menu fields. Press [UNDO] at any time to cancel program creation. The File Name is an optional name that the control uses when you copy the file to a memory device other than the control. The File comment is an optional descriptive program title that goes into the program as a comment in the first line with the O number.",
+      "chunks": [
+        {
+          "page": 105,
+          "score": 0.8903856873512268
+        },
+        {
+          "page": 16,
+          "score": 0.8848763704299927
+        },
+        {
+          "page": 141,
+          "score": 0.8778762817382812
+        }
+      ]
+    },
+    {
+      "id": "Q033",
+      "question": "Explain how to perform a 'Selected Machine Data Backup' and a 'Full Machine Backup', and describe the types of data included in each backup type.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "To back up selected information, navigate to USB in the Device Manager, open the destination directory, press [F4], select the menu option for the data you want to back up, and press [ENTER]. To create a full machine backup, navigate to the USB or Network Device, press [F4], select Backup Machine and press [ENTER]. A selected backup allows you to choose specific data like settings, offsets, or macro variables, while a full machine backup saves all machine data, including system data, programs, and user data.",
+      "chunks": [
+        {
+          "page": 15,
+          "score": 0.8810938596725464
+        },
+        {
+          "page": 16,
+          "score": 0.879754900932312
+        }
+      ]
+    },
+    {
+      "id": "Q034",
+      "question": "Describe the different methods for specifying the center of an arc when using G02 or G03, and explain the advantages and disadvantages of each method.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "Arcs can be defined using two different methods. The preferred method is to define the center of the arc or circle with I, J and/or K and to define the end point of the arc with an X, Y and/or Z. The I J K values define the relative X Y Z distances from the starting point to the center of the circle. The X Y Z values define the absolute X Y Z distances from the starting point to the end point of the arc within the current coordinate system. This is also the only method to cut a circle. The other method to cut an arc is to define the X Y Z values for the end point and to define the radius of the circle with an R value. The I, J, K method is more precise and versatile, especially for complex arcs, while the R method is simpler for basic arcs but limited to arcs of 180 degrees or less.",
+      "chunks": [
+        {
+          "page": 156,
+          "score": 0.8722940683364868
+        },
+        {
+          "page": 155,
+          "score": 0.8625869154930115
+        }
+      ]
+    },
+    {
+      "id": "Q035",
+      "question": "Explain how to use the 'Timers and Counters' display to monitor machine usage and track program execution, and describe the procedure for resetting these values.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "The Timers display shows the current date and time, the total power on time, total cycle start time, total feed time, M30 counters, and macro variable displays. To reset the power-on, cycle-start, and feed cutting timers, or the M30 counters, select the Timers page in Current Commands, use the cursor arrow keys to highlight the name of the timer or counter that you want to reset, and press [ORIGIN] to reset the timer or counter.",
+      "chunks": [
+        {
+          "page": 65,
+          "score": 0.8969464302062988
+        },
+        {
+          "page": 76,
+          "score": 0.8945790529251099
+        },
+        {
+          "page": 64,
+          "score": 0.890726625919342
+        }
+      ]
+    },
+    {
+      "id": "Q036",
+      "question": "Describe the different methods for accessing help information on the control, and explain how to use the 'Help Index' and 'Active Window Help' features.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "To access information about machine functions, commands, or programming, press [HELP]. You are presented with icon options for different help information. Active Icon Help displays a list of the currently active icons. Active Window Help displays the help system topic related to the currently active window. Help Index provides a list of manual topics that link to the information in the on-screen manual. To search for help content by keyword, type your search term in the input field, then press [F1] to execute the search.",
+      "chunks": [
+        {
+          "page": 84,
+          "score": 0.8751845359802246
+        },
+        {
+          "page": 84,
+          "score": 0.8723732829093933
+        },
+        {
+          "page": 84,
+          "score": 0.8623095750808716
+        }
+      ]
+    },
+    {
+      "id": "Q037",
+      "question": "Explain how to use the 'Timers and Counters' display to monitor machine usage and track program execution, and describe the procedure for resetting these values.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "The Timers display shows the current date and time, the total power on time, total cycle start time, total feed time, M30 counters, and macro variable displays. To reset the power-on, cycle-start, and feed cutting timers, or the M30 counters, select the Timers page in Current Commands, use the cursor arrow keys to highlight the name of the timer or counter that you want to reset, and press [ORIGIN] to reset the timer or counter.",
+      "chunks": [
+        {
+          "page": 65,
+          "score": 0.8969464302062988
+        },
+        {
+          "page": 76,
+          "score": 0.8945790529251099
+        },
+        {
+          "page": 64,
+          "score": 0.890726625919342
+        }
+      ]
+    },
+    {
+      "id": "Q038",
+      "question": "Describe the different methods for accessing help information on the control, and explain how to use the 'Help Index' and 'Active Window Help' features.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "To access information about machine functions, commands, or programming, press [HELP]. You are presented with icon options for different help information. Active Icon Help displays a list of the currently active icons. Active Window Help displays the help system topic related to the currently active window. Help Index provides a list of manual topics that link to the information in the on-screen manual. To search for help content by keyword, type your search term in the input field, then press [F1] to execute the search.",
+      "chunks": [
+        {
+          "page": 84,
+          "score": 0.8751845359802246
+        },
+        {
+          "page": 84,
+          "score": 0.8723732829093933
+        },
+        {
+          "page": 84,
+          "score": 0.8623095750808716
+        }
+      ]
+    },
+    {
+      "id": "Q039",
+      "question": "If the machine has been idle for 5 days and the operating temperature is 45°F, how should the machine be prepared for operation?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "If the machine’s spindle has been idle for more than (4) days, run the spindle warm-up program before you use the machine. This program brings the spindle up to speed slowly to distribute the lubrication and let the spindle reach a stable temperature. The operating temperature is within the safe limits, so no additional action is required.",
+      "chunks": [
+        {
+          "page": 102,
+          "score": 0.8511064052581787
+        },
+        {
+          "page": 377,
+          "score": 0.8194029331207275
+        }
+      ]
+    },
+    {
+      "id": "Q040",
+      "question": "A program is running with a feedrate of F20. If the operator adjusts the feedrate override to -20%, what is the resulting feedrate?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "A -20% feedrate override means the feedrate is reduced by 20%. Therefore, the resulting feedrate is 20 - (0.20 * 20) = 20 - 4 = 16. The resulting feedrate is F16.",
+      "chunks": [
+        {
+          "page": 397,
+          "score": 0.8558027148246765
+        },
+        {
+          "page": 408,
+          "score": 0.8552746176719666
+        },
+        {
+          "page": 407,
+          "score": 0.8523626327514648
+        }
+      ]
+    },
+    {
+      "id": "Q041",
+      "question": "If the tool diameter is 0.5 inches and the programmed feedrate is 20 inches per minute, what is the correct spindle speed to use for tapping an 8 TPI thread?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "The feed formula is: Spindle speed divided by threads per inch of the tap = feedrate in inches per minute. Therefore, Spindle speed = feedrate in inches per minute * threads per inch of the tap = 20 * 8 = 160. The correct spindle speed is 160 RPM.",
+      "chunks": [
+        {
+          "page": 275,
+          "score": 0.8544546365737915
+        },
+        {
+          "page": 265,
+          "score": 0.8536673784255981
+        },
+        {
+          "page": 184,
+          "score": 0.8505120873451233
+        }
+      ]
+    },
+    {
+      "id": "Q042",
+      "question": "If the current tool has been in a feed for 30 minutes and the total time is 45 minutes, and the tool life limit is set to 60 minutes, what is the remaining percentage of tool life?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "The total time the tool has been used is 45 minutes. The tool life limit is 60 minutes. Therefore, the remaining tool life is 60 - 45 = 15 minutes. The percentage of life left in a tool is calculated by the CNC control, using actual tool data and the allowed limits the operator entered for the group. Therefore, the remaining percentage of tool life is (15 / 60) * 100 = 25%. The remaining percentage of tool life is 25%.",
+      "chunks": [
+        {
+          "page": 415,
+          "score": 0.847895622253418
+        },
+        {
+          "page": 117,
+          "score": 0.8379665613174438
+        },
+        {
+          "page": 423,
+          "score": 0.8339525461196899
+        }
+      ]
+    },
+    {
+      "id": "Q043",
+      "question": "If the current spindle speed is 1000 RPM and the operator increases the spindle speed override by +10%, what is the resulting spindle speed?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "A +10% spindle speed override means the spindle speed is increased by 10%. Therefore, the resulting spindle speed is 1000 + (0.10 * 1000) = 1000 + 100 = 1100. The resulting spindle speed is 1100 RPM.",
+      "chunks": [
+        {
+          "page": 190,
+          "score": 0.8564410209655762
+        },
+        {
+          "page": 59,
+          "score": 0.8398687243461609
+        },
+        {
+          "page": 426,
+          "score": 0.8364278674125671
+        }
+      ]
+    },
+    {
+      "id": "Q044",
+      "question": "What is the recommended procedure for addressing concerns or questions regarding the Operator’s Manual?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 8,
+          "score": 0.8323141932487488
+        },
+        {
+          "page": 13,
+          "score": 0.8240072727203369
+        },
+        {
+          "page": 25,
+          "score": 0.8174105286598206
+        }
+      ]
+    },
+    {
+      "id": "Q045",
+      "question": "What is the procedure for obtaining a copy of the machine's original risk assessment documentation?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 23,
+          "score": 0.8121596574783325
+        },
+        {
+          "page": 12,
+          "score": 0.8062200546264648
+        },
+        {
+          "page": 24,
+          "score": 0.8045254349708557
+        }
+      ]
+    },
+    {
+      "id": "Q046",
+      "question": "What is the recommended brand and type of cutting fluid for machining titanium alloys on this machine?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 370,
+          "score": 0.8219720125198364
+        },
+        {
+          "page": 377,
+          "score": 0.8146364688873291
+        },
+        {
+          "page": 119,
+          "score": 0.8121851682662964
+        }
+      ]
+    },
+    {
+      "id": "Q047",
+      "question": "What is the expected lifespan of the spindle bearings under normal operating conditions?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 23,
+          "score": 0.8227935433387756
+        },
+        {
+          "page": 225,
+          "score": 0.8096946477890015
+        },
+        {
+          "page": 102,
+          "score": 0.8029232621192932
+        }
+      ]
+    },
+    {
+      "id": "Q048",
+      "question": "What is the procedure for calibrating the machine's linear scales?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 298,
+          "score": 0.8229236006736755
+        },
+        {
+          "page": 421,
+          "score": 0.8209958076477051
+        },
+        {
+          "page": 414,
+          "score": 0.8168578147888184
+        }
+      ]
+    },
+    {
+      "id": "Q049",
+      "question": "What is the recommended torque specification for the drawbar?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 121,
+          "score": 0.8115122318267822
+        },
+        {
+          "page": 115,
+          "score": 0.808874249458313
+        },
+        {
+          "page": 431,
+          "score": 0.8049477338790894
+        }
+      ]
+    },
+    {
+      "id": "Q050",
+      "question": "What is the procedure for reporting a software bug or requesting a new feature for the control system?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 105,
+          "score": 0.8019822835922241
+        },
+        {
+          "page": 9,
+          "score": 0.8019639253616333
+        },
+        {
+          "page": 213,
+          "score": 0.7978912591934204
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "categories": {
+      "VISUAL": 7,
+      "SAFETY": 11,
+      "TECHNICAL": 12,
+      "MULTI_CHAPTER": 8,
+      "NUMERICAL": 5,
+      "UNANSWERABLE": 7
+    },
+    "difficulties": {},
+    "visual_questions": 7,
+    "safety_critical": 15,
+    "answerable": 43,
+    "document_name": ""
+  }
+}

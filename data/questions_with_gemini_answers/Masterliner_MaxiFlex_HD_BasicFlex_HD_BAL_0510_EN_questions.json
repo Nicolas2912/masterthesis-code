@@ -1,0 +1,893 @@
+{
+  "total_questions": 50,
+  "questions": [
+    {
+      "id": "Q001",
+      "question": "What is the procedure for connecting the MasterLiner to the wire feeder and preparing it for welding after connecting it to the wire drum?",
+      "category": "VISUAL",
+      "safety_critical": false,
+      "answer": "To connect the MasterLiner to the wire feeder and prepare it for welding, follow these steps:\n\n## Connecting and Preparing the MasterLiner\n\n1.  Connect the MasterLiner's quick connector to the wire feeder.\n2.  Feed the welding wire through the MasterLiner until it reaches the wire feeder's wire inlet.\n3.  Cut off the bent section of the wire to ensure a clean and straight end.\n4.  Push the wire into the wire feeder's wire inlet to ensure proper feeding during the welding process.\n5.  Twist the connection sleeve clockwise to secure the quick connector and prevent it from accidentally coming loose.",
+      "image": [
+        "page_12_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 2,
+          "score": 0.8926169872283936
+        },
+        {
+          "page": 12,
+          "score": 0.8804029226303101
+        }
+      ]
+    },
+    {
+      "id": "Q002",
+      "question": "What is the procedure for replacing the MasterLiner on the wire feed side of the welding system, and what key components are involved in this process?",
+      "category": "VISUAL",
+      "safety_critical": true,
+      "answer": "To replace the MasterLiner, follow these steps:\n\n## MasterLiner Replacement Procedure\n\n1.  **Unlock the Connection:** Hold the connection sleeve (3) tightly to stabilize the connection. Then, twist the sleeve (1) clockwise to unlock it. This disengages the MasterLiner from the wire drum or wire feed mechanism.\n2.  **Remove the Old MasterLiner:** Once unlocked, carefully remove the old MasterLiner (2) from the system. Ensure no wire residue or debris remains in the connection points.\n3.  **Install the New MasterLiner:** Attach the new MasterLiner, ensuring it is properly seated and aligned with the wire feed and wire drum. Refer to section 6.1 for detailed attachment instructions.\n\nKey components involved in this process include:\n\n*   **Sleeve (1):** This component is twisted to lock and unlock the MasterLiner.\n*   **MasterLiner (2):** The flexible conduit that guides the welding wire.\n*   **Connection Sleeve (3):** Provides a secure connection between the MasterLiner and the wire drum or wire feed mechanism.\n*   **Wire Feed (4):** Delivers the welding wire through the MasterLiner.\n*   **Wire Drum (5):** Holds the spool of welding wire.",
+      "image": [
+        "page_16_figure_2.png"
+      ],
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.8625373840332031
+        }
+      ]
+    },
+    {
+      "id": "Q003",
+      "question": "When setting up a robotic welding cell, what key considerations must be taken into account regarding the MasterLiner's physical installation and how do these factors impact wire feeding performance and overall system reliability?",
+      "category": "VISUAL",
+      "safety_critical": true,
+      "answer": "When installing the MasterLiner in a robotic welding cell, several factors are critical for ensuring optimal wire feeding and system reliability.\n\n## MasterLiner Installation and Wire Feeding Considerations\n\n1.  **Bending Radius and Total Bending Angle**: Pay close attention to the bending radius of the MasterLiner, especially near the wire feeder and wire drum. Breaching the minimum permissible bending radii can cause wire feed irregularities. The maximum total bending angle should not exceed 3x180° + 1x90° (~630°).\n2.  **Suspension and Strain Relief**: Use suitable mounts and strain relief devices for both the wire feeder and wire drum connections. This prevents bending and tensile forces from the robot's movement from being transferred to the MasterLiner, which can cause damage and wire feed problems.\n3.  **Wire Feed Direction**: For MasterLiner Basic versions, ensure the wire feed direction is correctly oriented as indicated on the product label or threaded connections during installation. Incorrect direction can lead to wire jams and feeding problems.\n4.  **Length and Laying**: Ensure the MasterLiner is the correct length for the application and avoid unnecessary bending during installation. When laying the MasterLiner in a cable carrier, adhere to the permissible bending radii to prevent damage and wire feed issues.\n5.  **Additional Drive**: For wire feed distances exceeding 25 meters, or in applications with multiple bends, consider using an additional wire drive near the wire drum to ensure consistent wire feeding.\n\n*   Proper installation and attention to these details will help prevent wire feed irregularities, device damage, and ensure reliable operation of the robotic welding cell.",
+      "image": [
+        "page_9_figure_3.png"
+      ],
+      "chunks": [
+        {
+          "page": 9,
+          "score": 0.8719020485877991
+        },
+        {
+          "page": 14,
+          "score": 0.8419369459152222
+        }
+      ]
+    },
+    {
+      "id": "Q004",
+      "question": "When installing the MasterLiner Basic, what specific precaution must be taken regarding the wire feed direction, and what potential issue could arise if this precaution is not observed?",
+      "category": "VISUAL",
+      "safety_critical": false,
+      "answer": "When installing the MasterLiner Basic, it is crucial to note the wire feed direction indicated on the product label or the threaded connections. Failing to observe this direction can lead to wire jams and feeding problems. Here's why this is important:\n\n## Wire Feed Direction and Potential Issues\n\n*   **Product Label and Threaded Connections:** The MasterLiner Basic has a specific wire feed direction, indicated by an arrow on the nameplate. This ensures the wire is properly aligned as it enters the system.\n*   **Wire Jams:** If the wire is fed against the intended direction, it can easily jam within the MasterLiner. This is because the internal components are designed to guide the wire in one specific direction.\n*   **Feeding Problems:** Even if a complete jam doesn't occur, incorrect wire feed direction can cause inconsistent or erratic wire feeding. This affects the welding process, leading to defects and potential downtime.",
+      "image": [
+        "page_8_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 8,
+          "score": 0.872251033782959
+        },
+        {
+          "page": 10,
+          "score": 0.8514723777770996
+        }
+      ]
+    },
+    {
+      "id": "Q005",
+      "question": "When conducting routine maintenance on the MasterLiner, what specific information should you record from the nameplate, and why is this information crucial for troubleshooting or ordering replacement parts?",
+      "category": "VISUAL",
+      "safety_critical": false,
+      "answer": "When performing maintenance on the MasterLiner, it is essential to record specific information from the nameplate to facilitate troubleshooting and ensure accurate replacement part orders.\n\n## Nameplate Information and Importance\n\nThe following information should be noted:\n\n1.  **Liner Type:** Identifies the specific model (e.g., Maxi Flex/HD, Basic Flex/HD). This ensures compatibility when ordering spare parts or accessories.\n2.  **Length:** Indicates the overall length of the MasterLiner. Using the correct length is critical for proper wire feeding and system performance.\n3.  **ID Number:** Provides a unique identifier for the specific MasterLiner unit. This number can be used to track maintenance history and ensure the correct parts are ordered.\n\n*   Recording the wire feed direction is crucial for MasterLiner Basic versions to prevent wire jams and feeding problems during installation.\n*   This information ensures that any replacement parts or troubleshooting steps are tailored to the specific MasterLiner configuration, minimizing downtime and preventing potential damage.",
+      "image": [
+        "page_8_figure_2.png"
+      ],
+      "chunks": [
+        {
+          "page": 8,
+          "score": 0.8710124492645264
+        },
+        {
+          "page": 15,
+          "score": 0.8625656366348267
+        },
+        {
+          "page": 15,
+          "score": 0.8586767911911011
+        }
+      ]
+    },
+    {
+      "id": "Q006",
+      "question": "Describe the procedure for disassembling the MasterLiner from the wire feed system, including any safety precautions that should be observed before commencing the disassembly.",
+      "category": "VISUAL",
+      "safety_critical": true,
+      "answer": "To disassemble the MasterLiner from the wire feed system, follow these steps while observing all safety precautions:\n\n## Disassembly Procedure\n\n1.  **Power Down:** Before starting any disassembly work, switch off the power source and disconnect all electrical connections to prevent any risk of injury due to unexpected start-up or electric shock.\n2.  **Unlock the Sleeve:** Hold the connection sleeve (3) tightly to stabilize the connection. Then, twist the sleeve (1) clockwise to unlock it from the connection sleeve (3). This action disengages the MasterLiner (2) from the wire feed system.\n3.  **Remove Components:** Once the sleeve is unlocked, carefully remove the MasterLiner (2), along with any wire and other parts that need to be disassembled. Ensure that all components are handled with care to prevent damage.\n\n*   Disassembly should only be performed by qualified personnel who are familiar with the welding system and its components.\n*   Consult the operating instructions for all welding components, such as the power source, welding torch system, and re-circulating cooling unit, before beginning the disassembly process.\n*   Refer to the 'Putting out of operation' section in the documentation for additional information on safely shutting down the system before disassembly.",
+      "image": [
+        "page_18_figure_2.png"
+      ],
+      "chunks": [
+        {
+          "page": 18,
+          "score": 0.8774613738059998
+        },
+        {
+          "page": 14,
+          "score": 0.8770698308944702
+        }
+      ]
+    },
+    {
+      "id": "Q007",
+      "question": "What maintenance checks should be performed on the MasterLiner system on a weekly basis, and what specific actions should be taken if external damage is identified during these checks?",
+      "category": "VISUAL",
+      "safety_critical": true,
+      "answer": "The following maintenance checks should be performed weekly on the MasterLiner system:\n\n## Weekly Maintenance Checks\n\n1.  **Visual Inspection:** Perform a visual inspection of the MasterLiner for any external damage. This includes checking for cuts, abrasions, or deformities in the MasterLiner's protective housing.\n\n## Actions if External Damage is Identified\n\n*   **Replacement:** If any external damage is found during the visual inspection, the MasterLiner should be completely replaced. Refer to section 9.2, 'Replacing the MasterLiner,' for detailed instructions on how to perform the replacement procedure. This ensures that any potential internal damage or wire feed irregularities are addressed promptly, maintaining the system's reliability and preventing further complications.",
+      "image": [
+        "page_15_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 15,
+          "score": 0.8861639499664307
+        },
+        {
+          "page": 15,
+          "score": 0.8404123783111572
+        }
+      ]
+    },
+    {
+      "id": "Q008",
+      "question": "What specific personal protective equipment (PPE) is recommended for technicians to wear when working with the MasterLiner system to ensure their safety and prevent potential injuries?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Recommended Personal Protective Equipment (PPE) for MasterLiner System Work\n\nTo ensure the safety of technicians working with the MasterLiner system, the following personal protective equipment (PPE) is recommended:\n\n1.  **Protective Clothing:** To protect against sparks, heat, and other potential hazards.\n2.  **Safety Goggles:** To protect the eyes from debris and welding flash.\n3.  **Class P3 Respiratory Mask:** To protect against harmful particles and fumes.\n4.  **Protective Gloves:** To protect hands from cuts, burns, and electrical hazards.\n5.  **Safety Shoes:** To protect feet from falling objects and other workplace hazards.",
+      "chunks": [
+        {
+          "page": 3,
+          "score": 0.8738973736763
+        },
+        {
+          "page": 14,
+          "score": 0.8286189436912537
+        },
+        {
+          "page": 14,
+          "score": 0.8246726989746094
+        }
+      ]
+    },
+    {
+      "id": "Q009",
+      "question": "Describe the emergency procedures that should be followed if a hazardous situation arises while operating the MasterLiner, including steps for interrupting power, compressed air, and welding shielding gas.",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Emergency Procedures for Hazardous Situations\n\nIn the event of an emergency while operating the MasterLiner, the following steps should be taken immediately:\n\n1.  **Interrupt Electrical Power Supply:** Immediately switch off and disconnect the electrical power supply to the MasterLiner system to prevent electrical hazards.\n2.  **Interrupt Compressed Air:** Shut off the compressed air supply to eliminate pneumatic risks.\n3.  **Interrupt Welding Shielding Gas:** Stop the flow of welding shielding gas to prevent potential gas-related hazards.\n\nFor further actions, consult the operating instructions of all peripheral devices connected to the MasterLiner system.",
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.8924455642700195
+        },
+        {
+          "page": 4,
+          "score": 0.8886542916297913
+        },
+        {
+          "page": 17,
+          "score": 0.8679877519607544
+        }
+      ]
+    },
+    {
+      "id": "Q010",
+      "question": "What potential hazards are associated with the improper use of the MasterLiner, and what precautions should be taken to mitigate these risks and ensure safe operation?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Hazards of Improper Use and Mitigation\n\nImproper use of the MasterLiner can lead to risks to persons, animals, and material property. To mitigate these risks, the following precautions should be taken:\n\n*   **Designated Use Only:** Use the product only for its intended purpose as described in the operating instructions.\n*   **No Unauthorized Modifications:** Do not modify or alter the product to enhance its performance without authorization.\n*   **Qualified Personnel Only:** Ensure that only qualified personnel operate the product, adhering to relevant standards and regulations.",
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.8299583196640015
+        },
+        {
+          "page": 4,
+          "score": 0.8284743428230286
+        },
+        {
+          "page": 10,
+          "score": 0.8191719055175781
+        }
+      ]
+    },
+    {
+      "id": "Q011",
+      "question": "What specific safety checks should be performed on live cables and connections before commissioning the MasterLiner to prevent electric shock and ensure operator safety?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Safety Checks for Cables and Connections\n\nBefore commissioning the MasterLiner, perform the following safety checks on all live cables and connections to prevent electric shock:\n\n1.  **Proper Installation:** Verify that all cables and connections are correctly installed according to the manufacturer's instructions.\n2.  **Damage Inspection:** Thoroughly inspect all cables for any signs of damage, such as cuts, abrasions, or exposed wires.\n3.  **Deformation Check:** Check for any deformed or bent connectors that may compromise the electrical connection.\n4.  **Wear Assessment:** Assess the cables and connections for any signs of wear, such as fraying or corrosion.\n5.  **Replacement of Defective Parts:** Replace any damaged, deformed, or worn parts immediately to ensure electrical safety.",
+      "chunks": [
+        {
+          "page": 10,
+          "score": 0.8569347262382507
+        },
+        {
+          "page": 10,
+          "score": 0.8504315614700317
+        },
+        {
+          "page": 10,
+          "score": 0.844001293182373
+        }
+      ]
+    },
+    {
+      "id": "Q012",
+      "question": "Describe the potential risks associated with unexpected start-up during maintenance or repair work on the MasterLiner, and outline the necessary safety procedures to prevent injury.",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Risks of Unexpected Start-Up and Prevention\n\nUnexpected start-up during maintenance or repair work on the MasterLiner poses a significant risk of injury. To prevent such incidents, the following safety procedures must be followed:\n\n1.  **Switch Off Power Source:** Always switch off the power source to the MasterLiner system before commencing any maintenance or repair work.\n2.  **Disconnect Electrical Connections:** Disconnect all electrical connections to ensure that the system cannot be accidentally energized.\n\nThese steps are crucial to protect personnel from potential electrical hazards and mechanical injuries during maintenance activities.",
+      "chunks": [
+        {
+          "page": 10,
+          "score": 0.890190839767456
+        },
+        {
+          "page": 10,
+          "score": 0.8863041400909424
+        },
+        {
+          "page": 10,
+          "score": 0.8863041400909424
+        }
+      ]
+    },
+    {
+      "id": "Q013",
+      "question": "What precautions should be taken to ensure adequate ventilation when operating the MasterLiner in different environments, and why is proper ventilation important for operator safety?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Ventilation Precautions and Importance\n\nTo ensure operator safety, the following precautions should be taken to ensure adequate ventilation when operating the MasterLiner:\n\n*   **Sufficient Ventilation:** Operate the MasterLiner only in environments with sufficient ventilation to prevent the accumulation of harmful fumes and gases.\n\nProper ventilation is important because it:\n\n*   Reduces the concentration of hazardous substances in the air.\n*   Minimizes the risk of respiratory problems and other health issues.\n*   Ensures a safe and comfortable working environment for the operator.",
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.8321391940116882
+        },
+        {
+          "page": 15,
+          "score": 0.8266669511795044
+        },
+        {
+          "page": 14,
+          "score": 0.8163559436798096
+        }
+      ]
+    },
+    {
+      "id": "Q014",
+      "question": "What specific safety measures should be implemented to prevent wire jams and ensure proper wire feed direction during the installation of the MasterLiner?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Safety Measures for Wire Jams and Wire Feed Direction\n\nTo prevent wire jams and ensure proper wire feed direction during the installation of the MasterLiner, the following safety measures should be implemented:\n\n*   **Wire Feed Direction:** Note the wire feed direction indicated on the product label or the threaded connections during installation to avoid feeding the wire in the wrong direction.\n\nTaking note of the wire feed direction is especially important for the MasterLiner Basic (all versions).",
+      "chunks": [
+        {
+          "page": 8,
+          "score": 0.8560875654220581
+        },
+        {
+          "page": 10,
+          "score": 0.8521158695220947
+        }
+      ]
+    },
+    {
+      "id": "Q015",
+      "question": "What are the potential consequences of incorrect repair work or unauthorized modifications to the MasterLiner, and what steps should be taken to avoid these issues and maintain a safe working environment?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Consequences of Incorrect Repair Work and Unauthorized Modifications\n\nIncorrect repair work and unauthorized modifications to the MasterLiner can lead to significant injuries and damage to the device. Additionally, the product warranty will be rendered invalid if work is carried out by unauthorized persons.\n\nTo avoid these issues and maintain a safe working environment, the following steps should be taken:\n\n*   **Qualified Personnel Only:** Ensure that only qualified personnel perform operating, maintenance, cleaning, and repair work on the MasterLiner.\n*   **Warranty Compliance:** Adhere to the warranty guidelines and consult the retailer or manufacturer in case of any doubts or problems.",
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.8372584581375122
+        },
+        {
+          "page": 17,
+          "score": 0.8344177603721619
+        },
+        {
+          "page": 15,
+          "score": 0.8336491584777832
+        }
+      ]
+    },
+    {
+      "id": "Q016",
+      "question": "Describe the potential hazards associated with defective cables during maintenance and cleaning, and what safety measures should be taken to prevent electrical shock?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Hazards of Defective Cables and Prevention\n\nDefective cables pose a significant risk of electric shock during maintenance and cleaning of the MasterLiner. To prevent this, the following safety measures should be taken:\n\n1.  **Check Cables and Connections:** Inspect all live cables and connections for proper installation and damage.\n2.  **Replace Damaged Parts:** Replace any damaged, deformed, or worn parts immediately.\n\nThese measures are crucial to ensure electrical safety and prevent potential injuries.",
+      "chunks": [
+        {
+          "page": 10,
+          "score": 0.8775556683540344
+        },
+        {
+          "page": 10,
+          "score": 0.8639077544212341
+        },
+        {
+          "page": 10,
+          "score": 0.8376271724700928
+        }
+      ]
+    },
+    {
+      "id": "Q017",
+      "question": "What specific safety precautions should be observed when handling consumables like oil, greases, and cleaning agents during maintenance to prevent environmental contamination and ensure personnel safety?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Safety Precautions for Handling Consumables\n\nWhen handling consumables like oil, greases, and cleaning agents during maintenance, the following safety precautions should be observed to prevent environmental contamination and ensure personnel safety:\n\n*   **Environmental Protection:** Ensure that oil, greases, and cleaning agents do not contaminate the ground or enter the sewage system.\n*   **Proper Storage and Transport:** Store, transport, and dispose of these materials in suitable containers to prevent spills and leaks.\n*   **Local Regulations:** Observe the relevant local regulations and disposal instructions of the safety data sheets specified by the manufacturer of the consumables.\n*   **Contaminated Tools:** Dispose of contaminated cleaning tools (brushes, rags, etc.) in accordance with the information provided by the consumables’ manufacturer.",
+      "chunks": [
+        {
+          "page": 19,
+          "score": 0.8681544065475464
+        },
+        {
+          "page": 15,
+          "score": 0.8226987719535828
+        },
+        {
+          "page": 3,
+          "score": 0.8191748857498169
+        }
+      ]
+    },
+    {
+      "id": "Q018",
+      "question": "How can I conduct the disassembly of the MasterLiner?",
+      "answer": "Hold the connection sleeve tightly and twist the sleeve clockwise to unlock it. Then remove the MasterLiner, wire and parts to be disassembled.\nThere is a risk of injury due to unexpected start-up\nThe following instructions must be followed during all maintenance, servicing, assembly, disassembly, and repair work:\n• Switch off the power source.\n• Disconnect all electrical connections.\nNotice, Disassembly may be carried out only by qualified personnel (in Germany see TRBS 1203).\n• Please consult the operating instructions for the welding components, such as the power source, welding torch system, re-circulating cooling unit etc.\n• Observe the information provided in the following section:\n⇒ 8 Putting out of operation on page EN-14",
+      "category": "SAFETY",
+      "image": [
+        "page_18_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.8296120166778564
+        }
+      ]
+    },
+    {
+      "id": "Q019",
+      "question": "Describe the different versions of the MasterLiner available, including Maxi Flex/HD and Basic Flex/HD, and outline their suitability for various applications and wire diameters.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## MasterLiner Versions and Applications\n\nThe MasterLiner is available in the following versions:\n\n*   **Maxi Flex/HD:** Suitable for applications involving filler materials (wires) with a diameter of up to 4 mm.\n*   **Basic Flex/HD:** Also suitable for applications involving filler materials (wires) with a diameter of up to 4 mm.\n\nThese versions can be used with quick connectors and G1/4 connectors. The MasterLiner must only be operated using original ABICOR BINZEL spare parts.",
+      "chunks": [
+        {
+          "page": 4,
+          "score": 0.9342693090438843
+        },
+        {
+          "page": 3,
+          "score": 0.8943157196044922
+        }
+      ]
+    },
+    {
+      "id": "Q020",
+      "question": "Explain the function of the individual segments in the MasterLiner system and how they contribute to the seamless feeding of wire from the wire container to the wire feeder.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Function of Individual Segments in the MasterLiner System\n\nThe MasterLiner consists of individual segments that can each be rotated by 360°. Each segment contains four rollers that facilitate the seamless feeding of wire from the wire container (drum/spool) to the wire feeder. When using two wire feeders, the MasterLiner is installed in the middle to ensure smooth wire delivery.",
+      "chunks": [
+        {
+          "page": 9,
+          "score": 0.9150688648223877
+        }
+      ]
+    },
+    {
+      "id": "Q021",
+      "question": "Describe the recommended method for attaching a wire guide to the wire drum cover and explain the advantages of using an internal wire guide for feeding wire through the MasterLiner.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Attaching a Wire Guide to the Wire Drum Cover\n\nIt is recommended to attach a wire guide of a suitable length to the wire drum cover. This setup offers several advantages:\n\n*   **Dirt Removal:** Any dirt on the wire is removed in the wire inlet, reducing the amount of dirt that enters the wire guide.\n*   **Cleanability:** The internal wire guide can be detached if necessary and cleaned.\n\nOther advantages include the avoidance of wire knots and contact with the wire looping round the wire drum’s components.",
+      "chunks": [
+        {
+          "page": 2,
+          "score": 0.9012434482574463
+        }
+      ]
+    },
+    {
+      "id": "Q022",
+      "question": "Explain the procedure for connecting the MasterLiner to a wire drum using a QC quick coupling, and describe the steps to ensure a secure and reliable connection.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Connecting the MasterLiner to a Wire Drum Using a QC Quick Coupling\n\nTo connect the MasterLiner to a wire drum using a QC quick coupling, follow these steps:\n\n1.  **Push the Connection Sleeve:** Push the connection sleeve (quick coupling) with the wire guide onto the connection for the wire drum cover.\n2.  **Twist the Connection Sleeve:** Twist the connection sleeve to prevent the connection from accidentally coming loose.\n\nEnsure that the quick coupling is correctly and securely attached to the wire drum.",
+      "chunks": [
+        {
+          "page": 12,
+          "score": 0.9364604949951172
+        },
+        {
+          "page": 2,
+          "score": 0.9095517992973328
+        },
+        {
+          "page": 10,
+          "score": 0.8889997005462646
+        }
+      ]
+    },
+    {
+      "id": "Q023",
+      "question": "Describe the process of feeding welding wire through the MasterLiner to the wire feeder, including the steps for preparing the wire end and connecting the MasterLiner's quick connector.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Feeding Welding Wire Through the MasterLiner to the Wire Feeder\n\nTo feed welding wire through the MasterLiner to the wire feeder, follow these steps:\n\n1.  **Feed the Wire:** Feed in the welding wire until it reaches the wire feeder.\n2.  **Cut the Bent Section:** Cut off the bent section of wire.\n3.  **Push into Wire Inlet:** Push the wire into the wire feeder’s wire inlet.\n4.  **Connect Quick Connector:** Connect the MasterLiner’s quick connector to the wire feeder and feed in the wire.\n5.  **Twist Connection Sleeve:** Twist the connection sleeve clockwise to prevent the quick connector from accidentally coming loose.",
+      "chunks": [
+        {
+          "page": 12,
+          "score": 0.8889185190200806
+        }
+      ]
+    },
+    {
+      "id": "Q024",
+      "question": "How can I connect the Masterliner to a wire drum?",
+      "answer": "Notice: We recommend connecting the wire guide to the wire drum cover using a QC quick coupling. Ensure that the quick coupling is correctly and securely attached to the wire drum.\nFirst, push the connection sleeve (quick coupling) with the wire guide onto the connection. Twisting the connection sleeve prevents the connection from accidentally coming loose.",
+      "category": "TECHNICAL",
+      "image": [
+        "page_12_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 9,
+          "score": 0.8922224640846252
+        },
+        {
+          "page": 14,
+          "score": 0.8761802911758423
+        }
+      ]
+    },
+    {
+      "id": "Q025",
+      "question": "Describe the guidelines for laying the MasterLiner in a cable carrier, including the importance of observing permissible bending radii and using the appropriate MasterLiner version for dynamic movements.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Laying the MasterLiner in a Cable Carrier\n\nWhen laying the MasterLiner in a cable carrier, observe the following guidelines:\n\n*   **Permissible Bending Radii:** Note and observe the permissible bending radii to prevent damage and wire feed irregularities.\n*   **Avoid Unnecessary Bending:** Avoid bending the MasterLiner unnecessarily when it is laid.\n*   **Appropriate Version:** For very high dynamic forces and rapid robot movements, use the MasterLiner HD version.",
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.9251595735549927
+        },
+        {
+          "page": 10,
+          "score": 0.9103996753692627
+        }
+      ]
+    },
+    {
+      "id": "Q026",
+      "question": "How can I lay in the clable carrier?",
+      "answer": "When laying the MasterLiner in a cable carrier, note and observe the permissible bending radii.\n• Avoid bending the MasterLiner unnecessarily when it is laid. Laying in a cable carrier is essentially possible. \nBreaches of the minimum bending radii can cause damage and wire feed irregularities. Note the bending radii for use \nwhen dynamically laying the MasterLiner:\n⇒ 3.2 Suspension/total bending angle of all bending radii on page EN-7\n• All MasterLiner types are essentially suitable for dynamic movements. For very high dynamic forces and rapid robot \nmovements, use the MasterLiner HD version.\n• For applications involving a longer wire feed distance and/or multiple bends, we strongly recommend using an \nadditional wire drive near the wire drum.\n• When suspending MasterLiner of any type, use suitable mounts, strain relief devices for the wire feeder and wire \ndrums as well as the wire feed distance.\n• The MasterLiner HD and MasterLiner Flex can, in principle, be used in combination. To do so, use suitable connectors",
+      "category": "TECHNICAL",
+      "image": [
+        "page_14_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 15,
+          "score": 0.8622666001319885
+        },
+        {
+          "page": 2,
+          "score": 0.8598871231079102
+        }
+      ]
+    },
+    {
+      "id": "Q027",
+      "question": "Explain the procedure for replacing the MasterLiner, including the steps for unlocking the connection sleeve and attaching the new MasterLiner.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Procedure for Replacing the MasterLiner\n\nTo replace the MasterLiner, follow these steps:\n\n1.  **Unlock the Connection Sleeve:** Hold the connection sleeve tightly and twist the sleeve clockwise to unlock it.\n2.  **Replace the MasterLiner:** Replace the MasterLiner with a new one.\n\nFor instructions on attaching the MasterLiner, refer to the section on attaching the MasterLiner.",
+      "chunks": [
+        {
+          "page": 12,
+          "score": 0.8715075850486755
+        }
+      ]
+    },
+    {
+      "id": "Q028",
+      "question": "Describe the troubleshooting steps for addressing wire feed irregularities, including checking for foreign bodies, inspecting the filler material, and assessing the MasterLiner's layout.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Troubleshooting Steps for Wire Feed Irregularities\n\nTo address wire feed irregularities, follow these troubleshooting steps:\n\n*   **Check for Foreign Bodies:** Check if the MasterLiner contains foreign bodies (wire residues).\n*   **Inspect Filler Material:** Perform a visual inspection of the filler material for dirt.\n*   **Replace MasterLiner:** Completely replace the MasterLiner if necessary.\n*   **Assess Layout:** Refer to the section on suspension/total bending angle of all bending radii.",
+      "chunks": [
+        {
+          "page": 17,
+          "score": 0.8863927721977234
+        }
+      ]
+    },
+    {
+      "id": "Q029",
+      "question": "How can I replace the MasterLiner?",
+      "answer": "Hold the connection sleeve tightly and twist the sleeve clockwise to unlock it. Then, replace the masterliner.",
+      "category": "TECHNICAL",
+      "image": [
+        "page_16_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 18,
+          "score": 0.8938934803009033
+        },
+        {
+          "page": 14,
+          "score": 0.8688502311706543
+        }
+      ]
+    },
+    {
+      "id": "Q030",
+      "question": "What materials are used in the construction of the MasterLiner, and how does this affect its recyclability and disposal?",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Materials and Recyclability of the MasterLiner\n\nThe MasterLiner is mainly made of metallic materials, which can be melted in steel and iron works and are thus almost infinitely recyclable. The plastic materials used are labelled in preparation for their sorting and separation for later recycling. This design promotes recyclability and reduces environmental impact.",
+      "chunks": [
+        {
+          "page": 19,
+          "score": 0.8444112539291382
+        },
+        {
+          "page": 14,
+          "score": 0.8201384544372559
+        }
+      ]
+    },
+    {
+      "id": "Q031",
+      "question": "Describe the different areas of application for the MasterLiner, differentiating between type A and type B applications and their respective mechanical load capacities.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Areas of Application for the MasterLiner\n\nThe MasterLiner has different areas of application based on the type:\n\n*   **Type A:** Suitable for arc welding and soldering applications, machine applications, submerged arc welding applications, flame spraying applications, medium mechanical loads, and laying in cable carrier chains.\n*   **Type B:** Suitable for robot welding and soldering applications, machine applications, submerged arc welding applications, flame spraying applications, high mechanical loads, and laying in cable carrier chains.\n\nNote the tensile strength of the MasterLiner used.",
+      "chunks": [
+        {
+          "page": 4,
+          "score": 0.8665570020675659
+        },
+        {
+          "page": 3,
+          "score": 0.860673725605011
+        }
+      ]
+    },
+    {
+      "id": "Q032",
+      "question": "Explain how the MasterLiner is used in conjunction with wire feeders and wire drums within a robotic welding cell setup, detailing the connections and layout considerations.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## MasterLiner Use in a Robotic Welding Cell Setup\n\nThe MasterLiner is integrated into a robotic welding cell setup to facilitate the smooth feeding of wire from the wire drum to the wire feeder. The setup involves the following connections and layout considerations:\n\n1.  **Wire Drum Connection:** The MasterLiner is connected to the wire drum using a QC quick coupling or compatible threaded connection.\n2.  **Wire Feeder Connection:** The MasterLiner's quick connector is connected to the wire feeder to deliver the welding wire.\n3.  **Layout Considerations:** The MasterLiner should be laid without kinks, with sufficient strain relief on the wire feeder, and using suitable suspension devices. The bending radii should be noted to prevent wire feed irregularities.\n\nWhen using two wire feeders, the MasterLiner is installed in the middle.",
+      "chunks": [
+        {
+          "page": 9,
+          "score": 0.9138956665992737
+        },
+        {
+          "page": 2,
+          "score": 0.9013318419456482
+        },
+        {
+          "page": 9,
+          "score": 0.8858699798583984
+        }
+      ]
+    },
+    {
+      "id": "Q033",
+      "question": "Describe the maintenance checks that should be performed on the MasterLiner on a weekly and monthly basis, referencing the relevant sections for replacing the MasterLiner and noting bending radii.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## Maintenance Checks for the MasterLiner\n\nThe following maintenance checks should be performed on the MasterLiner:\n\n*   **Weekly:**\n    *   Visual inspection for external damage.\n    *   If necessary, completely replace the MasterLiner.\n*   **Monthly:**\n    *   Check that the wire feed movement is smooth running.\n    *   Check how the MasterLiner is laid, noting bending radii.\n    *   If necessary, completely replace the MasterLiner.\n\nRefer to the section on replacing the MasterLiner for detailed instructions and the section on suspension/total bending angle of all bending radii for bending radii specifications.",
+      "chunks": [
+        {
+          "page": 15,
+          "score": 0.9102926254272461
+        },
+        {
+          "page": 15,
+          "score": 0.8789966106414795
+        }
+      ]
+    },
+    {
+      "id": "Q034",
+      "question": "Explain the relationship between the MasterLiner's suspension, bending angle, and wire feed distance, and how these factors can affect wire feed irregularities, referencing the relevant sections for suspension and troubleshooting.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## Relationship Between Suspension, Bending Angle, and Wire Feed Distance\n\nThe MasterLiner's suspension, bending angle, and wire feed distance are interrelated factors that can affect wire feed irregularities. The following points should be considered:\n\n*   **Suspension:** The MasterLiner should be suspended using suitable suspension brackets, avoiding sharp edges.\n*   **Bending Angle:** The bending angles and radii should be within permissible limits to prevent wire feed irregularities.\n*   **Wire Feed Distance:** For wire feed distances exceeding 25 m, an additional drive should be used.\n\nRefer to the section on suspension/total bending angle of all bending radii for specifications and the section on troubleshooting for addressing wire feed irregularities.",
+      "chunks": [
+        {
+          "page": 10,
+          "score": 0.8803134560585022
+        }
+      ]
+    },
+    {
+      "id": "Q035",
+      "question": "Describe the steps for both attaching and disassembling the MasterLiner, detailing the use of the connection sleeve and quick coupling, and referencing the relevant sections for each procedure.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## Attaching and Disassembling the MasterLiner\n\nThe steps for attaching and disassembling the MasterLiner are as follows:\n\n*   **Attaching the MasterLiner:**\n    1.  Push the connection sleeve (quick coupling) with the wire guide onto the connection for the wire drum cover.\n    2.  Twist the connection sleeve to prevent the connection from accidentally coming loose.\n*   **Disassembling the MasterLiner:**\n    1.  Hold the connection sleeve tightly and twist the sleeve clockwise to unlock it.\n    2.  Remove the MasterLiner, wire, and parts to be disassembled.\n\nRefer to the section on attaching the MasterLiner for detailed instructions and the section on disassembly for the disassembly procedure.",
+      "chunks": [
+        {
+          "page": 12,
+          "score": 0.8880555629730225
+        },
+        {
+          "page": 6,
+          "score": 0.8803330659866333
+        }
+      ]
+    },
+    {
+      "id": "Q036",
+      "question": "Explain how to troubleshoot wire feed irregularities by checking for soiling, mechanical damage, and incorrect layout, referencing the sections on replacing the MasterLiner and suspension/bending angles.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## Troubleshooting Wire Feed Irregularities\n\nTo troubleshoot wire feed irregularities, consider the following:\n\n*   **Soiling:** Check if the MasterLiner is heavily soiled and contains foreign bodies (wire residues). If so, completely replace the MasterLiner.\n*   **Mechanical Damage:** Check for mechanical damage (torn apart, broken, etc.) and reduce the tensile load if necessary.\n*   **Incorrect Layout:** Check how the MasterLiner is laid, ensuring that the bending radii are within permissible limits and the wire feed distance is appropriate.\n\nRefer to the section on replacing the MasterLiner for replacement instructions and the section on suspension/total bending angle of all bending radii for layout specifications.",
+      "chunks": [
+        {
+          "page": 17,
+          "score": 0.8859103918075562
+        }
+      ]
+    },
+    {
+      "id": "Q037",
+      "question": "Describe the process of putting the MasterLiner out of operation, emphasizing the importance of following shutdown procedures for all integrated components within the welding system.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## Putting the MasterLiner Out of Operation\n\nPutting the MasterLiner out of operation involves the following considerations:\n\n*   **Integrated System:** As the MasterLiner is integrated into a welding system, the process for putting it out of operation depends on the control system.\n*   **Shutdown Procedures:** Ensure that the shutdown procedures for all components integrated in the welding system are strictly observed.\n\nRefer to the section on putting out of operation for more details.",
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.9236811995506287
+        },
+        {
+          "page": 18,
+          "score": 0.874212384223938
+        },
+        {
+          "page": 17,
+          "score": 0.8606159687042236
+        }
+      ]
+    },
+    {
+      "id": "Q038",
+      "question": "Explain the importance of using suitable mounts and strain relief devices when suspending the MasterLiner, referencing both the commissioning and laying sections of the document.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## Importance of Suitable Mounts and Strain Relief Devices\n\nWhen suspending the MasterLiner, it is crucial to use suitable mounts and strain relief devices for the following reasons:\n\n*   **Prevent Damage:** Suitable mounts and strain relief devices prevent damage to the MasterLiner and ensure its proper functioning.\n*   **Maintain Stability:** They maintain the stability of the MasterLiner and prevent it from being subjected to excessive stress or strain.\n\nRefer to the commissioning section for general guidelines on suspending the MasterLiner and the laying section for specific considerations related to robot welding cells and cable carriers.",
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.8834202289581299
+        },
+        {
+          "page": 10,
+          "score": 0.8834059238433838
+        }
+      ]
+    },
+    {
+      "id": "Q039",
+      "question": "Describe the relationship between the MasterLiner type, wire diameter, and wire feed capabilities, referencing the table of MasterLiner versions and the section on wire drum connections.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## Relationship Between MasterLiner Type, Wire Diameter, and Wire Feed\n\nThe MasterLiner type, wire diameter, and wire feed capabilities are closely related. The following points should be considered:\n\n*   **MasterLiner Type:** Different MasterLiner versions (e.g., Maxi Flex/HD, Basic Flex/HD) are designed for specific wire diameters and applications.\n*   **Wire Diameter:** The wire diameter must be compatible with the MasterLiner type to ensure proper wire feed.\n*   **Wire Feed Capabilities:** The MasterLiner's wire feed capabilities (e.g., maximum wire feed rate) should be considered based on the application requirements.\n\nRefer to the table of MasterLiner versions for specific details on wire diameter ranges and the section on wire drum connections for information on feeding wire through the MasterLiner.",
+      "chunks": [
+        {
+          "page": 2,
+          "score": 0.8962025046348572
+        },
+        {
+          "page": 12,
+          "score": 0.8896742463111877
+        }
+      ]
+    },
+    {
+      "id": "Q040",
+      "question": "For which wire feed distance do I need an additional drive?",
+      "answer": "Please use an additional drive in the event of wire feed distances of over 25 m.",
+      "category": "NUMERICAL",
+      "image": [
+        "page_13_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 9,
+          "score": 0.8205013871192932
+        },
+        {
+          "page": 15,
+          "score": 0.7811616063117981
+        }
+      ]
+    },
+    {
+      "id": "Q041",
+      "question": "What is the maximum permissible wire feed distance when using the MasterLiner, and what action should be taken if this distance is exceeded to prevent wire feed irregularities?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "## Maximum Permissible Wire Feed Distance\n\nThe maximum permissible wire feed distance when using the MasterLiner is 25 meters. If this distance is exceeded, an additional drive should be used to prevent wire feed irregularities.",
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.8568078279495239
+        }
+      ]
+    },
+    {
+      "id": "Q042",
+      "question": "What is the maximum total bending angle recommended for the MasterLiner, and how does exceeding this angle affect the wire feed?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "## Maximum Total Bending Angle\n\nThe maximum total bending angle recommended for the MasterLiner is approximately 630° (3x180° + 1x90°). Exceeding this angle can lead to wire feed irregularities.",
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.8755106925964355
+        }
+      ]
+    },
+    {
+      "id": "Q043",
+      "question": "What is the ambient temperature range specified for storing the MasterLiner in a closed environment?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "## Ambient Temperature Range for Storage\n\nThe ambient temperature range specified for storing the MasterLiner in a closed environment is -25°C to +55°C.",
+      "chunks": [
+        {
+          "page": 9,
+          "score": 0.8505022525787354
+        },
+        {
+          "page": 14,
+          "score": 0.8232156038284302
+        }
+      ]
+    },
+    {
+      "id": "Q044",
+      "question": "What is the smallest bending radius allowed for the Basic HD MasterLiner version during wire inching?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "## Smallest Bending Radius for Basic HD MasterLiner\n\nThe smallest bending radius allowed for the Basic HD MasterLiner version during wire inching is 1,500 mm.",
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.849507749080658
+        }
+      ]
+    },
+    {
+      "id": "Q045",
+      "question": "What is the ideal location for the MasterLiner within a manufacturing facility to optimize its performance?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 14,
+          "score": 0.8237175941467285
+        },
+        {
+          "page": 9,
+          "score": 0.8211163282394409
+        }
+      ]
+    },
+    {
+      "id": "Q046",
+      "question": "What is the expected lifespan of the MasterLiner under heavy usage conditions?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 15,
+          "score": 0.8356088399887085
+        },
+        {
+          "page": 14,
+          "score": 0.8350429534912109
+        }
+      ]
+    },
+    {
+      "id": "Q047",
+      "question": "What is the cost of replacing the MasterLiner?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 15,
+          "score": 0.8532850742340088
+        }
+      ]
+    },
+    {
+      "id": "Q048",
+      "question": "What is the chemical composition of the aramid-fibre-reinforced protective fabric used in the MasterLiner HD version?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 4,
+          "score": 0.8311272859573364
+        }
+      ]
+    },
+    {
+      "id": "Q049",
+      "question": "What is the procedure for calibrating the wire feeder after installing the MasterLiner?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 10,
+          "score": 0.8525727391242981
+        }
+      ]
+    },
+    {
+      "id": "Q050",
+      "question": "What is the impact of using non-original ABICOR BINZEL spare parts on the MasterLiner's performance and longevity?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 3,
+          "score": 0.8366891741752625
+        },
+        {
+          "page": 2,
+          "score": 0.8328431844711304
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "categories": {
+      "VISUAL": 7,
+      "SAFETY": 11,
+      "TECHNICAL": 13,
+      "MULTI_CHAPTER": 8,
+      "NUMERICAL": 5,
+      "UNANSWERABLE": 6
+    },
+    "difficulties": {},
+    "visual_questions": 7,
+    "safety_critical": 15,
+    "answerable": 44,
+    "document_name": ""
+  }
+}

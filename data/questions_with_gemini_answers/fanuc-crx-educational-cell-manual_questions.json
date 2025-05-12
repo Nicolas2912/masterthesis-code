@@ -1,0 +1,1090 @@
+{
+  "total_questions": 50,
+  "questions": [
+    {
+      "id": "Q001",
+      "question": "When observing the collaborative robot, what do the different colors displayed on the LED indicator signify regarding the robot's operational status, and why is it important to be aware of these indications during operation and maintenance?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "The LED indicator on the collaborative robot provides visual cues about its operational status, which is crucial for ensuring safety and proper operation. The different colors indicate the following:\n\n*   **Green:** The robot is in collaborative mode.\n*   **Flashing Green:** The robot is in direct teaching mode.\n*   **Yellow:** The robot is in high-speed mode.\n*   **Red:** An alarm has occurred.\n\nUnderstanding these indications is essential for several reasons:\n\n*   **Safety:** Knowing the robot's mode helps personnel understand the expected behavior and potential risks. For example, high-speed mode (yellow) requires additional safety measures because the contact stop function is unavailable.\n*   **Troubleshooting:** A red LED indicates an alarm, signaling the need for immediate attention and troubleshooting to resolve the issue.\n*   **Operational Awareness:** The LED provides a quick visual confirmation of the robot's current operating mode, ensuring that it aligns with the intended task and safety protocols.\n\nReference: page_24_figure_1.png",
+      "image": [
+        "page_24_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 60,
+          "score": 0.8733159899711609
+        },
+        {
+          "page": 65,
+          "score": 0.8667701482772827
+        }
+      ]
+    },
+    {
+      "id": "Q002",
+      "question": "What is the procedure to follow if the robot system must be accessed inside the safety fence for maintenance or programming adjustments, and what specific precautions should be taken regarding the enabling device (deadman switch) on the teach pendant?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "When entering the safety fence, ensure the robot system is completely stopped before entry, and never enter while the robot is moving. Confirm the stop condition indicator lamp shows the robot is stopped, and enter through the safety gate. To inform others of your presence, display a \"working\" sign. During teaching or testing, exercise special care due to unexpected movements, and teach from a position allowing escape from danger. Enable the \"Safe speed\" signal. If multiple workers are present, one should be in charge with the teach pendant, and others must follow their orders, prohibiting external interface or control panel operations without permission. All personnel must secure escape zones to avoid hazards from unintended robot movement, and care should be taken not to block each other's escape routes. Avoid operating the robot while resting against walls or equipment that could obstruct escape. Continuously monitor the robot during jogging or program verification. Immediately stop the robot using the E-stop switch if a dangerous situation is recognized, and ideally, have another person outside the fence monitor and be ready to use the E-stop. Make sure that the enabling device (deadman switch) on the teach pendant is operated only by hand. Finally, ensure no one remains inside the safety fence before closing the gate, and do not leave tools or equipment within the robot's operating space after finishing work. Based on the risk assessment by FANUC, the number of operations of the enabling device (DEADMAN switch) must not exceed about 10000 times per year.\nReference page_30_figure_1.png",
+      "image": [
+        "page_30_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 89,
+          "score": 0.8975105881690979
+        },
+        {
+          "page": 89,
+          "score": 0.8963987827301025
+        },
+        {
+          "page": 47,
+          "score": 0.8877973556518555
+        }
+      ]
+    },
+    {
+      "id": "Q003",
+      "question": "What is the detailed procedure for safely entering the robot's safety fence for maintenance or programming tasks, ensuring that the robot system is completely stopped and potential hazards are mitigated?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "To safely enter the robot's safety fence, follow these steps:\n\n1.  Stop the robot by pressing the HOLD buttons or activating the HOLD input signal.\n2.  Change the operating mode from AUTO to T1 or T2.\n3.  Remove the operating mode key switch to prevent unauthorized mode changes.\n4.  Remove plug 2 from socket 2.\n5.  Open the safety gate and insert plug 2 into socket 4.\n6.  Remove plug 1 from socket 1.\n7.  Enter the safety fence and insert plug 1 into socket 3. Always carry the operating mode key switch and safety plug 1 into the safety fence, ensuring plug 1 is placed in socket 3 inside the fence.\n\nThese steps are designed to ensure the robot is in a safe state before entry.  It's crucial to verify the robot is completely stopped and that all energy sources are isolated to prevent unexpected movement or activation while personnel are inside the safety fence.  Always be aware of your surroundings and potential escape routes in case of an emergency.  \n\nReference: page_34_figure_1.png",
+      "image": [
+        "page_34_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 93,
+          "score": 0.9220030307769775
+        },
+        {
+          "page": 92,
+          "score": 0.9024748802185059
+        }
+      ]
+    },
+    {
+      "id": "Q004",
+      "question": "When performing maintenance on the robot, where can I locate the specification number to ensure I am referencing the correct documentation for this specific mechanical unit, and what other key information is provided on this label?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "The specification number of the mechanical unit can be found on the label affixed to the robot. This label provides several key pieces of information, including the model name, TYPE, No. (specification number), DATE of manufacture, and WEIGHT in kilograms. This information is crucial for ensuring you are using the correct maintenance procedures and documentation for the specific robot model you are working on.\nReference page_43_figure_1.png",
+      "image": [
+        "page_43_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 77,
+          "score": 0.8652188777923584
+        },
+        {
+          "page": 80,
+          "score": 0.8613762855529785
+        }
+      ]
+    },
+    {
+      "id": "Q005",
+      "question": "What specific precautions must be taken when preparing a CRX-10iA or CRX-10iA/L robot for transportation to ensure its stability and prevent damage, and what components are available from FANUC to aid in this process?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "When preparing a CRX-10iA or CRX-10iA/L robot for transportation, it is crucial to ensure the robot's stability and prevent damage. Here's how:\n\n1.  **Remove the End Effector:** Always remove the end effector from the wrist before transporting the robot. Transporting the robot with the end effector attached can cause instability.\n2.  **Reposition the Robot:** Change the robot's posture to the configuration recommended for transportation.\n3.  **Use the Transport Box:** Pack the robot securely in the transport box to protect it from physical damage during transit.\n4.  **Secure the Box:** Tighten the box with PP bands to ensure it remains closed and secure during transportation.\n\nFANUC offers specific components to facilitate safe transportation:\n\n*   **Transport Kit:** This kit includes all necessary materials for safely packing the robot. The part numbers are A97L-0318-0710#10IA for the CRX-10iA and A97L-0318-0710#10IAL for the CRX-10iA/L.\n*   **Carrying Support:** This support aids in handling the robot during packing and unpacking. The part numbers are A97L-0318-0710#10IA-1 for the CRX-10iA and A97L-0318-0710#10IAL-1 for the CRX-10iA/L.\n\nIt is recommended that two people perform the packing procedure. One worker should support the arm while the other removes the bolts fixing the robot to the base.\n\n",
+      "image": [
+        "page_49_figure_11.png"
+      ],
+      "chunks": [
+        {
+          "page": 54,
+          "score": 0.8846946954727173
+        },
+        {
+          "page": 54,
+          "score": 0.8714216351509094
+        },
+        {
+          "page": 23,
+          "score": 0.8602956533432007
+        }
+      ]
+    },
+    {
+      "id": "Q006",
+      "question": "During the transportation of the robot, what critical steps must be taken to ensure stability and prevent damage, and what specific components are available for purchase to aid in this process?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "When transporting the robot, it is crucial to change its posture and pack it securely in the transport box, ideally with two people assisting. To ensure stability and prevent damage, always remove the end effector from the wrist before transportation. \n\nFor assistance, FANUC offers specific components that can be purchased:\n\n*   **Transport Kit**: This kit includes the necessary materials for safely packing the robot.\n*   **Carrying Support**: This support aids in maintaining the robot's posture during transportation.\n\nThese components are model-specific, so ensure the correct part numbers are used:\n\n*   For CRX-10iA: Transport Kit A97L-0318-0710#10IA, Carrying Support A97L-0318-0710#10IA-1\n*   For CRX-10iA/L: Transport Kit A97L-0318-0710#10IAL, Carrying Support A97L-0318-0710#10IAL-1\n\nAfter the robot is transported to the installation site, unpacking and installation should also be performed by two people. One worker should support the arm while the other worker fixes the robot arm to the base using bolts. Reference page_49_figure_2.png for an illustration of the transportation process.",
+      "image": [
+        "page_49_figure_2.png"
+      ],
+      "chunks": [
+        {
+          "page": 33,
+          "score": 0.912348747253418
+        },
+        {
+          "page": 40,
+          "score": 0.9020699262619019
+        },
+        {
+          "page": 32,
+          "score": 0.8939436078071594
+        }
+      ]
+    },
+    {
+      "id": "Q007",
+      "question": "When integrating a collaborative robot system where a robot hands parts to a person, what specific safety measures should be in place to ensure the safety of the worker interacting with the robot?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "When integrating a collaborative robot system where a robot hands parts to a person, several safety measures should be implemented to protect the worker. These measures are designed to ensure that the robot operates safely in close proximity to human workers. \n\n## Safety Measures:\n\n1.  **Robot Stoppage on Contact:** The system should be designed so that if the robot contacts a person, it immediately stops. This requires integrating sensors and control logic that can detect contact and trigger an emergency stop.\n\n2.  **Risk Assessment:** Conduct a thorough risk assessment of the entire robot system. This assessment should identify potential hazards and determine the necessary safety measures to mitigate those risks.\n\n3.  **Safeguards and Interlocks:** Implement physical safeguards such as safety fences and interlocked gates to prevent unauthorized access to the robot's workspace. Interlocking devices should be used to ensure that the robot cannot operate when a gate is open or a safeguard is breached.\n\n4.  **Training:** Ensure that all personnel who will be working with or near the robot receive comprehensive training. This training should cover robot operation, emergency procedures, and the risks associated with working near robots.\n\n5.  **Personal Protective Equipment (PPE):** Provide and require the use of appropriate PPE, such as safety shoes, helmets, and protective glasses, to minimize the risk of injury.\n\n6.  **Regular Inspections and Maintenance:** Implement a schedule for regular inspections and maintenance of the robot system. This includes checking safety devices, sensors, and mechanical components to ensure they are functioning correctly.\n\n7.  **Emergency Stop Devices:** Install easily accessible emergency stop devices that can be used to immediately halt the robot's operation in case of an emergency.\n\n8.  **Collaborative Workspace Design:** Design the collaborative workspace to minimize the risk of collisions and ensure that workers can easily move around the robot without entering hazardous areas.\n\nBy implementing these safety measures, the risk of accidents and injuries can be significantly reduced, allowing for safe and effective collaboration between humans and robots. \n\n",
+      "image": [
+        "page_4_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 50,
+          "score": 0.8531417846679688
+        },
+        {
+          "page": 49,
+          "score": 0.8515311479568481
+        },
+        {
+          "page": 17,
+          "score": 0.8505176305770874
+        }
+      ]
+    },
+    {
+      "id": "Q008",
+      "question": "When integrating a collaborative robot system, what specific elements must the user prepare according to the system configuration to ensure safety, and why is it crucial to conduct a thorough risk assessment of the entire robot system?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "When integrating a collaborative robot system, users must prepare specific elements according to the system configuration to ensure safety. It is crucial to conduct a thorough risk assessment of the entire robot system because FANUC can not guarantee safety for the end effector, other peripheral equipment, and the workpiece. The system designer must design the system in consideration of security according to safety standards. \n\nThe elements that must be prepared by the user according to system configuration as the need arises include:\n\n1.  Safeguard\n2.  Interlocked gate\n3.  Interlocking device\n\nThese elements are essential for creating a safe working environment where the robot and human workers can collaborate effectively. The collaborative robot is designed to stop upon contact with a person, as illustrated in the system example. \nReference page_4_figure_3.png",
+      "chunks": [
+        {
+          "page": 12,
+          "score": 0.8661613464355469
+        },
+        {
+          "page": 35,
+          "score": 0.8613942861557007
+        },
+        {
+          "page": 39,
+          "score": 0.8608864545822144
+        }
+      ],
+      "image": [
+        "page_4_figure_3.png"
+      ]
+    },
+    {
+      "id": "Q009",
+      "question": "During the robot installation, what is the correct procedure for securing the robot to its base, and what considerations should be taken into account regarding the use of bolts?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "To secure the robot to its base during installation, follow these steps:\n\n1.  Have one worker support the robot arm to maintain stability.\n2.  Simultaneously, have another worker use four bolts to fix the robot to the base.\n\n*   It's crucial to ensure that the flatness and inclination of the robot installation surface are within the specified limits to prevent base breakage or reduced robot performance. The flatness must be less than or equal to 0.5mm, and the inclination must be less than or equal to 0.5°.\n\nReference page_50_figure_3.png",
+      "chunks": [
+        {
+          "page": 7,
+          "score": 0.8837068676948547
+        },
+        {
+          "page": 24,
+          "score": 0.8731378316879272
+        },
+        {
+          "page": 10,
+          "score": 0.8685382604598999
+        }
+      ],
+      "image": [
+        "page_50_figure_3.png"
+      ]
+    },
+    {
+      "id": "Q010",
+      "question": "When assessing the structural integrity of the robot's installation plane, what force and moment values should be considered during the robot's operation, and how do these values change under different conditions such as stillness, acceleration/deceleration, and smooth stop?",
+      "category": "NUMERICAL",
+      "safety_critical": true,
+      "answer": "When assessing the structural integrity of the robot's installation plane, you should consider the vertical moment (MV), force in the vertical direction (FV), horizontal moment (MH), and force in the horizontal direction (FH). These values vary depending on the robot's operational state:\n\n## Force and Moment Values\n\n*   **During Stillness:** MV = 310 Nm, FV = 490 N, MH = 0 Nm, FH = 0 N.\n*   **During Acceleration or Deceleration:** MV = 380 Nm, FV = 550 N, MH = 120 Nm, FH = 180 N.\n*   **During Smooth Stop:** MV = 610 Nm, FV = 800 N, MH = 250 Nm, FH = 220 N.\n\nThese values are crucial for ensuring the robot's base is securely mounted and can withstand the forces exerted during various operations. The diagram illustrates the directions of these forces and moments acting on the robot base. Reference page_53_figure_3.png",
+      "chunks": [
+        {
+          "page": 35,
+          "score": 0.88294517993927
+        },
+        {
+          "page": 32,
+          "score": 0.87601637840271
+        },
+        {
+          "page": 39,
+          "score": 0.875044584274292
+        }
+      ],
+      "image": [
+        "page_53_figure_3.png"
+      ]
+    },
+    {
+      "id": "Q011",
+      "question": "When setting up a CRX-10iA robot for a non-floor mount, what is the procedure to configure the correct mounting angle within the robot's software, and why is it important to perform a risk assessment based on the robot's position after setting the mounting angle?",
+      "category": "TECHNICAL",
+      "safety_critical": true,
+      "answer": "To configure the mounting angle for non-floor mounted robots, follow these steps:\n\n1.  Turn on the controller while pressing the [PREV] and [NEXT] keys, then select [3 Controlled start].\n2.  Press the [MENU] key and navigate to [9 MAINTENANCE].\n3.  Select the specific robot you are configuring (e.g., CRX-10iA) and press [ENTER].\n4.  Press the [F4] key.\n5.  Continue pressing [ENTER] until the \"MOUNT ANGLE SETTING\" screen appears.\n6.  Input the appropriate mounting angle, referencing the angle between the robot base and the mounting surface.  The options are:\n    *   0 [deg] : floor mount type\n    *   90 [deg] : wall mount type\n    *   180 [deg] : upside-down mount type\n7.  Press [ENTER] until the main maintenance screen reappears.\n8.  Press the [FCTN] key and select [1 START (COLD)].\n\nIt is crucial to perform a risk assessment after setting the mounting angle because the robot's position and orientation directly impact the potential hazards it may pose to operators and equipment in the surrounding environment. Different mounting angles can alter the robot's reach, range of motion, and accessibility of certain areas, potentially creating new pinch points, collision risks, or ergonomic concerns. Therefore, a thorough risk assessment is necessary to identify and mitigate any new hazards introduced by the robot's configuration. Reference Fig. 1.2.1 (a) on page 7 for a visual representation of the mounting angle.",
+      "chunks": [
+        {
+          "page": 37,
+          "score": 0.8673978447914124
+        },
+        {
+          "page": 5,
+          "score": 0.8669195771217346
+        },
+        {
+          "page": 12,
+          "score": 0.8668836355209351
+        }
+      ],
+      "image": [
+        "page_55_figure_1.png"
+      ]
+    },
+    {
+      "id": "Q012",
+      "question": "When connecting the robot mechanical unit to the controller, what specific safety precautions must be observed regarding the earth line and power cables to prevent electrical hazards and ensure proper operation?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "Before powering on the controller, it is crucial to connect the robot and controller using the earth line to prevent electrical shock hazards. Additionally, before connecting any cables, ensure the controller power is turned off. When routing the power and signal cables, avoid using coiled cables longer than 10 meters without untangling them first, as this can cause overheating and damage. The earth line should be connected to the earth terminal using an M4 bolt, ensuring a secure ground connection. The power and signal cables are secured using a clamp, and the camera or force sensor cable connects to its designated connector. \n\nReference page_57_figure_1.png",
+      "chunks": [
+        {
+          "page": 71,
+          "score": 0.8531574010848999
+        },
+        {
+          "page": 35,
+          "score": 0.8405598402023315
+        },
+        {
+          "page": 30,
+          "score": 0.8352452516555786
+        }
+      ],
+      "image": [
+        "page_57_figure_1.png"
+      ]
+    },
+    {
+      "id": "Q013",
+      "question": "When planning the layout of a workspace with the CRX-10iA robot, what are the key considerations regarding the robot's operating space to prevent interference with peripheral devices and ensure safe operation?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "When installing peripheral devices, it's crucial to consider the robot's operating space to prevent any interference and ensure safe operation. The operating space is defined by the motion range of the end-of-flange and the J5-axis rotation center. \n\n## Key Considerations:\n\n*   **End-of-Flange Operating Space:** This area represents the maximum reach of the robot's tool mounting point. Ensure that no fixed objects or workstations are within this space to avoid collisions.\n*   **J5-Axis Rotation Center Operating Space:** This area defines the space occupied by the rotation of the J5 axis. Peripheral devices should be placed outside this area to prevent interference with the robot's movements.\n*   **Robot Model:** Note that the operating space differs between the CRX-10iA and CRX-10iA/L models. The CRX-10iA has a reach of 1249 mm, while the CRX-10iA/L has a reach of 1418 mm, affecting the overall operating space. \n\nReference page_62_figure_1.png, which illustrates the operating space for the CRX-10iA model, showing the motion range of the end-of-flange and the J5-axis rotation center. The dimensions provided in the diagram are essential for accurately planning the workspace layout.",
+      "chunks": [
+        {
+          "page": 18,
+          "score": 0.8724988102912903
+        },
+        {
+          "page": 57,
+          "score": 0.8681842088699341
+        },
+        {
+          "page": 73,
+          "score": 0.856169581413269
+        }
+      ],
+      "image": [
+        "page_62_figure_1.png"
+      ]
+    },
+    {
+      "id": "Q014",
+      "question": "When operating the CRX-10iA robot, what are the implications of the J1-axis reaching its software-defined motion limits, and how does this affect the robot's operational range?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "The J1-axis of the CRX-10iA robot has a software-defined motion limit, which restricts its rotation to a specific range. Exceeding these limits, also known as overtravel (OT), is detected at both ends of the motion limit for the axis. \n\nThe J1-axis motion limit for the CRX-10iA is ±190º. This means the axis can rotate 190 degrees in both the positive and negative directions from its zero point position. \nReference page_64_figure_1.png\n\nIf the robot attempts to exceed these limits due to programming errors or external forces, the system will detect the overtravel condition and initiate a controlled stop to prevent mechanical damage. The robot cannot exceed the motion range unless there is a loss of zero point position due to abnormalities in the servo system or system error. It is important to note that the motion range can be changed, and further information on how to change the motion range can be found in Chapter 6, “AXIS LIMIT SETUP”.",
+      "chunks": [
+        {
+          "page": 25,
+          "score": 0.891677975654602
+        },
+        {
+          "page": 30,
+          "score": 0.8403654098510742
+        },
+        {
+          "page": 7,
+          "score": 0.8372635245323181
+        }
+      ],
+      "image": [
+        "page_64_figure_1.png"
+      ]
+    },
+    {
+      "id": "Q015",
+      "question": "When configuring the robot for a new end effector, what steps should be taken to correctly set the payload parameters, and what potential issues can arise if these settings are not accurate?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "To correctly set the payload parameters for a new end effector, follow these steps:\n\n1.  Press the [MENU] key, select [6 SYSTEM], and then press the F1 ([TYPE]) key to display the screen switch menu.\n2.  Select “MOTION” to display the MOTION PERFORMANCE screen. This screen shows a list of payload conditions (No. 1 to No. 10) that can be configured.\n3.  Place the cursor on one of the numbers and press F3 (DETAIL) to access the MOTION PAYLOAD SET screen.\n4.  On the MOTION PAYLOAD SET screen, set the payload mass, center of gravity position (X, Y, Z), and inertia around the center of gravity. These values correspond to the standard tool coordinates.\n5.  After entering the values, confirm the changes when the message “Path and Cycle time will change. Set it?” appears by pressing F4 ([YES]).\n6.  To set the mass of loads on the J2 base and J3 casing, return to the MOTION PERFORMANCE screen and press F4 (ARMLOAD) to access the device-setting screen (MOTION ARMLOAD SET). Enter the mass values for ARM LOAD AXIS #1 (J2 base) and ARM LOAD AXIS #3 (J3 casing), and confirm the changes.\n\nIf the load settings are incorrect, several issues can arise:\n\n*   The sensitivity of the contact stop may worsen, reducing the robot's ability to detect collisions.\n*   The robot may stop during operations if it detects a mismatch between the actual load and the configured load.\n*   Operating the robot with incorrect payload settings or exceeding the allowable payload can lead to troubles such as reduced reducer life.\n*   Incorrect load settings can compromise the safety functions of the robot, potentially causing injury to personnel.\n\nIt is crucial to perform load settings (payload, payload center, and inertia) correctly and to retest the values if the load setting is changed. The MOTION PERFORMANCE screen, as shown, allows you to view and manage these settings. \n\n",
+      "chunks": [
+        {
+          "page": 84,
+          "score": 0.8654550313949585
+        },
+        {
+          "page": 61,
+          "score": 0.8310041427612305
+        },
+        {
+          "page": 81,
+          "score": 0.822818398475647
+        }
+      ],
+      "image": [
+        "page_71_figure_2.png"
+      ]
+    },
+    {
+      "id": "Q016",
+      "question": "When configuring the Joint Position Check function within the DCS (Dual Check Safety) system, what is the procedure to enable the function for a specific axis, such as J2, and set its upper and lower limits to +30 and -30 degrees respectively, ensuring the changes are applied and the system recognizes the new settings?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "To enable the Joint Position Check and set axis limits, follow these steps:\n\n## Enabling Joint Position Check and Setting Axis Limits\n\n1.  From the DCS screen, select \"Joint position check\" and press the DETAIL button to access the joint position check settings.\n2.  Move the cursor to the desired joint number (e.g., 1) and press DETAIL again to view its detailed settings.\n3.  Change the \"Enable/Disable\" status from DISABLE to ENABLE by pressing the CHOICE button.\n4.  Input the robot group number if necessary, and then input the axis number (e.g., \"2\" for J2 axis).\n5.  Set the \"Upper limit\" to +30 degrees and the \"Lower limit\" to -30 degrees by moving the cursor to the respective fields and entering the values.\nReference page_78_figure_1.png\n6.  Press the PREV key twice to return to the main DCS screen.\n7.  Press the APPLY button to apply the changes. You may be prompted to enter a password (default is \"1111\").\n8.  After applying, the status next to \"Joint position check\" will change to PEND, indicating that the changes are pending.\n9.  Cycle the power of the controller in cold start mode to enable the new settings. This step is crucial for the robot to recognize and enforce the new axis limits.\n\n**Warning:** Failing to cycle the power after applying the changes will result in the robot not working normally, potentially leading to personnel injury or equipment damage.",
+      "chunks": [
+        {
+          "page": 23,
+          "score": 0.8757791519165039
+        },
+        {
+          "page": 24,
+          "score": 0.8581536412239075
+        },
+        {
+          "page": 23,
+          "score": 0.8580480813980103
+        }
+      ],
+      "image": [
+        "page_78_figure_1.png"
+      ]
+    },
+    {
+      "id": "Q017",
+      "question": "After applying the changes to the joint position check settings, the teach pendant displays a 'Verify (diff)' screen. What steps must be taken to ensure the new DCS settings are correctly enabled and the robot operates with the updated axis limits?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "To ensure the new DCS settings are enabled after applying the joint position check changes, follow these steps:\n\n1.  After pressing the [APPLY] key and entering the password, verify that the [CHGD] status on the right side of [1 Joint position check] changes to [PEND].\n2.  Cycle the power of the controller in the cold start mode. This is essential for the new settings to take effect.\n\nReference page_79_figure_2.png\n\nIt is crucial to cycle the power; otherwise, the robot will not operate normally, potentially leading to personnel injury or equipment damage. The 'Verify (diff)' screen confirms that changes have been made but cycling the power finalizes the update.",
+      "chunks": [
+        {
+          "page": 17,
+          "score": 0.8843874931335449
+        },
+        {
+          "page": 35,
+          "score": 0.8633686304092407
+        },
+        {
+          "page": 35,
+          "score": 0.8569141626358032
+        }
+      ],
+      "image": [
+        "page_79_figure_2.png"
+      ]
+    },
+    {
+      "id": "Q018",
+      "question": "When performing daily checks on the robot, what specific observations should be made regarding oil seepage at each joint, and what immediate actions should be taken if seepage is detected to prevent potential issues?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "When performing daily checks for oil seepage on the robot's joints, inspect the sealed parts of each joint for any signs of oil. If oil seepage is found, it should be cleaned immediately to prevent accumulation and potential oil spots. If frequent wiping is required and opening the grease outlet does not resolve the issue, further troubleshooting is necessary, potentially indicating a grease leakage problem that needs to be addressed.\n\n## Confirmation of Oil Seepage\n\n*   Check for oil on the sealed part of each joint.\n*   If oil seepage is found, clean it.\n*   Wipe away any accumulated oil under the axis components to prevent oil spots.\n\nReference page_84_figure_1.png",
+      "chunks": [
+        {
+          "page": 7,
+          "score": 0.8819795250892639
+        },
+        {
+          "page": 7,
+          "score": 0.8672326803207397
+        },
+        {
+          "page": 37,
+          "score": 0.8642269372940063
+        }
+      ],
+      "image": [
+        "page_84_figure_1.png"
+      ]
+    },
+    {
+      "id": "Q019",
+      "question": "What is the correct procedure for replacing the lithium batteries that maintain the position data of each axis, and what precautions should be taken to prevent data loss during the replacement?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "To replace the lithium batteries, follow these steps:\n\n1.  Keep the power on and press the EMERGENCY STOP button to prevent robot motion. It is crucial to maintain power to avoid losing current position data, which would necessitate re-mastering.\n2.  Remove the bolts and the J2 arm root side cover to access the battery compartment.\n3.  Disconnect the cable connector from the batteries.\n4.  Remove the bolts and the cover plate of the battery case.\n5.  Take out the old batteries (2 pcs) from the battery case and replace them with new ones. Ensure you replace both batteries simultaneously, using FANUC specification A98L-0031-0011#D.\n6.  Reassemble the components in the reverse order, ensuring the gasket is correctly positioned. Tighten the M4 x 12 bolts on the battery clip to a torque of 4.5 Nm and the M3 x 8 bolts on the cover plate.\n\n    page_86_figure_1.png shows the location of the batteries, battery clip, cover plate, and associated hardware.\n\nIt is important to note that replacing the batteries with the power off will result in the loss of all current position data, requiring the robot to be re-mastered. Therefore, always keep the power on during the battery replacement procedure.",
+      "chunks": [
+        {
+          "page": 17,
+          "score": 0.8762154579162598
+        },
+        {
+          "page": 49,
+          "score": 0.8563517928123474
+        },
+        {
+          "page": 8,
+          "score": 0.852637767791748
+        }
+      ],
+      "image": [
+        "page_86_figure_1.png"
+      ]
+    },
+    {
+      "id": "Q020",
+      "question": "After performing mastering data entry by assigning values directly to the $DMR_GRP system variable, what crucial steps must be taken to ensure the robot's positioning system is correctly calibrated and operational?",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "After assigning mastering data values to the $DMR_GRP system variable, specifically the $MASTER_COUN variable, it is essential to complete the calibration process to ensure accurate robot positioning. Here's what you need to do:\n\n1.  Set $MASTER_DONE to TRUE. This confirms that the mastering data has been successfully entered.\n2.  Display the positioning screen and select the calibrate function, typically option [7 CALIBRATE].\n3.  Execute the calibration by pressing the appropriate function key, often F4 [YES].\n4.  After calibration is complete, finalize the process by pressing the designated 'DONE' key, usually F5 [DONE].\n\nThese steps ensure that the robot's control system recognizes and utilizes the new mastering data for accurate positioning. $DMR_GRP contains parameters such as $MASTER_DONE, $OT_MINUS, $OT_PLUS, $NASTER_COUN, $REF_DONE and $REF_POS. See the SYSTEM Variables screen for details.",
+      "chunks": [
+        {
+          "page": 50,
+          "score": 0.8578789830207825
+        },
+        {
+          "page": 35,
+          "score": 0.8548704385757446
+        },
+        {
+          "page": 50,
+          "score": 0.8502181172370911
+        }
+      ],
+      "image": [
+        "page_99_figure_2.png"
+      ]
+    },
+    {
+      "id": "Q021",
+      "question": "How do you set the mounting angle for non-floor mounted robots, and why is this setting important?",
+      "category": "TECHNICAL",
+      "safety_critical": true,
+      "answer": "## Mounting Angle Setting Procedure\n\n1.  Turn on the controller with the [PREV] and [NEXT] keys pressed, then select [3 Controlled start].\n2.  Press the [MENU] key and select [9 MAINTENANCE].\n3.  Select the robot for which you want to set the mount angle and press the [ENTER] key.\n4.  Press [F4] key.\n5.  Press the [ENTER] key until the mount angle setting screen is displayed.\n6.  Input the mount angle (0-180 degrees).\n7.  Press the [ENTER] key until the maintanence screen is displayed again.\n8.  Press [FCTN] key and select [1 START (COLD)].\n\n## Importance\n\nSetting the correct mounting angle is crucial for:\n\n*   Ensuring accurate robot operation.\n*   Maintaining stability.\n*   Preventing unexpected behavior that could lead to accidents.\n\n## Warning\n\nRisk assessment has to be done depending on the robot position.",
+      "chunks": [
+        {
+          "page": 54,
+          "score": 0.877368688583374
+        },
+        {
+          "page": 54,
+          "score": 0.8637798428535461
+        }
+      ]
+    },
+    {
+      "id": "Q022",
+      "question": "What is the recommended maintenance area around the robot, and why is it important to maintain this space?",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Recommended Maintenance Area\n\nThe manual specifies minimum distances around the robot for maintenance:\n\n*   500mm on most sides\n*   810mm on one side\n\n## Importance\n\nMaintaining this space is important for:\n\n*   Ensuring enough room for mastering.\n*   Providing safe access for maintenance personnel.\n*   Allowing for unobstructed movement during inspections and repairs.",
+      "chunks": [
+        {
+          "page": 39,
+          "score": 0.8532209992408752
+        },
+        {
+          "page": 41,
+          "score": 0.8425555229187012
+        }
+      ]
+    },
+    {
+      "id": "Q023",
+      "question": "Describe the procedure for connecting the robot to the controller, including grounding requirements and cable handling precautions.",
+      "category": "TECHNICAL",
+      "safety_critical": true,
+      "answer": "## Connection Procedure\n\n1.  Connect the power and signal cable.\n2.  Connect the earth line (ground).\n3.  Connect the camera cable or the force sensor cable (if applicable).\n\n## Grounding Requirements\n\n*   Before turning on the controller power, ensure the robot and controller are connected with the earth line (ground).\n\n## Cable Handling Precautions\n\n1.  Turn off the controller power before connecting cables.\n2.  Do not use 10m or longer coiled cable without first untying it.\n\n## Warning\n\nFailure to properly ground the robot can result in electrical shock.",
+      "chunks": [
+        {
+          "page": 57,
+          "score": 0.9149118661880493
+        },
+        {
+          "page": 57,
+          "score": 0.8912354111671448
+        },
+        {
+          "page": 18,
+          "score": 0.8685294389724731
+        }
+      ]
+    },
+    {
+      "id": "Q024",
+      "question": "What are the dust and drip-proof specifications for the robot, and what measures should be taken to maintain these specifications?",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Dust and Drip-Proof Specification\n\nThe robot conforms to IP67 standards.\n\n*   6 = Dust-tight: Complete protection against contact\n*   7 = Protection from water immersion: Ingress of water in harmful quantity shall not be possible when the enclosure is immersed in water under defined conditions of pressure and time.\n\n## Maintenance Measures\n\n1.  Ensure connectors are sealed to prevent water ingress.\n2.  Frequently check that connectors are tight and cable jackets are not damaged.\n3.  Do not use unconfirmed cutting fluid and cleaning fluid.\n4.  Do not use the robot immersed in water, neither temporary nor permanent. Robot must not be wet permanently.",
+      "chunks": [
+        {
+          "page": 61,
+          "score": 0.8385366201400757
+        },
+        {
+          "page": 21,
+          "score": 0.8299789428710938
+        }
+      ]
+    },
+    {
+      "id": "Q025",
+      "question": "Explain the process of setting the load parameters in the robot controller, and why is it important for the robot's performance and safety?",
+      "category": "TECHNICAL",
+      "safety_critical": true,
+      "answer": "## Load Setting Procedure\n\n1.  Press the [MENU] key to display the screen menu.\n2.  Select [6 SYSTEM] on the next page.\n3.  Press the F1 ([TYPE]) key to display the screen switch menu.\n4.  Select “MOTION.” The MOTION PERFORMANCE screen will be displayed.\n5.  Place the cursor on one of the numbers, and press F3 (DETAIL). The MOTION PAYLOAD SET screen appears.\n6.  Set the payload, gravity center position, and inertia around the gravity center on the MOTION PAYLOAD SET screen.\n7.  Pressing F3 ([NUMBER]) will bring you to the MOTION PAYLOAD SET screen for another condition number. For a multigroup system, pressing F2 ([GROUP]) will bring you to the MOTION PAYLOAD SET screen for another group.\n8.  Press the PREV key to return to the MOTION PERFORMANCE screen. Press F5 ([SETIND]), and enter the desired payload setting condition number.\n9.  On the list screen, pressing F4 ARMLOAD brings you to the device-setting screen.\n10. Specify the mass of the loads on the J2 base and J3 casing.\n\n## Importance\n\n*   Correct load settings are crucial for:\n*   Ensuring the accuracy of the contact stop function.\n*   Preventing the robot from stopping due to payload errors.\n*   Maintaining optimal robot performance.\n*   Preventing damage to the robot's mechanical components.\n\n## Warning\n\nIf the load setting is wrong, safety function may lost, and it may cause injury of the personnel.",
+      "chunks": [
+        {
+          "page": 71,
+          "score": 0.8527359962463379
+        },
+        {
+          "page": 45,
+          "score": 0.846890389919281
+        },
+        {
+          "page": 45,
+          "score": 0.8444637656211853
+        }
+      ]
+    },
+    {
+      "id": "Q026",
+      "question": "What are the potential consequences of using incorrect or damaged mechanical unit cables, and what preventative measures should be taken?",
+      "category": "TECHNICAL",
+      "safety_critical": true,
+      "answer": "## Consequences of Incorrect/Damaged Cables\n\n*   Incorrect function of the end effector.\n*   Robot faults.\n*   Damage to robot electrical hardware.\n*   Electric shock.\n\n## Preventative Measures\n\n*   Only use appropriately-specified mechanical unit cables.\n*   Do not add user cables or hoses inside of the mechanical unit.\n*   Please do not obstruct the movement of the mechanical unit cable when cables are added to outside of mechanical unit.\n*   Please do not perform remodeling (adding a protective cover, or secure an additional outside cable) that obstructs the behavior of the outcrop of the cable.\n*   When external equipment is installed in the robot, make sure that it does not interfere with other parts of the robot.\n*   Cut and discard any unnecessary length of wire strand of the end effector (hand) cable. Insulate the cable with seal tape.\n*   If you have end effector wiring and a process that develops static electricity, keep the end effector wiring as far away from the process as possible. If the end effector and process must remain close, be sure to insulate the cable.\n*   Be sure to seal the connectors of the user cable and terminal parts of all cables to prevent water from entering the mechanical unit. Also, attach the cover to the unused connector.\n*   Frequently check that connectors are tight and cable jackets are not damaged.",
+      "chunks": [
+        {
+          "page": 73,
+          "score": 0.8439374566078186
+        },
+        {
+          "page": 20,
+          "score": 0.8370553851127625
+        },
+        {
+          "page": 102,
+          "score": 0.8274818658828735
+        }
+      ]
+    },
+    {
+      "id": "Q027",
+      "question": "Describe the procedure for changing the axis limits using the DCS (Dual Check Safety) function, and why is this important for safety?",
+      "category": "TECHNICAL",
+      "safety_critical": true,
+      "answer": "## DCS Axis Limit Change Procedure\n\n1.  Press the [MENU] key to display the screen menu.\n2.  Press [0 NEXT] and press [6 SYSTEM].\n3.  Press the F1 (]TYPE]).\n4.  Select [DCS].\n5.  Move the cursor to [1 Joint position check], then press the [DETAIL].\n6.  Move the cursor to [1], then press the [DETAIL].\n7.  Move the cursor to [DISABLE], then press [CHOICE], set the status to [ENABLE].\n8.  Move the cursor to [Group], then input the robot group number, then press the [ENTER] key.\n9.  Move the cursor to [Axis], then input “2”, then press the [ENTER] key.\n10. Move the cursor to [Upper limit] right side, then input “30”, then press the [ENTER] key.\n11. Move the cursor to [Lower limit] right side, then input “‑30”, then press the [ENTER] key.\n12. Press the [PREV] key two times, back to the first screen.\n13. Press the [APPLY].\n14. Input 4‑digit password, then press the [ENTER] key. (Password default setting is “1111”.)\n15. Press the [OK].\n16. Cycle the power of the controller in the cold start mode so the new settings are enabled.\n\n## Importance for Safety\n\n*   DCS allows for precise restriction of robot motion within a defined area.\n*   This prevents the robot from moving into areas where it could collide with equipment or injure personnel.\n*   DCS functions are certified to meet the requirements of International Standard ISO13849‑1 and IEC61508 approved by notified body.\n\n## Warning\n\nYou must cycle the power of the controller to enable the new setting. If you fail to do so, the robot does not work normally and it may injure personnel or damage the equipment.",
+      "chunks": [
+        {
+          "page": 80,
+          "score": 0.8927608728408813
+        },
+        {
+          "page": 77,
+          "score": 0.887691855430603
+        },
+        {
+          "page": 77,
+          "score": 0.8672022819519043
+        }
+      ]
+    },
+    {
+      "id": "Q028",
+      "question": "What are the daily check items for the mechanical unit, and why are these checks important for maintaining the robot's safety and performance?",
+      "category": "TECHNICAL",
+      "safety_critical": true,
+      "answer": "## Daily Check Items\n\n*   Oil seepage: Check for oil on the sealed parts of each joint.\n*   Vibration, abnormal noises: Check for unusual vibrations or noises during operation.\n*   Positioning accuracy: Verify that the robot's taught positions have not deviated.\n*   Peripheral devices for proper operation: Ensure peripheral devices are functioning correctly.\n*   Brakes for each axis: Check that the droppage of the end effector is within 5 mm when the servo power turned off.\n*   Warnings: Check for unexpected warnings on the teach pendant.\n\n## Importance\n\nThese checks are important for:\n\n*   Early detection of potential problems.\n*   Preventing major failures.\n*   Maintaining robot accuracy and repeatability.\n*   Ensuring safe operation.\n\n## Warning\n\nFailure to perform these checks can lead to:\n\n*   Reduced robot performance.\n*   Increased risk of accidents.\n*   Costly repairs.",
+      "chunks": [
+        {
+          "page": 41,
+          "score": 0.8740565776824951
+        },
+        {
+          "page": 81,
+          "score": 0.861965000629425
+        },
+        {
+          "page": 41,
+          "score": 0.8483279943466187
+        }
+      ]
+    },
+    {
+      "id": "Q029",
+      "question": "Describe the procedure for replacing the batteries in the robot, and what precautions must be taken to avoid losing position data?",
+      "category": "TECHNICAL",
+      "safety_critical": true,
+      "answer": "## Battery Replacement Procedure\n\n1.  Keep the power on. Press the EMERGENCY STOP button to prohibit the robot motion.\n2.  Remove the bolts and the J2 arm root side cover.\n3.  Remove the cable connector of the batteries.\n4.  Remove bolts and cover plate of the battery.\n5.  Take out the old batteries (2 pcs) from the battery case. Then replace the batteries (2 pcs).\n6.  Assemble them by reversing the sequence. The gasket is reusable.\n\n## Precautions\n\n*   Be sure to keep the power on during battery replacement.\n*   Replacing the batteries with the power supply turned off causes all current position data to be lost.\n*   When replacing the batteries, replace two batteries together.\n\n## Warning\n\nReplacing the batteries with the power supply turned off causes all current position data to be lost. Therefore, mastering will be required again.",
+      "chunks": [
+        {
+          "page": 87,
+          "score": 0.8629013299942017
+        },
+        {
+          "page": 40,
+          "score": 0.8550815582275391
+        },
+        {
+          "page": 86,
+          "score": 0.852078914642334
+        }
+      ]
+    },
+    {
+      "id": "Q030",
+      "question": "Explain the different types of mastering available for the robot, and when each type should be used.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Types of Mastering\n\n*   **Fixture position mastering:** Mastering performed with the mastering fixture.\n*   **Zero-position mastering:** Mastering which performed with all axes set at the 0-degree position. A zero-position mark (witness mark) is attached to each robot axis. This mastering is performed with all axes aligned to their respective witness marks.\n*   **Quick mastering:** This is performed at a user-specified position. The corresponding count value is obtained from the rotation count of the Pulsecoder connected to the relevant motor and the rotation angle within one rotation.\n*   **Quick mastering for single axis:** This is performed at a user-specified position for one axis. The corresponding count value is obtained from the rotation count of the Pulsecoder connected to the relevant motor and the rotation angle within one rotation.\n*   **Single axis mastering:** Mastering which performed for one axis at a time. The mastering position for each axis can be specified by the user.\n*   **Mastering data entry:** Enter the Mastering data directly.\n\n## When to Use Each Type\n\n*   **Fixture position mastering:** For initial setup or after major component replacement.\n*   **Zero-position mastering:** As a quick-fix method when approximate positioning is sufficient.\n*   **Quick mastering:** If the pulse count value is lost, for example, because a low voltage has been detected on the backup battery for the pulse counter.\n*   **Quick mastering for single axis:** If the pulse count value is lost for one axis.\n*   **Single axis mastering:** If mastering data for a specific axis is lost.\n*   **Mastering data entry:** If mastering data has been lost but the pulse count is preserved.",
+      "chunks": [
+        {
+          "page": 87,
+          "score": 0.8732869625091553
+        },
+        {
+          "page": 87,
+          "score": 0.8593746423721313
+        },
+        {
+          "page": 87,
+          "score": 0.8508700132369995
+        }
+      ]
+    },
+    {
+      "id": "Q031",
+      "question": "What are the potential causes of vibration in the robot, and what troubleshooting steps should be taken to address this issue?",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Potential Causes of Vibration\n\n*   J1 base fastening: Loose bolts, uneven base plate, foreign material.\n*   Rack or floor: Insufficient rigidity.\n*   Overload: Exceeding the robot's maximum load capacity.\n*   Gear, bearing, or reducer: Damage due to collision, overload, or foreign matter.\n*   Noise from a nearby machine: Electrical noise induced on the grounding wire.\n*   Controller, cable, and motor: Controller malfunction, broken cable, defective motor, or incorrect parameters.\n\n## Troubleshooting Steps\n\n1.  Check J1 base fastening: Tighten bolts, adjust base plate, remove foreign material.\n2.  Reinforce rack or floor: Add support to increase rigidity.\n3.  Reduce load: Decrease the weight of the end effector or workpiece.\n4.  Inspect gear, bearing, and reducer: Replace damaged components.\n5.  Verify grounding: Ensure proper grounding to prevent electrical noise.\n6.  Check controller, cable, and motor: Troubleshoot controller, replace motor or cable, verify power supply, and correct parameters.",
+      "chunks": [
+        {
+          "page": 103,
+          "score": 0.8634326457977295
+        },
+        {
+          "page": 104,
+          "score": 0.858883798122406
+        }
+      ]
+    },
+    {
+      "id": "Q032",
+      "question": "Describe the complete procedure for safely entering the safety fence for maintenance, including all necessary steps and precautions, referencing relevant sections for detailed information.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": true,
+      "answer": "## Safety Procedure for Entering the Safety Fence for Maintenance\n\n### Initial Steps\n\n1.  **Stop the Robot System:** Ensure the robot system is completely stopped before entering the safety fence (Section 4.6).\n2.  **Power Down:** Shut off the power to the robot system and lock the main breaker to prevent accidental power-on during maintenance (Section 5.8).\n3.  **Safety Sequence:** Follow the safety sequence for fence entry as detailed in Section 4.7.\n\n### Detailed Entry Sequence (Section 4.7)\n\n1.  The robot is moving automatically (in AUTO mode).\n2.  Stop the robot by pressing HOLD buttons or HOLD input signal.\n3.  Change the operating mode to T1 or T2 from AUTO.\n4.  Remove the operating mode key switch for mode lock to prevent other persons change the operating mode.\n5.  Remove the plug2 from socket 2.\n6.  Open the gate of the safety fence, and put the plug2 to socket4.\n7.  Remove the plug1 from socket1.\n8.  Enter inside of the safety fence, and put the plug 1 to socket 3.\n\n### Additional Precautions\n\n*   **Indicator Lamp:** Make sure that an indicator lamp for stop condition shows the stopped status of the robot (Section 4.6).\n*   **Working Alone:** If more than one worker collaborates, a user in charge should be equipped with teach pendant, and other users have to follow his order. Any operations from the external interface and robot controller operation panel without his order have to be prohibited (Section 4.6).\n*   **Escape Zone:** All users inside of the safety fence always have to secure the escape zone to avoid hazards from unintended movement of the robot (Section 4.6).\n*   **Tool Placement:** Do not leave tools etc. inside of the operating space of robot or peripheral devices, when operation inside of the safety fence has been finished (Section 4.6).\n\n### Post-Maintenance Checks\n\n1.  **Safeguard System:** After the maintenance working, check if the safeguarded system is effective. If it has been suspended to perform the maintenance working, return their original effectiveness (Section 5.8).\n\nThis comprehensive procedure ensures the safety of maintenance personnel by addressing potential hazards at each stage of entry and maintenance within the safety fence.",
+      "chunks": [
+        {
+          "page": 32,
+          "score": 0.8821456432342529
+        },
+        {
+          "page": 45,
+          "score": 0.8817469477653503
+        },
+        {
+          "page": 45,
+          "score": 0.8793326020240784
+        }
+      ]
+    },
+    {
+      "id": "Q033",
+      "question": "Explain the different types of mastering available for the CRX-10+A robot and when each type is most appropriate, referencing sections that describe each method in detail.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## Types of Mastering for the CRX-10+A Robot\n\n### Overview\n\nMastering associates the angle of each robot axis with the pulse count value supplied from the absolute Pulsecoder. It is required under specific conditions such as motor replacement or battery failure (Section 8.1).\n\n### Mastering Methods (Section 8.1)\n\n1.  **Fixture Position Mastering:**\n    *   Performed with the mastering fixture.\n    *   For more detailed mastering, contact your local FANUC representative (Section 8.1).\n2.  **Zero-Position Mastering (Witness Mark Mastering):**\n    *   Performed with all axes set at the 0-degree position, aligning with zero-position marks (witness marks) on each axis (Section 8.3).\n    *   Appropriate as a quick-fix method but less accurate due to visual checks (Section 8.3).\n3.  **Quick Mastering:**\n    *   Performed at a user-specified position. The pulse count value is obtained from the rotation count of the Pulsecoder (Section 8.4).\n    *   Suitable if the pulse count value is lost due to low voltage on the backup battery (Section 8.4).\n4.  **Quick Mastering for Single Axis:**\n    *   Performed at a user-specified position for one axis. The corresponding count value is obtained from the rotation count of the Pulsecoder (Section 8.5).\n    *   Useful when only one axis needs re-mastering (Section 8.5).\n5.  **Single Axis Mastering:**\n    *   Performed for one axis at a time, with the mastering position specified by the user (Section 8.6).\n    *   Useful in performing mastering on a specific axis (Section 8.6).\n6.  **Mastering Data Entry:**\n    *   Enter the Mastering data directly (Section 8.7).\n    *   Applicable if mastering data has been lost but the pulse count is preserved (Section 8.7).\n\nThis detailed breakdown allows for selecting the appropriate mastering method based on the specific circumstances and available resources.",
+      "chunks": [
+        {
+          "page": 87,
+          "score": 0.8764156103134155
+        },
+        {
+          "page": 87,
+          "score": 0.8599331378936768
+        },
+        {
+          "page": 93,
+          "score": 0.8525823354721069
+        }
+      ]
+    },
+    {
+      "id": "Q034",
+      "question": "What safety measures should be taken by a programmer when teaching the robot, both inside and outside the safety fence, and how do the teach pendant and operator panel contribute to safety during this process?",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": true,
+      "answer": "## Safety Measures for Programmers During Robot Teaching\n\n### General Precautions (Section 2.4.5)\n\n*   **Work Area:** Carry out all tasks outside the robot work area unless specifically necessary to enter.\n*   **Condition Check:** Before teaching, check that the robot and its peripheral devices are all in normal condition.\n*   **Safety Devices:** Check the locations, settings, and conditions of safety devices (such as the EMERGENCY STOP button, the Enabling device (DEADMAN switch) on the teach pendant) before entering the area.\n*   **Area Control:** Be extremely careful not to let anyone else enter the robot work area.\n\n### Programming Outside the Safety Fence (Section 2.4.5)\n\n*   Programming must be done outside of the safety fence as far as possible.\n\n### Programming Inside the Safety Fence (Section 2.4.5)\n\n*   **Hazard Assessment:** Before entering the safety fence area, ensure that there is no risk of hazardous situation in the area.\n*   **Emergency Readiness:** Be ready to press the emergency stop button whenever it is necessary.\n*   **Low Speed Operation:** Operate the Robot at low speed.\n*   **System Status:** Before starting programming, check the entire system status to ensure that no remote instruction to the peripheral equipment or motion would harm working person.\n*   **Contact Stop:** Operator must work under the condition of Contact Stop function activates.\n*   **Deactivation Measures:** Required to deactivate the Contact Stop temporally, take measure to disseminate Contact Stop function deactivates.\n\n### Teach Pendant and Operator Panel Contributions (Section 2.4.5)\n\n*   **Operator Panel:**\n    *   Emergency stop button and a key switch (mode switch) for selecting the automatic operation mode (AUTO) and the teach modes (T1 and T2).\n    *   Before entering the inside of the safety fence for the purpose of teaching, set the switch to a teach mode, remove the key from the mode switch to prevent other people from changing the operation mode carelessly, then open the safety gate.\n*   **Teach Pendant:**\n    *   Enabling device (DEADMAN switch) as well as an emergency stop button.\n    *   Emergency stop button: Causes the stop of the robot when pressed.\n    *   Enabling device (DEADMAN switch): Servo power is turned off when the operator releases the enabling device (DEADMAN switch) or when the operator presses the switch strongly.\n\nThis comprehensive approach ensures the programmer's safety by utilizing both procedural and technological safeguards during the teaching process.",
+      "chunks": [
+        {
+          "page": 11,
+          "score": 0.89394211769104
+        },
+        {
+          "page": 7,
+          "score": 0.8795390129089355
+        },
+        {
+          "page": 32,
+          "score": 0.8773746490478516
+        }
+      ]
+    },
+    {
+      "id": "Q035",
+      "question": "Describe the different stop categories defined in the manual, and explain how the robot's behavior changes in each category, referencing the section that details stop types.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": true,
+      "answer": "## Stop Categories of the Robot\n\nThe manual defines three types of stop categories following IEC 60204-1 (Section 4.1):\n\n1.  **Stop Category 0 (Power-off Stop):**\n    *   Servo power is turned off, and the robot stops immediately.\n    *   The motion path of the deceleration is uncontrolled.\n    *   An alarm is generated, and then the servo power turns off.\n    *   Execution of the program is paused.\n    *   Frequent Category 0 Stop of the robot during operation can cause mechanical problems of the robot.\n2.  **Stop Category 1 (Controlled Stop, Smooth Stop):**\n    *   The robot is decelerated until it stops, and servo power is turned off.\n    *   The alarm \"SRVO-199 Controlled stop\" or \"SRVO-289 Smooth Stop\" occurs along with a decelerated stop. The program execution is paused.\n    *   An alarm is generated, and then the servo power turns off.\n    *   In Smooth stop, the robot decelerates until it stops with the deceleration time shorter than Controlled stop.\n3.  **Stop Category 2 (Hold):**\n    *   The robot is decelerated until it stops, and servo power remains on.\n    *   The robot operation is decelerated until it stops. Execution of the program is paused.\n\n### Stop Pattern (Section 4.1)\n\nThe stop type of robot is Stop Category 0 or Stop Category 1 when the emergency stop button is pressed or the FENCE is open. The configuration of stop type for each situation is called stop pattern.\n\n|Stop pattern|Emergency stop button|External Emergency stop|FENCE open|SVOFF input|Enabling device (Deadman switch) (*)|\n|---|---|---|---|---|---|\n|AUTO|Category 1|Category 1|Category 1|Category 1|-|\n|D|T1|Category 1|Category 1|-|Category 1|\n| |T2|Category 1|Category 1|-|Category 1|\n\nThis information is crucial for understanding how the robot responds to different emergency situations and for implementing appropriate safety measures.",
+      "chunks": [
+        {
+          "page": 26,
+          "score": 0.9120821952819824
+        },
+        {
+          "page": 26,
+          "score": 0.8850412368774414
+        },
+        {
+          "page": 45,
+          "score": 0.8839194774627686
+        }
+      ]
+    },
+    {
+      "id": "Q036",
+      "question": "How does the collaborative robot's contact stop function work, what are its limitations, and what design considerations should be made for the collaborative workspace to ensure safety?",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": true,
+      "answer": "## Collaborative Robot Contact Stop Function\n\n### Functionality (Section 3.6)\n\n*   When the external force exceeds the external force limit, the robot stops. For example, when a person contacts the robot and a big external force is added to the robot, the robot stops.\n*   This function does not guarantee safety in all situations. Additional appropriate safeguarding measures must be placed as the need arises.\n\n### Limitations (Section 3.6)\n\n*   The external force is calculated by the torque acting on each axis. Therefore, when the robot contacts at the point near the each axis, the robot may not stop even if the external force is more than the external force limit.\n*   On the other hand, when the robot contacts at the point far from the each axis, the robot may stop even if the external force is smaller than the external force limit.\n*   A default value of external force limit is 150N. The external force limit can’t increase more than 150N.\n*   Motion groups other than Collaborative robot are outside of the scope of the contact stop function.\n\n### Collaborative Workspace Design Considerations (Section 3.6)\n\n*   **Escape Space:** The space where a person escapes at contacting to robot must be placed between collaborative workspace and wall, floor, etc. If the space can’t be placed, the robot system must be designed to use additional appropriate safeguarding measures. Example, when a person access to dangerous space, the robot stops.\n*   **Force Reduction:**\n    *   Reduce the robot's motion speed near the place where pinching is occurred.\n    *   Cover the object or the table with a soft material because the lower the rigidity of the contact point, the smaller the generated force.\n*   **Personnel Training:** Untrained people must not enter collaborative workspace.\n*   **Safe Movement:** The ambient working space in which people may collide with the collaborative robot shall be arranged so they can move safely.\n*   **Head and Neck Protection:** The robot system must be designed not to contact robot to head or neck of person with frequency.\n\nThese considerations are crucial for minimizing the risk of injury in collaborative workspaces.",
+      "chunks": [
+        {
+          "page": 23,
+          "score": 0.8788592219352722
+        },
+        {
+          "page": 36,
+          "score": 0.8676297068595886
+        },
+        {
+          "page": 45,
+          "score": 0.8638547658920288
+        }
+      ]
+    },
+    {
+      "id": "Q037",
+      "question": "Explain the procedures for safe transportation and installation of the robot, including the use of the transport kit and carrying support, and the importance of proper mounting surface conditions, referencing the relevant sections.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": true,
+      "answer": "## Safe Transportation and Installation Procedures\n\n### Transportation (Section 1.1)\n\n1.  **Robot Posture:** Change the posture of the robot to that shown in Fig 1.1 (a) and pack it in the transport box.\n2.  **Personnel:** Perform packing the robot in two people.\n3.  **End Effector Removal:** Be sure to remove the end effector when the robot is transported.\n4.  **Transport Kit:** The transport kit and the carrying support can be purchased from FANUC. Refer to Table 1.1 (a) about specification.\n5.  **Securing the Box:** Please tighten the box with PP bands.\n\n### Installation (Section 1.2)\n\n1.  **Personnel:** Perform unpacking and the installation of the robot in two people.\n2.  **Arm Support:** One worker supports the arm, and the other worker fixes the robot arm to the base using bolts.\n\n### Mounting Surface Conditions (Section 1.2)\n\n*   **Flatness:** Flatness of robot installation surface must be less than or equal to 0.5mm.\n*   **Inclination:** Inclination of robot installation surface must be less than or equal to 0.5°.\n*   If robot base is placed on uneven ground, it may result in the base breakage or low performance of the robot.\n\n### Mounting Angle Setting (Section 1.2.1)\n\n*   For all robot mounts except floor mount, be sure to set the mounting angle referring to the procedure below.\n*   Turn on the controller with [PREV] and [NEXT] key pressed. Then select [3 Controlled start].\n*   Press the [MENU] key and select [9 MAINTENANCE].\n*   Select the robot for which you want to set the mount angle, and press the [ENTER] key.\n*   Input the mount angle referring to Fig.1.2.1 (a).\n*   Press [FCTN] key and select [1 START (COLD)].\n\nFollowing these procedures ensures the safe and stable operation of the robot after installation.",
+      "chunks": [
+        {
+          "page": 49,
+          "score": 0.8918207287788391
+        },
+        {
+          "page": 17,
+          "score": 0.8821085095405579
+        },
+        {
+          "page": 86,
+          "score": 0.874981164932251
+        }
+      ]
+    },
+    {
+      "id": "Q038",
+      "question": "What periodic maintenance tasks are required for both the mechanical and control units of the robot, and how frequently should these tasks be performed to ensure safe and reliable operation, referencing the periodic maintenance table?",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## Periodic Maintenance Tasks for Mechanical and Control Units\n\n### Mechanical Unit (Section 6.1, 7.1, Appendix A)\n\n*   **Daily Checks (Section 7.1.1):**\n    *   Oil seepage: Check for oil on the sealed part of each joint.\n    *   Vibration, abnormal noises: Check whether vibration or abnormal noises occur.\n    *   Positioning accuracy: Check that the taught positions of the robot have not deviated.\n    *   Peripheral devices for proper operation: Check whether the peripheral devices operate properly.\n    *   Brakes for each axis: Check that the droppage of the end effector is within 5 mm when the servo power turned off.\n    *   Warnings: Check whether unexpected warnings occur in the alarm screen on the teach pendant.\n*   **Periodic Checks (Section 7.1.2, Appendix A):**\n    *   Check for external damage: Only 1st check.\n    *   Check for water: 3 months, 1 year, 2 years, 3 years, 4 years, 8 years.\n    *   Check for damages to the teach pendant cable, the operation box connection cable or the robot connection cable: 3 months, 1 year, 2 years, 3 years, 4 years, 8 years.\n    *   Check for damage to the end effector connection cable (hand): 3 months, 1 year, 2 years, 3 years, 4 years, 8 years.\n    *   Check the exposed connectors: 3 months, 1 year, 2 years, 3 years, 4 years, 8 years.\n    *   Retightening the end effector mounting bolts: 3 months, 1 year, 2 years, 3 years, 4 years, 8 years.\n    *   Retightening the external main bolts: Only 1st check.\n    *   Clean spatters, sawdust and dust: Only 1st check.\n\n### Control Unit (Section 6.2, 7.1, Appendix A)\n\n*   **Daily Checks (Section 6.2):**\n    *   Check the cable connected to the teach pendant for excessive twisting.\n    *   Check the controller and peripheral devices for abnormalities.\n    *   Check the safety function.\n*   **Periodic Checks (Section 7.1.2, Appendix A):**\n    *   Cleaning the controller ventilation system: 1 month, 3 months, 1 year, 2 years, 3 years, 4 years, 8 years.\n\n### Frequency (Section 7, Appendix A)\n\nThe maintenance frequencies are based on the total operating time or the accumulated operating time, whichever comes first.\n\nThis structured approach ensures that all critical components are regularly inspected and maintained, contributing to the robot's safe and reliable operation.",
+      "chunks": [
+        {
+          "page": 81,
+          "score": 0.8800451755523682
+        },
+        {
+          "page": 82,
+          "score": 0.8704633712768555
+        },
+        {
+          "page": 41,
+          "score": 0.8667993545532227
+        }
+      ]
+    },
+    {
+      "id": "Q039",
+      "question": "Describe the potential hazards associated with dismantling a robot equipped with spring balancers, and explain the correct procedure to mitigate these risks, referencing the relevant safety warnings and dismantling instructions.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": true,
+      "answer": "## Hazards and Safe Dismantling Procedure for Robots with Spring Balancers\n\n### Potential Hazards (Section 5.9)\n\n*   When dismantling and/or scrapping robot mechanical units equipped with spring balancers, the robot arm may move unexpectedly due to the stored elastic energy of the springs inside the balancer(s), and subsequently lose its balance.\n\n### Safe Dismantling Procedure (Section 5.9)\n\n1.  **Contact FANUC:** Do not start dismantling the robot before contacting such as FANUC Europe Corporation, FANUC America Corporation, SHANGHAI‑FANUC Robotics CO., LTD. or FANUC Corporation in Japan.\n2.  **Release Stored Energy:** Dismantling and scrapping of such robot system must be done only after releasing the stored energy and according to the instructions provided by FANUC.\n\n### Warning (Section 5.9)\n\n*   Very severe injury or death of personnel may occur in case any of these instructions is not followed.\n\nBy adhering to these guidelines, the risks associated with dismantling robots equipped with spring balancers can be significantly reduced.",
+      "chunks": [
+        {
+          "page": 40,
+          "score": 0.9101283550262451
+        },
+        {
+          "page": 17,
+          "score": 0.8769065737724304
+        },
+        {
+          "page": 40,
+          "score": 0.8582244515419006
+        }
+      ]
+    },
+    {
+      "id": "Q040",
+      "question": "The robot installation surface must adhere to certain flatness and inclination standards. What are the maximum allowable values for flatness and inclination, and why are these important for robot performance and longevity?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "The flatness of the robot installation surface must be less than or equal to 0.5mm, and the inclination must be less than or equal to 0.5\n\n## Importance for Robot Performance and Longevity\n\n*   Ensures the base does not break.\n*   Maintains optimal robot performance.",
+      "chunks": [
+        {
+          "page": 54,
+          "score": 0.8641633987426758
+        },
+        {
+          "page": 51,
+          "score": 0.8417892456054688
+        },
+        {
+          "page": 86,
+          "score": 0.8396855592727661
+        }
+      ]
+    },
+    {
+      "id": "Q041",
+      "question": "According to Table 1.2 (b), what is the stopping angle in degrees for a CRX-10iA robot operating at 1000mm/s and what is the implication of this angle for safety considerations in a collaborative workspace?",
+      "category": "NUMERICAL",
+      "safety_critical": true,
+      "answer": "The stopping angle for a CRX-10iA robot operating at 1000mm/s is 29.3 degrees.\n\n## Implications for Safety Considerations\n\nThis stopping angle is crucial for safety because:\n\n1.  It determines the additional space needed for the robot to come to a complete stop after an emergency stop signal is triggered.\n2.  The collaborative workspace must be designed considering this angle to prevent collisions or injuries.\n3.  Risk assessments must account for this stopping distance to ensure personnel safety.",
+      "chunks": [
+        {
+          "page": 52,
+          "score": 0.8496744632720947
+        }
+      ]
+    },
+    {
+      "id": "Q042",
+      "question": "The documentation specifies a default external force limit of 150N for the contact stop function. Explain how decreasing this limit affects the sensitivity of the contact stop and what the maximum allowable value for the external force limit is.",
+      "category": "NUMERICAL",
+      "safety_critical": true,
+      "answer": "Decreasing the external force limit increases the sensitivity of the contact stop function. However, the external force limit cannot increase more than 150N.\n\n## Sensitivity Impact\n\n*   **Increased Sensitivity:** Lowering the limit causes the robot to stop more easily upon contact, enhancing safety.\n*   **Maximum Value:** The external force limit cannot exceed 150N.",
+      "chunks": [
+        {
+          "page": 22,
+          "score": 0.9054859280586243
+        },
+        {
+          "page": 25,
+          "score": 0.8493238687515259
+        },
+        {
+          "page": 28,
+          "score": 0.8486815690994263
+        }
+      ]
+    },
+    {
+      "id": "Q043",
+      "question": "The documentation mentions a maximum acceptable motion speed for different body regions. What is the acceptable motion speed in mm/s for the 'Arm, Hand, Fingers' region, and how does this influence the design of collaborative tasks?",
+      "category": "NUMERICAL",
+      "safety_critical": true,
+      "answer": "The acceptable motion speed for the 'Arm, Hand, Fingers' region is 1000 mm/s.\n\n## Influence on Collaborative Task Design\n\nThis speed influences the design of collaborative tasks by:\n\n1.  Setting an upper limit on the robot's speed when operating near human arms and hands to minimize injury risk.\n2.  Requiring task planning to ensure that the robot's movements do not exceed this limit in collaborative zones.\n3.  Guiding the selection of appropriate safety measures and monitoring systems to maintain safe interactions.",
+      "chunks": [
+        {
+          "page": 23,
+          "score": 0.9077900648117065
+        },
+        {
+          "page": 25,
+          "score": 0.8514906167984009
+        },
+        {
+          "page": 24,
+          "score": 0.8446329236030579
+        }
+      ]
+    },
+    {
+      "id": "Q044",
+      "question": "Based on the risk assessment by FANUC, what is the recommended maximum number of operations of the enabling device (DEADMAN switch) per year, and why is this limit in place?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "Based on the risk assessment by FANUC, the number of operations of the enabling device (DEADMAN switch) should not exceed about 10000 times per year.\n\n## Reason for the Limit\n\nThis limit is in place to:\n\n*   Ensure the longevity and reliability of the enabling device.\n*   Prevent wear and tear that could compromise its functionality.\n*   Maintain the safety integrity of the robot system.",
+      "chunks": [
+        {
+          "page": 30,
+          "score": 0.9078377485275269
+        },
+        {
+          "page": 45,
+          "score": 0.8387836217880249
+        },
+        {
+          "page": 29,
+          "score": 0.8304367065429688
+        }
+      ]
+    },
+    {
+      "id": "Q045",
+      "question": "What is the typical lifespan of the Pulsecoder backup batteries under standard operating conditions, and what factors might significantly reduce this lifespan?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 87,
+          "score": 0.8416981101036072
+        },
+        {
+          "page": 92,
+          "score": 0.8247686624526978
+        },
+        {
+          "page": 92,
+          "score": 0.8247686624526978
+        }
+      ]
+    },
+    {
+      "id": "Q046",
+      "question": "What specific types of grease are recommended for lubricating the joints of the CRX-10+A and CRX-10+A/L robots to ensure optimal performance and longevity?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 61,
+          "score": 0.8387001752853394
+        },
+        {
+          "page": 60,
+          "score": 0.8361577391624451
+        },
+        {
+          "page": 84,
+          "score": 0.8316906094551086
+        }
+      ]
+    },
+    {
+      "id": "Q047",
+      "question": "What is the exact procedure for recalibrating the force sensors in the collaborative robot system after a collision that triggers the contact stop function?",
+      "category": "UNANSWERABLE",
+      "safety_critical": true,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 22,
+          "score": 0.8694328665733337
+        },
+        {
+          "page": 23,
+          "score": 0.8590401411056519
+        },
+        {
+          "page": 23,
+          "score": 0.8535474538803101
+        }
+      ]
+    },
+    {
+      "id": "Q048",
+      "question": "How does the robot's performance degrade over time due to wear and tear on its mechanical components, and what are the specific indicators of this degradation?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 103,
+          "score": 0.8152040243148804
+        },
+        {
+          "page": 81,
+          "score": 0.8126723170280457
+        }
+      ]
+    },
+    {
+      "id": "Q049",
+      "question": "What are the detailed steps for upgrading the robot's firmware to the latest version, including any specific software or hardware requirements?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 36,
+          "score": 0.8300783634185791
+        },
+        {
+          "page": 45,
+          "score": 0.814626932144165
+        },
+        {
+          "page": 92,
+          "score": 0.8134238719940186
+        }
+      ]
+    },
+    {
+      "id": "Q050",
+      "question": "What is the procedure for conducting a comprehensive diagnostic test of the robot's electrical system to identify potential faults or failures before they occur?",
+      "category": "UNANSWERABLE",
+      "safety_critical": true,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 36,
+          "score": 0.8528861999511719
+        },
+        {
+          "page": 36,
+          "score": 0.8479596376419067
+        },
+        {
+          "page": 41,
+          "score": 0.84185391664505
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "categories": {
+      "VISUAL": 7,
+      "SAFETY": 11,
+      "TECHNICAL": 13,
+      "MULTI_CHAPTER": 8,
+      "NUMERICAL": 5,
+      "UNANSWERABLE": 6
+    },
+    "difficulties": {},
+    "visual_questions": 7,
+    "safety_critical": 35,
+    "answerable": 44,
+    "document_name": ""
+  }
+}

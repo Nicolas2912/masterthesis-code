@@ -1,0 +1,1011 @@
+{
+  "total_questions": 50,
+  "questions": [
+    {
+      "id": "Q001",
+      "question": "When the laser system is indicating that the safety door status is not active, what are the possible conditions that could cause this, and how does this affect the operation of the laser?",
+      "category": "VISUAL",
+      "safety_critical": true,
+      "answer": "The \"Safety door status\" display on the control panel indicates the status of the safety contacts of the processing station. The display is only active when both circuits of the safety door circuit are closed. If the \"Safety door status\" display is not active, it could be due to the following conditions:\n\n*   Laser covers not closed\n*   Shutter and safety door circuit open at the same time (the safety circuits have been opened during laser processing)\n*   Internal error\n\nWhen the safety door circuit is open, the shutter cannot be opened, and laser power cannot be directed to the processing room. Laser radiation is directed into an absorber.",
+      "image": [
+        "page_340_figure_2.png"
+      ],
+      "chunks": [
+        {
+          "page": 340,
+          "score": 0.862097978591919
+        },
+        {
+          "page": 305,
+          "score": 0.8617446422576904
+        }
+      ]
+    },
+    {
+      "id": "Q002",
+      "question": "Describe the procedure for replacing the water filter cartridge in the laser cooling system, including any specific considerations for coolant spillage and component handling.",
+      "category": "VISUAL",
+      "safety_critical": false,
+      "answer": "The water filter cartridge in the laser cooling system should be replaced every 12 months to prevent dirt particles from entering the diode laser or power supply unit. Here's how to replace it:\n\n## Water Filter Cartridge Replacement Procedure\n\n1.  **Loosen the Filter Housing:** Turn the filter housing to the left to loosen it. Be prepared for coolant spillage.\n2.  **Remove and Replace the Cartridge:** Remove the old filter cartridge and insert a new one. Ensure you have the new filter cartridge ready to minimize the time the system is open.\n3.  **Inspect the O-Ring:** Make sure the O-sealing ring is securely in place on the filter housing to prevent leaks.\n4.  **Tighten the Housing:** Tighten the retaining ring and filter housing securely.\n\n*   Even when the unit is switched off, coolant will drip out of the filter. Have the new filter cartridge ready to complete the replacement quickly. Replenish the coolant if necessary after the replacement.",
+      "image": [
+        "page_321_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 321,
+          "score": 0.89985591173172
+        },
+        {
+          "page": 325,
+          "score": 0.8869442939758301
+        },
+        {
+          "page": 324,
+          "score": 0.8832759261131287
+        }
+      ]
+    },
+    {
+      "id": "Q003",
+      "question": "When troubleshooting the laser system, you observe that the 'Laser is on' signal, which is typically active when the laser system is powered, is not present. Describe the conditions that must be met for this signal to be active, and what could cause it to be reset, preventing the laser from operating correctly.",
+      "category": "VISUAL",
+      "safety_critical": true,
+      "answer": "The 'Laser is on' signal indicates that the laser system is turned on and ready to operate. This signal is directly related to the status of input word 0 bit 13, which must first be set to enable the laser system.\n\n## Conditions for Active Signal:\n\n*   The laser system must be turned on, which is initiated by setting input word 0 bit 13.\n*   Once the laser system is on, the 'Laser is on' signal (output bit 14) should remain active as long as no faults are detected.\n\n## Conditions for Reset Signal:\n\n*   The signal is reset in case of a fault within the laser system. This indicates a problem that prevents the laser from maintaining its 'on' state.\n*   If a fault occurs, the system will reset the 'Laser is on' signal, indicating that the laser is no longer in a ready state and requires troubleshooting.",
+      "image": [
+        "page_270_figure_2.png"
+      ],
+      "chunks": [
+        {
+          "page": 251,
+          "score": 0.8797675967216492
+        },
+        {
+          "page": 270,
+          "score": 0.8786706924438477
+        },
+        {
+          "page": 270,
+          "score": 0.8761473894119263
+        }
+      ]
+    },
+    {
+      "id": "Q004",
+      "question": "What regular maintenance tasks are required to ensure the laser system operates within specified parameters, and what are the recommended intervals for these tasks?",
+      "category": "VISUAL",
+      "safety_critical": true,
+      "answer": "The diode laser system requires minimal maintenance if performed as described. Here are the maintenance tasks and their intervals:\n\n## Maintenance Tasks and Intervals\n\n*   **Check humidity values of each laser stack:** Monthly. High humidity can cause operational issues, so regular checks are essential.\n*   **Check level of cooling liquid:** Monthly. Maintaining the correct coolant level ensures proper thermal management of the laser system.\n*   **Exchange drying capsules:** Yearly. Drying capsules absorb moisture, and their effectiveness diminishes over time.\n*   **Exchange water filter:** Yearly. Replacing the water filter keeps the cooling system free of contaminants.\n*   **Exchange water filter for the power supply:** Every 24 months. This ensures the power supply cooling system remains efficient.\n*   **Exchange DI cartridge:** If necessary. The DI cartridge maintains water purity, and should be replaced when its capacity is exhausted.",
+      "image": [
+        "page_313_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 313,
+          "score": 0.8506447672843933
+        },
+        {
+          "page": 334,
+          "score": 0.8494783043861389
+        }
+      ]
+    },
+    {
+      "id": "Q005",
+      "question": "When configuring the laser system for program mode, describe the steps a technician would take to save a program from the laser control unit to a PC, ensuring that all programs are backed up in a single file.",
+      "category": "VISUAL",
+      "safety_critical": false,
+      "answer": "To save all programs from the laser control unit to a PC in program mode, follow these steps:\n\n## Saving Programs to PC\n\n1.  **Select the Program:** In the program editor, use the input field to define the program you want to edit or enter. Note the number of maximum laser programs available, which depends on the software version of the PLC (either 10 or 20).\n2.  **Beam Path Selection (if applicable):** If the laser system is used with a beam switch, select the desired beam path (1-4) using the provided buttons.\n3.  **Initiate Save:** Click the \"Save\" button to save the currently displayed program to the PC/network.\n4.  **Enable Backup:** Before saving, ensure the checkbox labeled \"all programs in one file\" is selected. This option ensures that all programs are read from the laser control unit and saved into a single file.\n5.  **Complete Save:** By selecting the checkbox, all programs are backed up, providing a comprehensive backup of the laser control unit's program memory.",
+      "image": [
+        "page_182_figure_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 182,
+          "score": 0.888298749923706
+        },
+        {
+          "page": 180,
+          "score": 0.8798239827156067
+        }
+      ]
+    },
+    {
+      "id": "Q006",
+      "question": "When performing maintenance on the laser system, what specific precautions should be taken to mitigate the risk of exposure to laser radiation from the laser head and laser optics?",
+      "category": "VISUAL",
+      "safety_critical": true,
+      "answer": "When performing maintenance on the laser system, several precautions must be taken to mitigate the risk of laser radiation exposure. These precautions are especially important when working near the laser head and laser optics, where the beam is present.\n\n## Laser Radiation Safety Procedures\n\n1.  **Verify Laser Class:** Confirm the laser class of the system. The laser head and laser optics are labeled with laser radiation warning symbols. These labels indicate the potential hazard level.\n2.  **Deactivate the Laser Source:** Before commencing any maintenance, ensure the laser source is completely deactivated and locked out to prevent accidental emission.\n3.  **Wear Appropriate PPE:** Always wear appropriate personal protective equipment (PPE), including laser safety glasses designed for the specific wavelength emitted by the laser. Ensure the glasses are in good condition and provide adequate protection.\n4.  **Control the Environment:** Ensure the work area is clear of reflective materials that could cause unintended beam reflections. Even seemingly rough surfaces can reflect infrared light if the surface roughness is smaller than the beam's wavelength.\n5.  **Avoid Direct Eye or Skin Exposure:** Never look directly into the laser beam or allow it to contact your skin. The beam can cause serious eye damage and skin burns, even from reflections.\n6.  **Follow Safety Protocols:** Adhere to all safety protocols and guidelines provided in the laser system's manual. This includes understanding the location and function of all safety interlocks and emergency shutdown procedures.",
+      "image": [
+        "page_30_figure_2_1.png"
+      ],
+      "chunks": [
+        {
+          "page": 293,
+          "score": 0.839918851852417
+        },
+        {
+          "page": 313,
+          "score": 0.8349654674530029
+        }
+      ]
+    },
+    {
+      "id": "Q007",
+      "question": "When troubleshooting communication issues with the Teleservice module on the laser system, describe the steps to verify the modem connection and interpret the LED indicators on the modem to diagnose potential problems.",
+      "category": "VISUAL",
+      "safety_critical": false,
+      "answer": "To verify the modem connection and interpret the LED indicators, follow these steps:\n\n## Verifying Modem Connection\n\n1.  **Check Physical Connection:** Ensure the data line is properly connected between the telephone system and the Teleservice module. For VG 2-5 supply units, this connection is located within the connection compartment of the supply unit. Use the supplied TAE line for connection to the telephone jack, or use a connecting cable with RJ11/RJ45 plugs if a TAE connection is unavailable.\n2.  **Test Modem (Analogue Modems):** For analogue modems, dial the modem number using a telephone. If you can hear modem signals in the telephone receiver, the connection has been correctly established.\n\n## Interpreting LED Indicators\n\nAfter switching on the laser system, the Teleservice module initializes. Once the initialization is complete, the system is ready to receive calls. The LEDs on the modem provide diagnostic information:\n\n*   **Left LED Off:** Indicates no supply voltage to the modem.\n*   **Left LED Green:** Indicates the modem has supply voltage and is ready.\n*   **Left LED Orange (On or Blinking):** Indicates a connection has been established.\n*   **Left LED Red:** Indicates no connection, but the DCD (Data Carrier Detect) line is switched on.\n*   **Right LED Off:** Indicates no connection.\n*   **Right LED Green:** Indicates the modem is hooked to the phone line.",
+      "image": [
+        "page_297_figure_2.png"
+      ],
+      "chunks": [
+        {
+          "page": 297,
+          "score": 0.8910869359970093
+        }
+      ]
+    },
+    {
+      "id": "Q008",
+      "question": "What specific actions should maintenance personnel take to address malfunctioning or defective safety devices on the diode laser system, and what are the potential consequences of neglecting these issues?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Addressing Malfunctioning Safety Devices\n\nIf any safety devices are found to be malfunctioning or defective, maintenance personnel must take the following actions immediately:\n\n1.  Remedy the malfunctioning or defects in the safety devices.\n2.  Contact the Technical Service Team for assistance.\n3.  Ensure the housing of the equipment is closed during operation, only opening it for maintenance work.\n4.  Carry out repair and maintenance work only after disconnecting the main power supply and cooling circuit.\n\n## Consequences of Neglecting Safety Devices\n\nIncreased danger of injury by non-functioning safety devices can occur. Regularly check the proper functioning of all safety devices. There is increased danger of injury for personnel who carry out maintenance work for which they are not qualified and instructed.",
+      "chunks": [
+        {
+          "page": 313,
+          "score": 0.8473255634307861
+        },
+        {
+          "page": 19,
+          "score": 0.8386638760566711
+        }
+      ]
+    },
+    {
+      "id": "Q009",
+      "question": "What critical safety measures must be implemented before performing any maintenance or repair work on the diode laser system, including disconnecting power and addressing potential electrical hazards?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Safety Measures Before Maintenance\n\nBefore commencing any maintenance or repair work on the diode laser system, the following safety measures are crucial:\n\n1.  Disconnect the equipment from the mains power supply.\n2.  Ensure that the equipment cannot be switched on again unintentionally.\n3.  Check the equipment for the absence of any electrical source.\n4.  Ground the equipment and short circuit any relevant components.\n5.  Cover all adjacent equipment with electrical connections and secure the danger areas.\n\nCarelessness can lead to electro-shock. Increased danger of injury by non-functioning safety devices can occur.",
+      "chunks": [
+        {
+          "page": 78,
+          "score": 0.8617995977401733
+        },
+        {
+          "page": 313,
+          "score": 0.8613578081130981
+        },
+        {
+          "page": 293,
+          "score": 0.8498257994651794
+        }
+      ]
+    },
+    {
+      "id": "Q010",
+      "question": "What specific personal protective measures and safety protocols must be followed when operating the diode laser to prevent potential injuries from laser radiation, and what are the potential consequences of non-compliance?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Protective Measures and Safety Protocols\n\nWhen operating the diode laser, the following protective measures and safety protocols must be strictly observed:\n\n1.  Follow all protective measures as laid down by the Prevention of Accidents Ordinance, BGV B2 and EN 60825, Part 1, as well as additional norms and regulations.\n2.  Observe all attached safety labels for personal health and safety.\n3.  Ensure that skin and eyes are not exposed to laser radiation.\n4.  Operate the system only when all protective facilities and safety-related devices are connected and in working order.\n5.  Never look directly into the laser beam.\n\n## Consequences of Non-Compliance\n\nThe laser beam can lead to irreparable personal injury. The radiation of the beam power can lead to irreparable personal injury and damage to health. Reflections can also lead to serious eye injuries. The danger to the skin by direct exposure of the beam is rated as considerably less than that to the eye.",
+      "chunks": [
+        {
+          "page": 23,
+          "score": 0.855186939239502
+        },
+        {
+          "page": 21,
+          "score": 0.852020263671875
+        },
+        {
+          "page": 24,
+          "score": 0.8464453220367432
+        }
+      ]
+    },
+    {
+      "id": "Q011",
+      "question": "What actions must be taken to secure the diode laser system against re-activation after it has malfunctioned or failed, and what conditions must be met before the system can be safely put back into operation?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Securing the System Against Re-activation\n\nIn the event of malfunctioning or failure of the system or unit, the following actions must be taken:\n\n1.  Immediately shut down the system.\n2.  Secure the system against re-activation.\n\n## Conditions for Safe Re-activation\n\nPrior to re-activation of the system, all errors must be properly eliminated. In the case of failures that could influence safety, the diode laser may not be put into operation. Such failures or malfunctions must be immediately eliminated.",
+      "chunks": [
+        {
+          "page": 22,
+          "score": 0.8559731245040894
+        },
+        {
+          "page": 78,
+          "score": 0.854015588760376
+        },
+        {
+          "page": 21,
+          "score": 0.8462934494018555
+        }
+      ]
+    },
+    {
+      "id": "Q012",
+      "question": "What specific safety precautions should be observed when working with the diode laser system to mitigate the risk of fire and explosion, especially in environments with flammable or reactive materials?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Fire and Explosion Safety Precautions\n\nWhen using high-power lasers, there is always a latent danger of fire and explosion. To mitigate this risk, the following precautions must be observed:\n\n1.  Ensure that no flammable or explosion-prone substances are in the vicinity of the location where the laser is being used.\n2.  Be aware that even the formation of gas and smoke can additionally impair personal health, especially the vaporization of plastics which can create extraordinarily dangerous substances.",
+      "chunks": [
+        {
+          "page": 26,
+          "score": 0.8479305505752563
+        },
+        {
+          "page": 21,
+          "score": 0.8442507982254028
+        },
+        {
+          "page": 24,
+          "score": 0.8432264924049377
+        }
+      ]
+    },
+    {
+      "id": "Q013",
+      "question": "What are the potential hazards associated with high leak current in specific supply units (VG2, VG3, VG3E, VG4, VG4L, and VG5), and what measures must be taken to prevent electrical shock?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## High Leak Current Hazards and Prevention\n\nHigh leak current can occur on the supply units VG2, VG3, VG3E, VG4, VG4L and VG5. To prevent electrical shock, the following measure must be taken:\n\n*   An additional earthing conductor must be installed before the system is connected to the mains power.\n\nHigh leakage current can cause serious injury or death when earthing conductor is broken.",
+      "chunks": [
+        {
+          "page": 22,
+          "score": 0.8739162683486938
+        },
+        {
+          "page": 22,
+          "score": 0.8721455931663513
+        }
+      ]
+    },
+    {
+      "id": "Q014",
+      "question": "What are the specific requirements for registering the operation of laser facilities rated as class 4 with the relevant authorities and the Employers’ Liability Association?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Registration Requirements for Class 4 Laser Facilities\n\nThe operation of laser facilities rated as class 4 must be registered with the Employers’ Liability Association and the authorities responsible for work protection. Photocopy the printed form and fill it in for registering the diode laser system/equipment and forward it to the local Employers’ Liability Insurance Association.",
+      "chunks": [
+        {
+          "page": 23,
+          "score": 0.8578938245773315
+        },
+        {
+          "page": 34,
+          "score": 0.8487401008605957
+        }
+      ]
+    },
+    {
+      "id": "Q015",
+      "question": "What are the potential dangers associated with reflections from the laser beam, and what materials should be carefully considered as potential reflectors, even if they appear visually 'rough'?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Dangers of Laser Beam Reflections\n\nReflections can lead to serious eye injuries. Reflections, e.g. the beam randomly hitting a workpiece as well as any other reflecting surfaces, can also lead to serious eye injuries. Importantly, in this context, is those materials which appear visually ‘rough’ to the human eye, are, in actuality, not so rough, and the long wavelength of infrared light can be reflected. As long as the surface roughness is smaller than the wavelength of the beam being used, this can result in a good reflector.",
+      "chunks": [
+        {
+          "page": 25,
+          "score": 0.8502827882766724
+        },
+        {
+          "page": 26,
+          "score": 0.8402336835861206
+        },
+        {
+          "page": 24,
+          "score": 0.8356833457946777
+        }
+      ]
+    },
+    {
+      "id": "Q016",
+      "question": "What is the role and importance of appointing a trained authorized representative for laser protective procedures, and what qualifications and responsibilities should this person possess?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Role and Importance of an Authorized Representative\n\nIn order to operate the diode laser, a trained authorized representative for laser protective procedures must be appointed in written form. The document does not specify the qualifications and responsibilities this person should possess.",
+      "chunks": [
+        {
+          "page": 21,
+          "score": 0.823914647102356
+        },
+        {
+          "page": 334,
+          "score": 0.8134583234786987
+        },
+        {
+          "page": 21,
+          "score": 0.8131989240646362
+        }
+      ]
+    },
+    {
+      "id": "Q017",
+      "question": "What is the significance of the key-operated switch in controlling access to the laser system, and how does it contribute to preventing unauthorized operation and potential safety hazards?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Significance of the Key-Operated Switch\n\nThere should be access restrictions for those people who do not work on or with the laser, e.g. using a key-operated switch. In position \"0\", the diode laser cannot be switched on. In position \"1\", only the alignment laser can be switched on. The alignment laser can be operated with opened safety circuits. In position \"2\", the Pilot laser (LED and alignment) as well as the laser can be operated. If the safety and/or protective door circuits are open, only the alignment laser can be switched on. In position \"1\", the key can be removed (LED mode and Laser cannot be operated). In position \"2\", the key cannot be removed.",
+      "chunks": [
+        {
+          "page": 339,
+          "score": 0.8753525018692017
+        },
+        {
+          "page": 58,
+          "score": 0.8543148040771484
+        },
+        {
+          "page": 262,
+          "score": 0.851997971534729
+        }
+      ]
+    },
+    {
+      "id": "Q018",
+      "question": "What specific steps must be taken to ensure that the laser system is operated only within a system correspondingly rated as laser class 1, and what are the potential liabilities if this stipulation is not observed?",
+      "category": "SAFETY",
+      "safety_critical": true,
+      "answer": "## Ensuring Operation Within Laser Class 1\n\nThe diode laser may only be operated in a system which is correspondingly rated as laser class 1. In the event of non-observance of this stipulation, the manufacturer shall not assume any liability for any resulting damage.",
+      "chunks": [
+        {
+          "page": 21,
+          "score": 0.847152829170227
+        },
+        {
+          "page": 78,
+          "score": 0.842210054397583
+        },
+        {
+          "page": 293,
+          "score": 0.841969907283783
+        }
+      ]
+    },
+    {
+      "id": "Q019",
+      "question": "Describe the process for connecting the external cooling circuit to the supply unit, emphasizing the importance of correct feed and return line connections and the potential consequences of incorrect setup.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Connecting the External Cooling Circuit\n\nTo connect the external cooling circuit to the supply unit, follow these steps:\n\n1.  Connect feed and return lines of the external cooling system with the hose nozzle.\n2.  Secure the hoses with a hose clamp (clamp or screw version).\n3.  Observe feed and return lines on the unit. The cooling system will not operate correctly if the lines are mixed up.\n4.  Check tightness of all hose clamps.\n\nShould the external feed and return lines be mixed up, the temperature of the coolant declines sharply.",
+      "chunks": [
+        {
+          "page": 82,
+          "score": 0.8971141576766968
+        },
+        {
+          "page": 83,
+          "score": 0.8888590931892395
+        },
+        {
+          "page": 81,
+          "score": 0.8721812963485718
+        }
+      ]
+    },
+    {
+      "id": "Q020",
+      "question": "Explain the function and maintenance requirements of the DI cartridge within the cooling system, including the type of water to be used and the potential consequences of using incorrect water.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Function and Maintenance of the DI Cartridge\n\nThe DI-cartridge ensures correct conductance of the coolant and is to be replaced at regular intervals. For cooling the laser, de-ionized water is used as it is suited to the requirements of the system. The DI-cartridge ensures correct conductance of the coolant and is to be replaced at regular intervals. The cooling circuit is equipped with two water filters that ensure clean coolant water to the laser and the switch mode power supply. A DI-cartridge continuously de-mineralizes the coolant water.\n\nCoolant should be deionized / demineralized water, alternatively: distilled water. Please pay attention to cooling water requirements in particular concerning DI value and pH-value.",
+      "chunks": [
+        {
+          "page": 325,
+          "score": 0.8904740810394287
+        },
+        {
+          "page": 321,
+          "score": 0.8682675957679749
+        },
+        {
+          "page": 86,
+          "score": 0.8605868816375732
+        }
+      ]
+    },
+    {
+      "id": "Q021",
+      "question": "Describe the procedure for draining coolant water from both the supply unit and the laser head in preparation for system transport, including the use of compressed air and the specific pressure limitations.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Draining Coolant Water for Transport\n\nTo drain the coolant water from the supply unit:\n\n1.  Remove (open) the back panel (door) of the supply unit.\n2.  Open the filling neck and remove the cap.\n3.  Remove the left side panel of the supply unit.\n4.  Remove the plug on the drain vent.\n5.  Wait as long as no further water is draining and set the plug back into the drain vent.\n\nTo drain the coolant water from the laser head:\n\n1.  Open the side cover panel of the connection area.\n2.  Open the drain vent marked \"internal out\".\n3.  Push the Ring in arrow direction and simultaneously pull out the plug in arrow direction.\n4.  Feed compressed air (2 to max. 3 bar) into the cooling system. Coolant is going to exit at the drain vent (cooling pump) during the procedure.\n5.  Flush the system until the coolant in the hoses (laser head) has been drained (approx. 2-3 min).\n6.  Close all drain vents and the filling neck.\n\nFlush the laser head only using oil-free air (max. 2 to 3 bar).",
+      "chunks": [
+        {
+          "page": 71,
+          "score": 0.9153767824172974
+        },
+        {
+          "page": 69,
+          "score": 0.9003898501396179
+        },
+        {
+          "page": 72,
+          "score": 0.8981720805168152
+        }
+      ]
+    },
+    {
+      "id": "Q022",
+      "question": "Explain the function of the beam switch, including its components (beam shutter modules and absorber module) and how it distributes laser light to individual beam output channels.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Function of the Beam Switch\n\nThe beam switch distributes the laser light coming from a laser source in a time-delayed fashion to individual beam output channels (time sharing). When a beam output channel is active and emits laser power, all other beam outputs will necessarily be inactive during that time. The beam switch generally consists of at least two beam shutter modules and one absorber module.",
+      "chunks": [
+        {
+          "page": 94,
+          "score": 0.904655933380127
+        },
+        {
+          "page": 95,
+          "score": 0.8870289325714111
+        }
+      ]
+    },
+    {
+      "id": "Q023",
+      "question": "Describe the function of the laser light cable guide, including how it routes and fixes laser light cables, and the precautions necessary to avoid damage to the fiber optic cable.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Function of the Laser Light Cable Guide\n\nThe laser light cable guides route and fix the individual laser light cables inside the supply unit. Additional connection cables for the customer safety door (with optional beam separating filter) can also be routed out of the supply unit through the laser light cable guide. Loosen the fixing device of the fiber optic cable before opening the guide-through cover. When connecting the fiber optic cable, observe its maximum bending radius.",
+      "chunks": [
+        {
+          "page": 98,
+          "score": 0.887775719165802
+        },
+        {
+          "page": 99,
+          "score": 0.8863480091094971
+        },
+        {
+          "page": 100,
+          "score": 0.8849531412124634
+        }
+      ]
+    },
+    {
+      "id": "Q024",
+      "question": "Explain the purpose and operation of the Emergency-OFF button, detailing which components are shut down when it is activated and the subsequent steps required for system restart.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Purpose and Operation of the Emergency-OFF Button\n\nBy pressing the Emergency-OFF button in dangerous situations, the laser beam, the diode mains power as well as the cooling system are immediately shut down. The supply unit is still on and must be separately shut down by the mains power switch. Should an error message appear, resulting from a previous emergency shutdown, during a re-start up of the laser system, this error message must be acknowledged by pressing the ‘ACK key’ before the system can be re-started.",
+      "chunks": [
+        {
+          "page": 6,
+          "score": 0.8651018142700195
+        },
+        {
+          "page": 110,
+          "score": 0.8574121594429016
+        },
+        {
+          "page": 109,
+          "score": 0.8482834696769714
+        }
+      ]
+    },
+    {
+      "id": "Q025",
+      "question": "Describe the function and purpose of the transport bolts on the supply unit, and the correct procedure for using them when lifting the unit from or onto a transport pallet.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Function and Purpose of Transport Bolts\n\nThese bolts are used for lifting the supply unit from or on to a transport pallet. After screwing in the bolts, hoisting straps, ropes or cables can be affixed to the bolts and then attached, by straps, chain or rope to a crane to lift the supply unit from the pallet.",
+      "chunks": [
+        {
+          "page": 66,
+          "score": 0.889625608921051
+        },
+        {
+          "page": 68,
+          "score": 0.8727643489837646
+        }
+      ]
+    },
+    {
+      "id": "Q026",
+      "question": "Explain the function of the frequency converter in the supply unit and how it enables operation of the coolant pump at different mains frequencies (50 or 60 Hz).",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Function of the Frequency Converter\n\nThe frequency converter enables operation of the coolant pump at 50 or 60 Hz mains frequency.",
+      "chunks": [
+        {
+          "page": 48,
+          "score": 0.8418698906898499
+        },
+        {
+          "page": 90,
+          "score": 0.8370852470397949
+        },
+        {
+          "page": 70,
+          "score": 0.8343203663825989
+        }
+      ]
+    },
+    {
+      "id": "Q027",
+      "question": "Describe the function of the solenoid in the cooling system and how it regulates the amount of water flowing to the external circuit and the heat exchanger.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Function of the Solenoid\n\nThe solenoid serves as a control for the external cooling circuit. A solenoid (magnetic valve) regulates the amount of water flowing to the external circuit and the heat exchanger.",
+      "chunks": [
+        {
+          "page": 81,
+          "score": 0.8968534469604492
+        },
+        {
+          "page": 82,
+          "score": 0.861842155456543
+        }
+      ]
+    },
+    {
+      "id": "Q028",
+      "question": "Explain the purpose of the mode selector PLC and the potential consequences of setting the key to the MRES position.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Purpose of the Mode Selector PLC\n\nIf the key is set to position MRES all programs entered by the customer are deleted and the system is set back to delivery status.",
+      "chunks": [
+        {
+          "page": 47,
+          "score": 0.8893718123435974
+        },
+        {
+          "page": 339,
+          "score": 0.8394415378570557
+        },
+        {
+          "page": 141,
+          "score": 0.8384716510772705
+        }
+      ]
+    },
+    {
+      "id": "Q029",
+      "question": "Describe the function of the load contactors for both the power supply and the converter, and their role in the electrical circuit of the diode power supplies and frequency converter.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Function of Load Contactors\n\nThe contactors are part of the electrical circuit of the diode power supplies. The contactor is part of the electrical circuit of the frequency converter.",
+      "chunks": [
+        {
+          "page": 38,
+          "score": 0.8407217264175415
+        },
+        {
+          "page": 12,
+          "score": 0.8335113525390625
+        },
+        {
+          "page": 45,
+          "score": 0.8323977589607239
+        }
+      ]
+    },
+    {
+      "id": "Q030",
+      "question": "Explain the function of the volume-flow sensor in the cooling system and its role in monitoring the coolant volume-flow.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Function of the Volume-Flow Sensor\n\nThe volume-flow sensor measures the coolant volume-flow in the cooling system.",
+      "chunks": [
+        {
+          "page": 87,
+          "score": 0.8349648714065552
+        },
+        {
+          "page": 150,
+          "score": 0.8341267704963684
+        }
+      ]
+    },
+    {
+      "id": "Q031",
+      "question": "Describe the process for selecting the appropriate laser program and beam path using the field bus interface, detailing the steps for loading and executing programs.",
+      "category": "TECHNICAL",
+      "safety_critical": false,
+      "answer": "## Selecting Laser Program and Beam Path via Field Bus\n\nWith the field bus interface, one or even several programs can be created or edited in the program editor of the laser system, which are then selected and executed using the field-bus interface. The laser operation via the field-bus is always effected in combination with the program modus of the laser system. In combination with a beam switch a suitable beam path can be selected for each program and be assigned to individual programs. Several beam combinations can be realized by different programs. The beam path is entered and saved together with the corresponding program.",
+      "chunks": [
+        {
+          "page": 206,
+          "score": 0.89990234375
+        },
+        {
+          "page": 288,
+          "score": 0.8976545333862305
+        },
+        {
+          "page": 180,
+          "score": 0.886329174041748
+        }
+      ]
+    },
+    {
+      "id": "Q032",
+      "question": "Explain the relationship between the laser power, mains power consumption, and the appropriate mains connector type for different laser output levels.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## Laser Power, Mains Power Consumption, and Connector Type\n\nThe laser system requires a three-phase connection with protective earthing conductor; the fusing from the mains power is to be protected by blow-out fuses. The supply unit is connected to a three-phase mains power supply using a CEE plug with either a 16A, 32A or a 64A fuse rating. The relationship between laser output, mains power consumption, and connector type is as follows:\n\n| Mains power [W] | Mains power consumption [kW] | Mains connector |\n|---|---|---|\n| 100 | 1 | CEE 32 A-6h |\n| 150 | 1.2 | |\n| 200 | 1.4 | |\n| 250 | 1.6 | |\n| 300 | 1.8 | |\n| 500 | 2.5 | |\n| 700 | 3 | |\n| 1000 | 4 | |\n| 1500 | 6 | |\n| 2000 | 7 | |\n| 3000 | 10 | |\n| 4000 | 13 | CEE 32 A-6h |\n| 6000 | 19 | |\n| 8000 | 24 | CEE 63 A-6h |\n| 10000 | 30 | |",
+      "chunks": [
+        {
+          "page": 90,
+          "score": 0.8868805170059204
+        },
+        {
+          "page": 10,
+          "score": 0.8650866746902466
+        }
+      ]
+    },
+    {
+      "id": "Q033",
+      "question": "Describe the relationship between the key switch position, the operation of the pilot laser (LED and alignment), and the status of the safety and protective door circuits.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## Key Switch Position and Laser Operation\n\nThe key switch controls access to the laser system and affects the operation of the pilot laser and the safety circuits:\n\n*   **Position \"0\"**: The diode laser cannot be switched on. The key can be withdrawn.\n*   **Position \"1\"**: Only the alignment laser can be switched on. The alignment laser can be operated with opened safety circuits. The key can be withdrawn.\n*   **Position \"2\"**: The Pilot laser (LED and alignment) as well as the laser can be operated. If the safety and/or protective door circuits are open, only the alignment laser can be switched on. The key cannot be withdrawn.",
+      "chunks": [
+        {
+          "page": 339,
+          "score": 0.9035894870758057
+        },
+        {
+          "page": 58,
+          "score": 0.8856987953186035
+        },
+        {
+          "page": 354,
+          "score": 0.8856438398361206
+        }
+      ]
+    },
+    {
+      "id": "Q034",
+      "question": "Explain the interaction between the safety door circuit, the safety circuit, and the operation of the shutter, detailing how these components work together to ensure safe laser operation.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## Interaction of Safety Components\n\nThe safety door circuit and the safety circuit work together to ensure safe laser operation. The safety circuit is a zero signal current based circuit. When a safety switch opens, the safety circuit is interrupted. According to the operation status:\n\n*   The laser beam is switched off, the shutter closed and an error message is generated.\n*   The laser beam cannot be activated (the laser beam is guided into the beam dump).\n*   An error message is generated when only one of the two circuits closes (synchronization).\n*   An error message is generated when one of the two circuits closes with a delay (synchronization).\n\nIf the system is equipped with a shutter, the safety circuit then includes the safety contacts of the shutter system. The assignment of the shutter system is then parallel to, and in conjunction with the protection door contact circuits.",
+      "chunks": [
+        {
+          "page": 292,
+          "score": 0.8954871892929077
+        },
+        {
+          "page": 294,
+          "score": 0.8947227597236633
+        },
+        {
+          "page": 338,
+          "score": 0.8925477862358093
+        }
+      ]
+    },
+    {
+      "id": "Q035",
+      "question": "Describe the relationship between the external control mode, the field bus interface, and the control functions available through the client interface (X3), detailing how these elements interact.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## External Control, Field Bus, and Client Interface\n\nThe diode laser system can basically be operated in two different control modes:\n\n*   **LOCAL mode**: The test will take place via the operating field of the system.\n*   **EXTERNAL mode**: The control test will take place with the client interface. Functions like Laser ready, Laser ON/OFF, Pilot laser ON/OFF can be switched only via the client interface.\n\nIf the field bus is activated in the console, the control functions of the client interface (X3) become inactive. An external control is possible only via the bus interface. The LOCAL/EXTERNAL selector switch in the operation unit becomes also inactive. A switch-over between LOCAL and EXTERNAL mode can take place with active field bus only via the bus interface.",
+      "chunks": [
+        {
+          "page": 174,
+          "score": 0.9014065861701965
+        },
+        {
+          "page": 7,
+          "score": 0.8782714605331421
+        },
+        {
+          "page": 335,
+          "score": 0.8689082860946655
+        }
+      ]
+    },
+    {
+      "id": "Q036",
+      "question": "Explain the relationship between the 'Laser ready' status, the 'Program active' signal, and the 'Program ended' signal, detailing how these signals indicate the state of the laser system during program execution.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## Laser System State Signals\n\nThe 'Laser ready' status, the 'Program active' signal, and the 'Program ended' signal indicate the state of the laser system during program execution:\n\n*   **Laser ready**: The laser system has the status “Laser ready” (input word 0 bit 12). With the “Laser ready” status, a threshold current is supplied to the laser diodes. A laser program can be called up and started.\n*   **Program active**: Signal indicates that a laser program is being processed. This signal is set as soon as a laser program is running. It is reset when the program is ended or aborted.\n*   **Program ended**: Signal indicates that a laser program has been ended. This signal is set for two seconds as soon as a laser program is ended. If a new program is started within the two seconds, the bit is reset by the start of that program.",
+      "chunks": [
+        {
+          "page": 358,
+          "score": 0.9058141708374023
+        },
+        {
+          "page": 270,
+          "score": 0.9027937054634094
+        },
+        {
+          "page": 269,
+          "score": 0.9016242027282715
+        }
+      ]
+    },
+    {
+      "id": "Q037",
+      "question": "Describe the relationship between the 'External error' signal, the 'Error reset' signal, and the 'PRG abort' signal, detailing how these signals are used to manage errors and program execution.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## Managing Errors and Program Execution\n\nThe 'External error' signal, the 'Error reset' signal, and the 'PRG abort' signal are used to manage errors and program execution:\n\n*   **External error**: Fault message to the laser system (by the customer system). If the signal edge changes from an inactive to an active signal, an external fault is detected and output. Any running laser program is aborted. The laser system exits the “Laser ready” and “Laser on” status. The shutter is closed and the power supplies to the laser diodes are disconnected. A fault is output at the field bus interface.\n*   **Error reset**: Present errors in the laser system are acknowledged. If the cause of the error has been eliminated, the error is deleted. If the signal edge changes from an inactive to an active signal, it is acknowledged.\n*   **PRG abort**: A running laser program is aborted. If the signal edge changes from an inactive to an active signal, a running laser program is aborted.",
+      "chunks": [
+        {
+          "page": 268,
+          "score": 0.8739408850669861
+        },
+        {
+          "page": 247,
+          "score": 0.8681269288063049
+        },
+        {
+          "page": 269,
+          "score": 0.8675862550735474
+        }
+      ]
+    },
+    {
+      "id": "Q038",
+      "question": "Explain the relationship between the 'Dynamic PRG start' signal and the 'Static PRG start' signal, detailing how these signals are used to initiate laser programs and the differences in their behavior.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## Initiating Laser Programs\n\nThe 'Dynamic PRG start' signal and the 'Static PRG start' signal are used to initiate laser programs:\n\n*   **Dynamic PRG start**: The currently selected laser program is started once. Before the program is started again, the bit must be cancelled for at least 10 ms. If the signal edge changes from an inactive to an active signal, the current program is started.\n*   **Static PRG start**: The currently selected laser program is started once. Before the program is started again, the bit must be cancelled for at least 10 ms. If the signal edge changes from an inactive to an active signal, the current program is started. The program is aborted as soon as the signal switches to an inactive state (if the program has not already been ended).",
+      "chunks": [
+        {
+          "page": 248,
+          "score": 0.9071613550186157
+        },
+        {
+          "page": 269,
+          "score": 0.8997182846069336
+        },
+        {
+          "page": 248,
+          "score": 0.8981565237045288
+        }
+      ]
+    },
+    {
+      "id": "Q039",
+      "question": "Describe the procedure for packaging the laser system for shipment, including the use of transport bolts, air bubble foil, wooden frames, and the handling of the laser light cable and accessories.",
+      "category": "MULTI_CHAPTER",
+      "safety_critical": false,
+      "answer": "## Packaging the System for Shipment\n\nTo package the system for shipment, follow these steps:\n\n1.  Screw all transport bolts again into the threaded openings on the supply unit.\n2.  Lift the supply unit on the transport palette.\n3.  Affix the supply unit to the transport palette by using the transport bolts (bolts at the front and back of the system).\n4.  Wrap the system with air bubble- and stretch foil.\n5.  Set the wooden frames around the supply unit and screw the frames to the transport palette.\n6.  Pack the laser light cable according to the instructions of the laser light cable manual. Observe the bending radius!\n7.  Wrap the accessories (optics etc.) with air bubble foil. Put the parts in a cardboard box.\n8.  Affix the cardboard box to the supply unit by using stretch foil.",
+      "chunks": [
+        {
+          "page": 73,
+          "score": 0.9186561703681946
+        },
+        {
+          "page": 74,
+          "score": 0.911173939704895
+        },
+        {
+          "page": 4,
+          "score": 0.8980132937431335
+        }
+      ]
+    },
+    {
+      "id": "Q040",
+      "question": "If the external cooling circuit operates with a water pressure of 0.4 bar, what adjustments or considerations are necessary to ensure proper cooling system function, given the specified pressure requirements?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "## Adjustments for Low Water Pressure\n\nGiven that the external cooling circuit requires a pressure of 0.5 bar (Min.) to 6 bar (Max.), operating with a water pressure of 0.4 bar is below the minimum requirement. In this scenario, the following adjustments or considerations are necessary:\n\n1.  Increase the water pressure: The primary action is to increase the water pressure of the external cooling circuit to meet the minimum requirement of 0.5 bar. This may involve adjusting the pump or water supply system.\n2.  Monitor the solenoid valve: If the water pressure is too low, the solenoid remains open for a longer period of time. This can lead to a low coolant temperature.\n3.  Ensure proper flow rate: Verify that the flow rate is sufficient to dissipate heat effectively, even with the lower pressure. Refer to the coolant water consumption table to determine the required flow rate based on laser power.\n4.  Check for obstructions: Inspect the cooling lines and heat exchanger for any obstructions that may be reducing the water pressure.\n5.  Consider a booster pump: If increasing the water pressure is not feasible, consider installing a booster pump to increase the pressure specifically for the cooling circuit.",
+      "chunks": [
+        {
+          "page": 81,
+          "score": 0.8682748675346375
+        },
+        {
+          "page": 82,
+          "score": 0.8527086973190308
+        },
+        {
+          "page": 5,
+          "score": 0.8382322192192078
+        }
+      ]
+    },
+    {
+      "id": "Q041",
+      "question": "If the ambient temperature is 30°C, what is the maximum permissible humidity level to ensure the dew point does not exceed 19°C, and what actions should be taken if this humidity level is surpassed?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "## Maximum Permissible Humidity Level\n\nThe document states that independent of the climate conditions the dew point may not exceed 19°C. Lower threshold ambient temperature is +10°C. This results in the following values for temperature and humidity:\n\nThe document does not provide a specific maximum humidity level for an ambient temperature of 30°C to ensure the dew point does not exceed 19°C. To determine the maximum permissible humidity level, a psychrometric chart or calculator would be needed.",
+      "chunks": [
+        {
+          "page": 64,
+          "score": 0.8765310049057007
+        },
+        {
+          "page": 330,
+          "score": 0.8314423561096191
+        }
+      ]
+    },
+    {
+      "id": "Q042",
+      "question": "If the laser system is set to automatically shut down after a period of inactivity, what is the range of time that can be set for this automatic shutdown feature, and how does this affect the cooling system operation?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "## Automatic Shutdown Time Range\n\nThe system automatically switches off the cooling system after a certain time without laser operation (system is not in “ready status”). The time after the system shuts down can be set between 10 and 30 min. (selected by the customer). As soon as the system is set to the “ready” status again (internal, external or by field bus), the cooling system starts automatically and the system is again ready for operation.",
+      "chunks": [
+        {
+          "page": 161,
+          "score": 0.8555373549461365
+        },
+        {
+          "page": 345,
+          "score": 0.8522359728813171
+        },
+        {
+          "page": 110,
+          "score": 0.8505836725234985
+        }
+      ]
+    },
+    {
+      "id": "Q043",
+      "question": "If the laser system is configured to limit the maximum activation time of the laser, what is the range of time that can be set for this maximum activation time, and how does this affect the laser's operation?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "## Maximum Activation Time Range\n\nThe laser system can limit the maximum activation time of the laser to a preset value. This time value can lie between 10 and 9000 seconds (150min/ 2.5 hours). If a value is set to more than 9000 seconds, the option is inactive.",
+      "chunks": [
+        {
+          "page": 295,
+          "score": 0.8352221250534058
+        },
+        {
+          "page": 160,
+          "score": 0.8334203958511353
+        }
+      ]
+    },
+    {
+      "id": "Q044",
+      "question": "What is the minimum bending radius that must be observed for the cooling unit hoses, and what are the potential consequences of exceeding this limit?",
+      "category": "NUMERICAL",
+      "safety_critical": false,
+      "answer": "## Minimum Bending Radius for Cooling Unit Hoses\n\nA minimal radius of bend of approximately 250 mm is ensured for the cooling unit hoses. The document does not specify the potential consequences of exceeding this limit.",
+      "chunks": [
+        {
+          "page": 81,
+          "score": 0.8333122134208679
+        },
+        {
+          "page": 83,
+          "score": 0.8078150749206543
+        },
+        {
+          "page": 62,
+          "score": 0.806364893913269
+        }
+      ]
+    },
+    {
+      "id": "Q045",
+      "question": "What is the procedure for adjusting the wavelength stabilization temperature, and what is the range of adjustment available?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 163,
+          "score": 0.8455203771591187
+        },
+        {
+          "page": 7,
+          "score": 0.832499623298645
+        },
+        {
+          "page": 361,
+          "score": 0.8309848308563232
+        }
+      ]
+    },
+    {
+      "id": "Q046",
+      "question": "What is the typical lifespan of the laser diodes, and what factors influence their longevity?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 10,
+          "score": 0.8710328340530396
+        },
+        {
+          "page": 293,
+          "score": 0.8286422491073608
+        },
+        {
+          "page": 330,
+          "score": 0.821153461933136
+        }
+      ]
+    },
+    {
+      "id": "Q047",
+      "question": "What are the specific requirements for the composition and purity of the compressed air used for dust protection?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 7,
+          "score": 0.8275653123855591
+        },
+        {
+          "page": 157,
+          "score": 0.8130462169647217
+        }
+      ]
+    },
+    {
+      "id": "Q048",
+      "question": "What is the recommended method for calibrating the laser power output, and what equipment is required?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 334,
+          "score": 0.8630889058113098
+        },
+        {
+          "page": 203,
+          "score": 0.8403916358947754
+        }
+      ]
+    },
+    {
+      "id": "Q049",
+      "question": "What is the procedure for updating the firmware of the laser control unit, and what precautions must be taken during this process?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 44,
+          "score": 0.8301650881767273
+        },
+        {
+          "page": 341,
+          "score": 0.8291037082672119
+        }
+      ]
+    },
+    {
+      "id": "Q050",
+      "question": "What is the expected service life of the DI cartridge, and what factors influence its replacement frequency?",
+      "category": "UNANSWERABLE",
+      "safety_critical": false,
+      "answer": null,
+      "chunks": [
+        {
+          "page": 325,
+          "score": 0.8483099341392517
+        },
+        {
+          "page": 321,
+          "score": 0.8191519975662231
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "categories": {
+      "VISUAL": 7,
+      "SAFETY": 11,
+      "TECHNICAL": 13,
+      "MULTI_CHAPTER": 8,
+      "NUMERICAL": 5,
+      "UNANSWERABLE": 6
+    },
+    "difficulties": {},
+    "visual_questions": 7,
+    "safety_critical": 15,
+    "answerable": 44,
+    "document_name": ""
+  }
+}
